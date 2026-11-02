@@ -14,7 +14,11 @@ from email.utils import parsedate_to_datetime
 
 import yaml
 
-UA = {"User-Agent": "Mozilla/5.0 (personal sports dashboard)"}
+UA = {
+    "User-Agent": "Mozilla/5.0 (personal sports dashboard)",
+    "Accept-Language": "en-GB,en;q=0.9",
+    "Cookie": "CONSENT=YES+1; SOCS=CAI",  # skips YouTube's cookie consent page
+}
 TSDB = "https://www.thesportsdb.com/api/v1/json/123"  # free key
 # Unofficial ESPN endpoint: undocumented, can change without warning
 ESPN = "https://site.api.espn.com/apis/site/v2/sports/golf/{league}/scoreboard"
@@ -178,13 +182,43 @@ def espn_golf(follow, ev):
 
 # ---------- highlights ----------
 
+_channel_ids = {}
+
+
+def channel_id(src):
+    """Use channel_id if given, otherwise look it up from the @handle."""
+    if not todo(src.get("channel_id")):
+        return src["channel_id"]
+    handle = src["handle"].strip()
+    direct = re.search(r"/channel/(UC[\w-]{22})", handle)
+    if direct:  # a pasted /channel/UC... link already contains the ID
+        return direct.group(1)
+    if handle.startswith("http"):
+        url = handle  # any pasted channel link
+    else:
+        url = "https://www.youtube.com/" + (handle if handle.startswith("@") else "@" + handle)
+    if handle not in _channel_ids:
+        html = get(url).decode("utf-8", "ignore")
+        m = (re.search(r'"externalId":"(UC[\w-]{22})"', html)
+             or re.search(r'<link rel="canonical" href="https://www\.youtube\.com/channel/(UC[\w-]{22})"', html)
+             or re.search(r'"channelId":"(UC[\w-]{22})"', html))
+        if not m:
+            raise ValueError(f"couldn't find a channel ID for {handle}; check the handle is right")
+        _channel_ids[handle] = m.group(1)
+    return _channel_ids[handle]
+
+
 def youtube_channel(follow, src):
     ns = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015"}
-    root = ET.fromstring(get(YOUTUBE.format(src["channel_id"])))
+    root = ET.fromstring(get(YOUTUBE.format(channel_id(src))))
+    keep_all = src.get("match_on") == "all"
     out = []
     for entry in root.findall("a:entry", ns):
         title = entry.findtext("a:title", namespaces=ns) or ""
-        if not mentions(title, follow):
+        if keep_all:
+            if excluded(title, follow):
+                continue
+        elif not mentions(title, follow):
             continue
         pub = entry.findtext("a:published", namespaces=ns)
         out.append({
@@ -234,13 +268,17 @@ def main():
             matches += run(f, ev["provider"], EVENTS[ev["provider"]], ev)
 
         for src in f.get("highlights", []):
-            if todo(src.get("channel_id")) or src["type"] not in HIGHLIGHTS:
+            if todo(src.get("channel_id")) and todo(src.get("handle")):
+                continue
+            if src["type"] not in HIGHLIGHTS:
                 continue
             highlights += run(f, src["name"], HIGHLIGHTS[src["type"]], src)
 
     news.sort(key=lambda n: n["published_at"] or "", reverse=True)
     matches = list({(m["follow_id"], m["source_id"]): m for m in matches}.values())
     matches.sort(key=lambda m: m.get("starts_at") or (m.get("dates") or {}).get("start") or "")
+    # same video can come from two channels' rules (e.g. PGA TOUR for two golfers): keep one per follow
+    highlights = list({(h["follow_id"], h["video_id"]): h for h in highlights}.values())
     highlights.sort(key=lambda h: h["published_at"] or "", reverse=True)
 
     data = {
@@ -257,4 +295,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
