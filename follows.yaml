@@ -29,11 +29,11 @@ follows:
       # rights sit with the home board, so swap the second one per tour
       - type: youtube_channel
         name: England & Wales Cricket Board
-        handle: TODO
+        handle: "https://www.youtube.com/channel/UCz1D0n02BR3t51KuBOPmfTQ"
         match_on: aliases
       - type: youtube_channel
         name: Cricket Australia      # Nov 2026 white-ball tour; swap for Cricket South Africa in Dec
-        handle: TODO
+        handle: "https://www.youtube.com/@cricketcomau"
         match_on: aliases
 
   - id: bath
@@ -53,11 +53,11 @@ follows:
     highlights:
       - type: youtube_channel
         name: PREM Rugby
-        handle: TODO
+        handle: "https://www.youtube.com/@PREM-Rugby"
         match_on: aliases
       - type: youtube_channel
         name: Investec Champions Cup (EPCR)
-        handle: TODO
+        handle: "https://www.youtube.com/@InvestecChampionsCup"
         match_on: aliases
       - type: youtube_channel
         name: Bath Rugby
@@ -84,15 +84,15 @@ follows:
     highlights:
       - type: youtube_channel
         name: Investec Champions Cup (EPCR)
-        handle: TODO
+        handle: "https://www.youtube.com/@InvestecChampionsCup"
         match_on: aliases
       - type: youtube_channel
         name: Top 14
-        handle: TODO               # check what's actually posted here
+        handle: "https://www.youtube.com/@top14"              # check what's actually posted here
         match_on: aliases
       - type: youtube_channel
         name: Union Bordeaux-Bègles
-        handle: TODO
+        handle: "https://www.youtube.com/@ubbrugby33"
         match_on: all
 
   - id: scotland-rugby
@@ -112,11 +112,11 @@ follows:
     highlights:
       - type: youtube_channel
         name: Six Nations Rugby
-        handle: TODO
+        handle: "https://www.youtube.com/@SixNationsRugby"
         match_on: aliases
       - type: youtube_channel
         name: Nations Championship   # November internationals
-        handle: TODO
+        handle: "https://www.youtube.com/@NationsChampionship"
         match_on: aliases
       - type: youtube_channel
         name: Scottish Rugby
@@ -135,14 +135,14 @@ follows:
         lang: en-GB
       - type: podcast_rss
         name: The Chipping Forecast
-        url: TODO
+        url: "https://feeds.acast.com/public/shows/the-chipping-forecast"
     events:
       provider: espn_golf
       player_id: "6629"
     highlights:
       - type: youtube_channel
         name: DP World Tour
-        handle: TODO
+        handle: "https://www.youtube.com/@DPWorldTour"
         match_on: aliases
 
   - id: mcilroy
@@ -166,7 +166,7 @@ follows:
         match_on: aliases
       - type: youtube_channel
         name: DP World Tour
-        handle: TODO
+        handle: "https://www.youtube.com/@DPWorldTour"
         match_on: aliases
 
   - id: macintyre
@@ -190,5 +190,5 @@ follows:
         match_on: aliases
       - type: youtube_channel
         name: DP World Tour
-        handle: TODO
+        handle: "https://www.youtube.com/@DPWorldTour"
         match_on: aliases
