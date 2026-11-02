@@ -178,6 +178,13 @@ h2 { font: 700 1.2rem/1.2 var(--body); letter-spacing: -.02em; margin: 0; }
 @media (min-width: 40rem) { .vgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .vgrid .vcard { width: auto; }
 .vgrid .vtitle { font-size: .86rem; }
+.subhead { font: 600 .9rem/1.2 var(--body); color: var(--muted); margin: 0 0 .55rem; }
+.subhead + .vrail, .subhead + .srail { margin-bottom: 1.3rem; }
+.srail { display: flex; gap: .7rem; overflow-x: auto; scrollbar-width: none; margin: 0 -1rem; padding: 0 1rem .3rem; scroll-snap-type: x mandatory; scroll-padding-inline: 1rem; }
+.srail::-webkit-scrollbar { display: none; }
+.scard { flex: none; width: 8.6rem; border: 0; padding: 0; background: none; text-align: left; cursor: pointer; scroll-snap-align: start; }
+.scard .thumb { aspect-ratio: 9 / 16; border-radius: 14px; }
+.scard .vtitle { font-size: .82rem; }
 .vrail { display: flex; gap: .8rem; overflow-x: auto; scrollbar-width: none; margin: 0 -1rem; padding: 0 1rem .3rem; scroll-snap-type: x mandatory; scroll-padding-inline: 1rem; }
 .vrail::-webkit-scrollbar { display: none; }
 .vcard { flex: none; width: 15.5rem; border: 0; padding: 0; background: none; text-align: left; cursor: pointer; scroll-snap-align: start; }
@@ -298,8 +305,7 @@ let data = null;
 let filter = "all";
 let tab = "results";
 let newsShown = NEWS_PAGE;
-const VIDEO_PAGE = 8;
-let videosShown = VIDEO_PAGE;
+
 let fresh = new Set();   // keys of items that are new this visit
 
 const $ = (id) => document.getElementById(id);
@@ -409,7 +415,7 @@ function renderRail() {
     </button>`;
   }).join("");
   $("rail").querySelectorAll(".follow").forEach(b => b.addEventListener("click", () => {
-    filter = b.dataset.id; newsShown = NEWS_PAGE; videosShown = VIDEO_PAGE; store.set("mai-filter", filter); render();
+    filter = b.dataset.id; newsShown = NEWS_PAGE; store.set("mai-filter", filter); render();
   }));
 }
 
@@ -492,7 +498,16 @@ function videoCard(v) {
   return `<button class="vcard" data-video="${esc(v.video_id)}">
     <div class="thumb"><img src="${thumbOf(esc(v.video_id))}" alt="" loading="lazy">
       ${isNew("video", v) ? '<span class="tag pill-new">NEW</span>' : ""}
-      ${v.short ? '<span class="kind">Short</span>' : ""}
+    </div>
+    <p class="vtitle">${esc(v.title)}</p>
+    <p class="vmeta">${esc(v.channel)}, ${ago(v.published_at)}</p>
+  </button>`;
+}
+function shortCard(v) {
+  // YouTube's standard thumbnail letterboxes a Short; cropping to 9:16 leaves just the frame
+  return `<button class="scard" data-video="${esc(v.video_id)}">
+    <div class="thumb"><img src="${thumbOf(esc(v.video_id))}" alt="" loading="lazy">
+      ${isNew("video", v) ? '<span class="tag pill-new">NEW</span>' : ""}
     </div>
     <p class="vtitle">${esc(v.title)}</p>
     <p class="vmeta">${esc(v.channel)}, ${ago(v.published_at)}</p>
@@ -500,12 +515,12 @@ function videoCard(v) {
 }
 function renderVideos() {
   const items = data.highlights.filter(keep);
-  const shown = items.slice(0, videosShown);
+  const long = items.filter(v => !v.short).slice(0, 24);
+  const shorts = items.filter(v => v.short).slice(0, 24);
   $("videos").innerHTML = items.length
-    ? `<div class="vgrid">${shown.map(videoCard).join("")}</div>${items.length > videosShown ? '<button class="more" id="more-videos">Show more videos</button>' : ""}`
+    ? (long.length ? `<p class="subhead">Videos</p><div class="vrail">${long.map(videoCard).join("")}</div>` : "")
+      + (shorts.length ? `<p class="subhead">Shorts</p><div class="srail">${shorts.map(shortCard).join("")}</div>` : "")
     : `<p class="empty">No videos yet. They appear once YouTube channels are added to follows.yaml.</p>`;
-  const more = $("more-videos");
-  if (more) more.addEventListener("click", () => { videosShown += VIDEO_PAGE; renderVideos(); bindCards($("videos")); });
 }
 
 /* ---------- news ---------- */

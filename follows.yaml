@@ -112,7 +112,7 @@ follows:
     sport: rugby
     name: Scotland men
     aliases: ["Scotland rugby", "Scotland"]
-    exclude: ["Scotland women", "U20", "Under-20", "Scotland A", "South of Scotland", "club rugby", "Club XV", "clubhouse", "clubhouses"]
+    exclude: ["Scotland women", "women", "women's", "U20", "Under-20", "Scotland A", "South of Scotland", "club rugby", "Club XV", "clubhouse", "clubhouses"]
     title_must_mention: true
     news:
       - type: google_news
@@ -132,8 +132,8 @@ follows:
         match_on: aliases
       - type: youtube_channel
         name: Scottish Rugby
-        handle: "https://www.youtube.com/ScottishRugbyTV"   # from Scottish Rugby's own listings; check it opens
-        match_on: all              # excludes above still apply
+        handle: "https://www.youtube.com/ScottishRugbyTV"
+        match_on: aliases          # channel also posts club and women's games, so only keep ones naming Scotland
 
   - id: newcastle
     kind: team
