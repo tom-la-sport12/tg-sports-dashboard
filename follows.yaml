@@ -9,6 +9,18 @@
 # match_on: aliases  = only keep videos that name the team or player
 # match_on: all      = keep everything (for a club's own channel)
 
+news_settings:
+  max_per_follow: 10        # most stories kept per team/player each run
+  max_age_days: 7           # older stories are dropped
+  # headlines containing any of these are skipped (not case-sensitive)
+  skip_phrases: ["how to watch", "live stream", "watch online", "tv channel", "what channel",
+                 "free stream", "tickets", "betting", "odds", "best bets", "free bets",
+                 "prediction", "predicts", "tips", "fantasy", "fpl", "opposition opinion",
+                 "quiz", "where to watch"]
+  # outlets to ignore completely, written exactly as they appear on the page
+  blocked_sources: []
+  # you can also add skip_phrases, blocked_sources or max_stories to any single team below
+
 follows:
 
   - id: england-cricket

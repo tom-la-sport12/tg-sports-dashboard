@@ -26,7 +26,6 @@ TSDB = "https://www.thesportsdb.com/api/v1/json/123"  # free key
 ESPN = "https://site.api.espn.com/apis/site/v2/sports/golf/{league}/scoreboard"
 ESPN_LEAGUES = {"pga-tour": "pga", "majors": "pga", "dp-world-tour": "eur"}
 YOUTUBE = "https://www.youtube.com/feeds/videos.xml?channel_id={}"  # no API key needed
-NEWS_PER_FOLLOW = 15
 
 errors = []
 
@@ -82,6 +81,8 @@ def parse_rss(xml_bytes, default_source):
     for item in root.iter("item"):
         title = (item.findtext("title") or "").strip()
         source = (item.findtext("source") or default_source).strip()
+        src_el = item.find("source")
+        site = src_el.get("url", "") if src_el is not None else ""
         # Google News appends " - Source" to titles
         if source and title.endswith(" - " + source):
             title = title[: -len(" - " + source)]
@@ -90,7 +91,7 @@ def parse_rss(xml_bytes, default_source):
             published = parsedate_to_datetime(pub) if pub else None
         except (TypeError, ValueError):
             published = None
-        yield title, (item.findtext("link") or "").strip(), source, published
+        yield title, (item.findtext("link") or "").strip(), source, published, site
 
 
 def google_news(follow, src):
@@ -99,19 +100,19 @@ def google_news(follow, src):
     q = urllib.parse.quote(src["query"])
     url = f"https://news.google.com/rss/search?q={q}&hl={lang}&gl={gl}&ceid={gl}:{hl}"
     out = []
-    for title, link, source, published in parse_rss(get(url), "Google News"):
+    for title, link, source, published, site in parse_rss(get(url), "Google News"):
         if excluded(title, follow):
             continue
         if follow.get("title_must_mention") and not mentions(title, follow):
             continue
-        out.append({"follow_id": follow["id"], "title": title, "source": source,
+        out.append({"follow_id": follow["id"], "title": title, "source": source, "site": site,
                     "url": link, "published_at": iso(published), "lang": hl})
     return out
 
 
 def podcast_rss(follow, src):
     out = []
-    for title, link, _, published in parse_rss(get(src["url"]), src["name"]):
+    for title, link, _, published, _site in parse_rss(get(src["url"]), src["name"]):
         out.append({"follow_id": follow["id"], "title": title, "source": src["name"],
                     "url": link, "published_at": iso(published), "lang": "en", "kind": "podcast"})
     return out[:5]
@@ -292,12 +293,141 @@ def youtube_channel(follow, src):
     return out
 
 
+# ---------- news images ----------
+# Google News links are wrapped, and the feed carries no pictures. To get one we
+# (1) ask Google for the publisher link behind the wrapper, then (2) read that
+# article's og:image. This uses Google's unofficial internal endpoint, so it may
+# break one day; if it does, the page falls back to the outlet's logo.
+
+GN_BATCH = "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+IMAGE_LOOKUPS_PER_RUN = 40
+
+
+def gn_publisher_url(google_url):
+    m = re.search(r"/articles/([^/?]+)", google_url)
+    if not m:
+        return None
+    art = m.group(1)
+    html = get(f"https://news.google.com/rss/articles/{art}?hl=en-GB&gl=GB&ceid=GB:en").decode("utf-8", "ignore")
+    sg = re.search(r'data-n-a-sg="([^"]+)"', html)
+    ts = re.search(r'data-n-a-ts="([^"]+)"', html)
+    if not (sg and ts):
+        return None
+    inner = ('["garturlreq",[["X","X",["X","X"],null,null,1,1,"US:en",null,1,null,null,null,null,null,0,1],'
+             '"X","X",1,[1,1,1],1,1,null,0,0,null,0],"%s",%s,"%s"]') % (art, ts.group(1), sg.group(1))
+    body = "f.req=" + urllib.parse.quote(json.dumps([[["Fbv4je", inner, None, "generic"]]]))
+    req = urllib.request.Request(GN_BATCH, data=body.encode(), headers={
+        **UA, "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"})
+    with urllib.request.urlopen(req, timeout=20) as r:
+        text = r.read().decode("utf-8", "ignore")
+    found = re.search(r'garturlres\\",\\"(https?://[^"\\]+)', text)
+    if found:
+        return found.group(1)
+    parts = text.split("\n\n")
+    if len(parts) > 1:
+        data = json.loads(parts[1])
+        return json.loads(data[0][2])[1]
+    return None
+
+
+def og_image(page_url):
+    req = urllib.request.Request(page_url, headers=UA)
+    with urllib.request.urlopen(req, timeout=12) as r:
+        html = r.read(400_000).decode("utf-8", "ignore")
+    for pat in (r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)',
+                r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image',
+                r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)'):
+        m = re.search(pat, html, re.I)
+        if m:
+            img = m.group(1).replace("&amp;", "&")
+            return urllib.parse.urljoin(page_url, img)
+    return None
+
+
+def add_news_images(news, prev):
+    """Reuse images found on earlier runs; look up a capped number of new ones."""
+    known = {n["url"]: n for n in prev.get("news", []) if n.get("img_tried")}
+    budget = IMAGE_LOOKUPS_PER_RUN
+    for n in news:
+        old = known.get(n["url"])
+        if old:
+            n["article_url"] = old.get("article_url")
+            n["image"] = old.get("image")
+            n["img_tried"] = True
+            continue
+        if "news.google.com" not in n["url"] or budget <= 0:
+            continue
+        budget -= 1
+        n["img_tried"] = True  # don't keep retrying the same article every run
+        try:
+            time.sleep(1)
+            real = gn_publisher_url(n["url"])
+            n["article_url"] = real
+            n["image"] = og_image(real) if real else None
+        except Exception:  # noqa: BLE001  any failure just means no picture
+            n.setdefault("image", None)
+
+
 # ---------- main ----------
 
 NEWS = {"google_news": google_news, "podcast_rss": podcast_rss}
 FIXTURES = {"thesportsdb": thesportsdb}
 EVENTS = {"espn_golf": espn_golf}
 HIGHLIGHTS = {"youtube_channel": youtube_channel}
+
+
+# ---------- news quality ----------
+
+NEWS_DEFAULTS = {
+    "max_per_follow": 10,
+    "max_age_days": 7,
+    "skip_phrases": [],
+    "blocked_sources": [],
+}
+STOP = {"with", "from", "that", "this", "after", "their", "have", "will", "into", "over",
+        "what", "when", "they", "about", "says", "more", "than", "just", "were", "been"}
+
+
+def words(title):
+    return {w for w in re.findall(r"[\w']+", title.lower()) if len(w) >= 4 and w not in STOP}
+
+
+def same_story(a, b):
+    """Two headlines about the same thing: most of the shorter one's key words appear in the other."""
+    wa, wb = words(a), words(b)
+    if not wa or not wb:
+        return False
+    overlap = len(wa & wb) / min(len(wa), len(wb))
+    return overlap >= 0.6
+
+
+def quality_filter(items, follow, settings, filtered):
+    """Drop fluff, blocked outlets, old stories and repeats; keep the newest few."""
+    phrases = [p.lower() for p in settings["skip_phrases"] + follow.get("skip_phrases", [])]
+    blocked = {b.lower() for b in settings["blocked_sources"] + follow.get("blocked_sources", [])}
+    cutoff = datetime.now(timezone.utc).timestamp() - settings["max_age_days"] * 86400
+    cap = follow.get("max_stories", settings["max_per_follow"])
+    items = sorted(items, key=lambda n: n["published_at"] or "", reverse=True)
+    kept = []
+    for n in items:
+        title = n["title"].lower()
+        if any(p in title for p in phrases):
+            filtered["phrase"] += 1
+            continue
+        if n.get("source", "").lower() in blocked:
+            filtered["source"] += 1
+            continue
+        if n.get("kind") != "podcast" and n["published_at"] and datetime.fromisoformat(n["published_at"]).timestamp() < cutoff:
+            filtered["old"] += 1
+            continue
+        if any(norm(n["title"]) == norm(k["title"]) or same_story(n["title"], k["title"]) for k in kept):
+            filtered["duplicate"] += 1
+            continue
+        if len(kept) >= cap:
+            filtered["cap"] += 1
+            continue
+        kept.append(n)
+    return kept
 
 
 def load_previous():
@@ -317,7 +447,10 @@ def load_previous():
 
 
 def main():
-    follows = yaml.safe_load(open("follows.yaml", encoding="utf-8"))["follows"]
+    config = yaml.safe_load(open("follows.yaml", encoding="utf-8"))
+    follows = config["follows"]
+    settings = {**NEWS_DEFAULTS, **(config.get("news_settings") or {})}
+    filtered = {"phrase": 0, "source": 0, "old": 0, "duplicate": 0, "cap": 0}
     prev = load_previous()
     news, matches, highlights = [], [], []
 
@@ -327,16 +460,7 @@ def main():
             if todo(src.get("url", "ok")) or src["type"] not in NEWS:
                 continue
             f_news += run(f, src["type"], NEWS[src["type"]], src)
-        # newest first, drop duplicate headlines across outlets
-        f_news.sort(key=lambda n: n["published_at"] or "", reverse=True)
-        seen = set()
-        for n in f_news:
-            key = norm(n["title"])
-            if key not in seen:
-                seen.add(key)
-                news.append(n)
-                if len(seen) >= NEWS_PER_FOLLOW:
-                    break
+        news += quality_filter(f_news, f, settings, filtered)
 
         fx = f.get("fixtures")
         if fx and not todo(fx.get("team_id")) and fx["provider"] in FIXTURES:
@@ -362,6 +486,7 @@ def main():
     news.sort(key=lambda n: n["published_at"] or "", reverse=True)
     matches = list({(m["follow_id"], m["source_id"]): m for m in matches}.values())
     matches.sort(key=lambda m: m.get("starts_at") or (m.get("dates") or {}).get("start") or "")
+    add_news_images(news, prev)
     # same video can come from two channels' rules (e.g. PGA TOUR for two golfers): keep one per follow
     highlights = list({(h["follow_id"], h["video_id"]): h for h in highlights}.values())
     highlights.sort(key=lambda h: h["published_at"] or "", reverse=True)
@@ -374,6 +499,7 @@ def main():
     }
     with open("data.json", "w", encoding="utf-8") as fh:
         json.dump(data, fh, ensure_ascii=False, indent=1)
+    print("news filtered out: " + ", ".join(f"{v} {k}" for k, v in filtered.items()))
     print(f"news {len(news)} · matches {len(matches)} · highlights {len(highlights)} · errors {len(errors)}")
     for e in errors:
         print(f"  ! {e['follow_id']} / {e['source']}: {e['error']}")

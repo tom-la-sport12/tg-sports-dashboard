@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>mAI sport</title>
+<title>Tom’s sport</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="mAI sport">
+<meta name="apple-mobile-web-app-title" content="Tom’s sport">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="theme-color" content="#F2F4F8" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0B1020" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%233B5BFF'/><text x='32' y='43' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'>mAI</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%233B5BFF'/><text x='32' y='43' font-family='Arial' font-weight='700' font-size='28' fill='white' text-anchor='middle'>TS</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
@@ -65,9 +65,14 @@ img { max-width: 100%; }
 .wrap { max-width: 46rem; margin: 0 auto; padding: 1rem 1rem 4rem; }
 
 /* header */
-.top { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.personalise {
+  display: inline-flex; align-items: center; gap: .4rem; flex: none;
+  border: 1px solid var(--line); background: var(--card); border-radius: 999px;
+  padding: .45rem .8rem; font-size: .85rem; font-weight: 600; cursor: pointer;
+}
 .brand { font: 700 1.6rem/1 var(--body); letter-spacing: -.035em; margin: 0; }
-.updated { color: var(--muted); font-size: .82rem; margin: 0; text-align: right; }
+.updated { color: var(--muted); font-size: .82rem; font-weight: 400; margin-left: .5rem; }
 .today { font: 600 1.05rem/1.2 var(--body); margin: .35rem 0 0; color: var(--muted); }
 
 .notice { margin: .9rem 0 0; padding: .65rem .85rem; border-radius: 12px; background: var(--card); font-size: .88rem; border: 1px solid var(--line); }
@@ -169,6 +174,10 @@ h2 { font: 700 1.2rem/1.2 var(--body); letter-spacing: -.02em; margin: 0; }
 .golf-pos span { display: block; font: 500 .8rem/1.3 var(--body); color: var(--muted); }
 
 /* videos */
+.vgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem .75rem; }
+@media (min-width: 40rem) { .vgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.vgrid .vcard { width: auto; }
+.vgrid .vtitle { font-size: .86rem; }
 .vrail { display: flex; gap: .8rem; overflow-x: auto; scrollbar-width: none; margin: 0 -1rem; padding: 0 1rem .3rem; scroll-snap-type: x mandatory; scroll-padding-inline: 1rem; }
 .vrail::-webkit-scrollbar { display: none; }
 .vcard { flex: none; width: 15.5rem; border: 0; padding: 0; background: none; text-align: left; cursor: pointer; scroll-snap-align: start; }
@@ -180,7 +189,11 @@ h2 { font: 700 1.2rem/1.2 var(--body); letter-spacing: -.02em; margin: 0; }
 .vmeta { margin: .15rem 0 0; font-size: .78rem; color: var(--muted); }
 
 /* news */
-.story { display: block; padding: .8rem 1rem; text-decoration: none; }
+.story { display: grid; grid-template-columns: 1fr 5.6rem; gap: .9rem; align-items: start; padding: .8rem 1rem; text-decoration: none; }
+.story-pic { width: 5.6rem; aspect-ratio: 4 / 3; border-radius: 10px; overflow: hidden; background: var(--raised); display: grid; place-items: center; }
+.story-pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.story-pic img.logo { width: 1.75rem; height: 1.75rem; object-fit: contain; border-radius: 6px; }
+.story-title { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .story + .story { border-top: 1px solid var(--line); }
 .story-title { font-weight: 600; line-height: 1.3; margin: 0; }
 .story-meta { margin: .3rem 0 0; font-size: .78rem; color: var(--muted); }
@@ -230,10 +243,13 @@ dialog.sheet::backdrop { background: var(--scrim); }
 <div class="wrap">
   <header>
     <div class="top">
-      <h1 class="brand">mAI sport</h1>
-      <p class="updated" id="updated">Loading…</p>
+      <h1 class="brand">Tom’s sport</h1>
+      <button class="personalise" id="personalise">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="8" cy="17" r="2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        Personalise
+      </button>
     </div>
-    <p class="today" id="today"></p>
+    <p class="today"><span id="today"></span><span class="updated" id="updated">Loading…</span></p>
   </header>
   <div id="notices"></div>
   <nav class="rail" id="rail" aria-label="Choose who to show"></nav>
@@ -282,6 +298,8 @@ let data = null;
 let filter = "all";
 let tab = "results";
 let newsShown = NEWS_PAGE;
+const VIDEO_PAGE = 8;
+let videosShown = VIDEO_PAGE;
 let fresh = new Set();   // keys of items that are new this visit
 
 const $ = (id) => document.getElementById(id);
@@ -391,7 +409,7 @@ function renderRail() {
     </button>`;
   }).join("");
   $("rail").querySelectorAll(".follow").forEach(b => b.addEventListener("click", () => {
-    filter = b.dataset.id; newsShown = NEWS_PAGE; store.set("mai-filter", filter); render();
+    filter = b.dataset.id; newsShown = NEWS_PAGE; videosShown = VIDEO_PAGE; store.set("mai-filter", filter); render();
   }));
 }
 
@@ -481,21 +499,63 @@ function videoCard(v) {
   </button>`;
 }
 function renderVideos() {
-  const items = data.highlights.filter(keep).slice(0, 20);
+  const items = data.highlights.filter(keep);
+  const shown = items.slice(0, videosShown);
   $("videos").innerHTML = items.length
-    ? `<div class="vrail">${items.map(videoCard).join("")}</div>`
+    ? `<div class="vgrid">${shown.map(videoCard).join("")}</div>${items.length > videosShown ? '<button class="more" id="more-videos">Show more videos</button>' : ""}`
     : `<p class="empty">No videos yet. They appear once YouTube channels are added to follows.yaml.</p>`;
+  const more = $("more-videos");
+  if (more) more.addEventListener("click", () => { videosShown += VIDEO_PAGE; renderVideos(); bindCards($("videos")); });
 }
 
 /* ---------- news ---------- */
+function siteHost(n) {
+  try { return new URL(n.site || n.article_url).hostname; } catch (e) { return ""; }
+}
+function logoImg(n) {
+  const host = siteHost(n);
+  return host ? `<img class="logo" src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(host)}&sz=64" alt="" loading="lazy">` : "";
+}
+function storyPic(n) {
+  if (n.image) {
+    // if the publisher blocks the picture, swap to their logo
+    return `<span class="story-pic"><img src="${esc(n.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" data-logo="${esc(siteHost(n))}"></span>`;
+  }
+  return `<span class="story-pic">${logoImg(n)}</span>`;
+}
+document.addEventListener("error", (e) => {
+  const img = e.target;
+  if (img.tagName === "IMG" && img.classList.contains("logo")) { img.remove(); return; }
+  if (img.tagName === "IMG" && img.dataset && "logo" in img.dataset) {
+    const host = img.dataset.logo;
+    img.parentNode.innerHTML = host ? `<img class="logo" src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(host)}&sz=64" alt="">` : "";
+  }
+}, true);
 function storyRow(n, showTag = true) {
-  return `<a class="story" href="${esc(n.url)}" target="_blank" rel="noopener">
+  return `<a class="story" href="${esc(n.article_url || n.url)}" target="_blank" rel="noopener">
+    <span>
     <p class="story-title">${isNew("news", n) ? '<span class="dot-new" aria-label="New"></span>' : ""}${esc(n.title)}</p>
     <p class="story-meta">${showTag && filter === "all" ? `<span class="chip-tag">${esc(shortName(follow(n.follow_id)))}</span>` : ""}${esc(n.source)}, ${ago(n.published_at)}</p>
+    </span>
+    ${storyPic(n)}
   </a>`;
 }
+// In "All", take turns between teams so one busy matchday doesn't fill the list
+function balanced(list) {
+  const buckets = {};
+  list.forEach(n => (buckets[n.follow_id] = buckets[n.follow_id] || []).push(n));
+  Object.values(buckets).forEach(b => b.sort((x, y) => new Date(y.published_at || 0) - new Date(x.published_at || 0)));
+  const out = [];
+  for (let round = 0; out.length < list.length; round++) {
+    const batch = Object.values(buckets).map(b => b[round]).filter(Boolean);
+    if (!batch.length) break;
+    batch.sort((x, y) => new Date(y.published_at || 0) - new Date(x.published_at || 0));
+    out.push(...batch);
+  }
+  return out;
+}
 function renderNews() {
-  const items = data.news.filter(keep);
+  const items = filter === "all" ? balanced(data.news) : data.news.filter(keep);
   const shown = items.slice(0, newsShown);
   $("news-section").hidden = !items.length && follow(filter).kind === "creator";
   $("news").innerHTML = items.length
@@ -542,8 +602,8 @@ function icsFor(m) {
   const fmt = (d) => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
   const start = new Date(m.starts_at);
   const end = new Date(start.getTime() + 2.5 * 36e5);
-  const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//mAI sport//EN", "BEGIN:VEVENT",
-    `UID:${m.source_id}@mai-sport`, `DTSTAMP:${fmt(new Date())}`, `DTSTART:${fmt(start)}`, `DTEND:${fmt(end)}`,
+  const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Toms sport//EN", "BEGIN:VEVENT",
+    `UID:${m.source_id}@toms-sport`, `DTSTAMP:${fmt(new Date())}`, `DTSTART:${fmt(start)}`, `DTEND:${fmt(end)}`,
     `SUMMARY:${clean(m.home)} v ${clean(m.away)}`, `LOCATION:${[m.venue, m.city].filter(Boolean).join(", ")}`,
     `DESCRIPTION:${m.competition || ""}`, "END:VEVENT", "END:VCALENDAR"];
   return URL.createObjectURL(new Blob([lines.join("\r\n")], { type: "text/calendar" }));
@@ -627,6 +687,14 @@ function bindCards(root = document) {
     location.hash = `video-${b.dataset.video}`;
   });
 }
+
+$("personalise").addEventListener("click", () => openSheet(`
+  <div class="sheet-bar">
+    <p id="sheet-title">Personalise</p>
+    <button class="close" data-close aria-label="Close">×</button>
+  </div>
+  <p class="empty">Coming soon.</p>
+`));
 
 document.querySelectorAll(".seg button").forEach(b => b.addEventListener("click", () => { tab = b.dataset.tab; renderMatches(); bindCards(); }));
 
