@@ -16,8 +16,9 @@ follows:
     kind: team
     sport: cricket
     name: England men
-    aliases: ["England cricket", "England men's cricket", "Three Lions cricket"]
+    aliases: ["England", "England cricket", "England men's cricket"]
     exclude: ["England women", "England Lions", "U19", "Under-19"]
+    title_must_mention: true
     news:
       - type: google_news
         query: '"England" cricket -women -U19'
@@ -42,6 +43,7 @@ follows:
     name: Bath Rugby
     aliases: ["Bath Rugby", "Bath"]
     exclude: []
+    title_must_mention: true
     news:
       - type: google_news
         query: '"Bath Rugby"'
@@ -64,7 +66,8 @@ follows:
     sport: rugby
     name: Union Bordeaux-Bègles
     aliases: ["UBB", "Union Bordeaux-Bègles", "Bordeaux-Bègles", "Bordeaux Bègles"]
-    exclude: []
+    exclude: ["Elite 1", "WXV", "Bleues", "féminine", "féminines", "Espoirs"]
+    title_must_mention: true
     news:
       - type: google_news
         query: '"Bordeaux-Bègles" OR "UBB" rugby'
@@ -90,7 +93,8 @@ follows:
     sport: rugby
     name: Scotland men
     aliases: ["Scotland rugby", "Scotland"]
-    exclude: ["Scotland women", "U20", "Under-20", "Scotland A"]
+    exclude: ["Scotland women", "U20", "Under-20", "Scotland A", "South of Scotland", "club rugby", "Club XV", "clubhouse", "clubhouses"]
+    title_must_mention: true
     news:
       - type: google_news
         query: '"Scotland" rugby -women -U20'
@@ -135,6 +139,7 @@ follows:
     sport: golf
     name: Rory McIlroy
     aliases: ["Rory McIlroy", "McIlroy"]
+    title_must_mention: true
     tours: [pga-tour, dp-world-tour, majors]
     news:
       - type: google_news
@@ -154,6 +159,7 @@ follows:
     sport: golf
     name: Robert MacIntyre
     aliases: ["Robert MacIntyre", "Bob MacIntyre", "Bobby Mac", "MacIntyre"]
+    title_must_mention: true
     tours: [pga-tour, dp-world-tour, majors]
     news:
       - type: google_news
@@ -167,3 +173,4 @@ follows:
         name: PGA TOUR
         channel_id: TODO
         match_on: aliases
+
