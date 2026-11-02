@@ -96,6 +96,8 @@ def google_news(follow, src):
     for title, link, source, published in parse_rss(get(url), "Google News"):
         if excluded(title, follow):
             continue
+        if follow.get("title_must_mention") and not mentions(title, follow):
+            continue
         out.append({"follow_id": follow["id"], "title": title, "source": source,
                     "url": link, "published_at": iso(published), "lang": hl})
     return out
@@ -112,6 +114,7 @@ def podcast_rss(follow, src):
 # ---------- matches ----------
 
 def thesportsdb(follow, fx):
+    now = datetime.now(timezone.utc)
     out = []
     for endpoint in ("eventsnext", "eventslast"):
         data = get(f"{TSDB}/{endpoint}.php?id={fx['team_id']}", as_json=True) or {}
@@ -126,9 +129,14 @@ def thesportsdb(follow, fx):
                 starts = datetime.fromisoformat(ts.replace("Z", "+00:00"))
                 if starts.tzinfo is None:
                     starts = starts.replace(tzinfo=timezone.utc)  # TheSportsDB timestamps are UTC
+            # cricket results come as text, not scores, so also go by date
+            if finished or (starts and starts < now):
+                status = "finished"
+            else:
+                status = "upcoming"
             out.append({
                 "follow_id": follow["id"], "kind": "team", "source_id": e.get("idEvent"),
-                "status": "finished" if finished else "upcoming",
+                "status": status, "result": e.get("strResult") or None,
                 "starts_at": iso(starts), "competition": e.get("strLeague"),
                 "home": e.get("strHomeTeam"), "away": e.get("strAwayTeam"),
                 "score": {"home": int(home), "away": int(away)} if finished else None,
@@ -231,6 +239,7 @@ def main():
             highlights += run(f, src["name"], HIGHLIGHTS[src["type"]], src)
 
     news.sort(key=lambda n: n["published_at"] or "", reverse=True)
+    matches = list({(m["follow_id"], m["source_id"]): m for m in matches}.values())
     matches.sort(key=lambda m: m.get("starts_at") or (m.get("dates") or {}).get("start") or "")
     highlights.sort(key=lambda h: h["published_at"] or "", reverse=True)
 
@@ -248,3 +257,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
