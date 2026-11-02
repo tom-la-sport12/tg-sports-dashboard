@@ -1,0 +1,169 @@
+# What to follow and where to find it. fetch.py reads this.
+# Sources with TODO are skipped until filled in.
+
+follows: what you care about, and where to find it (you edit this)
+#   2. items: the normalised shape every fetcher writes out (the page reads this)
+# TODO = an ID or URL still to look up
+# Hosting: GitHub Pages + scheduled GitHub Action writing data.json
+
+# ---------------------------------------------------------------
+# 1. FOLLOWS
+# ---------------------------------------------------------------
+
+follows:
+
+  - id: england-cricket
+    kind: team
+    sport: cricket
+    name: England men
+    aliases: ["England cricket", "England men's cricket", "Three Lions cricket"]
+    exclude: ["England women", "England Lions", "U19", "Under-19"]
+    news:
+      - type: google_news
+        query: '"England" cricket -women -U19'
+        lang: en-GB
+    fixtures:
+      provider: thesportsdb
+      team_id: "137142"            # men; women are 145688, don't mix up
+    highlights:
+      # rights move with the host nation, so this list changes per series
+      - type: youtube_channel
+        name: England & Wales Cricket Board
+        channel_id: TODO
+        when: home series
+      - type: youtube_channel
+        name: host board for away series
+        channel_id: TODO
+        when: away series
+
+  - id: bath
+    kind: team
+    sport: rugby
+    name: Bath Rugby
+    aliases: ["Bath Rugby", "Bath"]
+    exclude: []
+    news:
+      - type: google_news
+        query: '"Bath Rugby"'
+        lang: en-GB
+    fixtures:
+      provider: thesportsdb
+      team_id: "135199"            # current-season fixtures not yet confirmed
+    highlights:
+      - type: youtube_channel
+        name: Premiership Rugby
+        channel_id: TODO
+        competitions: [Premiership]
+      - type: youtube_channel
+        name: EPCR
+        channel_id: TODO
+        competitions: [Champions Cup]
+
+  - id: ubb
+    kind: team
+    sport: rugby
+    name: Union Bordeaux-Bègles
+    aliases: ["UBB", "Union Bordeaux-Bègles", "Bordeaux-Bègles", "Bordeaux Bègles"]
+    exclude: []
+    news:
+      - type: google_news
+        query: '"Bordeaux-Bègles" OR "UBB" rugby'
+        lang: fr-FR                # kept in French
+      - type: google_news
+        query: '"Bordeaux-Bègles"'
+        lang: en-GB
+    fixtures:
+      provider: thesportsdb
+      team_id: "135329"            # not Stade Bordelais (148370); 2026-27 fixtures showing
+    highlights:
+      - type: youtube_channel
+        name: EPCR
+        channel_id: TODO
+        competitions: [Champions Cup]
+      - type: youtube_channel
+        name: Top 14 rights holder
+        channel_id: TODO           # unknown whether full highlights are on YouTube
+        competitions: [Top 14]
+
+  - id: scotland-rugby
+    kind: team
+    sport: rugby
+    name: Scotland men
+    aliases: ["Scotland rugby", "Scotland"]
+    exclude: ["Scotland women", "U20", "Under-20", "Scotland A"]
+    news:
+      - type: google_news
+        query: '"Scotland" rugby -women -U20'
+        lang: en-GB
+    fixtures:
+      provider: thesportsdb
+      team_id: "137136"            # men; women are 150801
+    highlights:
+      - type: youtube_channel
+        name: Six Nations Rugby
+        channel_id: TODO
+        competitions: [Six Nations]
+      - type: youtube_channel
+        name: Autumn Nations Series
+        channel_id: TODO
+        competitions: [Autumn Nations Series]
+
+  - id: pepperell
+    kind: player
+    sport: golf
+    name: Eddie Pepperell
+    aliases: ["Eddie Pepperell", "Pepperell"]
+    tours: [dp-world-tour, challenge-tour, majors]
+    news:
+      - type: google_news
+        query: '"Eddie Pepperell"'
+        lang: en-GB
+      - type: podcast_rss
+        name: The Chipping Forecast
+        url: TODO
+    events:
+      provider: espn_golf          # unofficial; Challenge Tour likely a gap
+      player_id: "6629"            # from ESPN player page URL
+    highlights:
+      - type: youtube_channel
+        name: DP World Tour
+        channel_id: TODO
+        match_on: aliases          # only keep videos naming him
+
+  - id: mcilroy
+    kind: player
+    sport: golf
+    name: Rory McIlroy
+    aliases: ["Rory McIlroy", "McIlroy"]
+    tours: [pga-tour, dp-world-tour, majors]
+    news:
+      - type: google_news
+        query: '"Rory McIlroy"'
+        lang: en-GB
+    events:
+      provider: espn_golf
+      player_id: "3470"
+    highlights:
+      - type: youtube_channel
+        name: PGA TOUR
+        channel_id: TODO
+        match_on: aliases
+
+  - id: macintyre
+    kind: player
+    sport: golf
+    name: Robert MacIntyre
+    aliases: ["Robert MacIntyre", "Bob MacIntyre", "Bobby Mac", "MacIntyre"]
+    tours: [pga-tour, dp-world-tour, majors]
+    news:
+      - type: google_news
+        query: '"Robert MacIntyre" OR "Bob MacIntyre"'
+        lang: en-GB
+    events:
+      provider: espn_golf
+      player_id: "11378"
+    highlights:
+      - type: youtube_channel
+        name: PGA TOUR
+        channel_id: TODO
+        match_on: aliases
