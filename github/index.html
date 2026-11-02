@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Today’s sport</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏉</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --base: #EEF2EF;
+  --surface: #FFFFFF;
+  --ink: #15231E;
+  --muted: #5D6B65;
+  --line: #D3DBD6;
+  --turf: #1F5C43;
+  --turf-soft: #DCEBE3;
+  --body: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --display: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --base: #0F1A16;
+    --surface: #17251F;
+    --ink: #E8EEEA;
+    --muted: #94A39C;
+    --line: #2A3A33;
+    --turf: #7FC8A0;
+    --turf-soft: #1D3A2D;
+  }
+}
+*, *::before, *::after { box-sizing: inherit; }
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+body {
+  margin: 0;
+  background: var(--base);
+  color: var(--ink);
+  font: 400 1rem/1.45 var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--turf); outline-offset: 2px; }
+
+.wrap { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
+
+header h1 {
+  font: 700 2.6rem/1 var(--display);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+header p { margin: .35rem 0 0; color: var(--muted); font-size: .9rem; }
+
+.notice {
+  margin: 1rem 0 0;
+  padding: .6rem .8rem;
+  border-left: 3px solid var(--turf);
+  background: var(--surface);
+  font-size: .9rem;
+}
+
+/* filter chips */
+.chips {
+  display: flex; gap: .4rem; overflow-x: auto;
+  margin: 1.1rem -1rem 0; padding: 0 1rem .3rem;
+  scrollbar-width: none;
+}
+.chips::-webkit-scrollbar { display: none; }
+.chip {
+  flex: none;
+  font: 500 .9rem/1 var(--body);
+  padding: .5rem .8rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+}
+.chip[aria-pressed="true"] { background: var(--turf); border-color: var(--turf); color: var(--base); }
+
+section { margin-top: 2.2rem; }
+h2 {
+  font: 600 1.35rem/1.1 var(--display);
+  margin: 0 0 .7rem;
+  padding-bottom: .4rem;
+  border-bottom: 2px solid var(--ink);
+}
+.empty { color: var(--muted); font-size: .95rem; margin: .4rem 0; }
+
+/* results: the classified-results read-out */
+.result {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: .75rem;
+  padding: .65rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.line {
+  font: 600 1.55rem/1.15 var(--display);
+  margin: 0;
+}
+.line .score { color: var(--turf); font-weight: 700; padding: 0 .15em; }
+.line .mine { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.text-result { font-size: .95rem; margin: .15rem 0 0; }
+.meta { color: var(--muted); font-size: .85rem; margin: .15rem 0 0; }
+.when { color: var(--muted); font-size: .85rem; text-align: right; white-space: nowrap; }
+
+/* fixtures */
+.fixture {
+  display: grid;
+  grid-template-columns: 5.4rem 1fr;
+  column-gap: .9rem;
+  padding: .6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.date { font: 600 1.05rem/1.1 var(--display); }
+.date span { display: block; color: var(--muted); font: 500 .85rem/1.3 var(--body); }
+.teams { font: 500 1.05rem/1.25 var(--body); margin: 0; }
+
+/* golf */
+.golf {
+  display: grid; grid-template-columns: 1fr auto; column-gap: .75rem;
+  padding: .65rem 0; border-bottom: 1px solid var(--line);
+}
+.pos { font: 700 1.9rem/1 var(--display); text-align: right; }
+.pos span { display: block; font: 500 .85rem/1.3 var(--body); color: var(--muted); }
+
+/* highlights */
+.videos { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; }
+.video button {
+  display: block; width: 100%; padding: 0; border: 0; cursor: pointer;
+  aspect-ratio: 16 / 9; background: var(--line) center / cover no-repeat;
+  border-radius: 6px; position: relative;
+}
+.video button::after {
+  content: ""; position: absolute; inset: 50% auto auto 50%;
+  width: 3rem; height: 3rem; margin: -1.5rem 0 0 -1.5rem; border-radius: 50%;
+  background: rgba(0,0,0,.6) url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9 7v10l8-5z'/></svg>") center / 60% no-repeat;
+}
+.video iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 6px; display: block; }
+.video p { margin: .4rem 0 0; font-size: .95rem; line-height: 1.3; }
+
+/* news */
+.story { padding: .65rem 0; border-bottom: 1px solid var(--line); }
+.story a { text-decoration: none; font-weight: 500; font-size: 1.02rem; line-height: 1.3; }
+.story a:hover { text-decoration: underline; }
+.tag {
+  display: inline-block; font-size: .78rem; font-weight: 600;
+  padding: .1rem .45rem; margin-right: .35rem; border-radius: 4px;
+  background: var(--turf-soft); color: var(--turf);
+}
+.more {
+  margin-top: 1rem; font: 500 .95rem/1 var(--body);
+  padding: .65rem 1rem; border-radius: 6px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .chip, .more { transition: background-color .15s, color .15s; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1 id="today">Today’s sport</h1>
+    <p id="updated">Loading…</p>
+  </header>
+  <div id="notices"></div>
+  <nav class="chips" id="chips" aria-label="Filter by team or player"></nav>
+
+  <section id="results-section"><h2>Results</h2><div id="results"></div></section>
+  <section id="golf-section"><h2>Golf this week</h2><div id="golf"></div></section>
+  <section id="fixtures-section"><h2>Coming up</h2><div id="fixtures"></div></section>
+  <section id="highlights-section"><h2>Highlights</h2><div id="highlights"></div></section>
+  <section id="news-section"><h2>News</h2><div id="news"></div></section>
+</div>
+
+<script>
+const RESULT_DAYS = 14;   // how far back results go
+const NEWS_PAGE = 20;
+const STALE_HOURS = 12;
+
+let data = null;
+let filter = "all";
+let newsShown = NEWS_PAGE;
+
+try { filter = localStorage.getItem("filter") || "all"; } catch (e) {}
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+function label(f) {
+  // "England men" + cricket -> "England cricket"
+  return f.name.endsWith(" men") ? `${f.name.slice(0, -4)} ${f.sport}` : f.name;
+}
+function shortLabel(id) {
+  const f = data.follows.find(x => x.id === id);
+  return f ? label(f) : id;
+}
+function clean(team) {
+  return (team || "").replace(/ (Rugby|Cricket)$/, "");
+}
+function day(iso, withTime = true) {
+  const d = new Date(iso);
+  const opts = { weekday: "short", day: "numeric", month: "short" };
+  const date = d.toLocaleDateString("en-GB", opts);
+  return withTime ? { date, time: d.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" }) } : { date };
+}
+function ago(iso) {
+  if (!iso) return "";
+  const mins = Math.round((Date.now() - new Date(iso)) / 60000);
+  if (mins < 60) return `${Math.max(mins, 1)} min ago`;
+  const hrs = Math.round(mins / 60);
+  if (hrs < 24) return `${hrs} hr ago`;
+  const days = Math.round(hrs / 24);
+  return days === 1 ? "yesterday" : `${days} days ago`;
+}
+const keep = (item) => filter === "all" || item.follow_id === filter;
+
+function renderChips() {
+  const ids = ["all", ...data.follows.map(f => f.id)];
+  if (!ids.includes(filter)) filter = "all";
+  $("chips").innerHTML = ids.map(id => `
+    <button class="chip" data-id="${id}" aria-pressed="${id === filter}">
+      ${id === "all" ? "Everything" : esc(shortLabel(id))}
+    </button>`).join("");
+  $("chips").querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+    filter = b.dataset.id;
+    newsShown = NEWS_PAGE;
+    try { localStorage.setItem("filter", filter); } catch (e) {}
+    render();
+  }));
+}
+
+function sectionFor(id, hasItems) {
+  // hide sport-specific sections when the filter can't have anything in them
+  const f = data.follows.find(x => x.id === filter);
+  const golfOnly = f && f.sport === "golf";
+  const teamOnly = f && f.kind === "team";
+  if (id === "golf-section") $(id).hidden = teamOnly;
+  if (id === "results-section" || id === "fixtures-section") $(id).hidden = golfOnly;
+}
+
+function renderResults() {
+  const cutoff = Date.now() - RESULT_DAYS * 864e5;
+  const items = data.matches
+    .filter(m => m.kind === "team" && m.status === "finished" && keep(m) && new Date(m.starts_at) >= cutoff)
+    .sort((a, b) => new Date(b.starts_at) - new Date(a.starts_at));
+  sectionFor("results-section");
+  $("results").innerHTML = items.length ? items.map(m => {
+    const name = shortLabel(m.follow_id).split(" ")[0].toLowerCase();
+    const mark = (t) => clean(t).toLowerCase().includes(name) ? `<span class="mine">${esc(clean(t))}</span>` : esc(clean(t));
+    const line = m.score
+      ? `${mark(m.home)} <span class="score">${m.score.home}</span> ${mark(m.away)} <span class="score">${m.score.away}</span>`
+      : `${mark(m.home)} v ${mark(m.away)}`;
+    return `<div class="result">
+      <div>
+        <p class="line">${line}</p>
+        ${!m.score && m.result ? `<p class="text-result">${esc(m.result)}</p>` : ""}
+        <p class="meta">${esc(m.competition || "")}</p>
+      </div>
+      <div class="when">${day(m.starts_at, false).date}</div>
+    </div>`;
+  }).join("") : `<p class="empty">No results in the last ${RESULT_DAYS} days.</p>`;
+}
+
+function renderFixtures() {
+  const items = data.matches
+    .filter(m => m.kind === "team" && m.status === "upcoming" && keep(m))
+    .sort((a, b) => new Date(a.starts_at) - new Date(b.starts_at));
+  sectionFor("fixtures-section");
+  $("fixtures").innerHTML = items.length ? items.map(m => {
+    const d = day(m.starts_at);
+    return `<div class="fixture">
+      <div class="date">${d.date}<span>${d.time}</span></div>
+      <div>
+        <p class="teams">${esc(clean(m.home))} v ${esc(clean(m.away))}</p>
+        <p class="meta">${esc(m.competition || "")}${m.venue ? `, ${esc(m.venue)}` : ""}</p>
+      </div>
+    </div>`;
+  }).join("") : `<p class="empty">No fixtures found.</p>`;
+}
+
+function renderGolf() {
+  const items = data.matches.filter(m => m.kind === "golf" && keep(m));
+  sectionFor("golf-section");
+  $("golf").innerHTML = items.length ? items.map(m => {
+    const status = { upcoming: "Starts soon", in_progress: m.round ? `Round ${m.round}` : "In progress", finished: "Finished" }[m.status] || "";
+    return `<div class="golf">
+      <div>
+        <p class="teams">${esc(shortLabel(m.follow_id))}</p>
+        <p class="meta">${esc(m.event || "")}, ${status}</p>
+      </div>
+      <div class="pos">${esc(m.position || "")}<span>${esc(m.to_par ?? "")}</span></div>
+    </div>`;
+  }).join("") : `<p class="empty">None of your golfers is in a field this week.</p>`;
+}
+
+function renderHighlights() {
+  const items = data.highlights.filter(keep).slice(0, 8);
+  $("highlights").innerHTML = items.length
+    ? `<div class="videos">${items.map(h => `
+      <div class="video">
+        <button data-id="${esc(h.video_id)}" aria-label="Play ${esc(h.title)}"
+          style="background-image:url('https://i.ytimg.com/vi/${esc(h.video_id)}/hqdefault.jpg')"></button>
+        <p>${esc(h.title)}</p>
+        <p class="meta">${esc(h.channel)}, ${ago(h.published_at)}</p>
+      </div>`).join("")}</div>`
+    : `<p class="empty">No highlights yet. They appear once YouTube channel IDs are added to follows.yaml.</p>`;
+  $("highlights").querySelectorAll(".video button").forEach(b => b.addEventListener("click", () => {
+    const f = document.createElement("iframe");
+    f.src = `https://www.youtube-nocookie.com/embed/${b.dataset.id}?autoplay=1`;
+    f.allow = "autoplay; encrypted-media; picture-in-picture";
+    f.allowFullscreen = true;
+    b.replaceWith(f);
+  }));
+}
+
+function renderNews() {
+  const items = data.news.filter(keep);
+  const shown = items.slice(0, newsShown);
+  $("news").innerHTML = items.length ? shown.map(n => `
+    <div class="story">
+      <a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>
+      <p class="meta">${filter === "all" ? `<span class="tag">${esc(shortLabel(n.follow_id))}</span>` : ""}${esc(n.source)}, ${ago(n.published_at)}</p>
+    </div>`).join("") + (items.length > newsShown ? `<button class="more" id="more">Show more news</button>` : "")
+    : `<p class="empty">No news found.</p>`;
+  const more = $("more");
+  if (more) more.addEventListener("click", () => { newsShown += NEWS_PAGE; renderNews(); });
+}
+
+function render() {
+  renderChips();
+  renderResults();
+  renderGolf();
+  renderFixtures();
+  renderHighlights();
+  renderNews();
+}
+
+async function load() {
+  $("today").textContent = new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
+  try {
+    const res = await fetch(`data.json?t=${Date.now()}`, { cache: "no-store" });
+    if (!res.ok) throw new Error(res.status);
+    data = await res.json();
+  } catch (e) {
+    $("updated").textContent = "Couldn’t load data.json. Check the fetch workflow has run at least once.";
+    return;
+  }
+  $("updated").textContent = `Updated ${ago(data.generated_at)}`;
+  const notes = [];
+  if ((Date.now() - new Date(data.generated_at)) / 36e5 > STALE_HOURS)
+    notes.push("This data is more than 12 hours old. Check the Actions tab on GitHub for a failed run.");
+  if (data.errors.length)
+    notes.push(`${data.errors.length} source${data.errors.length > 1 ? "s" : ""} failed on the last run: ${data.errors.map(e => `${shortLabel(e.follow_id)} (${e.source})`).join(", ")}.`);
+  $("notices").innerHTML = notes.map(n => `<p class="notice">${esc(n)}</p>`).join("");
+  render();
+}
+load();
+</script>
+</body>
+</html>
