@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-02T16:32:09.918703+00:00",
+ "generated_at": "2026-11-02T16:59:13.081942+00:00",
  "follows": [
   {
    "id": "england-cricket",
@@ -46,19 +46,11 @@
  ],
  "news": [
   {
-   "follow_id": "scotland-rugby",
-   "title": "South of Scotland draft in ex-Samoan international Opeta Palepoi as assistant coach after Kelso rugby legend Ross Ford answers country’s call",
-   "source": "The Southern Reporter",
-   "url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxQUERqM09LWHhvalRUZU1DSjlPeE9yYklULVZkMUJZZ0lrT3FhZHk3b09TWmdWZlFTSHBLSjBBRmNnN29QWTc3WlJDbWhhWldkcnZ6M3pMbGlEUDBhd0NfM3RUQ09aTHB6V3Bab1UyLXhLMkh3Q2VWT01hU1NUYkNfeTNfTWdJQUh6T3F1bF9qeU9KRV9ZM1NnNTlZVWkzOVBVd1kwRTRoWnBYNWtONEo4NExLdC04Z1prc2F2Ql9RemY0d2NQZDZ6ODFMTXhfbUdXYXFUbWdad0FCZ0l2NDVzNFdPSzRpdmpQMWN3SnRVYUlFZUQxRThtMmkyR2hobThBSHhXVnJFdTBGbXhnX0lfczVwbWVfSGRaeVozZDk4MVp1S240WXZWX1JrSEM?oc=5",
-   "published_at": "2026-11-02T16:21:00+00:00",
-   "lang": "en"
-  },
-  {
-   "follow_id": "ubb",
-   "title": "This Week On FloRugby: Nov. 2-8, 2026 Rugby Schedule",
-   "source": "FloRugby",
-   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPM3A5UFpfSHJqU1U1aHJJYlV2ak95Qml5czNsZXlQQzFCdUNVQW9KbnpRZGNxcXNVLTVGUHJ3a3R1REVSU2dXYTBTNXhIdVE3N1VKR1d3MXhwM3FtMXpNMWsybjlBSWZTZWI5SEZTRV9ESjJuTUxVa01JZ3dwbTVNTGpBb01ESjBULV9iekhGR1NUWmd1T3Rr?oc=5",
-   "published_at": "2026-11-02T16:16:40+00:00",
+   "follow_id": "england-cricket",
+   "title": "View From My Seat | England cricketer James Coles",
+   "source": "West Ham United",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQRmJ2UThOTkRqV3hFRDR3a0JRUGxrLTY1ek1JVlFmU3JCdV9Od09iNkp2cUJaZ3VaTXdOQ1l5bjMyVDVYaEdjcHNvcG5pUGE2SjhJMDMtcXdxdDVUTmtKakNlWUFOaU96NFFVS2NOTi15VUU1R1dNN01mZEI4QnJ6RlRLcmNVUU0?oc=5",
+   "published_at": "2026-11-02T16:03:33+00:00",
    "lang": "en"
   },
   {
@@ -67,22 +59,6 @@
    "source": "Yahoo Sports",
    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPOVg2cHZSVEFqZ1UybmctN0h1aHI5U1g3bkZ3QnViSkx0dnZycnJrR0I3ckxKMGJZWDlXZ3FZdTVZZWFCR1FwZlRUeDgxUWVLSDUzVGQwVjJsNWxZMlJybllveTJoclBSaklBM05KNXVQNTI0cEEtdmZuZjhSQ0Y2Q1JhUm51MHM?oc=5",
    "published_at": "2026-11-02T15:36:55+00:00",
-   "lang": "en"
-  },
-  {
-   "follow_id": "ubb",
-   "title": "Louis Favrau prolonge jusqu'en 2030 !",
-   "source": "Union Bordeaux Bègles",
-   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQY3RWeTF2ZDk5V3JQMWNUUW5zTFNYWjdONlJ4THYyeFdDM0s2WHRuSElEeHdzUjVRTlhHZjBmTEVYeXFDNER5aTMwQkRSZnVGcVo4Z3h0dllhelgzd2xDYndhTnVRSWt3TTAtenRZRFBZSDBkWF9LX1dLUmZ1OVY2dnlKR09QOUtWeFE?oc=5",
-   "published_at": "2026-11-02T15:30:00+00:00",
-   "lang": "fr"
-  },
-  {
-   "follow_id": "england-cricket",
-   "title": "View From My Seat | England cricketer James Coles",
-   "source": "West Ham United",
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQRmJ2UThOTkRqV3hFRDR3a0JRUGxrLTY1ek1JVlFmU3JCdV9Od09iNkp2cUJaZ3VaTXdOQ1l5bjMyVDVYaEdjcHNvcG5pUGE2SjhJMDMtcXdxdDVUTmtKakNlWUFOaU96NFFVS2NOTi15VUU1R1dNN01mZEI4QnJ6RlRLcmNVUU0?oc=5",
-   "published_at": "2026-11-02T15:05:16+00:00",
    "lang": "en"
   },
   {
@@ -142,22 +118,6 @@
    "lang": "en"
   },
   {
-   "follow_id": "ubb",
-   "title": "Elite 1 : Large défaite à Toulon",
-   "source": "Union Bordeaux Bègles",
-   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQd21WRlVvaWpIZHRvcGJqNl9fUEVDNHBoSF9JNnhCbXBDWEduajhBUXpXZWNseWlONEdFWm1CYTdYT3AtZ0pseUtLTURHS05YWHdaeC1aOWhZalpkSWp3eC1QaUw0VW9tQW9faUdTTGtxMUdKNkhWNDlHUzNHbDQyRkRpbw?oc=5",
-   "published_at": "2026-11-02T13:15:00+00:00",
-   "lang": "fr"
-  },
-  {
-   "follow_id": "mcilroy",
-   "title": "Andrew Novak Jumps 32 Places to No. 58 as Yuto Katsuragawa Soars in Race to Dubai",
-   "source": "www.golfpost.com",
-   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOSzZwMmwwb3ZhLWdObXJwQ3RxQ0JMVm5ITzl1d01TRkhWbDdnbndXN2FQNTdoT3duVUVCbWxaNTZKaEdZSDNpM2lHRWVPVnNMWWJQakJxWDRRa3I2Z3RiYkRPaWN2NXJ6ZWZmSFRVeXh5TmRhUWduT1QxcWVpa2Vfam1QYnMwREZTeEhOODBqRGtnaGRiWWJ2X2J6eGZOQ3lZaDg1VHktY0lIUGZLVEJEcDRSakdEMVU?oc=5",
-   "published_at": "2026-11-02T13:02:31+00:00",
-   "lang": "en"
-  },
-  {
    "follow_id": "mcilroy",
    "title": "McIlroy, Scheffler bring back Optum Golf Channel Games",
    "source": "Sports Business Journal",
@@ -190,38 +150,6 @@
    "lang": "en"
   },
   {
-   "follow_id": "mcilroy",
-   "title": "Abu Dhabi Aldar Championship 2026 preview, picks & analysis",
-   "source": "Golfshake.com",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPcUc3ZUJraUc1ZUpZY1U4R21JRlVudXBraUVEOGh5d28tNnJyWmVlVTE4ZGMxWGlfUkdaYXprTHVyUUw1RkVYeVpwbDVjZllzVkdKRDY2bmx1NmtxMDJWdXFBX21TcHNvdjRJR29xUlE0T0tEVno1a0tZdXQ4QmZ0Sm80TU5QeE92aGR0bWs2UHJQYXFjbGtOMTI3UDh5MldzbkxtMjVB?oc=5",
-   "published_at": "2026-11-02T11:44:17+00:00",
-   "lang": "en"
-  },
-  {
-   "follow_id": "england-cricket",
-   "title": "Bazball returns to Perth after Ashes disaster",
-   "source": "The West Australian",
-   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOU2UxUjVJZHMzNXJzc045dWp0V3ZHZEwzZm1CVHc4Xzg3N1ROQXpsak5fRnJWV3BYS0NjdkFTdHlDTE1HVm9LNVRzV2RKeFFHdng3U210Ul9yNHd1UjZtV29QS2VHWC14UnFianNHRjdaQ1k4OWpwNTdLU3AyV2xZN2czTUxlSXFqckRJSXlhUWZ5Vks0YXRQbXo2QTBCVjlYN0RtVW1OeXpNOGUwdm5ScDVCQjJBY1ZLSkE?oc=5",
-   "published_at": "2026-11-02T11:43:00+00:00",
-   "lang": "en"
-  },
-  {
-   "follow_id": "mcilroy",
-   "title": "Abu Dhabi Championship 2026: Full field, prize money and some huge names pulling out",
-   "source": "Golfmagic",
-   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOTjkweDJjMDJ6cGJGal9udzFzTjVCWGxCZXFGUFFpNld1eDMxOHFQQVl2cGtydVJzRllRSGs5Y1dDeFB0c1p6aW1nbXpOM1p1VVJYSmVTZGF4OUMxNUg2QkhncGFkVjQzd2ROM2p4cmdkNlRvb25aZVVaWEVmRlI2Uk1RdGNqUXUySkdUMHRrV1J1ekVockRXV2tJRjV4bTJmRGc?oc=5",
-   "published_at": "2026-11-02T10:30:48+00:00",
-   "lang": "en"
-  },
-  {
-   "follow_id": "mcilroy",
-   "title": "Abu Dhabi Championship field plus tee times and prize money as stars opt out",
-   "source": "talkSPORT",
-   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNSUJtdGdYbFNEaEV4Mll5OUFHemI2ZndqTDJvQjZLRWpMWXBDcVFaOG5sNnhiOUpsSzU0MzNGa1p4MWtvbXpXeTlGT0R1RDF5YzlqX1ZhR2RRQmJVRnFNOUY2bVpMMFBEV1U3dUdQRFktRnBQZTBkNGEyLVMyMGJldGR5U3ZWQy1xMi1EeVB3eXpySnVTTkE?oc=5",
-   "published_at": "2026-11-02T10:28:20+00:00",
-   "lang": "en"
-  },
-  {
    "follow_id": "bath",
    "title": "Highlights: Bath Rugby vs Sale Sharks - Round 5",
    "source": "PREM Rugby",
@@ -243,22 +171,6 @@
    "source": "Bath Echo",
    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOU2Z3WEZkdG14Z3B5MHdlYU1BT2FZYklUWmhkVHBJRFZQVUx1RjRsR2hKM19XeGFKdnFkX1RCdTEyRGJWSXh3b2h0REFJQjFxTW5FQ1htWGx4MnFBOFpoWE1fZzIwcFZEX2h0LVFZTFJMS0RWS01iNmQ4ZGdUMGZtNldwQ2Y3Smc0ZDVV?oc=5",
    "published_at": "2026-11-02T09:02:10+00:00",
-   "lang": "en"
-  },
-  {
-   "follow_id": "ubb",
-   "title": "WXV Global Series : les Bleues s'inclinent encore face aux Black Ferns",
-   "source": "Union Bordeaux Bègles",
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQc3dGYWhmckxZcVZ0SWFKczFMMUdtRHBzT0FwaDBZQm1wUFZVVjgyUExPbjZ6RjJNeDFTZS1zNHY5SnM4RFVrRDJqX3BNTVd3Z080dEJ0eElHbzVqeHdOR2dkU3VBUVQ4em9NcW9fMUxqYVBnb3YyQUVFVEdNOERqa2JCcHhJQWRCNXVjaUlEcWFOQndXTlIzaGpua1pwU05zd1NfSzk3djhhVTBhdVNvdFRRb3NxZw?oc=5",
-   "published_at": "2026-11-02T09:00:00+00:00",
-   "lang": "fr"
-  },
-  {
-   "follow_id": "scotland-rugby",
-   "title": "Scotland club rugby XV coach Scott Wight hoping to get third time lucky v Irish",
-   "source": "The Southern Reporter",
-   "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOaVpKeGdOZmNOV1lfR2pRZDIwZE1UVjZxcEdkcDE5SmFGTW5qNFpCOVJ3RXQtRWE1V05ZRFFKME01Z0J4N251d0tPbVJQUlhCbnFiNXFGYXhDenF0RXpqc1Fjc2xwT2d1SGdjMDd4OVp3THNRVU4xSEc3dVBsUE41Z1paTkxwT0Y2LWI0YzlWOVJnUFFOZTJjMFNPQkhFZXJTWW40X0h4eVN0WklyZThOakNKcmtnX3dtT29QRWNxVmowSm1xUWU0cDZvWDJldllUM2tzWk92b1N3bm8?oc=5",
-   "published_at": "2026-11-02T08:58:00+00:00",
    "lang": "en"
   },
   {
@@ -318,36 +230,12 @@
    "lang": "en"
   },
   {
-   "follow_id": "england-cricket",
-   "title": "Cricket Australia name squads for white-ball series against England, Mahli Beardman set for ODI debut",
-   "source": "India TV News",
-   "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOSlBGbDhtd0ItNlJPeml2aGlYTmRvMmwwekhNa2lfYmZQaFFhc1MtYk5YN0RFeEpMclJpVHFTVll3bGd0Zm5DYWNfeFVRSTJGSnhlZndFNnpzN2pQalhVSHpuUlJfU2d6cGZyZUxzRG5sUnpoa1VCVTExWnNiUS1BN3ZKcFlvRUVtX1d3THRVMU02NTdJV0sycEMzM3EzWWl3dnYxWTE2Vjc2R3gyZU14b0dUTW5icExJTWR1b1VJZW1LXy1BVWVIek4tYUIxeGtOYl81TmZ3MTNOd203RVVOYlUwd2k2TkVDbjBOX1g4RVpOcXI10gH6AUFVX3lxTE9valRaTXZ2NGR4cVo0eDNHOFRFbkt5T3NRU0hwZHU0UWVkU0M2dEVHSVJsd0d3LWtySEdJQ3FlNVh0TEVQVlp5Y1B0VUdZS01BVkh2aUpMbW14MHF6d0tJOXU3dFVOYW9NT08xZzhsX2tmVTlLcEUzdnVFaHV2Q2tvWS00OVg4RnV1aGdfVFNyUVNnNTAtbDVNblZlOWUyZHpIb0JDWDdBNDVpRGh6NHBnX29ZMUE1SmQzZmpMakdkSWZiSmhCR21MVWJ1SllhWEdKMHpFVGdkYy0zZ0VNUTlVa0JnaXA2RFJzRzEzcTZEV1FjOWtWaXM4eFE?oc=5",
-   "published_at": "2026-11-02T06:46:38+00:00",
-   "lang": "en"
-  },
-  {
-   "follow_id": "england-cricket",
-   "title": "How South Africa beat Australia - eight key takeaways",
-   "source": "Cricket365",
-   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQMlUwd1JhcFNSWEFNZkVwSlR0QzNMNHVLaXlwMHJrMnFlMmctRndwSmFWeXluS0ZhRWxlZ2c3N2lNTUx6WVhsbHp2by1zSVNBNjJrakhFUGpvc042cjMyMWR5cWNhb3NrNkhfWWR4cjBaQmd5RUFxQ0NIMnpVOGwzek9qY2ZjMVFjbnc?oc=5",
-   "published_at": "2026-11-02T06:43:04+00:00",
-   "lang": "en"
-  },
-  {
    "follow_id": "ubb",
    "title": "L’UBB reste seconde de Top 14",
    "source": "Rugby Scapulaire",
    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBxX3RWODQ0OVRxR1drZDY2YnpYV1RHUElGOGtONjF2T2VEd0l4Ql9aWWk3WmcxTTdPUzQ3d3NNUXI4SGlrNzdoaUxKWE1nUVlINUF1bm85cTlDVnEtdjhudnJmSlBKMEw5ZFdiQTFnTWh1UGQyMTFQMGROM1FuQQ?oc=5",
    "published_at": "2026-11-02T06:00:04+00:00",
    "lang": "fr"
-  },
-  {
-   "follow_id": "england-cricket",
-   "title": "Australia name squads for white-ball series against England",
-   "source": "The Indian Sun",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQWlExQ1BmSzZfeDI1aFlOcUlxSVotUHNQcGhWZG5FOV9NdmlHVlJSZDVyNV9aZ3hVZTF3Y3BpTWZLamdPd3NsNHVOdkM5TlZlRXY5QWc5SDhZYWZMb3l5WEQxUXkzYVpGanNxZ0NUUEFVRjVxVEplR21JRE1DeEhQRHdBY3FsNVhFVkxHVlkzSmVPYTcyNE96dTBKTlFodndfWEZhUzZ3?oc=5",
-   "published_at": "2026-11-02T06:00:01+00:00",
-   "lang": "en"
   },
   {
    "follow_id": "macintyre",
@@ -359,10 +247,10 @@
   },
   {
    "follow_id": "england-cricket",
-   "title": "Australia Rest Key Test Players for England ODI and T20 Series",
-   "source": "https://www.businesstimes-bd.com/",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAwMnktRHJzUTlzc2o4UHpGdDlSRlV4V2QxYTlzUVJPbFF4MXFUZkNnV0N4Q0xSR3IwbGFxbVNraDBuZ0FGdk8xYlNvUEcycWp5RjJMVG4zNWd2VU40eGwyeUFfWQ?oc=5",
-   "published_at": "2026-11-02T05:41:57+00:00",
+   "title": "Australia Test captain Pat Cummins to miss upcoming England matches",
+   "source": "The Guardian",
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNMGJZQVQxQ19qdzNHU2ZubzBfNVRyMi1NOHJPelBPZFBhV0c1RnVQYWFyVDlMSGk2NzVyQTIweGpoV2hYUkFkS1JoV0JBTV82ZUtFNW5ONmpwQjA4aHRzaHc5eXpDS1pJSWtzZ2hVOXZ2OGZiTXdTUU1QbVp6TThpMEZ6Q0tnWVZrSHB1aEl5ZVNyN05GYTJ5NHU2VjJpQ2c1M2NKMTBVaDdTWjB3ZE5qODJHYw?oc=5",
+   "published_at": "2026-11-02T05:42:00+00:00",
    "lang": "en"
   },
   {
@@ -379,14 +267,6 @@
    "source": "Connected to India",
    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNd2JuRFJvZVJDZjBrdGhmN2FGdTF2WUFnNFZJRTcwb3lnUkk4SXM4RXlsT2dGNndVczhqNkI1ek5YcS0wTXFCajNYWnFKTE93S2FjTDhuZnJLRnQwNjdHQk8yV3BrcEVUNC1mYWF6QVJCYWhCR1V6TmFfazNDT1FyNUlickEwdzhWQnlybGg5NlIwT191cnZoSUFOV0ZNZTliYTBiOVE3aw?oc=5",
    "published_at": "2026-11-02T04:38:56+00:00",
-   "lang": "en"
-  },
-  {
-   "follow_id": "england-cricket",
-   "title": "Australia Announce Squads For England White-Ball Series; Cummins, Starc And Hazlewood Rested, Youngsters Get Chance",
-   "source": "myKhel",
-   "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNNmF2TUpELWxqdGtlbTl4VFpiaWRfY2NtQnZ3R2VNbzluWlRTY3pFTWltRmJhdWxYSnd4T2xqdW1UYVVzWExiRzdTc1hiN3FvdkZGZHM0c2drRXBEYjlma3NvX3FJbGktVWhiLVJOdkhIb3hCUGd1bU5EcS03Sk5kTFltWV9iaUtPeG5BQlJGYThBejZVc2VocFBDZW5Vcm1KS1hFQ3NOZzF5c256SlRDc05hQmlwY20xdWhlOVNieVNXNWF0YkhCOA?oc=5",
-   "published_at": "2026-11-02T04:23:04+00:00",
    "lang": "en"
   },
   {
@@ -415,18 +295,10 @@
   },
   {
    "follow_id": "england-cricket",
-   "title": "Australia rest Cummins, Starc, Hazlewood for England white-ball series",
-   "source": "The News Mill",
-   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOZGVJb1JvNGlES3BGbkJfUDhadjNQeDVFX25aNi1SdG5JdDlOWnpYRnk1bG93OFhSZldPQmVIdjZwWXItc0o3b2g1NXczdll2WktjUkM4VlFfNzBCamlWOFRXS1BwbW04NXp2LWhEMW1qQmVDdzB2dXI5VC1RSU5VMVF6S1BWakVhbXlTZ2c2SDlMTHdrc1lwY3QyZEU4eWZNNS1v?oc=5",
-   "published_at": "2026-11-02T02:52:55+00:00",
-   "lang": "en"
-  },
-  {
-   "follow_id": "england-cricket",
-   "title": "Bolters galore as Australia unveil new-look squads in mega WC audition",
-   "source": "Fox Sports",
-   "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxQUFVnNHBSbmVnbjhfUVN1NHlHUUZMN1VGVHVQVEVFakZKeFdxUWJaamtFenZjcmoyNkY2N19UelhxYUtxenJPV3h3SUpSV0NJUGdhVEwxNmpfTllxbEh4ZTRFWkFVakU4emEtRzh2cVBlbjNURllZUG0teHU2aHJoTUFLeEhURmNldkU3bWhpQ3dxVEpxM3l2ZDgwb3pPREhobTFNUFkxWmdPSFhlc2xOMU82ZF9acFg5ZC1xSzVvaGRwSFdmWk5SUlN0cjZ2bnpOanc2TWkzRUxZbzlvS3J6aC14UXJWNkZ5WXdla0xnamRRUGJ3aWtaajZ0MVhPZVREX2pzUVRZZl9leDlJajc2SnNsSktCTDFzVWdhd1ExVUFtVlJPVktxYXdmWVdjdVpiN3I2amcxcXlmRFXSAbsCQVVfeXFMUFBVZzRwUm5lZ244X1FTdTR5R1FGTDdVRlR1UFRFRWpGSnhXcVFiWmprRXp2Y3JqMjZGNjdfVHpYcWFLcXpyT1d4d0lKUldDSVBnYVRMMTZqX05ZcWxIeGU0RVpBVWpFOHphLUc4dnFQZW4zVEZZWVBtLXh1NmhyaE1BS3hIVEZjZXZFN21oaUN3cVRKcTN5dmQ4MG96T0RIaG0xTVBZMVpnT0hYZXNsTjFPNmRfWnBYOWQtcUs1b2hkcEhXZlpOUlJTdHI2dm56Tmp3Nk1pM0VMWW85b0tyemgteFFyVjZGeVl3ZWtMZ2pkUVBid2lrWmo2dDFYT2VURF9qc1FUWWZfZXg5SWo3NkpzbEpLQkwxc1VnYXdRMVVBbVZST1ZLcWF3ZllXY3VaYjdyNmpnMXF5ZkRV?oc=5",
-   "published_at": "2026-11-02T02:51:16+00:00",
+   "title": "Australia selects Renshaw and Green for England ODI series; Starc, Hazlewood, Cummins rested",
+   "source": "Toronto Star",
+   "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOOWpTSE8yenlXekxzTzlyd21NYjlJbk10b0pWYUxnR3Q2MkFiX085dHgwY1lzZnFPMVdreE1jNFAxaTk2anlCWUp3SHhlZFVhTC1HSERncndPZGllN3AxczhXREVZRzVmcnNJb1BzSm9jNHZNbWFWNHhFMHJmQ3g3M3c5Mm5PdVl6QzBHcG5jQUtoZVNlSkVZQTNWaFY1U2tJa1ozWjNpWHNjTWg1UGFMMnQzSFdvXzVVNXVrM2FiaG45VmxoZnBmYk8yeTRMbU5LeWtwSElqcXA4Z3pLVlBXN0NsWWhlTDJvTTU5a0lUeVB2NEFfNXVZV1h0MmdGbld6aEpwUW50V0JpUQ?oc=5",
+   "published_at": "2026-11-02T01:26:59+00:00",
    "lang": "en"
   },
   {
@@ -446,6 +318,30 @@
    "lang": "en"
   },
   {
+   "follow_id": "mcilroy",
+   "title": "Brooks Koepka sides with Rory McIlroy in Bryson DeChambeau Masters snub row",
+   "source": "Belfast Live",
+   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQV2RqZlgxV1JsNVEtYWVfdTNoZGEtYXdkZGNyWVlCVzJXSC1yczlzZ3pPNmJ4MXU4eG5WU2E5YnNneUZKWUtQckRsb2FZMUxQakZHT0k1SVhFcHdvOW1oVmtma196UUctanhJVjM3eEVyM1hHbzBCNnBPQlpWWU93aV9PX0hsNTNBVWw4UkdZWERmUDRKRjZ0OWN3?oc=5",
+   "published_at": "2026-11-01T13:55:27+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "mcilroy",
+   "title": "Bryson DeChambeau Reveals How Losing to Rory McIlroy Changed Him",
+   "source": "Heavy.com",
+   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOT0h3SFFObE5qWXZYNEczd2o1OUVJOC1EQVAtbldGV3M1a3RjcnVPVW1RSTh3ekRaZmtYaTQ0TTVWbjJpYlI0STZCTUNrR2xsZURsWkUyQTJfUUJsTHRrTExPVEhWRFQ2eUhKbTEtQ18wem4wR3NRU0tFTlY3bDZJU0xHZjhrTE5BbGNWUGsxUTJISXhPNlhpYkhB?oc=5",
+   "published_at": "2026-11-01T12:40:59+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "mcilroy",
+   "title": "Brooks Koepka explains why Rory McIlroy's latest Masters success bothers him",
+   "source": "Tennis World USA",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOblFzSFNYRHRmc3dGM3A5LXVzNEFQblphMm03X3FZU05WbHRPSF9YVzJoOXVNbUQxQ1RkUndCR2IwMzhMa3lhMV9xOHJFdVRoRUZCQTl4ZWc4V2lfZ2ZQbkJXUkNvSFBHV0o0eHpEUlhzSDBSM0wzOFJkZWJYeEhmb2hLZmV6OVphMGRwWFF3UXJadmZVMld3QkR6ajZPSFh0QmVBMDl3aElrbDJlV1FRdmg3MzNBS2dSOFY1VmFILTMwQi04UGtfdTZNYw?oc=5",
+   "published_at": "2026-11-01T12:15:20+00:00",
+   "lang": "en"
+  },
+  {
    "follow_id": "ubb",
    "title": "Architecte de l'attaque de l'UBB, l'Irlandais Noel McNamara intéresse le Leinster pour la saison prochaine",
    "source": "L'Équipe",
@@ -454,11 +350,11 @@
    "lang": "fr"
   },
   {
-   "follow_id": "ubb",
-   "title": "Noel McNamara lined up to succeed Leo Cullen as Leinster head coach",
-   "source": "BreakingNews.ie",
-   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOcGtTUE85WUNfTEN2ak4xRTdFYzZ3azRjS1I3ZkNrTU95OGxlSEhSV21jWFZkUHlpVkZ2N1NoclUyajl4TG5rVG9DeEVwR1Y5R1Q2OEEyT2FkU1U1bWhZZV9XYmlCRWk3Y082Q3dnZVhSdHVzSjJuODBqVXJ6TFZfQVItRVlqeWtHUnRVZ2xKNVhxSW05UGxUeWU4RnB6YVRtNWdWX2txWUhrQlVsQS1RZXZoN1U?oc=5",
-   "published_at": "2026-11-01T11:11:30+00:00",
+   "follow_id": "mcilroy",
+   "title": "Five-time major winner sides with Rory McIlroy in Bryson DeChambeau Masters snub row",
+   "source": "Irish Mirror",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeV8xU0M2NzFucWprRGp6QzBtNWJHb01ib3M3eGV4dWUtZElnbzk5aFFjcTI2Sm0zMnViOEJRQzBXWk93c1RZQ2ZNUDQtNkhOZ2NrNWZTQThwVFhLRVhfeHVPcFdjdUtFWHB4bmlqV1RBNHFXWl8tN0Y4UXdPMUsxQg?oc=5",
+   "published_at": "2026-11-01T11:40:34+00:00",
    "lang": "en"
   },
   {
@@ -478,11 +374,11 @@
    "lang": "en"
   },
   {
-   "follow_id": "bath",
-   "title": "\"England's Lomu\" – Steve Borthwick told to recall 6ft 4in, 113kg powerhouse winger",
-   "source": "Ruck.co.uk",
-   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxObWl4MnlWVFpsZ0M0Z1dobzlJc2JIVDNhRWdDY05DYlhWSzRXaTNBTWE0TlhZM1JkQktPTkxIc1gtX0JsWi00Rmdhd3JYek53dWlGY3lxZU1hYTlGVFJ5M2Frc2F4WWNSM3lZV1UxeG1ORDRSMS1NbmZ5V3lEWlAwc0hEZ0ZpZmJUWEtsUXBmRkxYVHc0dUJEZGk4UDA5ZFNfLXMzeE90UkpLWVJLSUtfVnMtT2YwczBRclE?oc=5",
-   "published_at": "2026-11-01T08:23:00+00:00",
+   "follow_id": "england-cricket",
+   "title": "England cricket team’s shirt-maker in cash squeeze",
+   "source": "Yahoo Finance",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNbGRGVkwzb3JxU09UT3UwRTUtN010UnU2YllBVTNFWTRWQ0tiN3RvWVY1QUtrb1lMaW1FMGt3dDgybHZYakJuMTBZTlRGV01vWnZIR0FKTDBBT3VWMWVvb3FIcXZ6WEpjRFJMLTdROUFnRF9BSzBNX0JmTkFBWjd5R3Jja2lEazRxbng5cnlNcGdSYTJpd2o2OEJmdFpxUQ?oc=5",
+   "published_at": "2026-11-01T06:30:00+00:00",
    "lang": "en"
   },
   {
@@ -491,14 +387,6 @@
    "source": "L'Équipe",
    "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxOLXlOZnpIc2dlSi1YbkJqZXV5SndlamhsYXpvaDJsam1ReXhvUnVXcklicGNOWTNhZGdQeXdJWGcwMUhnQWVhZ09YUmpuWGZ3QXJYaDhzbWFvemd4dGhuc184UDVFNVFnNFUwcXlTa3Z6UGdPVU1qSkJaSDQzb2dXOVpuempXb1ZiUmVOUm1JVjk4SjlrYVVCQ0NtVG1BcGN0MTFVdldHSnA2ZnU1Y3RDaVlfeXRpQ2doekdmTEpCRzNrOEEtVWZ0THN3aXBGWU80OUNNOG9MRkRVNjNVRFFCc202VjFiS19HalVUa1dQY1pHSjN3dlFSQ2RzSXN1clBRSEtqWQ?oc=5",
    "published_at": "2026-11-01T06:05:00+00:00",
-   "lang": "fr"
-  },
-  {
-   "follow_id": "ubb",
-   "title": "BEN TAMEIFUNA 2029 - Médias - Vidéos",
-   "source": "Union Bordeaux Bègles",
-   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQZE9lcm1Pb1JnWkU0VTZEQWhXVU5HSUw0T3hmV3MzUi1MTGd2N2Fja2UxTHc1OG5URzlYUEFFRXdobWpVVWxNOTVKdXRuUml1Vk43X3FnTlpQN2lVRkREcTMzV0I4ZmVuaDE4OTNuY1ZmRVVrbFRMNENyb0dBQ1FZUnFR?oc=5",
-   "published_at": "2026-10-31T23:05:06+00:00",
    "lang": "fr"
   },
   {
@@ -526,12 +414,12 @@
    "lang": "en"
   },
   {
-   "follow_id": "bath",
-   "title": "Gallagher PREM Rugby highlights: Bath end winless run against Sale Sharks as Joe Cokanasiga scores twice",
-   "source": "TNT Sports",
-   "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNMFg0N1YxeDFweXB0dXotN0d2cHdKSTNVc1d6LWpCNTRxcUIzTVdSODEzY01OQ3JZM3JLZmxGWWJ6TkZMdVZ4SlgyM0ZiZmd5VE5fSVRtTXI4QUtHYXhWQlJ3WUFQLXNxMjhBY0UtQ0NuVktTdUVvZ3ZHZWNpc2xtT3hWR0FrMVpWYkl5MXpQTVpnLWNwc1I2Mm1GeXg4OWluRVZ1d1JHcWJaZzlkcHFlMTJkVjBNT3pWdW14MjBTS09pcUgtM1pTOHRDYmR6TmlId0JYOFVUdU00Tnct?oc=5",
-   "published_at": "2026-10-31T20:00:00+00:00",
-   "lang": "en"
+   "follow_id": "ubb",
+   "title": "Les réactions après UBB – Bayonne : « On savait ce qu’ils allaient faire »",
+   "source": "Sud Ouest",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQdXMwYUpFTVNETmVnU0g4NDYxSmxDVTEweUJfbS02SkF0TkdydjlNdTFnaEFnNmxsVFFrTERvUkUtNnhheS01T29fM3RlVUhuVnV5X3N1Nl9DcUpEV3RtOUNJNDhjUk5jeUw4V3kwNHgtYUdZVHk4R3dDM0RjRVpiNVowM1V1RGZ6RkpJSVdoTGpFNU44Ukd5MVFnQnFKM3ZFV3Rid1Nqd2V3NmVLeC16QTA4YWgtQUpPSklBUnI4Wjh5MG9Xc196NWdiVQ?oc=5",
+   "published_at": "2026-10-31T19:23:05+00:00",
+   "lang": "fr"
   },
   {
    "follow_id": "bath",
@@ -542,28 +430,44 @@
    "lang": "en"
   },
   {
-   "follow_id": "bath",
-   "title": "Bath finally clinical as Miles Reid gets better of Currys at breakdown",
-   "source": "The Times",
-   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNeDB3TEVwbW01WnhhZ2lOcVRnMS0zWUpPWkQteEZYMG9Ic0FVYV9WQVE5cEZJdzVVUmxXU0k5MGl6ZDBuMGFPUENTZFFmSGgwY2F6RkZMcGdXTDh5UVg2WkVMQkZfNDNZejBrQk9aQTRoQmZZcXlFeTlidDdjTVdrTExabXM4aEkzSXJnaTd0bktLZDhQX09IaTAzcDFMTmN3UGoyOWhSMWk?oc=5",
-   "published_at": "2026-10-31T19:00:00+00:00",
-   "lang": "en"
+   "follow_id": "ubb",
+   "title": "UBB: Tameifuna prolonge deux ans supplémentaires",
+   "source": "Sports.fr",
+   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQa0gzV2hOVEpPY0N4ZTh0RllHV1V6R280ZWprYW93bVFNa2VsaUdPZzB3MlBzbDREU1V5VWRDUkxnVEVjb3BHSEZrS0pwTG1NX3FlMXFFTkpGLTNZalVGaHF4cFJ4U0FmdWE2bmJYeWpScWlUaUJhQWxGclJscDRvME4tZWJkWkJ2clVGc0tPVktiZw?oc=5",
+   "published_at": "2026-10-31T18:21:55+00:00",
+   "lang": "fr"
   },
   {
-   "follow_id": "bath",
-   "title": "Bath v Sale Sharks: Five takeaways as Finn Russell has 'first and last laugh' over George Ford but 'oh-so-classy' player the star of the show",
-   "source": "Planet Rugby",
-   "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOSExPQWs5MXBtZGJrSUVTTDVzdHg0NzVFamZrWmIzcUg1MnJGeE9KRW9HdHBzS2s5NWNwc2VPUDNvcUNZbHR3VDdBVjFaUWowcndleFlDVTg2dHhDa3V0MlAzbzg3YkRERE1YZFN1RmpwRVpqSF9KOGhRdkZSMTNKWE5hUTFBWVpxaHBKUS1ZUVlXM3B4RXFOdGZCRHVlUm9CODN5V2k0YXdsRkFnZnFVbWxxUjhzNkNiOWRXSzJoQVZTY016SjZHd2NMdEZQR1diODh2MVJsWTJLVGpFRGVweUYyVUp5RDRNMURIUVJMNlhBTzZESW1pVzBLQVpGQQ?oc=5",
-   "published_at": "2026-10-31T18:55:20+00:00",
-   "lang": "en"
+   "follow_id": "ubb",
+   "title": "J8 de TOP 14 : l'Union Bordeaux-Bègles surclasse l'Aviron Bayonnais (19-14) | Top 14 - Site Officiel",
+   "source": "Top 14 - Site Officiel",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNbVJoZGhIZ3l3ckhlbVJuQnk4N1Z1Y1V5ejBETTJhdnNUcXBqODJ6TzhEUE1PR2otNDJmcjlKQ2JwMVhvemFEYlFsS1RnZl81eXRlbVJ5SzRzYXM2eWpiSXZLYUxka0Jybm9lMWxTRHhDT19ObWxhZ0VuaUJPZ3FubEQwektKNnU2UEpfa0JuZ28zYjdnOWxUZVhRdHdiR3ZsYUJHNw?oc=5",
+   "published_at": "2026-10-31T18:18:46+00:00",
+   "lang": "fr"
   },
   {
-   "follow_id": "bath",
-   "title": "Bath Rugby 36 Sale Sharks 28: Recap and reaction as Bath back to winning ways",
-   "source": "Somerset Live",
-   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNc3pRSFVvQnRSV1R0YjNXSDY3Vm5CcjlJalRkLS1Mb19YNjlOWHFfbXFKWDdCdll6VE1yemEyeHZ2N1hoRFZ0LWVTSVR0N2FVMDFCOThzWDN2M1gzZExxX2NsdUk1VzFFQ0dzbUNnb2NhZ1NoNU80a1VONVJyMmUzRXA5TDRlT3pqakE?oc=5",
-   "published_at": "2026-10-31T17:49:00+00:00",
-   "lang": "en"
+   "follow_id": "ubb",
+   "title": "Rugby. Top 14 : l'Isérois Hugo Avogadro décisif lors de la victoire de l'UBB contre Bayonne",
+   "source": "Le Dauphiné Libéré",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMFlpd1drXzl4aE1fdm1vb3c5TDdaaC1uSFRMM0U4el84VktLWi1yRkFJZXVhVEpuTzN3R2pWTURUenc0cFVGTjFCWGpTWUk0U0dmVVZKQ0hZLWxyVmhISjBRVExjQU9xeTc3azZsNHRCQmpVMGpoWFBMWl8yWWtYOVc4bF9kOXl1WlJpSElfZ2RqTHQ3ZXVPcjlxSDdyOHpfOUpORDVnUzJBc2NSeVFwRA?oc=5",
+   "published_at": "2026-10-31T18:18:00+00:00",
+   "lang": "fr"
+  },
+  {
+   "follow_id": "ubb",
+   "title": "Bordeaux-Bègles s'est fait peur face à Bayonne | Rugby - Top 14",
+   "source": "L'Équipe",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQZEczUXdkanRvY3BGQk1JcllZRFdiMEM3MGJtZE9EUzlzaVJTUnZES2tjdnJvMVNQU0ZuTkFuRVBVaVJjNmltNkJabG5YTy1ObUNFV1BWT2EwUFprdlZOXzRWTHZXcmRuYy1Hc0xCSlZjVC15Y3BTdEVmT2xaNllyYzV4VkFicHJ4VXpDNGZRcmExRXBmZHFvSWFPc0h1UQ?oc=5",
+   "published_at": "2026-10-31T18:01:54+00:00",
+   "lang": "fr"
+  },
+  {
+   "follow_id": "ubb",
+   "title": "Top 14 : Bordeaux-Bègles s’en sort face à Bayonne au terme d’un combat irrespirable",
+   "source": "Vibrez Rugby",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOX3JuUVFJQ3BUenZXQ2VneEludU9sOWNwdDVGUTBrYjFYcUQxSG9fbFNtVDYzaVdwaUFhMm4wR3MtMDFDTG5MMkd6SkJVSUR1YklaVGRmdEViemFoa25pUmFBRnlaV2dsQVJkb2toMXVWcHRZWUpicEdrY1BabkNIN0kwOENzemUzQlBvdWJJRnZ1Vm1TNUZOTng0NjVWdTdmQWhnYTM3OVA?oc=5",
+   "published_at": "2026-10-31T18:00:49+00:00",
+   "lang": "fr"
   },
   {
    "follow_id": "bath",
@@ -575,18 +479,26 @@
   },
   {
    "follow_id": "bath",
-   "title": "The Prem: Bath v Sale: Joe Cokanasiga scores twice as Bath beat Sale",
-   "source": "BBC",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE40WWlfUmFhZlZlSUlJNU9pcDJnWFFtS0RXa3pkWTd0N3hRV09BaGlpYmItNmtDWTJKaG5ySUdTX1ZmYi1Fc3VYT0IwenBMa0I3MWVNUHhXWWZxZ2ZCcGVpMFJxQUpRNUdNRnhNeQ?oc=5",
-   "published_at": "2026-10-31T17:31:15+00:00",
+   "title": "Bath vs Sale Sharks player ratings: Gallagher PREM",
+   "source": "Ruck.co.uk",
+   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNNDM3OUJKZTd5Y3RWZmZIalBleWgwRkZOMkdPZXhxYlhNUktLUXN0WV91NkVCS3VFVms4QXJIc00xVndPdmZZRnQyQXlaVlNxa2lUWkExaGFocUFyOGstSUR6dWVrRUpfWlo3eUNibVUwaEcwdmY1OENzS1pqcnd4V2RSQlI3ZW8zZk5zaWZPWlVPUQ?oc=5",
+   "published_at": "2026-10-31T17:05:00+00:00",
    "lang": "en"
   },
   {
-   "follow_id": "bath",
-   "title": "Sale Sharks player ratings vs Bath | 2026/27 Gallagher PREM",
-   "source": "Rugbypass.com",
-   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNYXBDcUdyREJOZkhhdFY3bkthbFBQM3ROUGxBenNsQ3g3SGZXM2Ztb0QtRWJVLWVYNEt6dlBBU1A2aWU0MF9INFZpQ3pXT2h5OU9nRXRnZE03bTFGMXJsVEJhdzlCVU1rR3J0UUl0VGhxTHVJSldwQ3FTLUNyaVFrYzVvSldSOGxNSGpKb0VUTUtBMU0?oc=5",
-   "published_at": "2026-10-31T17:28:01+00:00",
+   "follow_id": "england-cricket",
+   "title": "Darren Gough backs Hong Kong Sixes global expansion, slams England 2-year demise",
+   "source": "South China Morning Post",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPc0J0cFE1VUpJQWpXNTg2Sk83Vl9mbXNyR01lZjN5ci1YdHFfWF9yemFDNTZQV284bGJMZS1rUzJUWW5ORERQUkRwQkYwTzhTUXBxdzRqOVVHdzZ2ZmNBRUFCci15UlhFcXQ0MDFENFl6YWRfNDFURXRGdGNrTUthSWdBLTJMZnRKT1RvRHFtdkFXOXY0czlRRi1ENTZyTGZaWWMxdWluTXFPaWdnZDRTZGZfNEQ1SDZOcm9aSzlFbUVHd3UzeTRLX1VwSdIBywFBVV95cUxNbzAtVmczOVlPT1pfVmZCZXBGWmE5dnE0YmZnUUUwcm5fd2dfaXJqZXdxMEZoa0p6eVhuellKSXhRanI1ZDN1c21pNlB2dmlKR3hUNGNIVG1sX1pETEVtY0lRT1pLRXpqSjZUV1ZCVTBhRzJwcFFiVXdzdkRPelB6a0lFQlRWdXhqa1hkc3JobVgwdWx5MWxQUVdZV0hHSDhUSnhtR0RFdENLODh3Y0dPYTVGZ25VdGF1WUFORE42RTFLcDMxaU1lVmljSQ?oc=5",
+   "published_at": "2026-10-31T14:00:14+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "england-cricket",
+   "title": "Brendon McCullum insists Sam Curran can be pivotal for England at World Cup",
+   "source": "This Is Wiltshire",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNMV9EeUpwWUoycHZPWnZNWFRaVDAzTkJfUElkVVdFMFBFeVVYWlhiT0NaXzljYlpVb1JFNGJwWmJwWFd2ZFBnN0JFdDZMZEhycmZGSV9xeW1heTE5cHBrOHd2QnVuUE1BMFhOY3dGUnJLSjZTQ2FUNGcxV0lRNTFOMTRNRGdRdmFmMjVVTmM5VkxUeUc3eDJycy1lcmJSd1Z5YkstNGRrcUVQSXRKY1E4UDFsV2g3S1VBeHhzbEc3ZnRJdw?oc=5",
+   "published_at": "2026-10-31T10:02:15+00:00",
    "lang": "en"
   },
   {
@@ -595,6 +507,14 @@
    "source": "The Scotsman",
    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPUFJuU08tVEpsNXpWaVhicUtwWTQ2Qi11TkJQQ25pUjdOMjJCQVo1VVg4MktScVoyUXU5REpMNkVlNWNOb3Fpc3JsOEU0VTlyWkhpcGFrSUhBU3JiMkFKY0twbjhFTFAzUTJjYl9KNjczQWI0dFBJQlZhY0N4NWZQTGhtT09vLTJjdEE3YmxUdGV6Uzh4QWRLbjhkY3p0d1JnSVlXS1l6cDlmS01RTjM3VWNxX0hDT2tUUVVtSW5rdEVzeXlkTjE1a0JDczZFMWc?oc=5",
    "published_at": "2026-10-31T07:30:00+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "bath",
+   "title": "2026 Bath Rugby vs Sale Sharks - Videos",
+   "source": "FloRugby",
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBNX3AyR3A3VU1xV3hHeDZsLUxuSnkteWhkVWtvTUQxNnd6OUxCcXAxd3NwdkQzNl9JcE00NHB5Zl85U3JBdjF2cjlER3puWnRtSUNZR2ZiZmh4ajdQdkRNNHVtSm9lN1FpNHNYcnRCNUYtMWRkUG1uTFVGZw?oc=5",
+   "published_at": "2026-10-31T07:00:00+00:00",
    "lang": "en"
   },
   {
@@ -611,6 +531,30 @@
    "source": "The Scotsman",
    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPUkdEakwyZjQ4dVhHQVNjX2pBM1BIZHhZaWR2WThWV1RKckZfMmNxOTc5cHo5bC1MTnJES2VjZHNmNG5uTWk5a0prUkpGNnlWRzNDQ0I5SGtmX0pWQXdKdDBhc3RfR21IcW1vak9QLWl4SHpLdGxyelFLbmdxM0lJLWlXbzZtcjdqSVRYU29iYTRvSTdPSHFjWTgwR1VSX1VOUGxHUUhMZmZ5Ml9uVC00MHRnZUtpNVh6WVYtaGRVdllQbjg?oc=5",
    "published_at": "2026-10-30T21:54:00+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "england-cricket",
+   "title": "‘Fundamentally wrong’: England legend shocked at sudden axing",
+   "source": "Nine.com.au",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPSHk2cWE2UGtybmhjWEM0czBXRXhqRmJIeC1aYXZGS09ka1gxdDNnQ0FnMlp3MlNKbVFMNVM2Z0Utc3B2ZzVwWDVDSFdyd0RHVkhORkxGN2djYnhDTGNBNno3RWJETDZMT0ZXOF9LRjhKbzRDSTNQTVk5SVV3UVJoWVZ0dzhVajVKaHRiVW9tLW8yeUNWMFRGNWsyNVhHQTBOZDdtLUx2QnNEVU52UFZVR0h4NTJzOXc?oc=5",
+   "published_at": "2026-10-30T21:19:41+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "england-cricket",
+   "title": "Somerset youngsters in England cricket squad for Autumn tour",
+   "source": "The Midsomer Norton & Radstock Journal",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBFeHpQcHR5dW9aSUI3RUREMGRfM1NXV25pb2ZESWlJVUlfS3d5bHAzSEFlTy04dGVEcmtLRS1XbXZKOXFsYndlUTVXSHEtVWtzVE96ZTNKQmZxOUQ4RVZQYk9VdGctUU5LMGRjNzZRLUhnc3Vx?oc=5",
+   "published_at": "2026-10-30T20:31:10+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "bath",
+   "title": "Bath Rugby vs. Sale Sharks Lineups, Kickoff Time: PREM Round 5",
+   "source": "FloRugby",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNMFN0NUJncUR0UTZ2QjdzUEtsQXR4N29NNFdtekVuc19UTGVkS0RnUmhkZXY3aVVsQWRBc2R1X1NJcWpOR2VYR2J3YldKNWo4bFpVNXpWVEhseWRtRjRSN2RrUlZLUXBHNXp5bmRYMmZTdkF2R3NUNTNWa2VxeU1KZXVyRFBOYk1ueTNMajM4UVJpZ0NTWlliOVFTQlB6b0RQU1YxQQ?oc=5",
+   "published_at": "2026-10-30T17:09:56+00:00",
    "lang": "en"
   },
   {
@@ -638,6 +582,30 @@
    "lang": "en"
   },
   {
+   "follow_id": "bath",
+   "title": "Uni student set to make pro debut for Bath as key duo return",
+   "source": "Rugbypass.com",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNd2dLSWc5WG1hMUJxeDBob0t4S2ZKNVRFSlE5WFEwTDdPaU1RUUFPVERRdEo3VGc2U09WeVA4MVN6bzhrcjJPUFBGeV9HTDh0QndUNXdOLXNKOV9DQXFjN1RxS3BFMFoyTHNGVHRSekZGYm5KU0VGSDFjNXViUWFlSHA1TDFkSXVKMk56RnllWXItbGFGUXhMeA?oc=5",
+   "published_at": "2026-10-30T11:59:10+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "england-cricket",
+   "title": "The bizarre link between England cricket and Pakistan’s human rights crackdown",
+   "source": "The Independent",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOMURTMkZLN0Q2V3oyc2F1S21WRkJtUDJtQWVkaWFpRnRxZ0M1Q0Q2dV94TkdvS0RwUWo3QXdGQjlDamI3UWdGSXFvTGU2d3YzbjdpcUNfZTlxSktZcnNWVk52b0szQjl1aWtQN3V5OFBPTHpkNE1EQmlnMXRtNE9reGtfQUVJaWdja3BuVHpOMkJRUmdvMmQ0T3RESVBkd3FzYXZsM2ZGLW12RjRTN1B5U2JkLXFsWE5CTF9XdC1pTGpFb2c?oc=5",
+   "published_at": "2026-10-30T11:17:00+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "bath",
+   "title": "Johann van Graan won't rush to reinforce Bath squad despite £400,000 credit",
+   "source": "Rugbypass.com",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcllSS3FMSmZUR1ZXa21lUHJQdE9yQmRZRk5EWEYtaTh5UUdBb2dERmwydXpfRnJCNUpfUVhoOXNtVmNnZUNfNmpuelNJYno3dEtXcnpacHFWRWZtVVZlOGh4djdLcE01bTQtdWZDVlNEVDBzV3BVQUdxRXVUTXdIT3hwdUw2NEsyd09JM0ZMZTRzQjJULVM4WjVBeFNMZVgzamVZZU5jRQ?oc=5",
+   "published_at": "2026-10-30T10:00:55+00:00",
+   "lang": "en"
+  },
+  {
    "follow_id": "pepperell",
    "title": "'This Has To Be Sergio Trolling Us?' DP World Tour Star Questions Garcia's Return Statement",
    "source": "Golf Monthly",
@@ -654,19 +622,11 @@
    "lang": "en"
   },
   {
-   "follow_id": "scotland-rugby",
-   "title": "Scotland's rugby clubhouses in the spotlight with £10,000 prize up for grabs",
-   "source": "Edinburgh News",
-   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOd3dvZExUUXRVeGk3aUFDS0ZJeUlybWpZZGFHbE5ybllxWnBURm1pcGVMYVFORHV0QmNHNnk2cjh3eU5IeXVjV2NsRXh4eXh0Qjd1aFZneXFidHJSQUlOYnR3dFdPTnNFS0ZnQ05iNGIwQU5sUFBuZVVyUmJ2WVJBMF9JR1pPV0xoU2ctV1NJWkt0N3pWd0YwN19SdF9WSlZUU3RtMzJpTkRLZGZHWUFwbWtEWW1kV3hObFEwZXVhekRiUURzclk5T19iV3cwUQ?oc=5",
-   "published_at": "2026-10-29T17:59:00+00:00",
-   "lang": "en"
-  },
-  {
-   "follow_id": "scotland-rugby",
-   "title": "Australia Wallabies Nations Championship Schedule, Dates & Times",
-   "source": "FloRugby",
-   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNW9PVmNwbFlNVlVkTkJ6TGIyMmtEMk9xZkNkSTR0ZUxwc2hhX1lZV1R5RkdfQ0gzMFpsanloSkdWSnRjUzJHbXpBMzZJWFh1VXltbHpfSEM1Q1Awdi1hM0REZ1VHQ3RSTk5jcU9aZHE0V2lWX1pYOGVISGtLOGIwLXo0c2VJeGdMcWtidWlYd2FTLWNGWEZEZEJWTTlveG8zbnVKZFQ5cERZV1E?oc=5",
-   "published_at": "2026-10-29T17:34:28+00:00",
+   "follow_id": "bath",
+   "title": "Where to Watch Bath Rugby vs Sale Sharks Live Streams",
+   "source": "Port of Rotterdam",
+   "url": "https://news.google.com/rss/articles/CBMi9AJBVV95cUxOYzU4TTdXeGhqOGxjTEZLNlc4QlpTU0dxeTg0dXh2Ui1ZTWJtS3hsNGRfS1gweU5HWlM5UVRrV0JwVFdCY2tiRlFpMTBMRXp2VmxvTkpQYnROb1VPTG1WQmhXU3V0XzU4YmxYbDR3cXV2Rk5oeUhHM09GWllnczJBOEpqN0Q2VmRjX1Y5RVhnUUZFVnNVVWhMOWZOVWpOS0ZuNzRBWExqOGZNMURlMTg3RzdsekxIaXRabTMwWWJsTG54V0FPMjRPcFNDcjBVb1pLOEhQOFJQUDA1bi1XMzVucWc4ekNBaWFaTzl2X1N0VzJKVWpNbkhCZ1Bsb1F4Nk9oR2pabmVFTURNQ2FDSTlELVFMSnNVMV9KNVktZzVELW9vYUR3X3VJSUZKOVZPOGxuc3pnYXBRdzFMVWd5OHduWUJKVERuWXlYMXYtNllSRXJWWndMNjkzc1J6REhhY1FvYzZJaHFNalI2SWpRVEhuX3ZHMDM?oc=5",
+   "published_at": "2026-10-30T07:00:00+00:00",
    "lang": "en"
   },
   {
@@ -679,7 +639,7 @@
   },
   {
    "follow_id": "pepperell",
-   "title": "Hypocritical Garcia statement ripped apart by golfer who narrowly lost tour card",
+   "title": "Hypocritical Sergio Garcia statement ripped apart by golfer who narrowly lost DP World Tour card",
    "source": "talkSPORT",
    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNVG02UGdFZmZlbnVremhWb3J5aWExNG1LSUM3S3FXc3BRS08xSVRWWE11OG1tcU1jVlhOOHhUSS1aeDVBU3R4UGl4RzFxb0t5R2lWOHVZMzRQUTFEd0ZicmlpTnJqU3pwMXR3RGh0NDlDbFZQQ3REb1NMLXFWMGRNWjhkTmxSa05OSVk5U3lEbm9OYjhkcXZMMG8tU2k?oc=5",
    "published_at": "2026-10-29T16:43:07+00:00",
@@ -702,11 +662,27 @@
    "lang": "en"
   },
   {
+   "follow_id": "scotland-rugby",
+   "title": "Scotland Rugby Nations Championship Roster 2026: Full Squad And Predicted XV",
+   "source": "FloRugby",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVEJvX0dWV2RuLU1oQllzb1M3T2ZVTEFVNG9MNVpueUQ5M2JQeFFpQUY0blpEVVJ0SnFFcV9rNE1OeElwOGRKVzIwZnl6dVIyQU1yOHlncG5EMzBXNVc2U0hPS05SZGpuWFoxa2tJbUpvMGpreHp6QkkzMFZuZ0d2c2Q3eXBIdkZhMDN4dDJNcm9YR1E?oc=5",
+   "published_at": "2026-10-29T13:29:25+00:00",
+   "lang": "en"
+  },
+  {
    "follow_id": "pepperell",
    "title": "LIV Golf's future and the ripple effect for PGA and European tours provide plenty of drama",
    "source": "The Washington Post",
    "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOWmpHVzROZFBEaXV4VVI0Y2RINXk2TU44bXpnNGRFMGd6UzFJalR6Rm9Lbjg1Q0VKSHhMU3Y0N1dCNEtWTklJX0M3aGc0WU1mbWUycjR6dHp5LS1kcVEyTlZERllIMFpnZ3NoaHNYQkJSNUpEV1BYZDBaMmtIXzRUbjQ2SXI5RkhwRlI1djhDNS1NSTJSZ1NwY29valFkd1lWODNxX3JyNWpsQ0N5VWRHOWZuWTJTNkZkaVRhTGVRRGhRd3NldUVrb2RLR1FRdGxNVVRweEFPUXFqaE42aEE?oc=5",
    "published_at": "2026-10-27T21:15:00+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "bath",
+   "title": "Bath Rugby suffer another injury in key position to test the squad depth to the max",
+   "source": "Yahoo",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNNTlORTY5a092bndkdlJpZXRuNVY5UGtremk0UHNVaTU5SDM1ZFd1NUJPNXBUb0VfUS1zbnFLdHhsZE9lZkc3Wk01T3JmZTVzX0J6WlByMmZwWk5EamtzWW9iZ2hIazhGZ3M5cTFwSm5Tcm5rcGd5LUlzR01rdnVzVjBYUWktUGM?oc=5",
+   "published_at": "2026-10-27T15:59:43+00:00",
    "lang": "en"
   },
   {
@@ -719,27 +695,20 @@
   },
   {
    "follow_id": "macintyre",
-   "title": "Ryder Cup heroes and Open champ set to skip DP World Tour playoff event",
-   "source": "bunkered.co.uk",
-   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPNEhwNUN2VXQtMmhfU3ZXSnlEVUdYaGtxNndWWi1TRVFjVzJEVWs5R3ZINjg0cXRwdXpFdksteTBEcFVFRVVBRE5vY1dKR1FNbGFlZktsODk0NTJVUEExNTJ4QzlsZlp5VkYtczQzVlJBb1RhRW13ZWJPNHdfd1hMZFZuMTBfdHpFNTRZekZuczlzRXc?oc=5",
-   "published_at": "2026-10-27T10:14:34+00:00",
-   "lang": "en"
-  },
-  {
-   "follow_id": "macintyre",
-   "title": "Bob MacIntyre’s Abu Dhabi Decision Could End His DP World Tour Streak",
-   "source": "Last Word On Sports",
-   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPbmp1LW9hU2dvQUVUOEtDWGdweGxpc1BFQXdlYnRXQ0FFQWRmRnFzdGFlQWFrRnptekRIVHo1cnFPOE9sbDItZlRFcVB0RExKUkxGdWUwV1FrcHFEOE1xOUhBeFIwY18zTkc1RnVkUklmLUo0c0xxOTBIa0tvTGZGb19LZExLenBJU196SUoxWklhU3RlVUMyNTFZdDVQaWdrTC04RkpRUC1udmxuMHVNVg?oc=5",
-   "published_at": "2026-10-27T09:41:37+00:00",
-   "lang": "en"
-  },
-  {
-   "follow_id": "macintyre",
    "title": "Dubai entry list still open as Bob MacIntyre sits out Abu Dhabi event",
    "source": "The Scotsman",
    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNzlWa3VYdlpVNWRIY2h6R2QwWjBEaGM0NlZlT3ZoT01KWkFHbTRpTWY1Nl9hdzZyT2h0QnlUSlBUU3c2VUJTbDRObnN4SWp3RUNoVGsxRVB2dXp2c0pHNk41WnJCTWpxUTBtVVdEeWliV2dJd1JfLTdpTUlRclM5Q3pXaTFSeTNMUkVaS1ZEa283OV9tVUowbnlYNUU2Q3ZUVUhxemNFTE15czkt?oc=5",
    "published_at": "2026-10-27T08:09:00+00:00",
    "lang": "en"
+  },
+  {
+   "follow_id": "pepperell",
+   "title": "Genesis and Exodus",
+   "source": "The Chipping Forecast",
+   "url": "https://shows.acast.com/the-chipping-forecast/episodes/genesis-and-exodus",
+   "published_at": "2026-10-27T00:05:00+00:00",
+   "lang": "en",
+   "kind": "podcast"
   },
   {
    "follow_id": "pepperell",
@@ -790,11 +759,51 @@
    "lang": "en"
   },
   {
-   "follow_id": "pepperell",
-   "title": "How to solve the ex-LIV pro ‘predicament?’ One golfer’s thoughtful take | News",
-   "source": "GOLF.com",
-   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5ma3BTYnFNbExVb1E5QnF1UVM4VzhoUWxva09FeEFNbHFrYWh4RTJUaTVmWmxuRTdPM0VYTDVDcThYZUxrVUw3WFRfZzBRcjRkUXRrelRhdXhxVnFX?oc=5",
-   "published_at": "2026-10-24T07:00:00+00:00",
+   "follow_id": "scotland-rugby",
+   "title": "Ex-Scotland rugby international to face rape and abuse trial",
+   "source": "The Times",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQNjltVWRxb3F2ZWJJZmE1U21nTlJxdlNhTUw0U2Nxc1FRQ3dwXzQ5ZUhHQ01xVzYtdDRVOXg0d3hSa1JjTUpuMm5CdkhFYVNPN29NeExNSVpYX3FMMEFzalBQMS1jd3dYa0RCaUtudDAxTFQtUk1KX3dndUZQVmo5RHdLQUN3OWhINmlOWHkxSm9oUDZlcmI3bFIxeTdhTGdmQ1FuT0Y1aF9hZnBaUDFUNEtITVlvdw?oc=5",
+   "published_at": "2026-10-22T15:29:41+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "Former Scotland rugby international to go on trial charged with rape",
+   "source": "BBC",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBOOTJjVmdkRkdNb0ROeHE4VExWM1JLSUQ3ZUgtYzRTR1JBb0pUNF9YSllkV3RIUnpIQTFHcjJYX0NYZmx3LWNydkkta2owdnBJRnlUZjlTbTk1ZWc?oc=5",
+   "published_at": "2026-10-22T07:00:00+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "Duhan van der Merwe set for shock move away from Scotland",
+   "source": "Ruck.co.uk",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOVjcyRWJpYWhNWkNWWm44VEYzVkF3dDBlR3pyVWl1SXQ1NXRXZVlrc2FYbk9CaUVVZ3hWTVBmS2IzOVAxZzdqY3JxWUZNSDFxb3pyS0xwak9tXy14R3RiZnlSdnh4RURrYmxEMEZfWGY4TTV4ZjlTblNKbF9JV3lheVBqY2pqdW9jSlFwZlliWWQ3cmNzM1EwR3lBVXFRU25SMUE?oc=5",
+   "published_at": "2026-10-22T07:00:00+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "macintyre",
+   "title": "Robert MacIntyre, Tom Kim jump up in new Official World Golf Ranking",
+   "source": "Golfweek",
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPUXpWMXhQY19wZkd6NGJ4b2F4YmR0ampXRENSeldCbGh5d0taNWZibkVkZnNkU2tFSm5DN04yVjB2b2drUjFxZTRVQ2RQT1lyNzVtQm1LeUFrWGdmZ1U2WHJSQmtvRDVnYUtmRS1tY1R5TjA3UXFiWkNhYW9GY3NYcllvWlpGdTNrT3dHNjlLUXVVWWI2NmFHMHBZQ3NldzRIcFFhRkJXSXhiUi1yRTh4Ti15VGFLa2txbGZRNHF3azRSOEU3ZUxBRmJMZ2ZiaTRmVGc?oc=5",
+   "published_at": "2026-10-20T07:00:00+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "macintyre",
+   "title": "Robert MacIntyre admits ‘love-hate’ relationship with Old Course",
+   "source": "bunkered.co.uk",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNclpOdXEwNUtiMmIyMEQxZkZoeFY2WDVnZ1JlSC1JS2E2MXY3ZklBSG1VOWF4dG13Y3AyOHNqN0Jxa1AyclIzcV9LV3lLSFdzeU56MXZTTkcyaHZzQ2RORHZBMzFBSlFqenlMUE1PaW04YzIwTExyNUwxSTB2dkllS1BDRURxcl9nd3JUSWcyQzVfQ1Jfay02NURHUFlMcGZESWc?oc=5",
+   "published_at": "2026-10-16T07:00:00+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "macintyre",
+   "title": "Bob MacIntyre adds event to DP World Tour schedule after securing late invitation",
+   "source": "The Scotsman",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQUFNDWTVFSkVxcUp0ZDFXZFBoNVhMSGt4dEY5VGVZZnhYU1JNbEc4Tkx0VEs0SUNLWTI4QlFnM0h4eW1OdzhpUnlBTmZZWHhSdUphcVdwQjNxTUU3d2g2Q1VUbzZ2dlc0OG12SXhQTjBybTRfVktKVjczZnVSdHEyTzZ1bklrSGhOQkdKaFJvQUQxWkZWdjR3enloOG5PbDFCWG5OdDZES2ZQYWRPNnVtN3A0YkRoeHl0S193SQ?oc=5",
+   "published_at": "2026-10-13T07:00:00+00:00",
    "lang": "en"
   },
   {
@@ -802,6 +811,14 @@
    "title": "‘Ride the wave’ - Michael Stewart reveals Robert MacIntyre advice as DP World Tour ‘whirlwind’ continues in Spain",
    "source": "DP World Tour",
    "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxORm9pRXNBa1dMaWt3R19fS3EwLV9rbUJvZXVOcV9SMEZibS1sRnNUYjhTTVN0NGRPa0I3UmF2aVVpRUJNTXNBMFJ1UFFZQXdrLXJ0OGotdV84V0w0UlMzUF82VEE4OXVrTnVVU1cwQ01JcDVfb3ZmelpfSWVzQTdoRDBlaFh1aHVIUXJlZHkzQ1pjOGJEWnpONmNkVEJ6YTlZa2JOMGpuZW9BY0JDYi1EWmNUZHByaV9MbWJwUk1KMS1sZDlOVWZjR01DQkVKRTdyRjhWRDhBSWEwM2hUc1lJTnUxQmxXX2tBejRfbGZnZk0zeUQyLUJIdkZKM21Tdmcz?oc=5",
+   "published_at": "2026-10-07T07:00:00+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "macintyre",
+   "title": "'Part of his DNA' - Luke Donald addresses Bob MacIntyre question ahead of 2027 Ryder Cup",
+   "source": "The Scotsman",
+   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOMFJBemVUSGlrTnFrZ2tUS1BqV183ZmpRVVptSks2bG0xck41OGRLcDJyX09hc0RIaDk4Zl84Z2ZFNzVhYkdIT1R0N1RwaWx1UUQyLXVFbGJHYUZnZGtrSlB2WFRWRXZhanplUVdOT2ZzZ0ZDSmhjVjNSVFVsdGRPTnhmdmJEUGJhaEZnMHh5MW5CYU9qOHl2VXBVWEd2N3J1UTBTYTN1aGgxandVSl95V24tbk5vNllVa0k5TjZvTVA?oc=5",
    "published_at": "2026-10-07T07:00:00+00:00",
    "lang": "en"
   },
@@ -815,74 +832,58 @@
   },
   {
    "follow_id": "macintyre",
-   "title": "‘It drives me insane!’ Bob MacIntyre warned after latest outburst",
-   "source": "Today's Golfer",
-   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOYVAtNHVmWTNudnh1Z0R5QXJTRXBYWlluTVJJUmpfTVhkQ0lFamZjTThlR1JOOWpVREtWU08yVXAyZzZZNlplTHdIY3Q4R1d2OGNoRDVFOEdENkpXMnpoc0V0ajRheFVUSDhJV3hMdGQ2WnB2czMzZi0xUFRYN0ZHd1pxN3VLMS1yTVA5ekpPRWxod3h0OGxtXzNWOUlYV0lj?oc=5",
+   "title": "Robert MacIntyre unsure over DP World Tour playoff plans",
+   "source": "bunkered.co.uk",
+   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOdzZjUWxsaURqazZFVlVFZVpXMWhzTWV0ZTFUaHV3NFNJUVJYem5xYzlzcjBsYzJHTWtlX2gxN1piU01lOTRydEF4MEU5TGtMNjNRano1cGg5OGJrLUVvY1BWd0pOWnNHQ0FiNUQyREwzamhWMlFPNWowN1FTMVhYMWR0ZUl0YVMtM0E?oc=5",
+   "published_at": "2026-10-05T07:00:00+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "macintyre",
+   "title": "Old Course 'growing' on Bob MacIntyre ahead of 155th Open after landing shot 12 years in making",
+   "source": "The Scotsman",
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQUmxZWHJzMmdYQ1c3N3ZpYmZnOGZ4XzhWb1ZCN0ZhZFBOUVIzcU1ZdkpicF9HeEJ3T2hJckxNSUhFS1hzUUgtUld6S1FndE4tUFFfeUtzdTI5d3EzN2FENDQyemUwdzRodmFmV19TQnBULWVZQkw1c3ZIOWhFZmFOWVdxX3hBOGZVVGstaG9OYjlWbGpaQXdoQjlRbU54Mlc1dmM1YnlvWkpjZVI5aVJFM3BqekZkcnRlaFNlVFFZVUp4d2M2WHgwY0pFS0M?oc=5",
+   "published_at": "2026-10-05T07:00:00+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "macintyre",
+   "title": "Robert MacIntyre fumes after wayward tee shot - 'This club is so bad!'",
+   "source": "Sky Sports",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQN0Nwb2JRMHp3ZWRxT29WSHBfTDl0S1dOVDZKYXNSQXV1OURsRUsya0NPdTFkVl8wc0tnZ01FMXdHdXNjSUN2UWlHcW1PQ0p2TFFNaVNUTGNhVFlFWk5lYmVsNEhnbndBYW9oZXpsN0ZTWWdnYkpjcEpCbVNYYVJjcnEySFVYVVJoZlpHczZPNHVjS1h1MW1lNDRYR1BZS0k2M1lsNndEbUhRU0ZKa0ViNg?oc=5",
+   "published_at": "2026-10-04T07:00:00+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "macintyre",
+   "title": "WATCH: Robert MacIntyre eagles the 14th at St Andrews",
+   "source": "DP World Tour",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOVC1RWjFKbWNLVXg0MTVkMXdvTXRLT2tzNHZodE0zWG1fbm81YlpJckc4aE5rZDZhN29vdlF2bHpBX1ZqQk9LNVUtZU9RWl9jVF9MdURsd0xFVU9ncVRRZTFoUkd5TWRKT0FiRS0wR1BoSmF2SVdIRHdQRHNqaTNKZHd4NDVobWhtN1lBLUJacHNOSWhiSHNiT2hFTHp4eFhmWGc?oc=5",
+   "published_at": "2026-10-04T07:00:00+00:00",
+   "lang": "en"
+  },
+  {
+   "follow_id": "macintyre",
+   "title": "Bob MacIntyre in Dunhill Links mix again through 'playing on the edge'",
+   "source": "The Scotsman",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQQm9uckdsVWVpTVJOU2g2OFJPOHI0RnZZYVktWEtMSkNkMWhlVm4zaGlLQk10S2RxOXctNjNlMzhtNXEzdngyVHp4aDV3bktfV0VkLTlOMEtHSlZkbDZnb2tZY25WR2dPSVBnXzk4aE5ieW45dlZyLTdKdllvOElNem5SYklrT1RhQVY5QnU4TUtzdUxMb1hKYUsxWWlVektPZ2Z6c3ZSTHY3NzQ?oc=5",
    "published_at": "2026-10-02T07:00:00+00:00",
    "lang": "en"
   },
   {
    "follow_id": "macintyre",
-   "title": "'They don't need to be so close' - MacIntyre on drone frustration",
+   "title": "Alfred Dunhill Links: Robert MacIntyre makes second-round move",
    "source": "BBC",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1EZ2o5X09NVjhtVDNBYVNpcVVRTllXYXBRdTZCTGNLODZlQzNsV1FqWmFQUXNWQXpDaTFIVnR6YzNUeDA3cWwyeFROY09Eb1lCbTlLLThOX3VDenBjQVA4LVVzWQ?oc=5",
-   "published_at": "2026-10-01T17:52:28+00:00",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5PSWhtSlY3djdyTGZDQkVXa3R2U19nQlZEaFZGVktGRktfeHNramtvQTlVVC1JXzd1M0J2bDJmc3AwU1QxeXZna2JaRU1YQUY3VUVsQms5Njg2VkVGQVNsZXlaRQ?oc=5",
+   "published_at": "2026-10-02T07:00:00+00:00",
    "lang": "en"
   },
   {
    "follow_id": "macintyre",
-   "title": "Frustrated Robert MacIntyre warned after drone row at Carnoustie",
-   "source": "BBC",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE12azhzNmo5MXh5Z2x3d25abERub2dIVzVHRXl0aEdHZFV3VFBvVXVkNndvTlUwUEI5SVBBVndRaHBnX255ZjE0eXMwRXl4VWprRVp4eTc2ek1kSU90aGlDaVBYaw?oc=5",
-   "published_at": "2026-10-01T07:00:00+00:00",
-   "lang": "en"
-  },
-  {
-   "follow_id": "macintyre",
-   "title": "The Open: Robert MacIntyre calls for Carnoustie and Muirfield to become regular venues",
-   "source": "BBC",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE10NThQSzRZQ09nV3lkc0FWM044N0wxNzhDWWxqcld3bk5UWi1jcXBJQkdZVUlEa2dkVnFrN0VSX28wbjNZUVZmZ2NlSWdwLTd1VnNHU1JBUEpoaVZ1Sy12aHdOOA?oc=5",
-   "published_at": "2026-09-30T07:00:00+00:00",
-   "lang": "en"
-  },
-  {
-   "follow_id": "macintyre",
-   "title": "New-dad club: Robert MacIntyre embracing fatherhood with Tyrrell Hatton and Matt Fitzpatrick",
-   "source": "DP World Tour",
-   "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNWXUtTDlma1JuUEk2czllampia1RmNVhydkV4cU8zaVpGNXUtRkFQX2ZibEJVN2NJRzJVdFFTRXpMWXd6aGhFekpCMnFmei1YSS1jUElwRjVCTnAtR0FDSF9HYTQ3eWk4cmNoakc2el8xMmNOSkhoSGwzVlo1dXNVM2YzblFpM05ZSE1PZExaa1dBR1F0eUxvSFhBN1dEUUVwa3k4dks4ZVRrZkRiMlF6b3FXLWVqc1I3eFVOWXNuREswRzhCRnRFVUpXUFRvMU9vbDdKVEFQR1NHUzV2YXFhOFpqbzFkcUM3UmhV?oc=5",
-   "published_at": "2026-09-30T07:00:00+00:00",
-   "lang": "en"
-  },
-  {
-   "follow_id": "macintyre",
-   "title": "Robert MacIntyre 'fizzing' after wild ride at Wentworth - Articles - Rolex Series",
-   "source": "DP World Tour",
-   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOczRPUGVCcEJMRzg0czd3ZVlTUVhBMWdCbWstVk9VbWU4eTBpUUg4US1sY1kyVkNHVXhFTTRZSXpNSEo2ejZkRm1XRGRQb3VZd0FvVWVMbnY3Q0Z5REt3ZWdXV1VURHJEWV9DZmtXTFRkbzlrUlFXbTFCQlc0UmFTU2l6azU0cU1CWUw4TkxMUDR2YW5MSjFRbHdRN3lzN1VUQ0x0dDNwcW81RHpDWGdnMy1QM2lILWd0X2ozOU9EazU?oc=5",
-   "published_at": "2026-09-18T07:00:00+00:00",
-   "lang": "en"
-  },
-  {
-   "follow_id": "macintyre",
-   "title": "What’s In The Bag: Robert MacIntyre (September 2026 update)",
-   "source": "Today's Golfer",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE85RjZMdHdnb1VQbHNEVmlwcXFweV9YS051aTlJTUFicU9yTXIyOEhGdlNOSl9TczlvQk9yZTNwaTcweHNISWFQd1RhbVhCUUtwTEp2d2dkZTNnalNYbUtET1ByZFp5dENNMHh3WTR6WQ?oc=5",
-   "published_at": "2026-09-07T07:00:00+00:00",
-   "lang": "en"
-  },
-  {
-   "follow_id": "macintyre",
-   "title": "Golfer Bob MacIntyre doubles value of own company with big wins",
-   "source": "The Times",
-   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQa2tOSTNBWUpjNEZJUmZERjZtMm9DbWdLTGRoSkF2d2hVZzJsUldjdlNkRHNtVjc4RTRteFRzSFFBeU9lRGNvWFl3cmc4Q2MxRkgzU0hCSEx2WHFzRmhpa1Q5ajZRdEFXOTRXWV92ckFfdTFrTXR1RHB0SDdkSHJxbXdzal9wV18yVndkNGd6bDc1cFU?oc=5",
-   "published_at": "2026-08-30T07:00:00+00:00",
-   "lang": "en"
-  },
-  {
-   "follow_id": "macintyre",
-   "title": "Robert MacIntyre betting profile: TOUR Championship",
+   "title": "Robert MacIntyre, Brooks Koepka three shots back after Round 2 at Alfred Dunhill Links Championship",
    "source": "PGA Tour",
-   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNQzhZV001MHhDNHZ1RFZCMXFNZktuVjN6cmVvcmVfcWprMTdBZ3YzdG5KdzYtcTlkUC1HN0FlR3hEek9yUXJUSm9fUHpSQTV1UFdPNDBoWkdiYmJlQmd0OExWWFgyMjdzcFgycWwybkdVdm90RzFqMklNZmN5dE9OQnQ0UmJ6MGpSd0RfaVNVaU91empMT3RWclJjVWRFRWpweXJidEVpZm9mYjZaUWdrMS1FakE0eVhJX2dLWXVmOHRWWjJfTS04MXptNWxFeTJlMkpyLXFYRQ?oc=5",
-   "published_at": "2026-08-24T07:00:00+00:00",
+   "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNXy01dlhBVkpFZEE3N0dhRXZqWGJPOGRFTG9VbGt5UFN1WWcwV2xPY1dDX2NtM0s5TmdZNGxNVlZoQkk2dElJRTQ0dDJlaDFWNG5jSVVMUnNYLVJVT2paWmwwYTkxQ0xnMlFUTFBfY2oyMnVGZWdxa2lNNENJc2JRNnNSRVFPZlE5OHVPOEdVczY5Y0hXRTZDR3BMazU3bG1vTkFpYy1OUUZBckFScVI3dTczdGQ5d3VuUy1CN3hEOHJvZnc4czh0elRMckRHYkJKM1hzQmZISWdFR3FuRUgyTm1odzh2MF9xUXlFT2l3?oc=5",
+   "published_at": "2026-10-02T07:00:00+00:00",
    "lang": "en"
   }
  ],
@@ -892,6 +893,7 @@
    "kind": "team",
    "source_id": "2261718",
    "status": "finished",
+   "result": "Scotland Rugby First Half:<br>19 14 <br>Second Half<br>31 26 <br>Overtime<br>",
    "starts_at": "2026-03-07T14:10:00+00:00",
    "competition": "Six Nations Championship",
    "home": "Scotland Rugby",
@@ -906,7 +908,8 @@
    "follow_id": "england-cricket",
    "kind": "team",
    "source_id": "2524734",
-   "status": "upcoming",
+   "status": "finished",
+   "result": null,
    "starts_at": "2026-09-27T09:30:00+00:00",
    "competition": "One Day International Series",
    "home": "England Cricket",
@@ -919,6 +922,7 @@
    "kind": "team",
    "source_id": "2553405",
    "status": "finished",
+   "result": " Bath Rugby First Half:<br>19 7 <br>Second Half<br>17 21 <br>Overtime<br> ",
    "starts_at": "2026-10-31T15:05:00+00:00",
    "competition": "English Prem Rugby",
    "home": "Bath Rugby",
@@ -934,6 +938,7 @@
    "kind": "team",
    "source_id": "2550422",
    "status": "finished",
+   "result": " Union Bordeaux Bègles First Half:<br>14 0 <br>Second Half<br>5 14 <br>Overtime<br> ",
    "starts_at": "2026-10-31T15:35:00+00:00",
    "competition": "French Top 14",
    "home": "Union Bordeaux Bègles",
@@ -949,6 +954,7 @@
    "kind": "team",
    "source_id": "2550429",
    "status": "upcoming",
+   "result": " Vannes First Half:<br>  <br>Second Half<br>  <br>Overtime<br> ",
    "starts_at": "2026-11-07T13:30:00+00:00",
    "competition": "French Top 14",
    "home": "Vannes",
@@ -961,6 +967,7 @@
    "kind": "team",
    "source_id": "2449607",
    "status": "upcoming",
+   "result": null,
    "starts_at": "2026-11-07T14:10:00+00:00",
    "competition": "Nations Championship",
    "home": "Scotland Rugby",
@@ -973,6 +980,7 @@
    "kind": "team",
    "source_id": "2611705",
    "status": "upcoming",
+   "result": " Exeter Chiefs First Half:<br>  <br>Second Half<br>  <br>Overtime<br> ",
    "starts_at": "2026-11-07T15:00:00+00:00",
    "competition": "English Prem Rugby Cup",
    "home": "Exeter Chiefs",
@@ -985,6 +993,7 @@
    "kind": "team",
    "source_id": "2623116",
    "status": "upcoming",
+   "result": null,
    "starts_at": "2026-12-17T08:00:00+00:00",
    "competition": "ICC World Test Championship",
    "home": "South Africa Cricket",
@@ -993,6 +1002,303 @@
    "venue": "Wanderers Stadium"
   }
  ],
- "highlights": [],
+ "highlights": [
+  {
+   "follow_id": "ubb",
+   "title": "🥶",
+   "channel": "Union Bordeaux-Bègles",
+   "video_id": "IyMQwbHyZ84",
+   "published_at": "2026-11-02T16:21:45+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "ubb",
+   "title": "𝑪𝒐𝒏𝒏𝒆𝒄𝒕𝒊𝒐𝒏 🤜🤛",
+   "channel": "Union Bordeaux-Bègles",
+   "video_id": "W_USpuXsxEY",
+   "published_at": "2026-11-02T15:06:55+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "bath",
+   "title": "Bath Rugby v Sale Sharks EXTENDED HIGHLIGHTS | Gallagher PREM 26/27 | Round 5",
+   "channel": "PREM Rugby",
+   "video_id": "f4XeakLMg-k",
+   "published_at": "2026-11-02T15:00:04+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "ubb",
+   "title": "Insaisissable ⚡️",
+   "channel": "Union Bordeaux-Bègles",
+   "video_id": "TczreIcDOXU",
+   "published_at": "2026-11-02T12:49:33+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "ubb",
+   "title": "TOP 14 - J8 : Le grattage monstrueux de Tom Willis pour offrir la victoire à l'UBB !",
+   "channel": "Top 14",
+   "video_id": "Z5uaNS9HMjk",
+   "published_at": "2026-11-02T11:16:17+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "bath",
+   "title": "RUSSELL v FORD! Bath Rugby v Sale Sharks | HIGHLIGHTS & REACTION | Gallagher PREM 26/27 | Round 5",
+   "channel": "PREM Rugby",
+   "video_id": "GVUaEfswSgg",
+   "published_at": "2026-11-01T09:00:06+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "WATCH: Hillhead Jordanhill RFC v Watsonian FC | Arnold Clark Women's Premiership",
+   "channel": "Scottish Rugby",
+   "video_id": "s0VTTKEe1bQ",
+   "published_at": "2026-11-01T03:00:01+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "ubb",
+   "title": "Les 𝒇𝒓𝒊𝒔𝒔𝒐𝒏𝒔 de la victoire ✨",
+   "channel": "Union Bordeaux-Bègles",
+   "video_id": "ceOeXsElvOM",
+   "published_at": "2026-10-31T18:56:35+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "ubb",
+   "title": "BEN TAMEIFUNA 2029",
+   "channel": "Union Bordeaux-Bègles",
+   "video_id": "wEyAYOWu9Uc",
+   "published_at": "2026-10-31T15:31:22+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "Finn Russell: Magic Moments | Skyscanner's Scan The Archives",
+   "channel": "Scottish Rugby",
+   "video_id": "LiihVDVxX0c",
+   "published_at": "2026-10-31T10:00:36+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "ubb",
+   "title": "En Bord Terrain - SAISON 3 EPISODE 2 - Hugo Avogadro",
+   "channel": "Union Bordeaux-Bègles",
+   "video_id": "_tktj2xYHMk",
+   "published_at": "2026-10-30T18:46:30+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "Facing The All Blacks, Fatherhood & The URC | Team Talk | Episode 6",
+   "channel": "Scottish Rugby",
+   "video_id": "mSJ_Lyqf5HI",
+   "published_at": "2026-10-30T16:23:36+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "ubb",
+   "title": "AUX CHARTRONS AVEC BORIS PALU ☕️",
+   "channel": "Union Bordeaux-Bègles",
+   "video_id": "P1A452yCW78",
+   "published_at": "2026-10-29T16:23:42+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "EVERY TRY | Scotland in the Nations Championship!",
+   "channel": "Nations Championship",
+   "video_id": "fYKy-Yk7Mco",
+   "published_at": "2026-10-29T09:32:56+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "england-cricket",
+   "title": "Huge Overs & Wickets! | England v Sri Lanka ODI & T20 2026 Highlights",
+   "channel": "England & Wales Cricket Board",
+   "video_id": "YbIO8LO_Flk",
+   "published_at": "2026-10-29T06:00:28+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "ubb",
+   "title": "POV : T'es Tom Willis en défense 😂 #rugby #top14",
+   "channel": "Union Bordeaux-Bègles",
+   "video_id": "LzK3AwkKEYw",
+   "published_at": "2026-10-28T09:57:57+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "ubb",
+   "title": "HUGO REUS AU PIED ! 🪄  #rugby #top14",
+   "channel": "Union Bordeaux-Bègles",
+   "video_id": "yoTJWsa4SBA",
+   "published_at": "2026-10-26T16:19:23+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "england-cricket",
+   "title": "Razaullah STUNS England & Tongue's Magic With The Ball | England vs Pakistan 3rd Test 2026",
+   "channel": "England & Wales Cricket Board",
+   "video_id": "ah-LKnoVgqo",
+   "published_at": "2026-10-26T16:00:11+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "ubb",
+   "title": "L'essai pour son retour de Carlü Sadie ! 🔥 #rugby #top14",
+   "channel": "Union Bordeaux-Bègles",
+   "video_id": "LommX15LZhY",
+   "published_at": "2026-10-26T15:00:05+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "Katie Buchanan At It Again Against Australia 👊🏴󠁧󠁢󠁳󠁣󠁴󠁿 #asone #scottishrugby #shorts",
+   "channel": "Scottish Rugby",
+   "video_id": "gOn0yp8Souk",
+   "published_at": "2026-10-26T12:00:09+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "Leatherbarrow Earns First Call-Up | Gregor Townsend | SQUAD ANNOUNCEMENT",
+   "channel": "Scottish Rugby",
+   "video_id": "cSq6t5RUb2c",
+   "published_at": "2026-10-26T10:34:29+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "ubb",
+   "title": "Quelle soirée hier à Deflandre !Merci pour votre soutien pendant ces 80 minutes 🫶#SRUBB",
+   "channel": "Union Bordeaux-Bègles",
+   "video_id": "eDt5N8R-kWs",
+   "published_at": "2026-10-26T10:00:07+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "Simply a stunner from Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+   "channel": "Six Nations Rugby",
+   "video_id": "9JCabN7Vlsw",
+   "published_at": "2026-10-26T09:29:42+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "england-cricket",
+   "title": "High-Scoring Drama! 🔥 | England vs Pakistan ODI Highlights 2019 & 2021",
+   "channel": "England & Wales Cricket Board",
+   "video_id": "ioAxIyrMSFA",
+   "published_at": "2026-10-25T06:00:23+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "The Perfect Pass From Meryl Smith to Rhona Lloyd 👏🏴󠁧󠁢󠁳󠁣󠁴󠁿 #rugby #scotlandrugby #shorts",
+   "channel": "Scottish Rugby",
+   "video_id": "4yNA94nvR3I",
+   "published_at": "2026-10-25T00:11:58+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "england-cricket",
+   "title": "Guess The Cricketer 🤔 (England Internationals) ft. Woakes & Duckett",
+   "channel": "England & Wales Cricket Board",
+   "video_id": "nzSv_Km_QFM",
+   "published_at": "2026-10-23T14:00:16+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "Grant Gilchrist gets interviewed BY KIDS | Class Chat",
+   "channel": "Scottish Rugby",
+   "video_id": "BFozck8PPWI",
+   "published_at": "2026-10-22T14:13:43+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "Looking Ahead To The Final Test | Katie Buchanan | Global WXV Series 2026",
+   "channel": "Scottish Rugby",
+   "video_id": "sgtJVBgPcI0",
+   "published_at": "2026-10-21T12:00:21+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "Joining The Pride | Josie Symonds Appointed to British And Irish Lions 2027",
+   "channel": "Scottish Rugby",
+   "video_id": "3F5qNbldaXc",
+   "published_at": "2026-10-21T00:52:40+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "Rachel Philipps gets interviewed BY KIDS | Class Chat",
+   "channel": "Scottish Rugby",
+   "video_id": "xfVLWi7Ssxo",
+   "published_at": "2026-10-20T17:07:49+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "ubb",
+   "title": "Malgré les galères à l'aéroport, le doublé pour LBB 🤯 #rugby #WeAreUBB",
+   "channel": "Union Bordeaux-Bègles",
+   "video_id": "1zFhE131y5c",
+   "published_at": "2026-10-19T11:55:52+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "ubb",
+   "title": "La vitesse de LBB 🌪️  #rugby #WeAreUBB",
+   "channel": "Union Bordeaux-Bègles",
+   "video_id": "5B5lbtdk_WU",
+   "published_at": "2026-10-19T11:47:58+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "ubb",
+   "title": "La puissance de Sipili 🧨 #rugby #WeAreUBB",
+   "channel": "Union Bordeaux-Bègles",
+   "video_id": "iX_AyDXrRPM",
+   "published_at": "2026-10-19T11:45:33+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "A First Try for Scotland Down Under 🏴󠁧󠁢󠁳󠁣󠁴󠁿 #shorts #asone #rugby",
+   "channel": "Scottish Rugby",
+   "video_id": "wDM6cuzQN9U",
+   "published_at": "2026-10-19T03:23:44+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "WATCH: Melrose Rugby v Hawick RFC | Arnold Clark Men's Premiership",
+   "channel": "Scottish Rugby",
+   "video_id": "YmCzkXOeh9w",
+   "published_at": "2026-10-18T05:16:15+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "Playing In Sydney and Escaping Rugby | Lana Skeldon | Global WXV Series 2026",
+   "channel": "Scottish Rugby",
+   "video_id": "PNgPKnjZW34",
+   "published_at": "2026-10-15T12:30:13+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "Forwards vs Backs Basketball Challenge | Global WXV Series 2026",
+   "channel": "Scottish Rugby",
+   "video_id": "1snVEyWdvLI",
+   "published_at": "2026-10-12T23:10:40+00:00",
+   "linked_match": null
+  }
+ ],
  "errors": []
 }
