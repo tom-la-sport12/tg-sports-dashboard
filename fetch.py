@@ -7,6 +7,7 @@ instead of killing the whole run. Needs: pip install pyyaml
 import json
 import re
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -124,12 +125,19 @@ images = {}  # follow_id -> avatar image, written into data.json
 
 
 def tsdb(path):
-    """TheSportsDB call, spaced out to stay under the free key's 30 a minute."""
-    wait = 2.1 - (time.time() - _last_tsdb[0])
-    if wait > 0:
-        time.sleep(wait)
-    _last_tsdb[0] = time.time()
-    return get(f"{TSDB}/{path}", as_json=True) or {}
+    """TheSportsDB call: spaced out, and backs off if the shared free key is busy."""
+    for attempt in range(4):
+        wait = 3.0 - (time.time() - _last_tsdb[0])
+        if wait > 0:
+            time.sleep(wait)
+        _last_tsdb[0] = time.time()
+        try:
+            return get(f"{TSDB}/{path}", as_json=True) or {}
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or attempt == 3:
+                raise
+            time.sleep(15 * (attempt + 1))  # 15s, 30s, 45s
+    return {}
 
 
 def badge(team_id, hint=None):
@@ -137,6 +145,7 @@ def badge(team_id, hint=None):
         return hint
     if not team_id:
         return None
+    team_id = str(team_id)
     if team_id not in _badges:
         try:
             teams = tsdb(f"lookupteam.php?id={team_id}").get("teams") or [{}]
@@ -178,6 +187,7 @@ def thesportsdb(follow, fx):
                 "venue": e.get("strVenue"), "city": e.get("strCity"), "country": e.get("strCountry"),
                 "round": e.get("intRound"), "season": e.get("strSeason"),
                 "side": "home" if str(e.get("idHomeTeam")) == me else "away",
+                "home_id": e.get("idHomeTeam"), "away_id": e.get("idAwayTeam"),
                 "home_badge": badge(e.get("idHomeTeam"), e.get("strHomeTeamBadge")),
                 "away_badge": badge(e.get("idAwayTeam"), e.get("strAwayTeamBadge")),
                 "thumb": e.get("strThumb") or None,
@@ -290,8 +300,25 @@ EVENTS = {"espn_golf": espn_golf}
 HIGHLIGHTS = {"youtube_channel": youtube_channel}
 
 
+def load_previous():
+    """Last run's data.json: reused for badges, and as a fallback if a source fails."""
+    try:
+        prev = json.load(open("data.json", encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    for m in prev.get("matches", []):
+        for side in ("home", "away"):
+            if m.get(f"{side}_id") and m.get(f"{side}_badge"):
+                _badges[str(m[f"{side}_id"])] = m[f"{side}_badge"]
+    for f in prev.get("follows", []):
+        if f.get("image"):
+            images[f["id"]] = f["image"]
+    return prev
+
+
 def main():
     follows = yaml.safe_load(open("follows.yaml", encoding="utf-8"))["follows"]
+    prev = load_previous()
     news, matches, highlights = [], [], []
 
     for f in follows:
@@ -313,7 +340,13 @@ def main():
 
         fx = f.get("fixtures")
         if fx and not todo(fx.get("team_id")) and fx["provider"] in FIXTURES:
-            matches += run(f, fx["provider"], FIXTURES[fx["provider"]], fx)
+            failed_before = len(errors)
+            got = run(f, fx["provider"], FIXTURES[fx["provider"]], fx)
+            if len(errors) > failed_before and not got:
+                # source failed: keep last run's fixtures rather than showing nothing
+                got = [m for m in prev.get("matches", []) if m.get("follow_id") == f["id"] and m.get("kind") == "team"]
+                errors[-1]["error"] += " (showing last run's fixtures)"
+            matches += got
 
         ev = f.get("events")
         if ev and not todo(ev.get("player_id")) and ev["provider"] in EVENTS:
