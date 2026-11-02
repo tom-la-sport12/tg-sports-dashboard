@@ -123,6 +123,26 @@ follows:
         handle: "https://www.youtube.com/ScottishRugbyTV"   # from Scottish Rugby's own listings; check it opens
         match_on: all              # excludes above still apply
 
+  - id: newcastle
+    kind: team
+    sport: football
+    name: Newcastle United
+    aliases: ["Newcastle United", "Newcastle", "NUFC", "Magpies"]
+    exclude: ["Newcastle Red Bulls", "Newcastle Falcons", "Newcastle Jets", "Newcastle Knights", "Newcastle Eagles", "women", "WSL", "U21", "U18"]
+    title_must_mention: true
+    news:
+      - type: google_news
+        query: '"Newcastle United"'
+        lang: en-GB
+    fixtures:
+      provider: thesportsdb
+      team_id: "134777"
+    highlights:
+      - type: youtube_channel
+        name: Newcastle United
+        handle: TODO
+        match_on: all
+
   - id: pepperell
     kind: player
     sport: golf
@@ -192,3 +212,15 @@ follows:
         name: DP World Tour
         handle: "https://www.youtube.com/@DPWorldTour"
         match_on: aliases
+
+  - id: forebros
+    kind: creator
+    sport: golf
+    name: Fore Bros Golf
+    aliases: ["Fore Bros", "ForeBros"]
+    exclude: []
+    highlights:
+      - type: youtube_channel
+        name: Fore Bros Golf
+        handle: "https://www.youtube.com/@ForeBrosGolf"
+        match_on: all

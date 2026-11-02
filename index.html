@@ -3,23 +3,32 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Today’s sport</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏉</text></svg>">
+<title>mAI sport</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="mAI sport">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#F2F4F8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1020" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%233B5BFF'/><text x='32' y='43' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'>mAI</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
 <style>
 :root {
   color-scheme: light;
-  --base: #EEF2EF;
-  --surface: #FFFFFF;
-  --ink: #15231E;
-  --muted: #5D6B65;
-  --line: #D3DBD6;
-  --turf: #1F5C43;
-  --turf-soft: #DCEBE3;
-  --body: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --display: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
+  --bg: #F2F4F8;
+  --card: #FFFFFF;
+  --raised: #E9ECF3;
+  --ink: #0D1424;
+  --muted: #5E687A;
+  --line: #E1E5EE;
+  --accent: #3B5BFF;
+  --accent-soft: #E6EBFF;
+  --on-accent: #FFFFFF;
+  --new: #FF3B5C;
+  --scrim: rgba(13, 20, 36, .45);
+  --body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --num: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
   box-sizing: border-box;
   padding-top: env(safe-area-inset-top, 0px);
   padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -27,194 +36,305 @@
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --base: #0F1A16;
-    --surface: #17251F;
-    --ink: #E8EEEA;
-    --muted: #94A39C;
-    --line: #2A3A33;
-    --turf: #7FC8A0;
-    --turf-soft: #1D3A2D;
+    --bg: #0B1020;
+    --card: #151C2F;
+    --raised: #1E2740;
+    --ink: #EEF2F8;
+    --muted: #95A1B6;
+    --line: #242E47;
+    --accent: #7D93FF;
+    --accent-soft: #1F2A55;
+    --on-accent: #0B1020;
+    --new: #FF5A75;
+    --scrim: rgba(0, 0, 0, .6);
   }
 }
 *, *::before, *::after { box-sizing: inherit; }
 html { scroll-padding-top: env(safe-area-inset-top, 0px); }
 body {
-  margin: 0;
-  background: var(--base);
-  color: var(--ink);
+  margin: 0; background: var(--bg); color: var(--ink);
   font: 400 1rem/1.45 var(--body);
   -webkit-font-smoothing: antialiased;
 }
+button { font: inherit; color: inherit; }
 a { color: inherit; }
-:focus-visible { outline: 2px solid var(--turf); outline-offset: 2px; }
+img { max-width: 100%; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+[hidden] { display: none !important; }
 
-.wrap { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
+.wrap { max-width: 46rem; margin: 0 auto; padding: 1rem 1rem 4rem; }
 
-header h1 {
-  font: 700 2.6rem/1 var(--display);
-  margin: 0;
-  letter-spacing: -0.01em;
-}
-header p { margin: .35rem 0 0; color: var(--muted); font-size: .9rem; }
+/* header */
+.top { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.brand { font: 700 1.6rem/1 var(--body); letter-spacing: -.035em; margin: 0; }
+.updated { color: var(--muted); font-size: .82rem; margin: 0; text-align: right; }
+.today { font: 600 1.05rem/1.2 var(--body); margin: .35rem 0 0; color: var(--muted); }
 
-.notice {
-  margin: 1rem 0 0;
-  padding: .6rem .8rem;
-  border-left: 3px solid var(--turf);
-  background: var(--surface);
-  font-size: .9rem;
+.notice { margin: .9rem 0 0; padding: .65rem .85rem; border-radius: 12px; background: var(--card); font-size: .88rem; border: 1px solid var(--line); }
+
+/* follow rail */
+.rail {
+  display: flex; gap: .9rem; overflow-x: auto; scrollbar-width: none;
+  margin: 1.1rem -1rem 0; padding: .2rem 1rem .4rem;
+  scroll-snap-type: x proximity; scroll-padding-inline: 1rem;
+}
+.rail::-webkit-scrollbar { display: none; }
+.follow {
+  flex: none; width: 4.6rem; border: 0; background: none; padding: 0; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; gap: .35rem;
+  scroll-snap-align: start;
+}
+.ring { position: relative; width: 3.6rem; height: 3.6rem; border-radius: 50%; padding: 3px; background: var(--line); }
+.follow[aria-pressed="true"] .ring { background: var(--accent); }
+.ring .av { width: 100%; height: 100%; border: 2px solid var(--bg); }
+.follow-name { font-size: .74rem; line-height: 1.15; text-align: center; color: var(--muted); max-width: 100%; }
+.follow[aria-pressed="true"] .follow-name { color: var(--ink); font-weight: 600; }
+.count {
+  position: absolute; top: -2px; right: -4px; min-width: 1.3rem; height: 1.3rem; padding: 0 .3rem;
+  border-radius: 999px; background: var(--new); color: #fff; border: 2px solid var(--bg);
+  font: 700 .7rem/1.05rem var(--body); text-align: center;
 }
 
-/* filter chips */
-.chips {
-  display: flex; gap: .4rem; overflow-x: auto;
-  margin: 1.1rem -1rem 0; padding: 0 1rem .3rem;
-  scrollbar-width: none;
+/* avatars and badges */
+.av {
+  display: grid; place-items: center; overflow: hidden; border-radius: 50%;
+  background: var(--card); color: var(--muted); font: 700 .9rem/1 var(--body);
 }
-.chips::-webkit-scrollbar { display: none; }
-.chip {
-  flex: none;
-  font: 500 .9rem/1 var(--body);
-  padding: .5rem .8rem;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  color: var(--ink);
-  cursor: pointer;
-}
-.chip[aria-pressed="true"] { background: var(--turf); border-color: var(--turf); color: var(--base); }
+.av img { width: 100%; height: 100%; object-fit: contain; }
+.av.photo img { object-fit: cover; }
+.crest { width: 2rem; height: 2rem; flex: none; display: grid; place-items: center; }
+.crest img { width: 100%; height: 100%; object-fit: contain; }
+.crest .init { width: 100%; height: 100%; border-radius: 50%; background: var(--raised); display: grid; place-items: center; font: 700 .72rem/1 var(--body); color: var(--muted); }
 
-section { margin-top: 2.2rem; }
-h2 {
-  font: 600 1.35rem/1.1 var(--display);
-  margin: 0 0 .7rem;
-  padding-bottom: .4rem;
-  border-bottom: 2px solid var(--ink);
-}
-.empty { color: var(--muted); font-size: .95rem; margin: .4rem 0; }
+/* sections */
+section { margin-top: 1.9rem; }
+.head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin: 0 0 .7rem; }
+h2 { font: 700 1.2rem/1.2 var(--body); letter-spacing: -.02em; margin: 0; }
+.empty { color: var(--muted); font-size: .92rem; margin: 0; padding: 1rem; background: var(--card); border-radius: 16px; }
 
-/* results: the classified-results read-out */
-.result {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  column-gap: .75rem;
-  padding: .65rem 0;
-  border-bottom: 1px solid var(--line);
+.pill-new {
+  display: inline-block; vertical-align: middle; margin-left: .4rem;
+  font: 700 .66rem/1 var(--body); padding: .22rem .4rem; border-radius: 999px;
+  background: var(--new); color: #fff; letter-spacing: .02em;
 }
-.line {
-  font: 600 1.55rem/1.15 var(--display);
-  margin: 0;
-}
-.line .score { color: var(--turf); font-weight: 700; padding: 0 .15em; }
-.line .mine { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
-.text-result { font-size: .95rem; margin: .15rem 0 0; }
-.meta { color: var(--muted); font-size: .85rem; margin: .15rem 0 0; }
-.when { color: var(--muted); font-size: .85rem; text-align: right; white-space: nowrap; }
+.dot-new { display: inline-block; width: .5rem; height: .5rem; border-radius: 50%; background: var(--new); margin-right: .45rem; vertical-align: middle; }
 
-/* fixtures */
-.fixture {
-  display: grid;
-  grid-template-columns: 5.4rem 1fr;
-  column-gap: .9rem;
-  padding: .6rem 0;
-  border-bottom: 1px solid var(--line);
+/* next up: the one bold moment */
+.hero {
+  display: block; width: 100%; text-align: left; cursor: pointer; border: 0;
+  border-radius: 22px; padding: 1.1rem 1.1rem 1.2rem; margin-top: 1.2rem;
+  background: var(--accent); color: var(--on-accent);
 }
-.date { font: 600 1.05rem/1.1 var(--display); }
-.date span { display: block; color: var(--muted); font: 500 .85rem/1.3 var(--body); }
-.teams { font: 500 1.05rem/1.25 var(--body); margin: 0; }
+.hero-top { display: flex; justify-content: space-between; gap: .75rem; font-size: .85rem; opacity: .9; }
+.hero-teams { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: .6rem; margin-top: 1rem; }
+.hero-side { display: flex; flex-direction: column; align-items: center; gap: .45rem; text-align: center; font-weight: 600; line-height: 1.2; }
+.hero-side .crest { width: 3.4rem; height: 3.4rem; }
+.hero-side .crest .init { background: rgba(255,255,255,.2); color: inherit; font-size: 1rem; }
+.hero-mid { text-align: center; }
+.hero-when { font: 700 2rem/1 var(--num); }
+.hero-sub { font-size: .82rem; opacity: .85; margin-top: .25rem; }
+
+/* segmented control */
+.seg { display: inline-flex; background: var(--raised); border-radius: 999px; padding: 3px; }
+.seg button { border: 0; background: none; padding: .4rem .85rem; border-radius: 999px; font-size: .85rem; font-weight: 600; color: var(--muted); cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--card); color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+
+/* grouped list (matches, news) */
+.group { background: var(--card); border-radius: 16px; overflow: hidden; }
+.row { display: block; width: 100%; text-align: left; border: 0; background: none; cursor: pointer; padding: .8rem 1rem; }
+.row + .row { border-top: 1px solid var(--line); }
+.row:hover { background: color-mix(in srgb, var(--raised) 45%, transparent); }
+
+.match { display: grid; grid-template-columns: 1fr auto; gap: .2rem 1rem; align-items: center; }
+.comp { grid-column: 1 / -1; font-size: .76rem; color: var(--muted); }
+.lines { display: grid; gap: .35rem; }
+.team { display: flex; align-items: center; gap: .6rem; min-width: 0; }
+.team .crest { width: 1.6rem; height: 1.6rem; }
+.tname { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 500; }
+.team.won .tname, .team.mine .tname { font-weight: 700; }
+.pts { font: 700 1.35rem/1 var(--num); min-width: 1.8rem; text-align: right; }
+.team.lost .pts { color: var(--muted); }
+.side-info { text-align: right; font-size: .8rem; color: var(--muted); white-space: nowrap; }
+.side-info strong { display: block; color: var(--ink); font-size: .95rem; }
+.txt-result { grid-column: 1 / -1; font-size: .85rem; color: var(--muted); }
 
 /* golf */
-.golf {
-  display: grid; grid-template-columns: 1fr auto; column-gap: .75rem;
-  padding: .65rem 0; border-bottom: 1px solid var(--line);
-}
-.pos { font: 700 1.9rem/1 var(--display); text-align: right; }
-.pos span { display: block; font: 500 .85rem/1.3 var(--body); color: var(--muted); }
+.golf { display: flex; align-items: center; gap: .85rem; padding: .8rem 1rem; }
+.golf + .golf { border-top: 1px solid var(--line); }
+.golf .av { width: 2.8rem; height: 2.8rem; background: var(--raised); }
+.golf-txt { flex: 1; min-width: 0; }
+.golf-txt strong { display: block; }
+.golf-txt span { font-size: .82rem; color: var(--muted); }
+.golf-pos { text-align: right; font: 700 1.9rem/1 var(--num); }
+.golf-pos span { display: block; font: 500 .8rem/1.3 var(--body); color: var(--muted); }
 
-/* highlights */
-.videos { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; }
-.video button {
-  display: block; width: 100%; padding: 0; border: 0; cursor: pointer;
-  aspect-ratio: 16 / 9; background: var(--line) center / cover no-repeat;
-  border-radius: 6px; position: relative;
-}
-.video button::after {
-  content: ""; position: absolute; inset: 50% auto auto 50%;
-  width: 3rem; height: 3rem; margin: -1.5rem 0 0 -1.5rem; border-radius: 50%;
-  background: rgba(0,0,0,.6) url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9 7v10l8-5z'/></svg>") center / 60% no-repeat;
-}
-.video iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 6px; display: block; }
-.video p { margin: .4rem 0 0; font-size: .95rem; line-height: 1.3; }
+/* videos */
+.vrail { display: flex; gap: .8rem; overflow-x: auto; scrollbar-width: none; margin: 0 -1rem; padding: 0 1rem .3rem; scroll-snap-type: x mandatory; scroll-padding-inline: 1rem; }
+.vrail::-webkit-scrollbar { display: none; }
+.vcard { flex: none; width: 15.5rem; border: 0; padding: 0; background: none; text-align: left; cursor: pointer; scroll-snap-align: start; }
+.thumb { position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background: var(--raised); }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thumb .tag { position: absolute; left: .5rem; top: .5rem; }
+.thumb .kind { position: absolute; right: .5rem; bottom: .5rem; font: 600 .68rem/1 var(--body); padding: .25rem .4rem; border-radius: 6px; background: rgba(0,0,0,.65); color: #fff; }
+.vtitle { margin: .5rem 0 0; font-weight: 600; font-size: .92rem; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.vmeta { margin: .15rem 0 0; font-size: .78rem; color: var(--muted); }
 
 /* news */
-.story { padding: .65rem 0; border-bottom: 1px solid var(--line); }
-.story a { text-decoration: none; font-weight: 500; font-size: 1.02rem; line-height: 1.3; }
-.story a:hover { text-decoration: underline; }
-.tag {
-  display: inline-block; font-size: .78rem; font-weight: 600;
-  padding: .1rem .45rem; margin-right: .35rem; border-radius: 4px;
-  background: var(--turf-soft); color: var(--turf);
+.story { display: block; padding: .8rem 1rem; text-decoration: none; }
+.story + .story { border-top: 1px solid var(--line); }
+.story-title { font-weight: 600; line-height: 1.3; margin: 0; }
+.story-meta { margin: .3rem 0 0; font-size: .78rem; color: var(--muted); }
+.chip-tag { display: inline-block; padding: .08rem .45rem; border-radius: 6px; margin-right: .35rem; background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.more { display: block; width: 100%; margin-top: .7rem; padding: .75rem; border-radius: 12px; border: 1px solid var(--line); background: var(--card); font-weight: 600; cursor: pointer; }
+
+/* sheets: match centre and player */
+dialog.sheet {
+  border: 0; padding: 0; margin: auto auto 0; width: 100%; max-width: 46rem;
+  max-height: calc(100dvh - 2.5rem); border-radius: 22px 22px 0 0;
+  background: var(--bg); color: var(--ink); overflow: hidden;
 }
-.more {
-  margin-top: 1rem; font: 500 .95rem/1 var(--body);
-  padding: .65rem 1rem; border-radius: 6px; cursor: pointer;
-  border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+dialog.sheet::backdrop { background: var(--scrim); }
+@media (min-width: 48rem) {
+  dialog.sheet { margin: auto; border-radius: 22px; max-height: min(52rem, calc(100dvh - 4rem)); }
 }
+.sheet-inner { overflow-y: auto; max-height: inherit; padding: 0 1rem calc(1.5rem + env(safe-area-inset-bottom, 0px)); }
+.sheet-bar { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .9rem 0 .7rem; background: var(--bg); }
+.sheet-bar p { margin: 0; font-size: .85rem; color: var(--muted); }
+.close { border: 0; width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--raised); cursor: pointer; font-size: 1.15rem; line-height: 1; flex: none; }
 @media (prefers-reduced-motion: no-preference) {
-  .chip, .more { transition: background-color .15s, color .15s; }
+  dialog.sheet[open] { animation: rise .26s cubic-bezier(.2,.8,.2,1); }
+  @keyframes rise { from { transform: translateY(2.5rem); opacity: 0; } }
 }
+
+.board { background: var(--card); border-radius: 20px; padding: 1.2rem 1rem; display: grid; grid-template-columns: 1fr auto 1fr; gap: .5rem; align-items: center; }
+.board .hero-side .crest { width: 3.8rem; height: 3.8rem; }
+.board .hero-side .crest .init { background: var(--raised); color: var(--muted); }
+.board .mine { color: var(--accent); }
+.big-score { font: 700 2.9rem/1 var(--num); text-align: center; white-space: nowrap; }
+.big-score small { display: block; font: 600 .78rem/1.4 var(--body); color: var(--muted); }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: .6rem; margin-top: .8rem; }
+.fact { background: var(--card); border-radius: 14px; padding: .7rem .85rem; }
+.fact span { display: block; font-size: .74rem; color: var(--muted); }
+.fact strong { font-weight: 600; }
+.actions { display: flex; gap: .6rem; margin-top: .8rem; flex-wrap: wrap; }
+.btn { border: 0; border-radius: 12px; padding: .7rem 1rem; font-weight: 600; cursor: pointer; background: var(--raised); text-decoration: none; display: inline-block; }
+.btn.primary { background: var(--accent); color: var(--on-accent); }
+.sheet h3 { font: 700 1rem/1.2 var(--body); margin: 1.4rem 0 .6rem; }
+.para { background: var(--card); border-radius: 14px; padding: .85rem 1rem; margin: 0; font-size: .92rem; line-height: 1.5; }
+.player { aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; background: #000; }
+.player.short { aspect-ratio: 9 / 16; max-height: 70dvh; margin: 0 auto; }
+.player iframe { width: 100%; height: 100%; border: 0; display: block; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <h1 id="today">Today’s sport</h1>
-    <p id="updated">Loading…</p>
+    <div class="top">
+      <h1 class="brand">mAI sport</h1>
+      <p class="updated" id="updated">Loading…</p>
+    </div>
+    <p class="today" id="today"></p>
   </header>
   <div id="notices"></div>
-  <nav class="chips" id="chips" aria-label="Filter by team or player"></nav>
+  <nav class="rail" id="rail" aria-label="Choose who to show"></nav>
 
-  <section id="results-section"><h2>Results</h2><div id="results"></div></section>
-  <section id="golf-section"><h2>Golf this week</h2><div id="golf"></div></section>
-  <section id="fixtures-section"><h2>Coming up</h2><div id="fixtures"></div></section>
-  <section id="highlights-section"><h2>Highlights</h2><div id="highlights"></div></section>
-  <section id="news-section"><h2>News</h2><div id="news"></div></section>
+  <div id="hero-slot"></div>
+
+  <section id="matches-section">
+    <div class="head">
+      <h2>Matches</h2>
+      <div class="seg" role="group" aria-label="Results or upcoming">
+        <button data-tab="results" aria-pressed="true">Results</button>
+        <button data-tab="upcoming" aria-pressed="false">Upcoming</button>
+      </div>
+    </div>
+    <div id="matches"></div>
+  </section>
+
+  <section id="golf-section">
+    <div class="head"><h2>Golf this week</h2></div>
+    <div id="golf"></div>
+  </section>
+
+  <section id="videos-section">
+    <div class="head"><h2>Latest videos</h2></div>
+    <div id="videos"></div>
+  </section>
+
+  <section id="news-section">
+    <div class="head"><h2>News</h2></div>
+    <div id="news"></div>
+  </section>
 </div>
 
+<dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+  <div class="sheet-inner" id="sheet-body"></div>
+</dialog>
+
 <script>
-const RESULT_DAYS = 14;   // how far back results go
-const NEWS_PAGE = 20;
+const RESULT_DAYS = 14;
+const NEWS_PAGE = 15;
 const STALE_HOURS = 12;
+const SEEN_KEY = "mai-seen-v1";
+const GENERIC = new Set(["union", "united", "club", "aviron", "stade", "rugby", "cricket", "football", "city", "town", "racing", "sporting"]);
 
 let data = null;
 let filter = "all";
+let tab = "results";
 let newsShown = NEWS_PAGE;
-
-try { filter = localStorage.getItem("filter") || "all"; } catch (e) {}
+let fresh = new Set();   // keys of items that are new this visit
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} },
+};
+filter = store.get("mai-filter", "all");
 
-function label(f) {
-  // "England men" + cricket -> "England cricket"
-  return f.name.endsWith(" men") ? `${f.name.slice(0, -4)} ${f.sport}` : f.name;
+/* ---------- helpers ---------- */
+const follow = (id) => data.follows.find(f => f.id === id) || { id, name: id, kind: "team", sport: "" };
+function label(f) { return f.name.endsWith(" men") ? `${f.name.slice(0, -4)} ${f.sport}` : f.name; }
+function shortName(f) {
+  const map = { "Union Bordeaux-Bègles": "UBB", "Newcastle United": "Newcastle", "Fore Bros Golf": "Fore Bros" };
+  return map[f.name] || (f.kind === "player" ? f.name.split(" ").slice(-1)[0] : label(f).replace(/ Rugby$/, ""));
 }
-function shortLabel(id) {
-  const f = data.follows.find(x => x.id === id);
-  return f ? label(f) : id;
+const clean = (t) => (t || "").replace(/ (Rugby|Cricket)$/, "");
+const initials = (s) => clean(s).split(/[\s-]+/).filter(Boolean).slice(0, 2).map(w => w[0]).join("").toUpperCase();
+function crest(src, name) {
+  const fallback = `<span class="init">${esc(initials(name))}</span>`;
+  return `<span class="crest">${src ? `<img src="${esc(src)}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'init',textContent:'${esc(initials(name))}'}))">` : fallback}</span>`;
 }
-function clean(team) {
-  return (team || "").replace(/ (Rugby|Cricket)$/, "");
+function avatar(f) {
+  const cls = f.kind === "player" || f.kind === "creator" ? "av photo" : "av";
+  const ini = esc(initials(f.name));
+  return `<span class="${cls}">${f.image ? `<img src="${esc(f.image)}" alt="" loading="lazy" onerror="this.parentNode.textContent='${ini}'">` : ini}</span>`;
 }
-function day(iso, withTime = true) {
+const DAY = 864e5;
+function startOfDay(d) { const x = new Date(d); x.setHours(0, 0, 0, 0); return x; }
+function when(iso) {
   const d = new Date(iso);
-  const opts = { weekday: "short", day: "numeric", month: "short" };
-  const date = d.toLocaleDateString("en-GB", opts);
-  return withTime ? { date, time: d.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" }) } : { date };
+  const days = Math.round((startOfDay(d) - startOfDay(Date.now())) / DAY);
+  const time = d.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
+  const date = d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" });
+  let rel = date;
+  if (days === 0) rel = "Today";
+  else if (days === 1) rel = "Tomorrow";
+  else if (days === -1) rel = "Yesterday";
+  else if (days > 1 && days < 7) rel = d.toLocaleDateString("en-GB", { weekday: "long" });
+  return { days, time, date, rel, long: d.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" }) };
+}
+function countdown(iso) {
+  const ms = new Date(iso) - Date.now();
+  if (ms <= 0) return "Under way";
+  const h = Math.floor(ms / 36e5), d = Math.floor(h / 24);
+  if (d >= 1) return `${d} day${d > 1 ? "s" : ""}`;
+  if (h >= 1) return `${h} hr${h > 1 ? "s" : ""}`;
+  return `${Math.max(1, Math.round(ms / 6e4))} min`;
 }
 function ago(iso) {
   if (!iso) return "";
-  const mins = Math.round((Date.now() - new Date(iso)) / 60000);
+  const mins = Math.round((Date.now() - new Date(iso)) / 6e4);
   if (mins < 60) return `${Math.max(mins, 1)} min ago`;
   const hrs = Math.round(mins / 60);
   if (hrs < 24) return `${hrs} hr ago`;
@@ -222,126 +342,304 @@ function ago(iso) {
   return days === 1 ? "yesterday" : `${days} days ago`;
 }
 const keep = (item) => filter === "all" || item.follow_id === filter;
+const ytId = (url) => (String(url || "").match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([\w-]{11})/) || [])[1];
+const thumbOf = (id) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
 
-function renderChips() {
-  const ids = ["all", ...data.follows.map(f => f.id)];
-  if (!ids.includes(filter)) filter = "all";
-  $("chips").innerHTML = ids.map(id => `
-    <button class="chip" data-id="${id}" aria-pressed="${id === filter}">
-      ${id === "all" ? "Everything" : esc(shortLabel(id))}
-    </button>`).join("");
-  $("chips").querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
-    filter = b.dataset.id;
-    newsShown = NEWS_PAGE;
-    try { localStorage.setItem("filter", filter); } catch (e) {}
-    render();
+/* ---------- "new" tracking ---------- */
+const keyOf = {
+  news: n => `n:${n.url}`,
+  video: v => `v:${v.video_id}`,
+  match: m => `m:${m.source_id}:${m.status}`,
+};
+function allKeys() {
+  return [
+    ...data.news.map(keyOf.news),
+    ...data.highlights.map(keyOf.video),
+    ...data.matches.filter(m => m.kind === "team").map(keyOf.match),
+  ];
+}
+function trackNew() {
+  const seen = store.get(SEEN_KEY, null);
+  const keys = allKeys();
+  if (seen) {
+    const s = new Set(seen);
+    fresh = new Set(keys.filter(k => !s.has(k)));
+    // remember everything for next visit, keeping the list from growing forever
+    store.set(SEEN_KEY, [...new Set([...keys, ...seen])].slice(0, 3000));
+  } else {
+    store.set(SEEN_KEY, keys);  // first visit: nothing is "new" yet
+  }
+}
+const isNew = (kind, item) => fresh.has(keyOf[kind](item));
+function newCount(fid) {
+  return data.news.filter(n => n.follow_id === fid && isNew("news", n)).length
+    + data.highlights.filter(v => v.follow_id === fid && isNew("video", v)).length
+    + data.matches.filter(m => m.kind === "team" && m.follow_id === fid && isNew("match", m)).length;
+}
+
+/* ---------- rail ---------- */
+function renderRail() {
+  const totalNew = fresh.size;
+  const items = [{ id: "all", name: "Everything", kind: "all" }, ...data.follows];
+  if (!items.some(i => i.id === filter)) filter = "all";
+  $("rail").innerHTML = items.map(f => {
+    const n = f.id === "all" ? totalNew : newCount(f.id);
+    const av = f.id === "all" ? `<span class="av" style="background:var(--accent-soft);color:var(--accent)">All</span>` : avatar(f);
+    return `<button class="follow" data-id="${esc(f.id)}" aria-pressed="${f.id === filter}">
+      <span class="ring">${av}${n ? `<span class="count" aria-label="${n} new">${n > 99 ? "99+" : n}</span>` : ""}</span>
+      <span class="follow-name">${esc(f.id === "all" ? "All" : shortName(f))}</span>
+    </button>`;
+  }).join("");
+  $("rail").querySelectorAll(".follow").forEach(b => b.addEventListener("click", () => {
+    filter = b.dataset.id; newsShown = NEWS_PAGE; store.set("mai-filter", filter); render();
   }));
 }
 
-function sectionFor(id, hasItems) {
-  // hide sport-specific sections when the filter can't have anything in them
-  const f = data.follows.find(x => x.id === filter);
-  const golfOnly = f && f.sport === "golf";
-  const teamOnly = f && f.kind === "team";
-  if (id === "golf-section") $(id).hidden = teamOnly;
-  if (id === "results-section" || id === "fixtures-section") $(id).hidden = golfOnly;
+/* ---------- hero: next match ---------- */
+function teamMatches() { return data.matches.filter(m => m.kind === "team" && keep(m)); }
+function renderHero() {
+  const next = teamMatches().filter(m => m.status === "upcoming" && m.starts_at)
+    .sort((a, b) => new Date(a.starts_at) - new Date(b.starts_at))[0];
+  if (!next) { $("hero-slot").innerHTML = ""; return; }
+  const w = when(next.starts_at);
+  $("hero-slot").innerHTML = `<button class="hero" data-match="${esc(next.source_id)}" aria-label="Open match centre for ${esc(clean(next.home))} v ${esc(clean(next.away))}">
+    <div class="hero-top"><span>Next up</span><span>${esc(next.competition || "")}</span></div>
+    <div class="hero-teams">
+      <div class="hero-side">${crest(next.home_badge, next.home)}${esc(clean(next.home))}</div>
+      <div class="hero-mid"><div class="hero-when">${w.days === 0 ? w.time : esc(w.rel)}</div><div class="hero-sub">${w.days === 0 ? "Today" : `${w.time}, in ${countdown(next.starts_at)}`}</div></div>
+      <div class="hero-side">${crest(next.away_badge, next.away)}${esc(clean(next.away))}</div>
+    </div>
+  </button>`;
 }
 
-function renderResults() {
-  const cutoff = Date.now() - RESULT_DAYS * 864e5;
-  const items = data.matches
-    .filter(m => m.kind === "team" && m.status === "finished" && keep(m) && new Date(m.starts_at) >= cutoff)
+/* ---------- matches ---------- */
+function mineSide(m) {
+  if (m.side) return m.side;
+  const fn = clean(follow(m.follow_id).name).split(" ")[0].toLowerCase();
+  return clean(m.home).toLowerCase().includes(fn) ? "home" : "away";
+}
+function matchRow(m) {
+  const side = mineSide(m);
+  const s = m.score;
+  const res = (who) => !s ? "" : s.home === s.away ? "" : ((who === "home") === (s.home > s.away) ? "won" : "lost");
+  const teamLine = (who) => `<div class="team ${res(who)} ${side === who ? "mine" : ""}">
+      ${crest(m[`${who}_badge`], m[who])}
+      <span class="tname">${esc(clean(m[who]))}</span>
+      ${s ? `<span class="pts">${s[who]}</span>` : ""}
+    </div>`;
+  const w = when(m.starts_at);
+  const info = m.status === "finished"
+    ? `<strong>FT</strong>${esc(w.days > -7 ? w.rel : w.date)}`
+    : `<strong>${esc(w.time)}</strong>${esc(w.rel)}`;
+  return `<button class="row" data-match="${esc(m.source_id)}">
+    <div class="match">
+      <div class="comp">${isNew("match", m) ? '<span class="dot-new" aria-label="New"></span>' : ""}${filter === "all" ? `<span class="chip-tag">${esc(shortName(follow(m.follow_id)))}</span>` : ""}${esc(m.competition || "")}</div>
+      <div class="lines">${teamLine("home")}${teamLine("away")}</div>
+      <div class="side-info">${info}</div>
+      ${!s && m.result ? `<div class="txt-result">${esc(m.result)}</div>` : ""}
+    </div>
+  </button>`;
+}
+function renderMatches() {
+  const cutoff = Date.now() - RESULT_DAYS * DAY;
+  const all = teamMatches();
+  const results = all.filter(m => m.status === "finished" && new Date(m.starts_at) >= cutoff)
     .sort((a, b) => new Date(b.starts_at) - new Date(a.starts_at));
-  sectionFor("results-section");
-  $("results").innerHTML = items.length ? items.map(m => {
-    const name = shortLabel(m.follow_id).split(" ")[0].toLowerCase();
-    const mark = (t) => clean(t).toLowerCase().includes(name) ? `<span class="mine">${esc(clean(t))}</span>` : esc(clean(t));
-    const line = m.score
-      ? `${mark(m.home)} <span class="score">${m.score.home}</span> ${mark(m.away)} <span class="score">${m.score.away}</span>`
-      : `${mark(m.home)} v ${mark(m.away)}`;
-    return `<div class="result">
-      <div>
-        <p class="line">${line}</p>
-        ${!m.score && m.result ? `<p class="text-result">${esc(m.result)}</p>` : ""}
-        <p class="meta">${esc(m.competition || "")}</p>
-      </div>
-      <div class="when">${day(m.starts_at, false).date}</div>
-    </div>`;
-  }).join("") : `<p class="empty">No results in the last ${RESULT_DAYS} days.</p>`;
-}
-
-function renderFixtures() {
-  const items = data.matches
-    .filter(m => m.kind === "team" && m.status === "upcoming" && keep(m))
+  const upcoming = all.filter(m => m.status === "upcoming")
     .sort((a, b) => new Date(a.starts_at) - new Date(b.starts_at));
-  sectionFor("fixtures-section");
-  $("fixtures").innerHTML = items.length ? items.map(m => {
-    const d = day(m.starts_at);
-    return `<div class="fixture">
-      <div class="date">${d.date}<span>${d.time}</span></div>
-      <div>
-        <p class="teams">${esc(clean(m.home))} v ${esc(clean(m.away))}</p>
-        <p class="meta">${esc(m.competition || "")}${m.venue ? `, ${esc(m.venue)}` : ""}</p>
-      </div>
-    </div>`;
-  }).join("") : `<p class="empty">No fixtures found.</p>`;
+  const list = tab === "results" ? results : upcoming;
+  document.querySelectorAll(".seg button").forEach(b => b.setAttribute("aria-pressed", b.dataset.tab === tab));
+  $("matches").innerHTML = list.length
+    ? `<div class="group">${list.map(matchRow).join("")}</div>`
+    : `<p class="empty">${tab === "results" ? `No results in the last ${RESULT_DAYS} days.` : "No fixtures found."}</p>`;
 }
 
+/* ---------- golf ---------- */
 function renderGolf() {
   const items = data.matches.filter(m => m.kind === "golf" && keep(m));
-  sectionFor("golf-section");
-  $("golf").innerHTML = items.length ? items.map(m => {
-    const status = { upcoming: "Starts soon", in_progress: m.round ? `Round ${m.round}` : "In progress", finished: "Finished" }[m.status] || "";
-    return `<div class="golf">
-      <div>
-        <p class="teams">${esc(shortLabel(m.follow_id))}</p>
-        <p class="meta">${esc(m.event || "")}, ${status}</p>
-      </div>
-      <div class="pos">${esc(m.position || "")}<span>${esc(m.to_par ?? "")}</span></div>
-    </div>`;
-  }).join("") : `<p class="empty">None of your golfers is in a field this week.</p>`;
+  const status = (m) => ({ upcoming: "Starts soon", in_progress: m.round ? `Round ${m.round}` : "In progress", finished: "Finished" }[m.status] || "");
+  $("golf").innerHTML = items.length
+    ? `<div class="group">${items.map(m => {
+        const f = follow(m.follow_id);
+        return `<div class="golf">${avatar(f)}
+          <div class="golf-txt"><strong>${esc(f.name)}</strong><span>${esc(m.event || "")}, ${status(m)}</span></div>
+          <div class="golf-pos">${esc(m.position || "")}<span>${esc(m.to_par ?? "")}</span></div>
+        </div>`;
+      }).join("")}</div>`
+    : `<p class="empty">None of your golfers is in a field this week.</p>`;
 }
 
-function renderHighlights() {
-  const items = data.highlights.filter(keep).slice(0, 8);
-  $("highlights").innerHTML = items.length
-    ? `<div class="videos">${items.map(h => `
-      <div class="video">
-        <button data-id="${esc(h.video_id)}" aria-label="Play ${esc(h.title)}"
-          style="background-image:url('https://i.ytimg.com/vi/${esc(h.video_id)}/hqdefault.jpg')"></button>
-        <p>${esc(h.title)}</p>
-        <p class="meta">${esc(h.channel)}, ${ago(h.published_at)}</p>
-      </div>`).join("")}</div>`
-    : `<p class="empty">No highlights yet. They appear once YouTube channel IDs are added to follows.yaml.</p>`;
-  $("highlights").querySelectorAll(".video button").forEach(b => b.addEventListener("click", () => {
-    const f = document.createElement("iframe");
-    f.src = `https://www.youtube-nocookie.com/embed/${b.dataset.id}?autoplay=1`;
-    f.allow = "autoplay; encrypted-media; picture-in-picture";
-    f.allowFullscreen = true;
-    b.replaceWith(f);
-  }));
+/* ---------- videos ---------- */
+function videoCard(v) {
+  return `<button class="vcard" data-video="${esc(v.video_id)}">
+    <div class="thumb"><img src="${thumbOf(esc(v.video_id))}" alt="" loading="lazy">
+      ${isNew("video", v) ? '<span class="tag pill-new">NEW</span>' : ""}
+      ${v.short ? '<span class="kind">Short</span>' : ""}
+    </div>
+    <p class="vtitle">${esc(v.title)}</p>
+    <p class="vmeta">${esc(v.channel)}, ${ago(v.published_at)}</p>
+  </button>`;
+}
+function renderVideos() {
+  const items = data.highlights.filter(keep).slice(0, 20);
+  $("videos").innerHTML = items.length
+    ? `<div class="vrail">${items.map(videoCard).join("")}</div>`
+    : `<p class="empty">No videos yet. They appear once YouTube channels are added to follows.yaml.</p>`;
 }
 
+/* ---------- news ---------- */
+function storyRow(n, showTag = true) {
+  return `<a class="story" href="${esc(n.url)}" target="_blank" rel="noopener">
+    <p class="story-title">${isNew("news", n) ? '<span class="dot-new" aria-label="New"></span>' : ""}${esc(n.title)}</p>
+    <p class="story-meta">${showTag && filter === "all" ? `<span class="chip-tag">${esc(shortName(follow(n.follow_id)))}</span>` : ""}${esc(n.source)}, ${ago(n.published_at)}</p>
+  </a>`;
+}
 function renderNews() {
   const items = data.news.filter(keep);
   const shown = items.slice(0, newsShown);
-  $("news").innerHTML = items.length ? shown.map(n => `
-    <div class="story">
-      <a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>
-      <p class="meta">${filter === "all" ? `<span class="tag">${esc(shortLabel(n.follow_id))}</span>` : ""}${esc(n.source)}, ${ago(n.published_at)}</p>
-    </div>`).join("") + (items.length > newsShown ? `<button class="more" id="more">Show more news</button>` : "")
+  $("news-section").hidden = !items.length && follow(filter).kind === "creator";
+  $("news").innerHTML = items.length
+    ? `<div class="group">${shown.map(n => storyRow(n)).join("")}</div>${items.length > newsShown ? '<button class="more" id="more">Show more news</button>' : ""}`
     : `<p class="empty">No news found.</p>`;
   const more = $("more");
   if (more) more.addEventListener("click", () => { newsShown += NEWS_PAGE; renderNews(); });
 }
 
+/* ---------- section visibility by filter ---------- */
+function visibility() {
+  const f = filter === "all" ? null : follow(filter);
+  const kind = f ? f.kind : "all";
+  $("matches-section").hidden = kind === "player" || kind === "creator";
+  $("hero-slot").hidden = kind === "player" || kind === "creator";
+  $("golf-section").hidden = kind === "team" || kind === "creator";
+}
+
+/* ---------- match centre ---------- */
+function tokens(name) {
+  return clean(name).split(/[\s-]+/).map(w => w.toLowerCase())
+    .filter(w => w.length >= 4 && !GENERIC.has(w)).map(w => w.slice(0, 5));
+}
+function mentionsOpponent(text, m) {
+  const opp = mineSide(m) === "home" ? m.away : m.home;
+  const t = String(text).toLowerCase();
+  return tokens(opp).some(tok => new RegExp(`(^|[^\\p{L}])${tok}`, "u").test(t));
+}
+function nearMatch(iso, m, before = 3, after = 4) {
+  const d = new Date(iso) - new Date(m.starts_at);
+  return d > -before * DAY && d < after * DAY;
+}
+function relatedNews(m) {
+  return data.news.filter(n => n.follow_id === m.follow_id && n.published_at && nearMatch(n.published_at, m) && mentionsOpponent(n.title, m)).slice(0, 8);
+}
+function relatedVideos(m) {
+  const vids = data.highlights.filter(v => v.follow_id === m.follow_id && v.published_at && nearMatch(v.published_at, m, 1, 5) && mentionsOpponent(v.title, m));
+  const official = ytId(m.video);
+  if (official && !vids.some(v => v.video_id === official))
+    vids.unshift({ video_id: official, title: `${clean(m.home)} v ${clean(m.away)} highlights`, channel: "Match highlights", published_at: null });
+  return vids.slice(0, 6);
+}
+function icsFor(m) {
+  const fmt = (d) => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+  const start = new Date(m.starts_at);
+  const end = new Date(start.getTime() + 2.5 * 36e5);
+  const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//mAI sport//EN", "BEGIN:VEVENT",
+    `UID:${m.source_id}@mai-sport`, `DTSTAMP:${fmt(new Date())}`, `DTSTART:${fmt(start)}`, `DTEND:${fmt(end)}`,
+    `SUMMARY:${clean(m.home)} v ${clean(m.away)}`, `LOCATION:${[m.venue, m.city].filter(Boolean).join(", ")}`,
+    `DESCRIPTION:${m.competition || ""}`, "END:VEVENT", "END:VCALENDAR"];
+  return URL.createObjectURL(new Blob([lines.join("\r\n")], { type: "text/calendar" }));
+}
+function openSheet(html) {
+  $("sheet-body").innerHTML = html;
+  const d = $("sheet");
+  if (!d.open) d.showModal();
+  $("sheet-body").scrollTop = 0;
+  d.querySelectorAll("[data-close]").forEach(b => b.addEventListener("click", () => d.close()));
+  bindCards(d);
+}
+function renderMatchCentre(id) {
+  const m = data.matches.find(x => String(x.source_id) === String(id));
+  if (!m) return false;
+  const side = mineSide(m);
+  const w = when(m.starts_at);
+  const done = m.status === "finished";
+  const sideBlock = (who) => `<div class="hero-side ${side === who ? "mine" : ""}">${crest(m[`${who}_badge`], m[who])}${esc(clean(m[who]))}</div>`;
+  const centre = done
+    ? (m.score ? `<div class="big-score">${m.score.home}–${m.score.away}<small>Full time</small></div>` : `<div class="big-score" style="font-size:1.6rem">Played<small>Full time</small></div>`)
+    : `<div class="big-score">${esc(w.time)}<small>${esc(w.rel)}, in ${countdown(m.starts_at)}</small></div>`;
+  const facts = [
+    ["Date", w.long],
+    [done ? "Kicked off" : "Kick-off", w.time],
+    m.venue && ["Venue", [m.venue, m.city].filter(Boolean).join(", ")],
+    m.round && ["Round", m.round],
+    m.spectators && ["Attendance", Number(m.spectators).toLocaleString("en-GB")],
+  ].filter(Boolean);
+  const vids = relatedVideos(m);
+  const news = relatedNews(m);
+  openSheet(`
+    <div class="sheet-bar">
+      <p id="sheet-title">${esc(m.competition || "Match centre")}</p>
+      <button class="close" data-close aria-label="Close">×</button>
+    </div>
+    <div class="board">${sideBlock("home")}${centre}${sideBlock("away")}</div>
+    ${m.result && !m.score ? `<p class="para" style="margin-top:.8rem">${esc(m.result)}</p>` : ""}
+    <div class="facts">${facts.map(([k, v]) => `<div class="fact"><span>${k}</span><strong>${esc(v)}</strong></div>`).join("")}</div>
+    ${!done && m.starts_at ? `<div class="actions"><a class="btn primary" href="${icsFor(m)}" download="${esc(clean(m.home))}-v-${esc(clean(m.away))}.ics">Add to calendar</a></div>` : ""}
+    ${m.description ? `<h3>Preview</h3><p class="para">${esc(m.description)}</p>` : ""}
+    <h3>Videos</h3>
+    ${vids.length ? `<div class="vrail">${vids.map(videoCard).join("")}</div>` : `<p class="empty">${done ? "No highlights found for this match yet." : "Videos appear here around the match."}</p>`}
+    <h3>News</h3>
+    ${news.length ? `<div class="group">${news.map(n => storyRow(n, false)).join("")}</div>` : `<p class="empty">No stories about this match yet.</p>`}
+  `);
+  return true;
+}
+function renderPlayer(id) {
+  const v = data.highlights.find(x => x.video_id === id) || { video_id: id, title: "Video", channel: "", short: false };
+  openSheet(`
+    <div class="sheet-bar">
+      <p id="sheet-title">${esc(v.channel || "Video")}</p>
+      <button class="close" data-close aria-label="Close">×</button>
+    </div>
+    <div class="player ${v.short ? "short" : ""}"><iframe src="https://www.youtube-nocookie.com/embed/${esc(v.video_id)}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="${esc(v.title)}"></iframe></div>
+    <h3 style="margin-top:1rem">${esc(v.title)}</h3>
+    ${v.published_at ? `<p class="story-meta">${ago(v.published_at)}</p>` : ""}
+  `);
+}
+
+/* ---------- routing: #match-123 and #video-abc open sheets, back closes them ---------- */
+function route() {
+  const h = location.hash.slice(1);
+  const d = $("sheet");
+  if (h.startsWith("match-") && data && renderMatchCentre(h.slice(6))) return;
+  if (h.startsWith("video-") && data) { renderPlayer(h.slice(6)); return; }
+  if (d.open) d.close();
+}
+$("sheet").addEventListener("close", () => {
+  $("sheet-body").innerHTML = "";  // stops any playing video
+  if (/^#(match|video)-/.test(location.hash)) history.back();
+});
+$("sheet").addEventListener("click", (e) => { if (e.target === $("sheet")) $("sheet").close(); });
+window.addEventListener("hashchange", route);
+
+function bindCards(root = document) {
+  root.querySelectorAll("[data-match]").forEach(b => b.onclick = () => { location.hash = `match-${b.dataset.match}`; });
+  root.querySelectorAll("[data-video]").forEach(b => b.onclick = () => {
+    if (location.hash.startsWith("#match-")) history.replaceState(null, "", location.pathname);
+    location.hash = `video-${b.dataset.video}`;
+  });
+}
+
+document.querySelectorAll(".seg button").forEach(b => b.addEventListener("click", () => { tab = b.dataset.tab; renderMatches(); bindCards(); }));
+
+/* ---------- main ---------- */
 function render() {
-  renderChips();
-  renderResults();
+  visibility();
+  renderRail();
+  renderHero();
+  renderMatches();
   renderGolf();
-  renderFixtures();
-  renderHighlights();
+  renderVideos();
   renderNews();
+  bindCards();
 }
 
 async function load() {
@@ -351,17 +649,25 @@ async function load() {
     if (!res.ok) throw new Error(res.status);
     data = await res.json();
   } catch (e) {
-    $("updated").textContent = "Couldn’t load data.json. Check the fetch workflow has run at least once.";
+    $("updated").textContent = "Couldn’t load data";
+    $("notices").innerHTML = `<p class="notice">data.json didn’t load. Check the fetch workflow has run at least once.</p>`;
     return;
   }
+  data.follows = data.follows || []; data.news = data.news || []; data.matches = data.matches || [];
+  data.highlights = data.highlights || []; data.errors = data.errors || [];
   $("updated").textContent = `Updated ${ago(data.generated_at)}`;
   const notes = [];
   if ((Date.now() - new Date(data.generated_at)) / 36e5 > STALE_HOURS)
     notes.push("This data is more than 12 hours old. Check the Actions tab on GitHub for a failed run.");
   if (data.errors.length)
-    notes.push(`${data.errors.length} source${data.errors.length > 1 ? "s" : ""} failed on the last run: ${data.errors.map(e => `${shortLabel(e.follow_id)} (${e.source})`).join(", ")}.`);
+    notes.push(`${data.errors.length} source${data.errors.length > 1 ? "s" : ""} failed on the last run: ${data.errors.map(e => `${shortName(follow(e.follow_id))} (${e.source})`).join(", ")}.`);
   $("notices").innerHTML = notes.map(n => `<p class="notice">${esc(n)}</p>`).join("");
+  // results first, unless nothing has finished in the last few days
+  const recent = data.matches.some(m => m.kind === "team" && m.status === "finished" && Date.now() - new Date(m.starts_at) < 3 * DAY);
+  tab = recent ? "results" : "upcoming";
+  trackNew();
   render();
+  route();
 }
 load();
 </script>

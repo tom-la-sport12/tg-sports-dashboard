@@ -6,6 +6,7 @@ instead of killing the whole run. Needs: pip install pyyaml
 """
 import json
 import re
+import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -117,11 +118,41 @@ def podcast_rss(follow, src):
 
 # ---------- matches ----------
 
+_last_tsdb = [0.0]
+_badges = {}
+images = {}  # follow_id -> avatar image, written into data.json
+
+
+def tsdb(path):
+    """TheSportsDB call, spaced out to stay under the free key's 30 a minute."""
+    wait = 2.1 - (time.time() - _last_tsdb[0])
+    if wait > 0:
+        time.sleep(wait)
+    _last_tsdb[0] = time.time()
+    return get(f"{TSDB}/{path}", as_json=True) or {}
+
+
+def badge(team_id, hint=None):
+    if hint:
+        return hint
+    if not team_id:
+        return None
+    if team_id not in _badges:
+        try:
+            teams = tsdb(f"lookupteam.php?id={team_id}").get("teams") or [{}]
+            _badges[team_id] = teams[0].get("strBadge") or teams[0].get("strTeamBadge")
+        except Exception:  # noqa: BLE001
+            _badges[team_id] = None
+    return _badges[team_id]
+
+
 def thesportsdb(follow, fx):
     now = datetime.now(timezone.utc)
+    me = str(fx["team_id"])
+    images[follow["id"]] = badge(me)
     out = []
     for endpoint in ("eventsnext", "eventslast"):
-        data = get(f"{TSDB}/{endpoint}.php?id={fx['team_id']}", as_json=True) or {}
+        data = tsdb(f"{endpoint}.php?id={me}")
         for e in data.get("events") or data.get("results") or []:
             home, away = e.get("intHomeScore"), e.get("intAwayScore")
             finished = home not in (None, "") and away not in (None, "")
@@ -143,8 +174,16 @@ def thesportsdb(follow, fx):
                 "status": status, "result": e.get("strResult") or None,
                 "starts_at": iso(starts), "competition": e.get("strLeague"),
                 "home": e.get("strHomeTeam"), "away": e.get("strAwayTeam"),
-                "score": {"home": int(home), "away": int(away)} if finished else None,
-                "venue": e.get("strVenue"),
+                "score": {"home": int(home), "away": int(away)} if (home not in (None, "") and away not in (None, "")) else None,
+                "venue": e.get("strVenue"), "city": e.get("strCity"), "country": e.get("strCountry"),
+                "round": e.get("intRound"), "season": e.get("strSeason"),
+                "side": "home" if str(e.get("idHomeTeam")) == me else "away",
+                "home_badge": badge(e.get("idHomeTeam"), e.get("strHomeTeamBadge")),
+                "away_badge": badge(e.get("idAwayTeam"), e.get("strAwayTeamBadge")),
+                "thumb": e.get("strThumb") or None,
+                "video": e.get("strVideo") or None,
+                "description": e.get("strDescriptionEN") or None,
+                "spectators": e.get("intSpectators") or None,
             })
     return out
 
@@ -152,6 +191,7 @@ def thesportsdb(follow, fx):
 def espn_golf(follow, ev):
     """Find this player in whichever event is on this week. Empty list = not playing."""
     pid = str(ev["player_id"])
+    images[follow["id"]] = f"https://a.espncdn.com/i/headshots/golf/players/full/{pid}.png"
     leagues = sorted({ESPN_LEAGUES[t] for t in follow.get("tours", []) if t in ESPN_LEAGUES})
     out, seen = [], set()
     for league in leagues:
@@ -183,6 +223,7 @@ def espn_golf(follow, ev):
 # ---------- highlights ----------
 
 _channel_ids = {}
+_channel_images = {}
 
 
 def channel_id(src):
@@ -199,6 +240,8 @@ def channel_id(src):
         url = "https://www.youtube.com/" + (handle if handle.startswith("@") else "@" + handle)
     if handle not in _channel_ids:
         html = get(url).decode("utf-8", "ignore")
+        og = re.search(r'<meta property="og:image" content="([^"]+)"', html)
+        _channel_images[handle] = og.group(1) if og else None
         m = (re.search(r'"externalId":"(UC[\w-]{22})"', html)
              or re.search(r'<link rel="canonical" href="https://www\.youtube\.com/channel/(UC[\w-]{22})"', html)
              or re.search(r'"channelId":"(UC[\w-]{22})"', html))
@@ -208,9 +251,17 @@ def channel_id(src):
     return _channel_ids[handle]
 
 
+def link_href(entry, ns):
+    link = entry.find("a:link", ns)
+    return link.get("href", "") if link is not None else ""
+
+
 def youtube_channel(follow, src):
     ns = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015"}
     root = ET.fromstring(get(YOUTUBE.format(channel_id(src))))
+    if follow.get("kind") == "creator" and follow["id"] not in images:
+        h = (src.get("handle") or "").strip()
+        images[follow["id"]] = _channel_images.get(h) or _channel_images.get("@" + h.lstrip("@"))
     keep_all = src.get("match_on") == "all"
     out = []
     for entry in root.findall("a:entry", ns):
@@ -224,6 +275,7 @@ def youtube_channel(follow, src):
         out.append({
             "follow_id": follow["id"], "title": title, "channel": src["name"],
             "video_id": entry.findtext("yt:videoId", namespaces=ns),
+            "short": "/shorts/" in link_href(entry, ns),
             "published_at": iso(datetime.fromisoformat(pub)) if pub else None,
             "linked_match": None,  # v2: match on team names + date window
         })
@@ -283,7 +335,8 @@ def main():
 
     data = {
         "generated_at": iso(datetime.now(timezone.utc)),
-        "follows": [{"id": f["id"], "name": f["name"], "sport": f["sport"], "kind": f["kind"]} for f in follows],
+        "follows": [{"id": f["id"], "name": f["name"], "sport": f["sport"], "kind": f["kind"],
+                     "image": images.get(f["id"])} for f in follows],
         "news": news, "matches": matches, "highlights": highlights, "errors": errors,
     }
     with open("data.json", "w", encoding="utf-8") as fh:
