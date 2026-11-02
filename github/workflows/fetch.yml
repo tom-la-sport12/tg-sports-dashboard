@@ -1,0 +1,27 @@
+name: Fetch sports data
+
+on:
+  schedule:
+    - cron: "0 6,12,18,22 * * *"   # UTC, four times a day
+  workflow_dispatch:                # "Run workflow" button for manual runs
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - run: python fetch.py
+      - name: Commit data.json if it changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git diff --staged --quiet || git commit -m "Update data"
+          git push
