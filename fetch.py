@@ -123,6 +123,21 @@ def podcast_rss(follow, src):
 _last_tsdb = [0.0]
 _badges = {}
 images = {}  # follow_id -> avatar image, written into data.json
+colours = {}  # follow_id -> kit colours, written into data.json
+
+
+def team_colours(follow, team_id):
+    if follow.get("colours"):
+        colours[follow["id"]] = follow["colours"]
+    if follow["id"] in colours:
+        return
+    try:
+        t = (tsdb(f"lookupteam.php?id={team_id}").get("teams") or [{}])[0]
+        found = [t.get(k) for k in ("strColour1", "strColour2", "strColour3") if t.get(k)]
+        if found:
+            colours[follow["id"]] = found
+    except Exception:  # noqa: BLE001  colours are a nice-to-have
+        pass
 
 
 def tsdb(path):
@@ -160,6 +175,7 @@ def thesportsdb(follow, fx):
     now = datetime.now(timezone.utc)
     me = str(fx["team_id"])
     images[follow["id"]] = badge(me)
+    team_colours(follow, me)
     out = []
     for endpoint in ("eventsnext", "eventslast"):
         data = tsdb(f"{endpoint}.php?id={me}")
@@ -478,6 +494,8 @@ def load_previous():
     for f in prev.get("follows", []):
         if f.get("image"):
             images[f["id"]] = f["image"]
+        if f.get("colours"):
+            colours[f["id"]] = f["colours"]
     return prev
 
 
@@ -530,7 +548,8 @@ def main():
     data = {
         "generated_at": iso(datetime.now(timezone.utc)),
         "follows": [{"id": f["id"], "name": f["name"], "sport": f["sport"], "kind": f["kind"],
-                     "image": images.get(f["id"])} for f in follows],
+                     "image": images.get(f["id"]),
+                     "colours": f.get("colours") or colours.get(f["id"])} for f in follows],
         "news": news, "matches": matches, "highlights": highlights, "errors": errors,
     }
     with open("data.json", "w", encoding="utf-8") as fh:
