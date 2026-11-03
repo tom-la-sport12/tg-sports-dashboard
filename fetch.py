@@ -199,6 +199,33 @@ def thesportsdb(follow, fx):
     return out
 
 
+PREV = {}  # last run's data.json, set in main()
+
+
+def golfer_row(c):
+    score = c.get("score")
+    if isinstance(score, dict):
+        score = score.get("displayValue")
+    ath = c.get("athlete") or {}
+    return {
+        "id": str(ath.get("id") or c.get("id")),
+        "name": ath.get("displayName") or ath.get("shortName") or "",
+        "pos": (((c.get("status") or {}).get("position")) or {}).get("displayName"),
+        "to_par": score,
+    }
+
+
+def previous_positions(event_id):
+    """Positions from last run for the same event, to show who's moved."""
+    out = {}
+    for m in PREV.get("matches", []):
+        if m.get("kind") == "golf" and str(m.get("source_id")) == str(event_id):
+            for r in m.get("leaderboard") or []:
+                out[r["id"]] = r.get("pos")
+            out[str(m.get("player_id"))] = m.get("position")
+    return out
+
+
 def espn_golf(follow, ev):
     """Find this player in whichever event is on this week. Empty list = not playing."""
     pid = str(ev["player_id"])
@@ -220,7 +247,15 @@ def espn_golf(follow, ev):
                     if isinstance(score, dict):
                         score = score.get("displayValue")
                     position = (((c.get("status") or {}).get("position")) or {}).get("displayName")
+                    ranked = sorted(comp.get("competitors", []),
+                                    key=lambda x: int(x.get("order") or x.get("sortOrder") or 9999))
+                    before = previous_positions(event.get("id"))
+                    board = [golfer_row(x) for x in ranked[:5]]
+                    for r in board:
+                        r["prev_pos"] = before.get(r["id"])
                     out.append({
+                        "player_id": pid, "prev_position": before.get(pid), "leaderboard": board,
+                        "field_size": len(ranked),
                         "follow_id": follow["id"], "kind": "golf", "source_id": event.get("id"),
                         "status": {"pre": "upcoming", "in": "in_progress", "post": "finished"}.get(state, state),
                         "event": event.get("name"), "tour": league,
@@ -452,6 +487,7 @@ def main():
     settings = {**NEWS_DEFAULTS, **(config.get("news_settings") or {})}
     filtered = {"phrase": 0, "source": 0, "old": 0, "duplicate": 0, "cap": 0}
     prev = load_previous()
+    PREV.update(prev)
     news, matches, highlights = [], [], []
 
     for f in follows:

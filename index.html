@@ -26,12 +26,13 @@
   --accent-soft: #E6EBFF;
   --on-accent: #FFFFFF;
   --new: #FF3B5C;
+  --up: #12985A;
+  --bar: rgba(255, 255, 255, .86);
   --scrim: rgba(13, 20, 36, .45);
   --body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --num: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
   box-sizing: border-box;
   padding-top: env(safe-area-inset-top, 0px);
-  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -46,6 +47,8 @@
     --accent-soft: #1F2A55;
     --on-accent: #0B1020;
     --new: #FF5A75;
+    --up: #3DD68C;
+    --bar: rgba(16, 22, 40, .86);
     --scrim: rgba(0, 0, 0, .6);
   }
 }
@@ -62,19 +65,18 @@ img { max-width: 100%; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
 [hidden] { display: none !important; }
 
-.wrap { max-width: 46rem; margin: 0 auto; padding: 1rem 1rem 4rem; }
+.wrap { max-width: 46rem; margin: 0 auto; padding: 1rem 1rem calc(6rem + env(safe-area-inset-bottom, 0px)); }
 
 /* header */
 .top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.brand { font: 700 1.6rem/1 var(--body); letter-spacing: -.035em; margin: 0; }
 .personalise {
   display: inline-flex; align-items: center; gap: .4rem; flex: none;
   border: 1px solid var(--line); background: var(--card); border-radius: 999px;
   padding: .45rem .8rem; font-size: .85rem; font-weight: 600; cursor: pointer;
 }
-.brand { font: 700 1.6rem/1 var(--body); letter-spacing: -.035em; margin: 0; }
-.updated { color: var(--muted); font-size: .82rem; font-weight: 400; margin-left: .5rem; }
 .today { font: 600 1.05rem/1.2 var(--body); margin: .35rem 0 0; color: var(--muted); }
-
+.updated { font-size: .82rem; font-weight: 400; margin-left: .5rem; }
 .notice { margin: .9rem 0 0; padding: .65rem .85rem; border-radius: 12px; background: var(--card); font-size: .88rem; border: 1px solid var(--line); }
 
 /* follow rail */
@@ -86,10 +88,9 @@ img { max-width: 100%; }
 .rail::-webkit-scrollbar { display: none; }
 .follow {
   flex: none; width: 4.6rem; border: 0; background: none; padding: 0; cursor: pointer;
-  display: flex; flex-direction: column; align-items: center; gap: .35rem;
-  scroll-snap-align: start;
+  display: flex; flex-direction: column; align-items: center; gap: .35rem; scroll-snap-align: start;
 }
-.ring { position: relative; width: 3.6rem; height: 3.6rem; border-radius: 50%; padding: 3px; background: var(--line); }
+.ring { position: relative; width: 3.6rem; height: 3.6rem; border-radius: 50%; padding: 3px; background: var(--line); transition: background-color .2s; }
 .follow[aria-pressed="true"] .ring { background: var(--accent); }
 .ring .av { width: 100%; height: 100%; border: 2px solid var(--bg); }
 .follow-name { font-size: .74rem; line-height: 1.15; text-align: center; color: var(--muted); max-width: 100%; }
@@ -100,7 +101,7 @@ img { max-width: 100%; }
   font: 700 .7rem/1.05rem var(--body); text-align: center;
 }
 
-/* avatars and badges */
+/* avatars and crests */
 .av {
   display: grid; place-items: center; overflow: hidden; border-radius: 50%;
   background: var(--card); color: var(--muted); font: 700 .9rem/1 var(--body);
@@ -111,20 +112,56 @@ img { max-width: 100%; }
 .crest img { width: 100%; height: 100%; object-fit: contain; }
 .crest .init { width: 100%; height: 100%; border-radius: 50%; background: var(--raised); display: grid; place-items: center; font: 700 .72rem/1 var(--body); color: var(--muted); }
 
+/* view and transitions */
+.view { min-height: 60vh; }
+@media (prefers-reduced-motion: no-preference) {
+  .view.enter > * { animation: enter .32s cubic-bezier(.2, .8, .2, 1) both; }
+  .view.enter > *:nth-child(2) { animation-delay: .04s; }
+  .view.enter > *:nth-child(3) { animation-delay: .08s; }
+  .view.enter > *:nth-child(n+4) { animation-delay: .12s; }
+  @keyframes enter { from { opacity: 0; transform: translateY(10px); } }
+}
+
+/* loading placeholders */
+.skel { background: var(--raised); border-radius: 14px; }
+@media (prefers-reduced-motion: no-preference) {
+  .skel { background: linear-gradient(90deg, var(--raised) 25%, var(--card) 50%, var(--raised) 75%) 0 0 / 300% 100%; animation: shimmer 1.4s linear infinite; }
+  @keyframes shimmer { to { background-position: -150% 0; } }
+}
+.skel-hero { height: 9.5rem; border-radius: 22px; margin-top: 1.2rem; }
+.skel-line { height: 1.1rem; width: 40%; margin: 1.9rem 0 .7rem; }
+.skel-row { height: 4.6rem; margin-bottom: .5rem; }
+
 /* sections */
 section { margin-top: 1.9rem; }
 .head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin: 0 0 .7rem; }
 h2 { font: 700 1.2rem/1.2 var(--body); letter-spacing: -.02em; margin: 0; }
+.see-all { border: 0; background: none; color: var(--accent); font-weight: 600; font-size: .88rem; cursor: pointer; padding: .3rem 0; }
 .empty { color: var(--muted); font-size: .92rem; margin: 0; padding: 1rem; background: var(--card); border-radius: 16px; }
+.subhead { font: 600 .9rem/1.2 var(--body); color: var(--muted); margin: 0 0 .55rem; }
 
 .pill-new {
-  display: inline-block; vertical-align: middle; margin-left: .4rem;
-  font: 700 .66rem/1 var(--body); padding: .22rem .4rem; border-radius: 999px;
-  background: var(--new); color: #fff; letter-spacing: .02em;
+  display: inline-block; vertical-align: middle; font: 700 .66rem/1 var(--body); padding: .22rem .4rem;
+  border-radius: 999px; background: var(--new); color: #fff; letter-spacing: .02em;
 }
 .dot-new { display: inline-block; width: .5rem; height: .5rem; border-radius: 50%; background: var(--new); margin-right: .45rem; vertical-align: middle; }
 
-/* next up: the one bold moment */
+/* week strip */
+.week { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .35rem; margin-top: 1.2rem; }
+.day {
+  border: 0; border-radius: 14px; padding: .5rem 0 .45rem; background: var(--card); cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; gap: .1rem; transition: background-color .2s, color .2s;
+}
+.day small { font-size: .7rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .03em; }
+.day strong { font: 700 1.25rem/1.1 var(--num); }
+.dots { display: flex; gap: 3px; height: 6px; margin-top: .15rem; }
+.dots i { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.day.is-today strong { color: var(--accent); }
+.day[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
+.day[aria-pressed="true"] small, .day[aria-pressed="true"] strong { color: inherit; }
+.day[aria-pressed="true"] .dots i { background: var(--on-accent); }
+
+/* next up */
 .hero {
   display: block; width: 100%; text-align: left; cursor: pointer; border: 0;
   border-radius: 22px; padding: 1.1rem 1.1rem 1.2rem; margin-top: 1.2rem;
@@ -141,14 +178,15 @@ h2 { font: 700 1.2rem/1.2 var(--body); letter-spacing: -.02em; margin: 0; }
 
 /* segmented control */
 .seg { display: inline-flex; background: var(--raised); border-radius: 999px; padding: 3px; }
-.seg button { border: 0; background: none; padding: .4rem .85rem; border-radius: 999px; font-size: .85rem; font-weight: 600; color: var(--muted); cursor: pointer; }
+.seg button { border: 0; background: none; padding: .4rem .85rem; border-radius: 999px; font-size: .85rem; font-weight: 600; color: var(--muted); cursor: pointer; transition: background-color .2s, color .2s; }
 .seg button[aria-pressed="true"] { background: var(--card); color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,.08); }
 
-/* grouped list (matches, news) */
+/* grouped lists */
 .group { background: var(--card); border-radius: 16px; overflow: hidden; }
 .row { display: block; width: 100%; text-align: left; border: 0; background: none; cursor: pointer; padding: .8rem 1rem; }
 .row + .row { border-top: 1px solid var(--line); }
 .row:hover { background: color-mix(in srgb, var(--raised) 45%, transparent); }
+.chip-tag { display: inline-block; padding: .08rem .45rem; border-radius: 6px; margin-right: .35rem; background: var(--accent-soft); color: var(--accent); font-weight: 600; }
 
 .match { display: grid; grid-template-columns: 1fr auto; gap: .2rem 1rem; align-items: center; }
 .comp { grid-column: 1 / -1; font-size: .76rem; color: var(--muted); }
@@ -164,59 +202,89 @@ h2 { font: 700 1.2rem/1.2 var(--body); letter-spacing: -.02em; margin: 0; }
 .txt-result { grid-column: 1 / -1; font-size: .85rem; color: var(--muted); }
 
 /* golf */
-.golf { display: flex; align-items: center; gap: .85rem; padding: .8rem 1rem; }
-.golf + .golf { border-top: 1px solid var(--line); }
+.golfcard { background: var(--card); border-radius: 16px; overflow: hidden; }
+.golfcard + .golfcard { margin-top: .7rem; }
+.golf { display: flex; align-items: center; gap: .85rem; padding: .85rem 1rem; }
 .golf .av { width: 2.8rem; height: 2.8rem; background: var(--raised); }
 .golf-txt { flex: 1; min-width: 0; }
 .golf-txt strong { display: block; }
 .golf-txt span { font-size: .82rem; color: var(--muted); }
 .golf-pos { text-align: right; font: 700 1.9rem/1 var(--num); }
 .golf-pos span { display: block; font: 500 .8rem/1.3 var(--body); color: var(--muted); }
+.board-list { border-top: 1px solid var(--line); padding: .35rem 0; }
+.lb { display: grid; grid-template-columns: 2.6rem 1fr auto 2.6rem; gap: .5rem; align-items: center; padding: .3rem 1rem; font-size: .88rem; }
+.lb .p { font: 700 1rem/1 var(--num); color: var(--muted); }
+.lb .s { font: 700 1rem/1 var(--num); text-align: right; }
+.lb.me { background: var(--accent-soft); }
+.lb.me .n { font-weight: 700; }
+.lb-gap { text-align: center; color: var(--muted); font-size: .8rem; line-height: 1; padding: .1rem 0; }
+.mv { font: 700 .74rem/1 var(--body); text-align: right; }
+.mv.up { color: var(--up); }
+.mv.down { color: var(--new); }
+.mv.same { color: var(--muted); }
+.golf-day { display: flex; align-items: center; gap: .7rem; padding: .8rem 1rem; }
+.golf-day + .row, .row + .golf-day { border-top: 1px solid var(--line); }
+.golf-day .av { width: 2rem; height: 2rem; background: var(--raised); }
 
 /* videos */
+.vrail, .srail { display: flex; align-items: flex-start; overflow-x: auto; scrollbar-width: none; margin: 0 -1rem 1.3rem; padding: 0 1rem .3rem; scroll-snap-type: x mandatory; scroll-padding-inline: 1rem; }
+.vrail { gap: .8rem; }
+.srail { gap: .7rem; }
+.vrail::-webkit-scrollbar, .srail::-webkit-scrollbar { display: none; }
 .vgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem .75rem; }
 @media (min-width: 40rem) { .vgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.vcard, .scard { flex: none; border: 0; padding: 0; background: none; text-align: left; cursor: pointer; scroll-snap-align: start; }
+.vcard { width: 15.5rem; }
 .vgrid .vcard { width: auto; }
-.vgrid .vtitle { font-size: .86rem; }
-.subhead { font: 600 .9rem/1.2 var(--body); color: var(--muted); margin: 0 0 .55rem; }
-.subhead + .vrail, .subhead + .srail { margin-bottom: 1.3rem; }
-.srail { display: flex; gap: .7rem; overflow-x: auto; scrollbar-width: none; margin: 0 -1rem; padding: 0 1rem .3rem; scroll-snap-type: x mandatory; scroll-padding-inline: 1rem; }
-.srail::-webkit-scrollbar { display: none; }
-.scard { flex: none; width: 8.6rem; border: 0; padding: 0; background: none; text-align: left; cursor: pointer; scroll-snap-align: start; }
-.scard .thumb { aspect-ratio: 9 / 16; border-radius: 14px; }
-.scard .vtitle { font-size: .82rem; }
-.vrail { display: flex; gap: .8rem; overflow-x: auto; scrollbar-width: none; margin: 0 -1rem; padding: 0 1rem .3rem; scroll-snap-type: x mandatory; scroll-padding-inline: 1rem; }
-.vrail::-webkit-scrollbar { display: none; }
-.vcard { flex: none; width: 15.5rem; border: 0; padding: 0; background: none; text-align: left; cursor: pointer; scroll-snap-align: start; }
+.scard { width: 8.6rem; }
 .thumb { position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background: var(--raised); }
-.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.scard .thumb { aspect-ratio: 9 / 16; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .2s; }
 .thumb .tag { position: absolute; left: .5rem; top: .5rem; }
-.thumb .kind { position: absolute; right: .5rem; bottom: .5rem; font: 600 .68rem/1 var(--body); padding: .25rem .4rem; border-radius: 6px; background: rgba(0,0,0,.65); color: #fff; }
-.vtitle { margin: .5rem 0 0; font-weight: 600; font-size: .92rem; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.watched .thumb img { opacity: .4; }
+.watched-badge {
+  position: absolute; right: .5rem; bottom: .5rem; display: inline-flex; align-items: center; gap: .25rem;
+  font: 600 .7rem/1 var(--body); padding: .3rem .45rem; border-radius: 999px; background: rgba(0,0,0,.7); color: #fff;
+}
+.vtitle { margin: .5rem 0 0; font-weight: 600; font-size: .9rem; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.scard .vtitle, .vgrid .vtitle { font-size: .84rem; }
+.watched .vtitle { color: var(--muted); }
 .vmeta { margin: .15rem 0 0; font-size: .78rem; color: var(--muted); }
 
 /* news */
 .story { display: grid; grid-template-columns: 1fr 5.6rem; gap: .9rem; align-items: start; padding: .8rem 1rem; text-decoration: none; }
+.story + .story { border-top: 1px solid var(--line); }
+.story-title { font-weight: 600; line-height: 1.3; margin: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.story-meta { margin: .3rem 0 0; font-size: .78rem; color: var(--muted); }
 .story-pic { width: 5.6rem; aspect-ratio: 4 / 3; border-radius: 10px; overflow: hidden; background: var(--raised); display: grid; place-items: center; }
 .story-pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .story-pic img.logo { width: 1.75rem; height: 1.75rem; object-fit: contain; border-radius: 6px; }
-.story-title { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-.story + .story { border-top: 1px solid var(--line); }
-.story-title { font-weight: 600; line-height: 1.3; margin: 0; }
-.story-meta { margin: .3rem 0 0; font-size: .78rem; color: var(--muted); }
-.chip-tag { display: inline-block; padding: .08rem .45rem; border-radius: 6px; margin-right: .35rem; background: var(--accent-soft); color: var(--accent); font-weight: 600; }
 .more { display: block; width: 100%; margin-top: .7rem; padding: .75rem; border-radius: 12px; border: 1px solid var(--line); background: var(--card); font-weight: 600; cursor: pointer; }
 
-/* sheets: match centre and player */
+/* bottom tab bar */
+.tabbar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+  padding: .35rem .5rem calc(.35rem + env(safe-area-inset-bottom, 0px));
+  background: var(--bar); border-top: 1px solid var(--line);
+  -webkit-backdrop-filter: saturate(1.6) blur(14px); backdrop-filter: saturate(1.6) blur(14px);
+}
+.tabs { max-width: 30rem; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
+.tab {
+  border: 0; background: none; cursor: pointer; padding: .35rem 0 .2rem; color: var(--muted);
+  display: flex; flex-direction: column; align-items: center; gap: .15rem; font-size: .7rem; font-weight: 600;
+  transition: color .2s;
+}
+.tab svg { width: 1.45rem; height: 1.45rem; }
+.tab[aria-current="page"] { color: var(--accent); }
+
+/* sheets */
 dialog.sheet {
   border: 0; padding: 0; margin: auto auto 0; width: 100%; max-width: 46rem;
   max-height: calc(100dvh - 2.5rem); border-radius: 22px 22px 0 0;
   background: var(--bg); color: var(--ink); overflow: hidden;
 }
 dialog.sheet::backdrop { background: var(--scrim); }
-@media (min-width: 48rem) {
-  dialog.sheet { margin: auto; border-radius: 22px; max-height: min(52rem, calc(100dvh - 4rem)); }
-}
+@media (min-width: 48rem) { dialog.sheet { margin: auto; border-radius: 22px; max-height: min(52rem, calc(100dvh - 4rem)); } }
 .sheet-inner { overflow-y: auto; max-height: inherit; padding: 0 1rem calc(1.5rem + env(safe-area-inset-bottom, 0px)); }
 .sheet-bar { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .9rem 0 .7rem; background: var(--bg); }
 .sheet-bar p { margin: 0; font-size: .85rem; color: var(--muted); }
@@ -225,7 +293,6 @@ dialog.sheet::backdrop { background: var(--scrim); }
   dialog.sheet[open] { animation: rise .26s cubic-bezier(.2,.8,.2,1); }
   @keyframes rise { from { transform: translateY(2.5rem); opacity: 0; } }
 }
-
 .board { background: var(--card); border-radius: 20px; padding: 1.2rem 1rem; display: grid; grid-template-columns: 1fr auto 1fr; gap: .5rem; align-items: center; }
 .board .hero-side .crest { width: 3.8rem; height: 3.8rem; }
 .board .hero-side .crest .init { background: var(--raised); color: var(--muted); }
@@ -261,34 +328,28 @@ dialog.sheet::backdrop { background: var(--scrim); }
   <div id="notices"></div>
   <nav class="rail" id="rail" aria-label="Choose who to show"></nav>
 
-  <div id="hero-slot"></div>
-
-  <section id="matches-section">
-    <div class="head">
-      <h2>Matches</h2>
-      <div class="seg" role="group" aria-label="Results or upcoming">
-        <button data-tab="results" aria-pressed="true">Results</button>
-        <button data-tab="upcoming" aria-pressed="false">Upcoming</button>
-      </div>
-    </div>
-    <div id="matches"></div>
-  </section>
-
-  <section id="golf-section">
-    <div class="head"><h2>Golf this week</h2></div>
-    <div id="golf"></div>
-  </section>
-
-  <section id="videos-section">
-    <div class="head"><h2>Latest videos</h2></div>
-    <div id="videos"></div>
-  </section>
-
-  <section id="news-section">
-    <div class="head"><h2>News</h2></div>
-    <div id="news"></div>
-  </section>
+  <main class="view" id="view" aria-live="polite">
+    <div class="skel skel-hero"></div>
+    <div class="skel skel-line"></div>
+    <div class="skel skel-row"></div>
+    <div class="skel skel-row"></div>
+    <div class="skel skel-line"></div>
+    <div class="skel skel-row"></div>
+  </main>
 </div>
+
+<nav class="tabbar" aria-label="Sections">
+  <div class="tabs">
+    <button class="tab" data-tab="home" aria-current="page">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 10.5 12 4l8 6.5V20h-5v-6H9v6H4z"/></svg>Home</button>
+    <button class="tab" data-tab="matches">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 3v4M16 3v4M4 10h16"/></svg>Matches</button>
+    <button class="tab" data-tab="videos">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path fill="currentColor" d="M10 9v6l5-3z"/></svg>Videos</button>
+    <button class="tab" data-tab="news">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 9h8M8 13h8M8 17h5"/></svg>News</button>
+  </div>
+</nav>
 
 <dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
   <div class="sheet-inner" id="sheet-body"></div>
@@ -297,16 +358,21 @@ dialog.sheet::backdrop { background: var(--scrim); }
 <script>
 const RESULT_DAYS = 14;
 const NEWS_PAGE = 15;
+const VIDEO_PAGE = 12;
 const STALE_HOURS = 12;
 const SEEN_KEY = "mai-seen-v1";
+const WATCHED_KEY = "toms-watched-v1";
 const GENERIC = new Set(["union", "united", "club", "aviron", "stade", "rugby", "cricket", "football", "city", "town", "racing", "sporting"]);
+const DAY = 864e5;
 
 let data = null;
 let filter = "all";
-let tab = "results";
+let tab = "home";
+let matchTab = "results";
+let selDay = null;          // "YYYY-MM-DD" when a day in the week strip is picked
 let newsShown = NEWS_PAGE;
-
-let fresh = new Set();   // keys of items that are new this visit
+let videosShown = VIDEO_PAGE;
+let fresh = new Set();
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -315,9 +381,11 @@ const store = {
   set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} },
 };
 filter = store.get("mai-filter", "all");
+let watched = new Set(store.get(WATCHED_KEY, []));
 
 /* ---------- helpers ---------- */
 const follow = (id) => data.follows.find(f => f.id === id) || { id, name: id, kind: "team", sport: "" };
+const currentKind = () => filter === "all" ? "all" : follow(filter).kind;
 function label(f) { return f.name.endsWith(" men") ? `${f.name.slice(0, -4)} ${f.sport}` : f.name; }
 function shortName(f) {
   const map = { "Union Bordeaux-Bègles": "UBB", "Newcastle United": "Newcastle", "Fore Bros Golf": "Fore Bros" };
@@ -326,15 +394,15 @@ function shortName(f) {
 const clean = (t) => (t || "").replace(/ (Rugby|Cricket)$/, "");
 const initials = (s) => clean(s).split(/[\s-]+/).filter(Boolean).slice(0, 2).map(w => w[0]).join("").toUpperCase();
 function crest(src, name) {
-  const fallback = `<span class="init">${esc(initials(name))}</span>`;
-  return `<span class="crest">${src ? `<img src="${esc(src)}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'init',textContent:'${esc(initials(name))}'}))">` : fallback}</span>`;
+  const ini = esc(initials(name));
+  return `<span class="crest">${src ? `<img src="${esc(src)}" alt="" loading="lazy" data-ini="${ini}">` : `<span class="init">${ini}</span>`}</span>`;
 }
 function avatar(f) {
   const cls = f.kind === "player" || f.kind === "creator" ? "av photo" : "av";
   const ini = esc(initials(f.name));
-  return `<span class="${cls}">${f.image ? `<img src="${esc(f.image)}" alt="" loading="lazy" onerror="this.parentNode.textContent='${ini}'">` : ini}</span>`;
+  return `<span class="${cls}">${f.image ? `<img src="${esc(f.image)}" alt="" loading="lazy" data-ini="${ini}">` : ini}</span>`;
 }
-const DAY = 864e5;
+function dayKey(d) { const x = new Date(d); return `${x.getFullYear()}-${String(x.getMonth() + 1).padStart(2, "0")}-${String(x.getDate()).padStart(2, "0")}`; }
 function startOfDay(d) { const x = new Date(d); x.setHours(0, 0, 0, 0); return x; }
 function when(iso) {
   const d = new Date(iso);
@@ -350,7 +418,7 @@ function when(iso) {
 }
 function countdown(iso) {
   const ms = new Date(iso) - Date.now();
-  if (ms <= 0) return "Under way";
+  if (ms <= 0) return "under way";
   const h = Math.floor(ms / 36e5), d = Math.floor(h / 24);
   if (d >= 1) return `${d} day${d > 1 ? "s" : ""}`;
   if (h >= 1) return `${h} hr${h > 1 ? "s" : ""}`;
@@ -368,6 +436,25 @@ function ago(iso) {
 const keep = (item) => filter === "all" || item.follow_id === filter;
 const ytId = (url) => (String(url || "").match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([\w-]{11})/) || [])[1];
 const thumbOf = (id) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+const posNum = (p) => { const m = String(p || "").match(/\d+/); return m ? +m[0] : null; };
+
+// images that fail: crests and avatars fall back to initials, news pictures to the outlet logo
+document.addEventListener("error", (e) => {
+  const img = e.target;
+  if (img.tagName !== "IMG") return;
+  if (img.classList.contains("logo")) { img.remove(); return; }
+  if (img.dataset.ini !== undefined) {
+    const span = document.createElement("span");
+    span.className = img.parentNode.classList.contains("crest") ? "init" : "";
+    span.textContent = img.dataset.ini;
+    img.replaceWith(span);
+    return;
+  }
+  if (img.dataset.logo !== undefined) {
+    const host = img.dataset.logo;
+    img.parentNode.innerHTML = host ? `<img class="logo" src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(host)}&sz=64" alt="">` : "";
+  }
+}, true);
 
 /* ---------- "new" tracking ---------- */
 const keyOf = {
@@ -375,23 +462,19 @@ const keyOf = {
   video: v => `v:${v.video_id}`,
   match: m => `m:${m.source_id}:${m.status}`,
 };
-function allKeys() {
-  return [
+function trackNew() {
+  const seen = store.get(SEEN_KEY, null);
+  const keys = [
     ...data.news.map(keyOf.news),
     ...data.highlights.map(keyOf.video),
     ...data.matches.filter(m => m.kind === "team").map(keyOf.match),
   ];
-}
-function trackNew() {
-  const seen = store.get(SEEN_KEY, null);
-  const keys = allKeys();
   if (seen) {
     const s = new Set(seen);
     fresh = new Set(keys.filter(k => !s.has(k)));
-    // remember everything for next visit, keeping the list from growing forever
     store.set(SEEN_KEY, [...new Set([...keys, ...seen])].slice(0, 3000));
   } else {
-    store.set(SEEN_KEY, keys);  // first visit: nothing is "new" yet
+    store.set(SEEN_KEY, keys);
   }
 }
 const isNew = (kind, item) => fresh.has(keyOf[kind](item));
@@ -401,42 +484,24 @@ function newCount(fid) {
     + data.matches.filter(m => m.kind === "team" && m.follow_id === fid && isNew("match", m)).length;
 }
 
-/* ---------- rail ---------- */
+/* ---------- follow rail ---------- */
 function renderRail() {
-  const totalNew = fresh.size;
   const items = [{ id: "all", name: "Everything", kind: "all" }, ...data.follows];
   if (!items.some(i => i.id === filter)) filter = "all";
   $("rail").innerHTML = items.map(f => {
-    const n = f.id === "all" ? totalNew : newCount(f.id);
+    const n = f.id === "all" ? fresh.size : newCount(f.id);
     const av = f.id === "all" ? `<span class="av" style="background:var(--accent-soft);color:var(--accent)">All</span>` : avatar(f);
-    return `<button class="follow" data-id="${esc(f.id)}" aria-pressed="${f.id === filter}">
+    return `<button class="follow" data-follow="${esc(f.id)}" aria-pressed="${f.id === filter}">
       <span class="ring">${av}${n ? `<span class="count" aria-label="${n} new">${n > 99 ? "99+" : n}</span>` : ""}</span>
       <span class="follow-name">${esc(f.id === "all" ? "All" : shortName(f))}</span>
     </button>`;
   }).join("");
-  $("rail").querySelectorAll(".follow").forEach(b => b.addEventListener("click", () => {
-    filter = b.dataset.id; newsShown = NEWS_PAGE; store.set("mai-filter", filter); render();
-  }));
 }
 
-/* ---------- hero: next match ---------- */
-function teamMatches() { return data.matches.filter(m => m.kind === "team" && keep(m)); }
-function renderHero() {
-  const next = teamMatches().filter(m => m.status === "upcoming" && m.starts_at)
-    .sort((a, b) => new Date(a.starts_at) - new Date(b.starts_at))[0];
-  if (!next) { $("hero-slot").innerHTML = ""; return; }
-  const w = when(next.starts_at);
-  $("hero-slot").innerHTML = `<button class="hero" data-match="${esc(next.source_id)}" aria-label="Open match centre for ${esc(clean(next.home))} v ${esc(clean(next.away))}">
-    <div class="hero-top"><span>Next up</span><span>${esc(next.competition || "")}</span></div>
-    <div class="hero-teams">
-      <div class="hero-side">${crest(next.home_badge, next.home)}${esc(clean(next.home))}</div>
-      <div class="hero-mid"><div class="hero-when">${w.days === 0 ? w.time : esc(w.rel)}</div><div class="hero-sub">${w.days === 0 ? "Today" : `${w.time}, in ${countdown(next.starts_at)}`}</div></div>
-      <div class="hero-side">${crest(next.away_badge, next.away)}${esc(clean(next.away))}</div>
-    </div>
-  </button>`;
-}
+/* ---------- building blocks ---------- */
+const teamMatches = () => data.matches.filter(m => m.kind === "team" && keep(m));
+const golfItems = () => data.matches.filter(m => m.kind === "golf" && keep(m));
 
-/* ---------- matches ---------- */
 function mineSide(m) {
   if (m.side) return m.side;
   const fn = clean(follow(m.follow_id).name).split(" ")[0].toLowerCase();
@@ -464,104 +529,154 @@ function matchRow(m) {
     </div>
   </button>`;
 }
-function renderMatches() {
+function heroBlock() {
+  // skip games that should have finished; the data may not have caught up yet
+  const next = teamMatches().filter(m => m.status === "upcoming" && m.starts_at && new Date(m.starts_at) > Date.now() - 3 * 36e5)
+    .sort((a, b) => new Date(a.starts_at) - new Date(b.starts_at))[0];
+  if (!next) return "";
+  const w = when(next.starts_at);
+  return `<button class="hero" data-match="${esc(next.source_id)}" aria-label="Open match centre for ${esc(clean(next.home))} v ${esc(clean(next.away))}">
+    <div class="hero-top"><span>Next up</span><span>${esc(next.competition || "")}</span></div>
+    <div class="hero-teams">
+      <div class="hero-side">${crest(next.home_badge, next.home)}${esc(clean(next.home))}</div>
+      <div class="hero-mid"><div class="hero-when">${w.days === 0 ? w.time : esc(w.rel)}</div><div class="hero-sub">${w.days === 0 ? "Today" : `${w.time}, in ${countdown(next.starts_at)}`}</div></div>
+      <div class="hero-side">${crest(next.away_badge, next.away)}${esc(clean(next.away))}</div>
+    </div>
+  </button>`;
+}
+
+/* week strip */
+function golfOnDay(g, key) {
+  if (!g.dates || !g.dates.start) return false;
+  const s = dayKey(g.dates.start), e = dayKey(g.dates.end || g.dates.start);
+  return key >= s && key <= e;
+}
+function weekBlock() {
+  const today = startOfDay(Date.now());
+  const days = [...Array(7)].map((_, i) => new Date(today.getTime() + i * DAY));
+  return `<div class="week" role="group" aria-label="This week">${days.map((d, i) => {
+    const key = dayKey(d);
+    const n = teamMatches().filter(m => m.starts_at && dayKey(m.starts_at) === key).length
+      + golfItems().filter(g => golfOnDay(g, key)).length;
+    return `<button class="day ${i === 0 ? "is-today" : ""}" data-day="${key}" aria-pressed="${selDay === key}" aria-label="${d.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" })}, ${n} event${n === 1 ? "" : "s"}">
+      <small>${i === 0 ? "Today" : d.toLocaleDateString("en-GB", { weekday: "short" })}</small>
+      <strong>${d.getDate()}</strong>
+      <span class="dots">${"<i></i>".repeat(Math.min(n, 3))}</span>
+    </button>`;
+  }).join("")}</div>`;
+}
+function dayBlock() {
+  const ms = teamMatches().filter(m => m.starts_at && dayKey(m.starts_at) === selDay)
+    .sort((a, b) => new Date(a.starts_at) - new Date(b.starts_at));
+  const gs = golfItems().filter(g => golfOnDay(g, selDay));
+  const title = new Date(selDay + "T12:00:00").toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
+  const golfRows = gs.map(g => {
+    const f = follow(g.follow_id);
+    return `<div class="golf-day">${avatar(f)}<div class="golf-txt"><strong>${esc(f.name)}</strong><span>${esc(g.event || "")}</span></div></div>`;
+  }).join("");
+  return `<section><div class="head"><h2>${esc(title)}</h2><button class="see-all" data-clear-day>Show all</button></div>
+    ${ms.length || gs.length ? `<div class="group">${ms.map(matchRow).join("")}${golfRows}</div>` : `<p class="empty">Nothing on for your teams.</p>`}
+  </section>`;
+}
+
+/* matches list */
+function matchesBlock(limit) {
   const cutoff = Date.now() - RESULT_DAYS * DAY;
   const all = teamMatches();
   const results = all.filter(m => m.status === "finished" && new Date(m.starts_at) >= cutoff)
     .sort((a, b) => new Date(b.starts_at) - new Date(a.starts_at));
   const upcoming = all.filter(m => m.status === "upcoming")
     .sort((a, b) => new Date(a.starts_at) - new Date(b.starts_at));
-  const list = tab === "results" ? results : upcoming;
-  document.querySelectorAll(".seg button").forEach(b => b.setAttribute("aria-pressed", b.dataset.tab === tab));
-  $("matches").innerHTML = list.length
-    ? `<div class="group">${list.map(matchRow).join("")}</div>`
-    : `<p class="empty">${tab === "results" ? `No results in the last ${RESULT_DAYS} days.` : "No fixtures found."}</p>`;
+  const list = matchTab === "results" ? results : upcoming;
+  const shown = limit ? list.slice(0, limit) : list;
+  return `<section>
+    <div class="head">
+      <h2>Matches</h2>
+      <div class="seg" role="group" aria-label="Results or upcoming">
+        <button data-mtab="results" aria-pressed="${matchTab === "results"}">Results</button>
+        <button data-mtab="upcoming" aria-pressed="${matchTab === "upcoming"}">Upcoming</button>
+      </div>
+    </div>
+    ${shown.length ? `<div class="group">${shown.map(matchRow).join("")}</div>` : `<p class="empty">${matchTab === "results" ? `No results in the last ${RESULT_DAYS} days.` : "No fixtures found."}</p>`}
+    ${limit && list.length > limit ? `<button class="more" data-go="matches">All matches</button>` : ""}
+  </section>`;
 }
 
-/* ---------- golf ---------- */
-function renderGolf() {
-  const items = data.matches.filter(m => m.kind === "golf" && keep(m));
-  const status = (m) => ({ upcoming: "Starts soon", in_progress: m.round ? `Round ${m.round}` : "In progress", finished: "Finished" }[m.status] || "");
-  $("golf").innerHTML = items.length
-    ? `<div class="group">${items.map(m => {
-        const f = follow(m.follow_id);
-        return `<div class="golf">${avatar(f)}
-          <div class="golf-txt"><strong>${esc(f.name)}</strong><span>${esc(m.event || "")}, ${status(m)}</span></div>
-          <div class="golf-pos">${esc(m.position || "")}<span>${esc(m.to_par ?? "")}</span></div>
-        </div>`;
-      }).join("")}</div>`
-    : `<p class="empty">None of your golfers is in a field this week.</p>`;
+/* golf with mini leaderboard */
+function move(now, before) {
+  const a = posNum(now), b = posNum(before);
+  if (a === null || b === null) return `<span class="mv"></span>`;
+  if (a < b) return `<span class="mv up" aria-label="up ${b - a}">▲${b - a}</span>`;
+  if (a > b) return `<span class="mv down" aria-label="down ${a - b}">▼${a - b}</span>`;
+  return `<span class="mv same" aria-label="no change">–</span>`;
+}
+function golfCard(m) {
+  const f = follow(m.follow_id);
+  const status = { upcoming: "starts soon", in_progress: m.round ? `round ${m.round}` : "in progress", finished: "finished" }[m.status] || "";
+  const board = m.leaderboard || [];
+  const mineInTop = board.some(r => String(r.id) === String(m.player_id));
+  const lbRow = (r, me) => `<div class="lb ${me ? "me" : ""}"><span class="p">${esc(r.pos || "")}</span><span class="n">${esc(r.name)}</span><span class="s">${esc(r.to_par ?? "")}</span>${move(r.pos, r.prev_pos)}</div>`;
+  const showBoard = board.length && m.status !== "upcoming";
+  return `<div class="golfcard">
+    <div class="golf">${avatar(f)}
+      <div class="golf-txt"><strong>${esc(f.name)}</strong><span>${esc(m.event || "")}, ${status}</span></div>
+      <div class="golf-pos">${esc(m.position || "")}<span>${esc(m.to_par ?? "")} ${m.prev_position ? move(m.position, m.prev_position) : ""}</span></div>
+    </div>
+    ${showBoard ? `<div class="board-list">
+      ${board.map(r => lbRow(r, String(r.id) === String(m.player_id))).join("")}
+      ${!mineInTop && m.position ? `<div class="lb-gap">···</div>${lbRow({ pos: m.position, name: f.name, to_par: m.to_par, prev_pos: m.prev_position }, true)}` : ""}
+    </div>` : ""}
+  </div>`;
+}
+function golfBlock() {
+  const items = golfItems();
+  if (!items.length && filter === "all") return "";
+  return `<section><div class="head"><h2>Golf this week</h2></div>
+    ${items.length ? items.map(golfCard).join("") : `<p class="empty">Not in a field this week.</p>`}
+  </section>`;
 }
 
-/* ---------- videos ---------- */
+/* videos */
+function watchedBadge(v) {
+  return watched.has(v.video_id) ? `<span class="watched-badge"><svg width="11" height="11" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" d="M5 12l5 5 9-10"/></svg>Watched</span>` : "";
+}
 function videoCard(v) {
-  return `<button class="vcard" data-video="${esc(v.video_id)}">
+  return `<button class="vcard ${watched.has(v.video_id) ? "watched" : ""}" data-video="${esc(v.video_id)}">
     <div class="thumb"><img src="${thumbOf(esc(v.video_id))}" alt="" loading="lazy">
-      ${isNew("video", v) ? '<span class="tag pill-new">NEW</span>' : ""}
+      ${isNew("video", v) && !watched.has(v.video_id) ? '<span class="tag pill-new">NEW</span>' : ""}${watchedBadge(v)}
     </div>
     <p class="vtitle">${esc(v.title)}</p>
-    <p class="vmeta">${esc(v.channel)}, ${ago(v.published_at)}</p>
+    <p class="vmeta">${esc(v.channel)}${v.published_at ? `, ${ago(v.published_at)}` : ""}</p>
   </button>`;
 }
 function shortCard(v) {
-  // YouTube's standard thumbnail letterboxes a Short; cropping to 9:16 leaves just the frame
-  return `<button class="scard" data-video="${esc(v.video_id)}">
-    <div class="thumb"><img src="${thumbOf(esc(v.video_id))}" alt="" loading="lazy">
-      ${isNew("video", v) ? '<span class="tag pill-new">NEW</span>' : ""}
-    </div>
-    <p class="vtitle">${esc(v.title)}</p>
-    <p class="vmeta">${esc(v.channel)}, ${ago(v.published_at)}</p>
-  </button>`;
+  return videoCard(v).replace('class="vcard', 'class="scard');
 }
-function renderVideos() {
+function videosBlock(limit) {
   const items = data.highlights.filter(keep);
-  const long = items.filter(v => !v.short).slice(0, 24);
-  const shorts = items.filter(v => v.short).slice(0, 24);
-  $("videos").innerHTML = items.length
-    ? (long.length ? `<p class="subhead">Videos</p><div class="vrail">${long.map(videoCard).join("")}</div>` : "")
-      + (shorts.length ? `<p class="subhead">Shorts</p><div class="srail">${shorts.map(shortCard).join("")}</div>` : "")
-    : `<p class="empty">No videos yet. They appear once YouTube channels are added to follows.yaml.</p>`;
+  const long = items.filter(v => !v.short);
+  const shorts = items.filter(v => v.short);
+  if (!items.length) return `<section><div class="head"><h2>Latest videos</h2></div><p class="empty">No videos yet.</p></section>`;
+  if (limit) {
+    return `<section><div class="head"><h2>Latest videos</h2><button class="see-all" data-go="videos">See all</button></div>
+      ${long.length ? `<p class="subhead">Videos</p><div class="vrail">${long.slice(0, limit).map(videoCard).join("")}</div>` : ""}
+      ${shorts.length ? `<p class="subhead">Shorts</p><div class="srail">${shorts.slice(0, limit).map(shortCard).join("")}</div>` : ""}
+    </section>`;
+  }
+  return `<section><div class="head"><h2>Latest videos</h2></div>
+    ${shorts.length ? `<p class="subhead">Shorts</p><div class="srail">${shorts.map(shortCard).join("")}</div>` : ""}
+    ${long.length ? `<p class="subhead">Videos</p><div class="vgrid">${long.slice(0, videosShown).map(videoCard).join("")}</div>
+      ${long.length > videosShown ? `<button class="more" data-more-videos>Show more videos</button>` : ""}` : ""}
+  </section>`;
 }
 
-/* ---------- news ---------- */
-function siteHost(n) {
-  try { return new URL(n.site || n.article_url).hostname; } catch (e) { return ""; }
-}
-function logoImg(n) {
-  const host = siteHost(n);
-  return host ? `<img class="logo" src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(host)}&sz=64" alt="" loading="lazy">` : "";
-}
-function storyPic(n) {
-  if (n.image) {
-    // if the publisher blocks the picture, swap to their logo
-    return `<span class="story-pic"><img src="${esc(n.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" data-logo="${esc(siteHost(n))}"></span>`;
-  }
-  return `<span class="story-pic">${logoImg(n)}</span>`;
-}
-document.addEventListener("error", (e) => {
-  const img = e.target;
-  if (img.tagName === "IMG" && img.classList.contains("logo")) { img.remove(); return; }
-  if (img.tagName === "IMG" && img.dataset && "logo" in img.dataset) {
-    const host = img.dataset.logo;
-    img.parentNode.innerHTML = host ? `<img class="logo" src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(host)}&sz=64" alt="">` : "";
-  }
-}, true);
-function storyRow(n, showTag = true) {
-  return `<a class="story" href="${esc(n.article_url || n.url)}" target="_blank" rel="noopener">
-    <span>
-    <p class="story-title">${isNew("news", n) ? '<span class="dot-new" aria-label="New"></span>' : ""}${esc(n.title)}</p>
-    <p class="story-meta">${showTag && filter === "all" ? `<span class="chip-tag">${esc(shortName(follow(n.follow_id)))}</span>` : ""}${esc(n.source)}, ${ago(n.published_at)}</p>
-    </span>
-    ${storyPic(n)}
-  </a>`;
-}
-// In "All", take turns between teams so one busy matchday doesn't fill the list
+/* news */
 function balanced(list) {
   const buckets = {};
   list.forEach(n => (buckets[n.follow_id] = buckets[n.follow_id] || []).push(n));
   Object.values(buckets).forEach(b => b.sort((x, y) => new Date(y.published_at || 0) - new Date(x.published_at || 0)));
   const out = [];
-  for (let round = 0; out.length < list.length; round++) {
+  for (let round = 0; ; round++) {
     const batch = Object.values(buckets).map(b => b[round]).filter(Boolean);
     if (!batch.length) break;
     batch.sort((x, y) => new Date(y.published_at || 0) - new Date(x.published_at || 0));
@@ -569,24 +684,59 @@ function balanced(list) {
   }
   return out;
 }
-function renderNews() {
+function siteHost(n) { try { return new URL(n.site || n.article_url).hostname; } catch (e) { return ""; } }
+function storyPic(n) {
+  const host = siteHost(n);
+  if (n.image) return `<span class="story-pic"><img src="${esc(n.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" data-logo="${esc(host)}"></span>`;
+  return `<span class="story-pic">${host ? `<img class="logo" src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(host)}&sz=64" alt="" loading="lazy">` : ""}</span>`;
+}
+function storyRow(n, showTag = true) {
+  return `<a class="story" href="${esc(n.article_url || n.url)}" target="_blank" rel="noopener">
+    <span>
+      <p class="story-title">${isNew("news", n) ? '<span class="dot-new" aria-label="New"></span>' : ""}${esc(n.title)}</p>
+      <p class="story-meta">${showTag && filter === "all" ? `<span class="chip-tag">${esc(shortName(follow(n.follow_id)))}</span>` : ""}${esc(n.source)}, ${ago(n.published_at)}</p>
+    </span>
+    ${storyPic(n)}
+  </a>`;
+}
+function newsBlock(limit) {
   const items = filter === "all" ? balanced(data.news) : data.news.filter(keep);
-  const shown = items.slice(0, newsShown);
-  $("news-section").hidden = !items.length && follow(filter).kind === "creator";
-  $("news").innerHTML = items.length
-    ? `<div class="group">${shown.map(n => storyRow(n)).join("")}</div>${items.length > newsShown ? '<button class="more" id="more">Show more news</button>' : ""}`
-    : `<p class="empty">No news found.</p>`;
-  const more = $("more");
-  if (more) more.addEventListener("click", () => { newsShown += NEWS_PAGE; renderNews(); });
+  if (!items.length) return currentKind() === "creator" ? "" : `<section><div class="head"><h2>News</h2></div><p class="empty">No news found.</p></section>`;
+  const n = limit || newsShown;
+  return `<section><div class="head"><h2>News</h2>${limit ? `<button class="see-all" data-go="news">See all</button>` : ""}</div>
+    <div class="group">${items.slice(0, n).map(x => storyRow(x)).join("")}</div>
+    ${!limit && items.length > n ? `<button class="more" data-more-news>Show more news</button>` : ""}
+  </section>`;
 }
 
-/* ---------- section visibility by filter ---------- */
-function visibility() {
-  const f = filter === "all" ? null : follow(filter);
-  const kind = f ? f.kind : "all";
-  $("matches-section").hidden = kind === "player" || kind === "creator";
-  $("hero-slot").hidden = kind === "player" || kind === "creator";
-  $("golf-section").hidden = kind === "team" || kind === "creator";
+/* ---------- tabs ---------- */
+function homeView() {
+  const k = currentKind();
+  if (k === "creator") return videosBlock(12) + newsBlock(5);
+  if (k === "player") return golfBlock() + videosBlock(12) + newsBlock(5);
+  return weekBlock() + heroBlock() + matchesBlock(3) + golfBlock() + videosBlock(12) + newsBlock(5);
+}
+function matchesView() {
+  const k = currentKind();
+  if (k === "creator") return `<section><p class="empty">${esc(follow(filter).name)} is a creator, so there are no matches. Their videos are in the Videos tab.</p></section>`;
+  if (k === "player") return weekBlock() + (selDay ? dayBlock() : golfBlock());
+  return weekBlock() + (selDay ? dayBlock() : matchesBlock(0) + golfBlock());
+}
+const VIEWS = { home: homeView, matches: matchesView, videos: () => videosBlock(0), news: () => newsBlock(0) };
+
+function render(animate = true) {
+  renderRail();
+  document.querySelectorAll(".tab").forEach(t => t.dataset.tab === tab ? t.setAttribute("aria-current", "page") : t.removeAttribute("aria-current"));
+  const view = $("view");
+  view.innerHTML = VIEWS[tab]();
+  if (animate) { view.classList.remove("enter"); void view.offsetWidth; view.classList.add("enter"); }
+  bindCards(view);
+}
+function go(t) {
+  tab = t;
+  if (t !== "matches") selDay = null;
+  window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
+  render();
 }
 
 /* ---------- match centre ---------- */
@@ -632,7 +782,7 @@ function openSheet(html) {
   bindCards(d);
 }
 function renderMatchCentre(id) {
-  const m = data.matches.find(x => String(x.source_id) === String(id));
+  const m = data.matches.find(x => String(x.source_id) === String(id) && x.kind === "team");
   if (!m) return false;
   const side = mineSide(m);
   const w = when(m.starts_at);
@@ -651,10 +801,7 @@ function renderMatchCentre(id) {
   const vids = relatedVideos(m);
   const news = relatedNews(m);
   openSheet(`
-    <div class="sheet-bar">
-      <p id="sheet-title">${esc(m.competition || "Match centre")}</p>
-      <button class="close" data-close aria-label="Close">×</button>
-    </div>
+    <div class="sheet-bar"><p id="sheet-title">${esc(m.competition || "Match centre")}</p><button class="close" data-close aria-label="Close">×</button></div>
     <div class="board">${sideBlock("home")}${centre}${sideBlock("away")}</div>
     ${m.result && !m.score ? `<p class="para" style="margin-top:.8rem">${esc(m.result)}</p>` : ""}
     <div class="facts">${facts.map(([k, v]) => `<div class="fact"><span>${k}</span><strong>${esc(v)}</strong></div>`).join("")}</div>
@@ -667,20 +814,23 @@ function renderMatchCentre(id) {
   `);
   return true;
 }
+function markWatched(id) {
+  if (watched.has(id)) return;
+  watched.add(id);
+  store.set(WATCHED_KEY, [...watched].slice(-1000));
+}
 function renderPlayer(id) {
   const v = data.highlights.find(x => x.video_id === id) || { video_id: id, title: "Video", channel: "", short: false };
+  markWatched(id);
   openSheet(`
-    <div class="sheet-bar">
-      <p id="sheet-title">${esc(v.channel || "Video")}</p>
-      <button class="close" data-close aria-label="Close">×</button>
-    </div>
+    <div class="sheet-bar"><p id="sheet-title">${esc(v.channel || "Video")}</p><button class="close" data-close aria-label="Close">×</button></div>
     <div class="player ${v.short ? "short" : ""}"><iframe src="https://www.youtube-nocookie.com/embed/${esc(v.video_id)}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="${esc(v.title)}"></iframe></div>
     <h3 style="margin-top:1rem">${esc(v.title)}</h3>
     ${v.published_at ? `<p class="story-meta">${ago(v.published_at)}</p>` : ""}
   `);
 }
 
-/* ---------- routing: #match-123 and #video-abc open sheets, back closes them ---------- */
+/* ---------- routing for sheets: #match-123 and #video-abc; back closes ---------- */
 function route() {
   const h = location.hash.slice(1);
   const d = $("sheet");
@@ -689,42 +839,51 @@ function route() {
   if (d.open) d.close();
 }
 $("sheet").addEventListener("close", () => {
-  $("sheet-body").innerHTML = "";  // stops any playing video
+  const wasVideo = /^#video-/.test(location.hash);
+  $("sheet-body").innerHTML = "";
   if (/^#(match|video)-/.test(location.hash)) history.back();
+  if (wasVideo) render(false);  // show the watched marker straight away
 });
 $("sheet").addEventListener("click", (e) => { if (e.target === $("sheet")) $("sheet").close(); });
 window.addEventListener("hashchange", route);
 
-function bindCards(root = document) {
+/* ---------- one click handler for everything ---------- */
+function bindCards(root) {
   root.querySelectorAll("[data-match]").forEach(b => b.onclick = () => { location.hash = `match-${b.dataset.match}`; });
   root.querySelectorAll("[data-video]").forEach(b => b.onclick = () => {
     if (location.hash.startsWith("#match-")) history.replaceState(null, "", location.pathname);
     location.hash = `video-${b.dataset.video}`;
   });
 }
-
+document.addEventListener("click", (e) => {
+  const t = e.target.closest("[data-follow],[data-tab],[data-mtab],[data-day],[data-clear-day],[data-go],[data-more-news],[data-more-videos]");
+  if (!t) return;
+  if (t.dataset.follow) {
+    filter = t.dataset.follow; newsShown = NEWS_PAGE; videosShown = VIDEO_PAGE;
+    store.set("mai-filter", filter); render();
+  } else if (t.dataset.tab) {
+    go(t.dataset.tab);
+  } else if (t.dataset.mtab) {
+    matchTab = t.dataset.mtab; render(false);
+  } else if (t.dataset.day) {
+    selDay = selDay === t.dataset.day ? null : t.dataset.day;
+    if (tab !== "matches") go("matches"); else render();
+  } else if (t.hasAttribute("data-clear-day")) {
+    selDay = null; render();
+  } else if (t.dataset.go) {
+    go(t.dataset.go);
+  } else if (t.hasAttribute("data-more-news")) {
+    newsShown += NEWS_PAGE; render(false);
+  } else if (t.hasAttribute("data-more-videos")) {
+    videosShown += VIDEO_PAGE; render(false);
+  }
+});
 $("personalise").addEventListener("click", () => openSheet(`
-  <div class="sheet-bar">
-    <p id="sheet-title">Personalise</p>
-    <button class="close" data-close aria-label="Close">×</button>
-  </div>
+  <div class="sheet-bar"><p id="sheet-title">Personalise</p><button class="close" data-close aria-label="Close">×</button></div>
   <p class="empty">Coming soon.</p>
 `));
 
-document.querySelectorAll(".seg button").forEach(b => b.addEventListener("click", () => { tab = b.dataset.tab; renderMatches(); bindCards(); }));
-
-/* ---------- main ---------- */
-function render() {
-  visibility();
-  renderRail();
-  renderHero();
-  renderMatches();
-  renderGolf();
-  renderVideos();
-  renderNews();
-  bindCards();
-}
-
+/* ---------- start ---------- */
 async function load() {
   $("today").textContent = new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
   try {
@@ -732,8 +891,8 @@ async function load() {
     if (!res.ok) throw new Error(res.status);
     data = await res.json();
   } catch (e) {
-    $("updated").textContent = "Couldn’t load data";
-    $("notices").innerHTML = `<p class="notice">data.json didn’t load. Check the fetch workflow has run at least once.</p>`;
+    $("updated").textContent = "couldn’t load data";
+    $("view").innerHTML = `<p class="notice">data.json didn’t load. Check the fetch workflow has run at least once.</p>`;
     return;
   }
   data.follows = data.follows || []; data.news = data.news || []; data.matches = data.matches || [];
@@ -745,9 +904,8 @@ async function load() {
   if (data.errors.length)
     notes.push(`${data.errors.length} source${data.errors.length > 1 ? "s" : ""} failed on the last run: ${data.errors.map(e => `${shortName(follow(e.follow_id))} (${e.source})`).join(", ")}.`);
   $("notices").innerHTML = notes.map(n => `<p class="notice">${esc(n)}</p>`).join("");
-  // results first, unless nothing has finished in the last few days
   const recent = data.matches.some(m => m.kind === "team" && m.status === "finished" && Date.now() - new Date(m.starts_at) < 3 * DAY);
-  tab = recent ? "results" : "upcoming";
+  matchTab = recent ? "results" : "upcoming";
   trackNew();
   render();
   route();
