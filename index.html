@@ -56,7 +56,9 @@ img { max-width: 100%; }
 .today { font: 500 .85rem/1.2 var(--body); margin: .3rem 0 0; color: var(--muted); }
 .updated { margin-left: .4rem; color: var(--dim); }
 .notice { margin: .8rem 0 0; padding: .65rem .85rem; border-radius: 12px; background: var(--card); font-size: .88rem; }
-.quiet { margin: .5rem 0 0; font-size: .8rem; color: var(--muted); }
+.status { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.status:empty { display: none; }
+.quiet { margin: 0; font-size: .8rem; color: var(--muted); }
 .quiet summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: .35rem; }
 .quiet summary::before { content: ""; width: .45rem; height: .45rem; border-radius: 50%; background: #E0A100; }
 .quiet summary::-webkit-details-marker { display: none; }
@@ -314,6 +316,7 @@ dialog.sheet::backdrop { background: var(--scrim); }
     <div class="skel skel-line"></div>
     <div class="skel skel-row"></div>
   </main>
+  <footer id="status" class="status"></footer>
 </div>
 
 <nav class="tabbar" aria-label="Sections">
@@ -1051,7 +1054,7 @@ async function load() {
     // a quiet one-liner; details only if you tap
     const stale = data.errors.every(e => e.stale);
     const list = data.errors.map(e => `<li>${esc(shortName(follow(e.follow_id)))}: ${esc(e.source)}${e.stale ? " (showing earlier content)" : ""}</li>`).join("");
-    $("notices").insertAdjacentHTML("beforeend", `<details class="quiet">
+    $("status").insertAdjacentHTML("beforeend", `<details class="quiet">
       <summary>${data.errors.length} source${data.errors.length > 1 ? "s" : ""} didn’t refresh${stale ? ", showing their earlier content" : ""}</summary>
       <ul>${list}</ul></details>`);
   }
