@@ -149,6 +149,9 @@ follows:
     fixtures:
       provider: thesportsdb
       team_id: "134777"
+    match_detail:                # scorers, cards and stats in the match centre
+      provider: espn_soccer
+      leagues: ["eng.1", "eng.fa", "eng.league_cup", "uefa.champions", "uefa.europa", "uefa.europa.conf"]
     highlights:
       - type: youtube_channel
         name: Newcastle United

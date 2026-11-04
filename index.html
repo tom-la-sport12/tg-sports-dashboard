@@ -278,6 +278,34 @@ dialog.sheet::backdrop { background: var(--scrim); }
 .board .hero-side .crest { width: 4rem; height: 4rem; }
 .big-score { font: 800 3.3rem/1 var(--display); text-align: center; white-space: nowrap; }
 .big-score small { display: block; font: 700 .72rem/1.5 var(--body); color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+.scorers { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: .5rem; margin: -.4rem 0 0; padding: 0 1rem 1rem; background: var(--card); border-radius: 0 0 20px 20px; font-size: .82rem; color: var(--muted); }
+.scorers div { display: flex; flex-direction: column; gap: .15rem; }
+.scorers div:last-child { text-align: right; }
+.scorers .ball { align-self: start; padding-top: .1rem; }
+.board.has-scorers { border-radius: 20px 20px 0 0; }
+.moments { background: var(--card); border-radius: 18px; padding: .4rem 0; }
+.moment { display: grid; grid-template-columns: minmax(0, 1fr) 3.4rem minmax(0, 1fr); align-items: center; gap: .5rem; padding: .45rem 1rem; font-size: .9rem; }
+.moment + .moment { border-top: 1px solid #23262C; }
+.moment .min { text-align: center; font: 800 1.05rem/1 var(--display); color: var(--muted); }
+.moment .who { display: flex; align-items: center; gap: .45rem; min-width: 0; }
+.moment .who span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.moment .away { justify-content: flex-end; text-align: right; }
+.moment.goal .who span { font-weight: 700; }
+.ico-card { width: .7rem; height: .95rem; border-radius: 2px; flex: none; }
+.ico-card.yellow { background: #F5C400; }
+.ico-card.red { background: #E5243B; }
+.ico-ball { width: 1rem; height: 1rem; flex: none; }
+.stats { background: var(--card); border-radius: 18px; padding: .9rem 1rem; display: flex; flex-direction: column; gap: .85rem; }
+.stat-top { display: grid; grid-template-columns: 4rem 1fr 4rem; align-items: baseline; font-size: .82rem; color: var(--muted); }
+.stat-top b { font: 800 1.15rem/1 var(--display); color: var(--ink); }
+.stat-top b:last-child { text-align: right; }
+.stat-top span { text-align: center; }
+.stat-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-top: .35rem; }
+.stat-bar i { height: 6px; border-radius: 3px; background: #2A2D33; position: relative; overflow: hidden; }
+.stat-bar i::after { content: ""; position: absolute; top: 0; bottom: 0; width: var(--w); border-radius: 3px; }
+.stat-bar i:first-child::after { right: 0; background: #FFFFFF; }
+.stat-bar i:last-child::after { left: 0; background: #7C838E; }
+.source-note { margin: .5rem 0 0; font-size: .72rem; color: var(--dim); }
 .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: .6rem; margin-top: .8rem; }
 .fact { background: var(--card); border-radius: 14px; padding: .7rem .85rem; }
 .fact span { display: block; font-size: .72rem; color: var(--muted); }
@@ -520,6 +548,11 @@ function mineSide(m) {
   const fn = clean(follow(m.follow_id).name).split(" ")[0].toLowerCase();
   return clean(m.home).toLowerCase().includes(fn) ? "home" : "away";
 }
+function cleanResult(t) {
+  // ignore HTML and the blank half-by-half template some feeds send before kick-off
+  const x = String(t || "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+  return /(first|second) half|overtime/i.test(x) ? "" : x;
+}
 function matchRow(m) {
   const side = mineSide(m);
   const s = m.score;
@@ -538,7 +571,7 @@ function matchRow(m) {
       <div class="comp">${isNew("match", m) ? '<span class="dot-new" aria-label="New"></span>' : ""}${filter === "all" ? `<span class="tag" style="--tc:${fcol(m.follow_id)}">${esc(shortName(follow(m.follow_id)))}</span>` : ""}<span>${esc(m.competition || "")}</span></div>
       <div class="lines">${teamLine("home")}${teamLine("away")}</div>
       <div class="side-info">${info}</div>
-      ${!s && m.result ? `<div class="txt-result">${esc(m.result)}</div>` : ""}
+      ${!s && m.status === "finished" && cleanResult(m.result) ? `<div class="txt-result">${esc(cleanResult(m.result))}</div>` : ""}
     </div>
   </button>`;
 }
@@ -923,6 +956,42 @@ function openSheet(html) {
   d.querySelectorAll("[data-close]").forEach(b => b.addEventListener("click", () => d.close()));
   bindCards(d);
 }
+const BALL = `<svg class="ico-ball" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><path fill="currentColor" d="M12 7.2l3.6 2.6-1.4 4.2H9.8L8.4 9.8z"/></svg>`;
+function scorersBlock(d) {
+  // "Isak 23', 67'" per player, home on the left, away on the right
+  const goals = (d.events || []).filter(e => ["goal", "pen", "og"].includes(e.type));
+  if (!goals.length) return "";
+  const side = (who) => {
+    const byPlayer = {};
+    goals.filter(g => g.side === who).forEach(g => {
+      const name = (g.player || "Goal").split(" ").slice(-1)[0];
+      (byPlayer[name] = byPlayer[name] || []).push(`${g.minute || ""}${g.type === "pen" ? " pen" : g.type === "og" ? " og" : ""}`);
+    });
+    return Object.entries(byPlayer).map(([n, mins]) => `<span>${esc(n)} ${esc(mins.join(", "))}</span>`).join("");
+  };
+  return `<div class="scorers"><div>${side("home")}</div><span class="ball">${BALL}</span><div>${side("away")}</div></div>`;
+}
+function momentsBlock(d) {
+  const ev = d.events || [];
+  if (!ev.length) return "";
+  const icon = (t) => t === "yellow" ? `<i class="ico-card yellow" aria-label="Yellow card"></i>` : t === "red" ? `<i class="ico-card red" aria-label="Red card"></i>` : BALL;
+  const label = (e) => `${e.player || ""}${e.type === "pen" ? " (pen)" : e.type === "og" ? " (og)" : ""}`;
+  return `<h3>Key moments</h3><div class="moments">${ev.map(e => `<div class="moment ${["goal", "pen", "og"].includes(e.type) ? "goal" : ""}">
+      <div class="who">${e.side === "home" ? `${icon(e.type)}<span>${esc(label(e))}</span>` : ""}</div>
+      <div class="min">${esc(e.minute || "")}</div>
+      <div class="who away">${e.side === "away" ? `<span>${esc(label(e))}</span>${icon(e.type)}` : ""}</div>
+    </div>`).join("")}</div>`;
+}
+function statsBlock(d) {
+  const st = d.stats || [];
+  if (!st.length) return "";
+  const num = (v) => parseFloat(String(v).replace("%", "")) || 0;
+  return `<h3>Stats</h3><div class="stats">${st.map(r => {
+    const h = num(r.home), a = num(r.away), t = h + a || 1;
+    return `<div><div class="stat-top"><b>${esc(r.home)}</b><span>${esc(r.label)}</span><b>${esc(r.away)}</b></div>
+      <div class="stat-bar"><i style="--w:${(h / t * 100).toFixed(1)}%"></i><i style="--w:${(a / t * 100).toFixed(1)}%"></i></div></div>`;
+  }).join("")}</div>`;
+}
 function renderMatchCentre(id) {
   const m = data.matches.find(x => String(x.source_id) === String(id) && x.kind === "team");
   if (!m) return false;
@@ -938,16 +1007,18 @@ function renderMatchCentre(id) {
     [done ? "Kicked off" : "Kick-off", w.time],
     m.venue && ["Venue", [m.venue, m.city].filter(Boolean).join(", ")],
     m.round && ["Round", m.round],
-    m.spectators && ["Attendance", Number(m.spectators).toLocaleString("en-GB")],
+    (m.spectators || (m.detail && m.detail.attendance)) && ["Attendance", Number(m.spectators || m.detail.attendance).toLocaleString("en-GB")],
   ].filter(Boolean);
   const vids = relatedVideos(m);
   const news = relatedNews(m);
   openSheet(`
     <div class="sheet-bar"><p id="sheet-title">${esc(m.competition || "Match centre")}</p><button class="close" data-close aria-label="Close">×</button></div>
-    <div class="board">${sideBlock("home")}${centre}${sideBlock("away")}</div>
-    ${m.result && !m.score ? `<p class="para" style="margin-top:.8rem">${esc(m.result)}</p>` : ""}
+    <div class="board ${m.detail && scorersBlock(m.detail) ? "has-scorers" : ""}">${sideBlock("home")}${centre}${sideBlock("away")}</div>
+    ${m.detail ? scorersBlock(m.detail) : ""}
+    ${done && !m.score && cleanResult(m.result) ? `<p class="para" style="margin-top:.8rem">${esc(cleanResult(m.result))}</p>` : ""}
     <div class="facts">${facts.map(([k, v]) => `<div class="fact"><span>${k}</span><strong>${esc(v)}</strong></div>`).join("")}</div>
     ${!done && m.starts_at ? `<div class="actions"><a class="btn primary" href="${icsFor(m)}" download="${esc(clean(m.home))}-v-${esc(clean(m.away))}.ics">Add to calendar</a></div>` : ""}
+    ${m.detail ? momentsBlock(m.detail) + statsBlock(m.detail) + `<p class="source-note">Match data: ${esc(m.detail.source || "")}</p>` : ""}
     ${m.description ? `<h3>Preview</h3><p class="para">${esc(m.description)}</p>` : ""}
     <h3>Videos</h3>
     ${vids.length ? `<div class="vrail">${vids.map(videoCard).join("")}</div>` : `<p class="empty">${done ? "No highlights found for this match yet." : "Videos appear here around the match."}</p>`}

@@ -11,7 +11,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 
 import yaml
@@ -171,6 +171,17 @@ def badge(team_id, hint=None):
     return _badges[team_id]
 
 
+def clean_result(text):
+    """Cricket-style result text only; drop HTML and the empty scoring templates rugby games carry."""
+    if not text:
+        return None
+    t = re.sub(r"<[^>]+>", " ", text)
+    t = re.sub(r"\s+", " ", t).strip()
+    if not t or re.search(r"(First|Second) Half|Overtime", t, re.I):
+        return None
+    return t
+
+
 def thesportsdb(follow, fx):
     now = datetime.now(timezone.utc)
     me = str(fx["team_id"])
@@ -197,7 +208,7 @@ def thesportsdb(follow, fx):
                 status = "upcoming"
             out.append({
                 "follow_id": follow["id"], "kind": "team", "source_id": e.get("idEvent"),
-                "status": status, "result": e.get("strResult") or None,
+                "status": status, "result": clean_result(e.get("strResult")) if status == "finished" else None,
                 "starts_at": iso(starts), "competition": e.get("strLeague"),
                 "home": e.get("strHomeTeam"), "away": e.get("strAwayTeam"),
                 "score": {"home": int(home), "away": int(away)} if (home not in (None, "") and away not in (None, "")) else None,
@@ -496,6 +507,105 @@ def quality_filter(items, follow, settings, filtered):
     return kept
 
 
+# ---------- match details (football, via ESPN) ----------
+# Goals with minutes, cards and team stats. ESPN's site API is public but
+# undocumented, so everything here is best-effort: a miss just means a plainer match centre.
+
+ESPN_SOCCER = "https://site.api.espn.com/apis/site/v2/sports/soccer/{league}/{what}"
+STAT_ROWS = [("possessionPct", "Possession", "%"), ("totalShots", "Shots", ""), ("shotsOnTarget", "On target", ""),
+             ("wonCorners", "Corners", ""), ("foulsCommitted", "Fouls", "")]
+
+
+def _first_word(name):
+    words = [w for w in re.findall(r"[a-zà-ÿ]+", (name or "").lower()) if w not in ("fc", "afc", "the")]
+    return words[0] if words else ""
+
+
+def _same_team(a, b):
+    x, y = _first_word(a), _first_word(b)
+    return bool(x and y and (x in (b or "").lower() or y in (a or "").lower()))
+
+
+def espn_event_id(m, leagues):
+    day = datetime.fromisoformat(m["starts_at"])
+    span = f"{(day - timedelta(days=1)):%Y%m%d}-{(day + timedelta(days=1)):%Y%m%d}"
+    for league in leagues:
+        data = get(ESPN_SOCCER.format(league=league, what="scoreboard") + f"?dates={span}", as_json=True)
+        for ev in data.get("events", []):
+            comps = ((ev.get("competitions") or [{}])[0]).get("competitors", [])
+            names = {c.get("homeAway"): (c.get("team") or {}).get("displayName", "") for c in comps}
+            if _same_team(m["home"], names.get("home")) and _same_team(m["away"], names.get("away")):
+                return league, ev.get("id")
+    return None, None
+
+
+def soccer_detail(m, leagues):
+    league, eid = espn_event_id(m, leagues)
+    if not eid:
+        return None
+    d = get(ESPN_SOCCER.format(league=league, what="summary") + f"?event={eid}", as_json=True)
+    comps = (((d.get("header") or {}).get("competitions") or [{}])[0]).get("competitors", [])
+    home_id = next((str((c.get("team") or {}).get("id")) for c in comps if c.get("homeAway") == "home"), None)
+    events = []
+    for ev in d.get("keyEvents") or []:
+        kind = ((ev.get("type") or {}).get("text") or "").lower()
+        if "own goal" in kind:
+            t = "og"
+        elif "penalty" in kind and ("scored" in kind or "goal" in kind):
+            t = "pen"
+        elif "goal" in kind and "disallowed" not in kind:
+            t = "goal"
+        elif "red" in kind:
+            t = "red"
+        elif "yellow" in kind:
+            t = "yellow"
+        else:
+            continue
+        who = [((p.get("athlete") or {}).get("displayName")) for p in ev.get("participants") or []]
+        team_id = str((ev.get("team") or {}).get("id"))
+        events.append({
+            "minute": (ev.get("clock") or {}).get("displayValue"),
+            "type": t,
+            "side": "home" if team_id == home_id else "away",
+            "player": next((w for w in who if w), None),
+        })
+    stats = []
+    teams = (d.get("boxscore") or {}).get("teams") or []
+    by_side = {}
+    for t in teams:
+        side = "home" if str((t.get("team") or {}).get("id")) == home_id else "away"
+        by_side[side] = {s.get("name"): s.get("displayValue") for s in t.get("statistics") or []}
+    for key, label, unit in STAT_ROWS:
+        h, a = (by_side.get("home") or {}).get(key), (by_side.get("away") or {}).get(key)
+        if h not in (None, "") and a not in (None, ""):
+            if unit == "%":
+                h, a = (round(float(x)) if str(x).replace(".", "", 1).isdigit() else x for x in (h, a))
+            stats.append({"label": label, "home": f"{h}{unit}", "away": f"{a}{unit}"})
+    attendance = ((d.get("gameInfo") or {}).get("attendance"))
+    return {"events": events, "stats": stats, "attendance": attendance, "source": "ESPN"}
+
+
+def add_match_details(follows, matches, prev):
+    """Finished football games from the last 10 days get scorers, cards and stats."""
+    old = {(m.get("follow_id"), str(m.get("source_id"))): m.get("detail") for m in prev.get("matches", []) if m.get("detail")}
+    cfg = {f["id"]: f.get("match_detail") for f in follows if f.get("match_detail")}
+    now = datetime.now(timezone.utc)
+    for m in matches:
+        c = cfg.get(m.get("follow_id"))
+        if not c or m.get("kind") != "team" or m.get("status") != "finished" or not m.get("starts_at"):
+            continue
+        if (now - datetime.fromisoformat(m["starts_at"])).days > 10:
+            continue
+        key = (m["follow_id"], str(m["source_id"]))
+        if old.get(key):
+            m["detail"] = old[key]  # finished games don't change, so no need to ask again
+            continue
+        try:
+            m["detail"] = soccer_detail(m, c.get("leagues") or ["eng.1"])
+        except Exception as e:  # noqa: BLE001
+            errors.append({"follow_id": m["follow_id"], "source": "match details", "error": f"{type(e).__name__}: {e}"})
+
+
 def load_previous():
     """Last run's data.json: reused for badges, and as a fallback if a source fails."""
     try:
@@ -560,6 +670,7 @@ def main():
                 errors[-1]["stale"] = True
             highlights += got
 
+    add_match_details(follows, matches, prev)
     news.sort(key=lambda n: n["published_at"] or "", reverse=True)
     matches = list({(m["follow_id"], m["source_id"]): m for m in matches}.values())
     matches.sort(key=lambda m: m.get("starts_at") or (m.get("dates") or {}).get("start") or "")
