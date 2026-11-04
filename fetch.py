@@ -529,6 +529,7 @@ def _same_team(a, b):
 def espn_event_id(m, leagues):
     day = datetime.fromisoformat(m["starts_at"])
     span = f"{(day - timedelta(days=1)):%Y%m%d}-{(day + timedelta(days=1)):%Y%m%d}"
+    seen = []
     for league in leagues:
         data = get(ESPN_SOCCER.format(league=league, what="scoreboard") + f"?dates={span}", as_json=True)
         for ev in data.get("events", []):
@@ -536,6 +537,9 @@ def espn_event_id(m, leagues):
             names = {c.get("homeAway"): (c.get("team") or {}).get("displayName", "") for c in comps}
             if _same_team(m["home"], names.get("home")) and _same_team(m["away"], names.get("away")):
                 return league, ev.get("id")
+            seen.append(f"{names.get('home')} v {names.get('away')}")
+    if seen:
+        print(f"  ESPN had: {', '.join(seen[:12])}")
     return None, None
 
 
@@ -589,6 +593,8 @@ def add_match_details(follows, matches, prev):
     """Finished football games from the last 10 days get scorers, cards and stats."""
     old = {(m.get("follow_id"), str(m.get("source_id"))): m.get("detail") for m in prev.get("matches", []) if m.get("detail")}
     cfg = {f["id"]: f.get("match_detail") for f in follows if f.get("match_detail")}
+    if not cfg:
+        print("match details: no team has match_detail set in follows.yaml")
     now = datetime.now(timezone.utc)
     for m in matches:
         c = cfg.get(m.get("follow_id"))
@@ -597,12 +603,21 @@ def add_match_details(follows, matches, prev):
         if (now - datetime.fromisoformat(m["starts_at"])).days > 10:
             continue
         key = (m["follow_id"], str(m["source_id"]))
+        label = f"{m['home']} v {m['away']} ({m['starts_at'][:10]})"
         if old.get(key):
             m["detail"] = old[key]  # finished games don't change, so no need to ask again
+            print(f"match details: {label}: kept from last run")
             continue
         try:
             m["detail"] = soccer_detail(m, c.get("leagues") or ["eng.1"])
+            if m["detail"]:
+                d = m["detail"]
+                print(f"match details: {label}: found, {len(d['events'])} key moments, {len(d['stats'])} stats")
+            else:
+                print(f"match details: {label}: no matching game found on ESPN")
+                errors.append({"follow_id": m["follow_id"], "source": "match details", "error": f"no ESPN game found for {label}"})
         except Exception as e:  # noqa: BLE001
+            print(f"match details: {label}: failed, {type(e).__name__}: {e}")
             errors.append({"follow_id": m["follow_id"], "source": "match details", "error": f"{type(e).__name__}: {e}"})
 
 
