@@ -83,6 +83,11 @@ img { max-width: 100%; }
 }
 .today { font: 600 1.05rem/1.2 var(--body); margin: .35rem 0 0; color: var(--muted); }
 .updated { font-size: .82rem; font-weight: 400; margin-left: .5rem; }
+.quiet { margin: .6rem 0 0; font-size: .8rem; color: var(--muted); }
+.quiet summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: .35rem; }
+.quiet summary::before { content: ""; width: .45rem; height: .45rem; border-radius: 50%; background: #E0A100; }
+.quiet summary::-webkit-details-marker { display: none; }
+.quiet ul { margin: .4rem 0 0; padding-left: 1.1rem; }
 .notice { margin: .9rem 0 0; padding: .65rem .85rem; border-radius: 12px; background: var(--card); font-size: .88rem; border: 1px solid var(--line); }
 
 /* follow rail */
@@ -1026,9 +1031,15 @@ async function load() {
   const notes = [];
   if ((Date.now() - new Date(data.generated_at)) / 36e5 > STALE_HOURS)
     notes.push("This data is more than 12 hours old. Check the Actions tab on GitHub for a failed run.");
-  if (data.errors.length)
-    notes.push(`${data.errors.length} source${data.errors.length > 1 ? "s" : ""} failed on the last run: ${data.errors.map(e => `${shortName(follow(e.follow_id))} (${e.source})`).join(", ")}.`);
   $("notices").innerHTML = notes.map(n => `<p class="notice">${esc(n)}</p>`).join("");
+  if (data.errors.length) {
+    // a quiet one-liner; details only if you tap
+    const stale = data.errors.every(e => e.stale);
+    const list = data.errors.map(e => `<li>${esc(shortName(follow(e.follow_id)))}: ${esc(e.source)}${e.stale ? " (showing earlier content)" : ""}</li>`).join("");
+    $("notices").insertAdjacentHTML("beforeend", `<details class="quiet">
+      <summary>${data.errors.length} source${data.errors.length > 1 ? "s" : ""} didn’t refresh${stale ? ", showing their earlier content" : ""}</summary>
+      <ul>${list}</ul></details>`);
+  }
   const recent = data.matches.some(m => m.kind === "team" && m.status === "finished" && Date.now() - new Date(m.starts_at) < 3 * DAY);
   matchTab = recent ? "results" : "upcoming";
   trackNew();

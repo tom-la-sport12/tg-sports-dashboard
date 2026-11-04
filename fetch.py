@@ -313,6 +313,21 @@ def channel_id(src):
     return _channel_ids[handle]
 
 
+def youtube_feed(cid):
+    """Channel feed, retried; YouTube sometimes refuses cloud servers for a while."""
+    urls = [YOUTUBE.format(cid),
+            "https://www.youtube.com/feeds/videos.xml?playlist_id=UU" + cid[2:]]  # same videos, other route
+    last = None
+    for attempt in range(2):
+        for url in urls:
+            try:
+                return get(url)
+            except Exception as e:  # noqa: BLE001
+                last = e
+        time.sleep(5)
+    raise last
+
+
 def link_href(entry, ns):
     link = entry.find("a:link", ns)
     return link.get("href", "") if link is not None else ""
@@ -320,7 +335,7 @@ def link_href(entry, ns):
 
 def youtube_channel(follow, src):
     ns = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015"}
-    root = ET.fromstring(get(YOUTUBE.format(channel_id(src))))
+    root = ET.fromstring(youtube_feed(channel_id(src)))
     if follow.get("kind") == "creator" and follow["id"] not in images:
         h = (src.get("handle") or "").strip()
         images[follow["id"]] = _channel_images.get(h) or _channel_images.get("@" + h.lstrip("@"))
@@ -491,6 +506,9 @@ def load_previous():
         for side in ("home", "away"):
             if m.get(f"{side}_id") and m.get(f"{side}_badge"):
                 _badges[str(m[f"{side}_id"])] = m[f"{side}_badge"]
+    for handle, info in (prev.get("channels") or {}).items():
+        _channel_ids[handle] = info.get("id")
+        _channel_images[handle] = info.get("image")
     for f in prev.get("follows", []):
         if f.get("image"):
             images[f["id"]] = f["image"]
@@ -523,7 +541,7 @@ def main():
             if len(errors) > failed_before and not got:
                 # source failed: keep last run's fixtures rather than showing nothing
                 got = [m for m in prev.get("matches", []) if m.get("follow_id") == f["id"] and m.get("kind") == "team"]
-                errors[-1]["error"] += " (showing last run's fixtures)"
+                errors[-1]["stale"] = True
             matches += got
 
         ev = f.get("events")
@@ -535,7 +553,12 @@ def main():
                 continue
             if src["type"] not in HIGHLIGHTS:
                 continue
-            highlights += run(f, src["name"], HIGHLIGHTS[src["type"]], src)
+            failed_before = len(errors)
+            got = run(f, src["name"], HIGHLIGHTS[src["type"]], src)
+            if len(errors) > failed_before and not got:
+                got = [h for h in prev.get("highlights", []) if h.get("follow_id") == f["id"] and h.get("channel") == src["name"]]
+                errors[-1]["stale"] = True
+            highlights += got
 
     news.sort(key=lambda n: n["published_at"] or "", reverse=True)
     matches = list({(m["follow_id"], m["source_id"]): m for m in matches}.values())
@@ -551,6 +574,7 @@ def main():
                      "image": images.get(f["id"]),
                      "colours": f.get("colours") or colours.get(f["id"])} for f in follows],
         "news": news, "matches": matches, "highlights": highlights, "errors": errors,
+        "channels": {h: {"id": i, "image": _channel_images.get(h)} for h, i in _channel_ids.items() if i},
     }
     with open("data.json", "w", encoding="utf-8") as fh:
         json.dump(data, fh, ensure_ascii=False, indent=1)
