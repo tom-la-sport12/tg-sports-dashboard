@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T18:47:30.790154+00:00",
+ "generated_at": "2026-11-12T22:42:32.967225+00:00",
  "follows": [
   {
    "id": "england-cricket",
@@ -81,16 +81,76 @@
  ],
  "news": [
   {
-   "follow_id": "mcilroy",
-   "title": "Rory McIlroy Reveals How Roger Federer and Rafael Nadal Influenced His Golf Career",
-   "source": "Yahoo Sports",
-   "site": "https://sports.yahoo.com",
-   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQUG9QM0Vtbjd0bXh1T3VSTkxFbDh6UkNBRkNFN1pWLWpvZHd0dFdmTWNBVDhsbTJTVDZYaExyU0JvOEFfOXZNQ1V6ZXdfMlc0cVJXQWVuNWY2elpfSEV6d1VwN0E0N0d2bGJYN1dHNlRUU3RfaEpWcXBaRHVaWUp1Y2JWODMtaHE5eHBn?oc=5",
-   "published_at": "2026-11-12T18:32:07+00:00",
+   "follow_id": "newcastle",
+   "title": "Newcastle Players on International Duty: Burn Starts, Hall Shines (12 November)",
+   "source": "The False 9",
+   "site": "https://thefalse9.com",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPOGxfQngwZThzaHVoMXZOZWlXTk9PQzBUUmNsQ1dZcGh4UW10UmVfamZPSXlnXy16WWc5VG9aMkVrWVhnTlBhTk5tZmZ6REVmUWM1WWRHc2EyXzRtYTJqcG5sai1ycWdUOGwwY0psWkZNZWhzR19kVjh5NFRRMmQ2TkZoMlB6WFVYMVJF?oc=5",
+   "published_at": "2026-11-12T22:26:06+00:00",
    "lang": "en",
    "img_tried": true,
-   "article_url": "https://sports.yahoo.com/articles/rory-mcilroy-reveals-roger-federer-183207791.html",
-   "image": "https://s.yimg.com/lo/mysterio/api/c8ccb8539578a8d2fd85d9de8d035146878aaca0fc75c8cfe49eb8360024795a/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Flast_word_on_sports_293%2Ff2b3822d82635471e799d114fee68d35.jpg"
+   "article_url": "https://thefalse9.com/2026/11/newcastle-players-international-duty-12-november.html",
+   "image": "https://thefalse9.com/wp-content/uploads/2026/11/newcastle-news-today-10-november-2026.jpg"
+  },
+  {
+   "follow_id": "mcilroy",
+   "title": "Boost for McIlroy in bid for eighth European tour crown",
+   "source": "Golf Australia Magazine",
+   "site": "https://www.golfaustralia.com.au",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNRlBMTkVQaTZiQ2VoTzVwZnVtaXV0cjRVZ094d2pNRXV5RFFEQzRGbDdjSGZ1T2RWZ3doanEzbHluUmFWUjJDWjJyNFdNNEUxek1UTEkzcG1YU2pTYWJNRGZ5RmFhbkZHemd2WWxQdC1lMXFUMUxqMGdoeWNfamZ4WG9kNWxadDFWNnRsT01WTmpNWUl4WFRFcnNyODdhNFd0SXc?oc=5",
+   "published_at": "2026-11-12T21:57:24+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.golfaustralia.com.au/news/boost-for-mcilroy-in-bid-for-eighth-european-tour-crown-630312",
+   "image": "https://i.nextmedia.com.au/News/Rory_day_1_1600_x_900_GettyImages-2304765229.jpg"
+  },
+  {
+   "follow_id": "mcilroy",
+   "title": "Rory McIlroy opens up on gratitude, pressure and lessons from Roger Federer and Rafael Nadal",
+   "source": "The Times of India",
+   "site": "https://timesofindia.indiatimes.com",
+   "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOS2ZzM3V6WTNQYlRXTS13WGNGUHdyeVZrN3Nkc3JFaGZoQnJkMkR0UmRaWlFMZjg3ZDRobGVHUFRQTnBONF8xX281MHQ0aV82eHV0TzlpMzA2RXliR0FUQjZLUUJzWVZSMjFCRnl1blpRZXpIM19iM0FfZktKSjVVUkF1LWhBRTBiVzBpUzhXTGN1ZE80aGRaUzV6NEtGaU5DcnhOMERMQTM4Nkx2ZVJvS1NkUzIwSUZyS3ZXNlFoQ1N6S3FXZ2pxbzlFSnJkZHhrMGFmRWUtSVFaWEQxeU43UW1HdE81QmFyQ3dnRm81M2RZa0dxUENRZ3NRWUVQa0N4UGNIR19lS0xKdEYxckHSAZMCQVVfeXFMTlhtMzljMld5MkhNaHJyWXZ3RS14bktsTU56S3lxYjg2MmlZZlU0ZUZRRHJqZnMwZE5TblIwZmtIVDFSNWRoeHVaZjBKZGVhcS1SMExrMFF3ekd5ck04RzVNSmpiQl9ObWhTdmQ3Sm04ZVZxa19aS3Q3dklYUmZjcThTWk14Rzg1a0JlY3dLMWl0eUlYTDhmalcxcVc1endPd3ZqYTRiSjZlUFJvN2FERHdRSHFabGM4a2d2aWxVbU1DREd3RnpzMVFRQ3hKTlluZDBOMlhQS2RRYmdNRTdzZFItT0RFSTNpRXl0MFZ5ankzT1pieUo0U29uYnp4VjhycUJ6dWw5VHVFU2xCX1kyMjdoeUU?oc=5",
+   "published_at": "2026-11-12T21:25:00+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://timesofindia.indiatimes.com/sports/international-sports/rory-mcilroy-opens-up-on-gratitude-pressure-and-lessons-from-roger-federer-and-rafael-nadal/articleshow/135782086.cms",
+   "image": "https://static.toiimg.com/thumb/msid-135782090,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg"
+  },
+  {
+   "follow_id": "newcastle",
+   "title": "Newcastle United Were Rejected By Star Keeper: Was Hornicek The Right Call Instead?",
+   "source": "Yahoo Sports",
+   "site": "https://sports.yahoo.com",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOQlNVRklxcGJRUXJFN1FRQWtQTnUtcElwZDJqeHQ2Vmw4d3hsbTd1N0ZtQkVId2RyVVZGWVhyNThtdHN2NGUxQVc2ZkR3enJOTkw3RnhqLTZLUXM5UzhqVVZ0NHl4UTl1ZGlnWWh0d1QxYUxvV3UwN1FDQUtmU2ZjS1ZfUDM0Q2xFM1RSTw?oc=5",
+   "published_at": "2026-11-12T19:00:00+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://sports.yahoo.com/articles/newcastle-united-were-rejected-star-190000982.html",
+   "image": "https://s.yimg.com/lo/mysterio/api/46564a2bed1508c9c9a1ef0d387ae3673d648eac70fa87a1c3c1a61776f6aa6f/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fthe_4th_official_articles_868%2F3bf16e44e7bb19c4d0d7589119f2b817.jpg"
+  },
+  {
+   "follow_id": "mcilroy",
+   "title": "How Rory McIlroy Generates Effortless Driver Speed: Slow-Motion Swing Breakdown & Wall Drill",
+   "source": "PGA.com",
+   "site": "https://www.pga.com",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPaktDVXFPT3U0dllCRGVmWkdicXc0cjlMOXJLbEdvY2djWVc4Y1ZSTnB4R0tFV3dQeDAtN3VRTFQzaDR4TDVOSHJ3YWtBTGtHWDkxQWw0ME40bkQ3bEI2OV95c1Fkb2F4bVBReWg0SGQ2dW9VMVE5Nk50VFJ3d2habWhlOU9jUHJCXzhWVHZja3pMdUlQZTI3ZXRPNndUY3JZNGVzWGtrU2I5Mlh3dTdMZXV4eXhyYlFvMXRn?oc=5",
+   "published_at": "2026-11-12T18:48:12+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.pga.com/story/how-rory-mcilroy-generates-effortless-driver-speed-slow-motion-swing-breakdown-and-wall-drill",
+   "image": null
+  },
+  {
+   "follow_id": "mcilroy",
+   "title": "McIlroy opens World Tour Championship with 69 to boost bid for record-tying Race to Dubai title",
+   "source": "NBC Sports",
+   "site": "https://www.nbcsports.com",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNakhLU3I4ejZLOURPLUVScTJkWjVxWkttb3lIU25DQXhHU3RqRy10SV9YazRoLXVJbjZBVWhfRTVzMVZCekJOVTgyTHBXVUQ4d01BbjBLQ2xNSGdTdWxuSUV4Q2ZiMWZwZkE4Skpha044YThCZXdoNGVEcXRCVHl0Q3RSWS1aU1dMS18zUFVUNjc3Z1V2ZXViUVUydnpTWmxYNHRNbWxrWXR0cDJISnJfcmZMOHQzSEVrdmU0aERUdG5HVmRvdFRMNll6RQ?oc=5",
+   "published_at": "2026-11-12T18:41:43+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.nbcsports.com/golf/news/mcilroy-opens-world-tour-championship-with-69-to-boost-bid-for-record-tying-race-to-dubai-title",
+   "image": "https://nbcsports.brightspotcdn.com/dims4/default/ec8d073/2147483647/strip/true/crop/3963x2229+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fd3%2F39%2F7bee268d425887d40c35d8077a86%2Fgettyimages-2304765226.jpg"
   },
   {
    "follow_id": "mcilroy",
@@ -100,9 +160,9 @@
    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPTlBTa0pBaVF5aEpxdFpHSnZQdjdleER2T2ZydHlBWWJ4NHpTcG8tcDFuOUQtTkJBZzdmZWJNOGw2UkRQMGJnUFFCSExwT1lic3dPbldUQ1VfVVNTeUNvUFAxNlFoekg0LTdZMzEyd05QVXQxOU5sYkp6OE5pR3dYRk5pX3ZhZw?oc=5",
    "published_at": "2026-11-12T18:30:00+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://www.the42.ie/rory-mcilroy-european-tour-order-of-merit-7224288-Nov2026/",
-   "image": "https://img2.thejournal.ie/article/7224288/river/?height=400&version=7224302"
+   "image": "https://img2.thejournal.ie/article/7224288/river/?height=400&version=7224302",
+   "img_tried": true
   },
   {
    "follow_id": "newcastle",
@@ -112,9 +172,21 @@
    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPSlUxYjdjZ19RRDB2bFhoSHBzanhqNDM2bU9SbUFrWmRVOFY2ekNhaTJqbFFIdUdVdldWdzlSUmpqYy1sUmN3d1FxVHdTV3Bfa1RVdktxbzdFQzJCbUJxbkVGQnVqcnp1aG5SbGVDN0ZaME5JdTF4cy1OUVExN2VxSXdEVElFQ3FKM2xEOFVR?oc=5",
    "published_at": "2026-11-12T18:25:00+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://readnewcastle.com/2026/11/12/kevin-nolan-matthias-jaissle-newcastle-pressure/",
-   "image": "https://media.readnewcastle.com/readnewcastle/sites/21/2026/11/OFS_251026_CRYNEW_019.jpg"
+   "image": "https://media.readnewcastle.com/readnewcastle/sites/21/2026/11/OFS_251026_CRYNEW_019.jpg",
+   "img_tried": true
+  },
+  {
+   "follow_id": "mcilroy",
+   "title": "Watch Rory McIlroy's hilarious attempt at hitting the world's longest driver! Credit: @GOLF_com",
+   "source": "Sky Sports",
+   "site": "https://www.skysports.com",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNLWZ4ajY5QWJCTVlZeGp0dlZuVERpLVVHWUR5TmtfOHVaN0g2ckpVXzRwRk4wQ0ZiLWlYZmktbXM4T1VvZGF5S2RjbnBrbkw4bHktUjNpbC1kZ21fVkxBX2sxWktjZTU5VG1POWNkejhhazJ5cW1RWXJyalotY21uajB1azNMUU1fa2pNbTBabTZNR3hoR01yWGFlcERWU2E0dG1aSkJtT2FTUzhxQ3pXb2Z1NGw?oc=5",
+   "published_at": "2026-11-12T18:21:58+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.skysports.com/golf/video/13610743/rory-mcilroys-hilarious-attempt-at-hitting-the-worlds-longest-driver",
+   "image": "https://e0.365dm.com/26/11/1600x900/skysports-golf-mcilroy_7403374.jpg?20261110183812"
   },
   {
    "follow_id": "newcastle",
@@ -124,9 +196,9 @@
    "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNcVBkeERYZjhxbTFlOEpaUjIwOW56ZC1XdmN6Tm1ZS0JCcVdVdTR2cURMalNoanRLUEZ2dnZPX2p2djlTZ2ZjcGxMbzZNeEE1aUFLZjlEclNmUlBCdV8xX0NWRHNTT01rczI2cTE4VnNWVnZQdHdreGVVYnN4NWFmTExiV0hKYldTRk9EUW5Va0gwY2NfNHBBd3UzR05XY2ZxZllPREF0Mk84V1UybmlkUzgzWnEwTllwcVVLQUdZYjA0dDJBX29JNWF1U25zdkdjY2NOZWFDS3BsNk5kcEk4MEdzX0R4bEp0a0xkMFBDOHRtdw?oc=5",
    "published_at": "2026-11-12T18:07:57+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://www.livescore.com/en/news/football/premier-league/what-do-newcastle-united-need-in-january-so-matthias-jaissle-has-the-tools-to-succeed-newcastle-toons/",
-   "image": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_82,w_3000,h_1687/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/GettyImages/mmsport/354/01m78ds5fgn10z9wkezh.jpg"
+   "image": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_82,w_3000,h_1687/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/GettyImages/mmsport/354/01m78ds5fgn10z9wkezh.jpg",
+   "img_tried": true
   },
   {
    "follow_id": "mcilroy",
@@ -136,21 +208,33 @@
    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOM3FtYm53aG5WWFlndVpGUHVyTXZaclpRZy1QVVk5SGxyRHB1Nk4yNlg3S3hRd2o3TVNyM2c5QjQ4VERGMUNFa1FDV1FZLUJ1OFUySmhKNlBGSXV4MHlpV0R2X2wweUluZW16SXZvLVI5U21udW5rMFZqLTNKeWl2QnhyLWduUlZPVjJVbTliSGNkQ2N6SFZwbXh4UUFVMHVlbGpnTg?oc=5",
    "published_at": "2026-11-12T18:00:57+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://www.heraldscotland.com/sport/26725257.mcilroy-lurking-luiten-leads-dp-world-tour-championship/",
-   "image": "https://www.heraldscotland.com/resources/images/21711732.jpg?type=og-image"
+   "image": "https://www.heraldscotland.com/resources/images/21711732.jpg?type=og-image",
+   "img_tried": true
   },
   {
    "follow_id": "scotland-rugby",
    "title": "'Wounded' Scotland looking to bounce back against Australia who also have point to prove",
    "source": "The Scotsman",
-   "site": "http://scotlandonsunday.scotsman.com",
-   "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOdEo5NF8tbzAxZzlWSXJDN2dfUFJkNEtUZmJRZDJCOTROcXhmd1VzbndIdWktSnRrWFJOUGRBOW02OVZvOEJXS2JGbWpWNDViSEtxWHlrWHNjM1VDelE1bXhzV0c1d050WWd4UkdyMTkyNjU0QUJnS2xrbGkwYnJIajRkSDJRaEpEb0dIRGN0UVRVYmNNQURmd0hjcF9vYkF2b2dta2c5WV9sNmJvUldYLW03alk4REZrTmlWZGFLNmx0czhnWHQ2a1dWM0stMnJialJXM1IzbENGcWFGQVU2ellZaUJGOTZ1MjlIaEFqYWJCLXJ5VEE?oc=5",
+   "site": "https://www.scotsman.com",
+   "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQS3R3YlBoT2xjc0R3WXN3RWlOVDdodEpsOFdnMmRmMmdPNkhaRXRiTk5kb1dWSHZfS1d0cUpPUjIxbzFMeXJHUERjcnByTF90cTBMYXBDVDNjeXk4OERmWjhJcmNJb0RHMVEtUWo2SGNkQ2V6MmE5T2FPZXlWOEIwemlCNmQxZU1fV0cxZjQxYmZ0eHIxdE90YXNDQl9jMjhuQ3VFVVV2QzJ1QU13TW5zdG9MM1pOQXRjMXotSWhkdnpneXZ3cVlWQjJmUlJueW14NTI4dHBDUG1mVDVGNVJZQkYzZVFYZw?oc=5",
    "published_at": "2026-11-12T18:00:00+00:00",
    "lang": "en",
    "img_tried": true,
-   "article_url": "http://scotlandonsunday.scotsman.com/sport/rugby-union/scotland-rugby-news-kyle-steyn-australia-preview-nations-championship-murrayfield-all-blacks-england-9345820",
+   "article_url": "https://www.scotsman.com/sport/rugby-union/scotland-rugby-news-kyle-steyn-australia-preview-nations-championship-murrayfield-all-blacks-england-9345820",
    "image": "https://www.scotsman.com/jpim-static/image/2026/11/11/19/02/GettyImages-2303488713.jpeg?width=1200&auto=webp&quality=75&trim=0,0,0,0&crop="
+  },
+  {
+   "follow_id": "newcastle",
+   "title": "Harvey Barnes is the epitome of Newcastle United's problems right now",
+   "source": "Chronicle Live",
+   "site": "https://www.chroniclelive.co.uk",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOaWRKYnVxQzFVQnhNcTZEcENSMTh4bndJYlE4RkY3NFNSeG9rb3p3T2htaTEzbUpKdTFlbWU4R1oweC1vRWJEYzRxOTBCTEJVcE42aC1DRG43WXNHdTlPaUZiTTlOdVdhTkFGdEJsMGhiM3RuaWh6Q0xBZHFyX200QVlMaHdCSWJaS29qTzE3Z1FQZU91X2VGOENyZE1WNXl0OThzcWtHa1FkcTFDcUHSAbMBQVVfeXFMTjh6SEhVUlFaakRYb2hOdVVOdmNra0xQbVh0dkNMdURrZjJKYW83TGtCVHlTWDhTNllhX1RERVp5eGx0X3FRVERhY1IxejJvZFZGMjRDdVJiSERNRVhLd3czUW4zckpaaEgxckE2ZkhQMzNTYVBtdlN1ck5TVzRLUV9tSVpxM0tNazQ0cktOcjhwN3FiY0szMHdzTHFCN0pyX3h2dTJNdFhhVmFObG5FaWFWQlk?oc=5",
+   "published_at": "2026-11-12T18:00:00+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.chroniclelive.co.uk/sport/football/football-news/harvey-barnes-epitome-newcastle-uniteds-34902610",
+   "image": "https://i2-prod.chroniclelive.co.uk/article34902680.ece/ALTERNATES/s1200d/0_GettyImages-2302875256.jpg"
   },
   {
    "follow_id": "mcilroy",
@@ -160,21 +244,9 @@
    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPQlR2R3BJbjNGczZNYV9Bay1ud21xa2sxTmQ0V25zMTNMazI4eE4xSEJKc2dJNGxrXzNEeGFhQzVOZXRkWWNMSnhiQTBEa05BSnlqOF9sMzRQel9kS1p3TkJsWl9UZFVKT0NNWGw3M2ViaVRkdTZfVGVLLWhxRTlXMjBkS2NVbWJlN3hUcjUyaHhVWkFiUkRVN3UtRUMzRXo5blp5Ri1oblJBZzJJN3J2aGxyMUdPMXJ1VHhSRUVyUzVLY3dqemJHQURFczRNNFk1LWc?oc=5",
    "published_at": "2026-11-12T18:00:00+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://www.thenationalnews.com/sport/2026/11/12/rory-mcilroy-two-shots-off-lead-after-tricky-opening-day-of-dp-world-tour-championship/",
-   "image": "https://www.thenationalnews.com/resizer/v2/MWXBR3ZQLND4ZI7RD56SFTF2CQ?auth=1e023053d54aa66f6035cf2eb67b953a4ea595fc816bbca528e6223e5be28593&smart=true&width=1200&height=630"
-  },
-  {
-   "follow_id": "newcastle",
-   "title": "Newcastle United and Sunderland set for major battle to sign 21-year-old midfielder",
-   "source": "Yahoo Sports",
-   "site": "https://sports.yahoo.com",
-   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOdXBSc1FpaVhvbnR0VEpkSWJFYUlJZmJvc3o0X1kwcE1NMm51emEycE8wdl9GOFBqZGJkSHIySGFqME9kVHp3YV9lUVRuU2VnOTN1cjZMWjlVcUlZNm8xNHJreFVZbFZDdDdSTGMyckJnNFF3c25XaG5NOElNcFpTMGdDaHJwVE1UVzF2c1ROOA?oc=5",
-   "published_at": "2026-11-12T17:50:00+00:00",
-   "lang": "en",
-   "img_tried": true,
-   "article_url": "https://sports.yahoo.com/articles/newcastle-united-sunderland-set-major-175000753.html",
-   "image": "https://s.yimg.com/lo/mysterio/api/f7d0022fd5f134d5d2975b2824fb5a84433566b324dee9b8bf1f6e61cfe64d67/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fepl_index_articles_253%2F539bbc8abd94e0728fb09bccfba405e1.jpg"
+   "image": "https://www.thenationalnews.com/resizer/v2/MWXBR3ZQLND4ZI7RD56SFTF2CQ?auth=1e023053d54aa66f6035cf2eb67b953a4ea595fc816bbca528e6223e5be28593&smart=true&width=1200&height=630",
+   "img_tried": true
   },
   {
    "follow_id": "newcastle",
@@ -184,21 +256,9 @@
    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQYlhGcGxXakZKeTlvcGhlaVFSTThHN3g5Z1NYaUtmVGZBNzlaSE9pUEtQczdfb184dUdzaDNldlRsMUZRUTFOa2FvSEtCTGwtZHVBRHl6QnpEaTRDZHUtbjFIY0ZYcDdlRXhGMGc1VGgtbE1BcW03NzNSdlZQdnhyUjFZVTFBeERpNHA1MEhEMlM2NzgxWnljMHdMMmd1SlMyemJSbUFmWmIxOGRFQXVwSFFlQms2Njg0STR6ZmlEM25POWRoY0VHd05OaGJndWtrcUNFUg?oc=5",
    "published_at": "2026-11-12T17:30:00+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://www.newcastleworld.com/sport/football/newcastle-united/newcastle-united-bumper-deal-champions-league-keeper-lukas-hornicek-9347423",
-   "image": "https://www.newcastleworld.com/jpim-static/image/2026/06/02/13/43/Gregor-Kobel-Switzerland-4-7m.jpeg?width=1200&auto=webp&quality=75&trim=0,0,0,0&crop="
-  },
-  {
-   "follow_id": "mcilroy",
-   "title": "Rory McIlroy opens DP World Tour Championship with 69 to boost bid for record-tying Race to Dubai title",
-   "source": "Golf Channel",
-   "site": "https://www.golfchannel.com",
-   "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNY0M3M0ZxelN4T3piNEpFYjhxazBVZHVVVWxlV2ZjSkdYX05fWWFfWllUWHRmNXlJZWJhWmhXNEZWQ3FRdjd5Tjl3UFR1aV9zZlVtY29vUE9kQ1RGSy1keTJYWC1sRWF4ZW9iQXBiQkVNQWxpS3gtTkM2TUdTTVZDcVRFVm5YQTQwRzZTWk1JdlQtRV80bkxheGdDSTVlQjJKc3g5Y252bmU2S1kyUmZMV3lGZ1hGTTBUZVhHbmZWRG5lT2VVY0stLVlFZDgtdUEybVFMNi0xOUNuUXpZQVZXYzctZ1I?oc=5",
-   "published_at": "2026-11-12T17:00:28+00:00",
-   "lang": "en",
-   "img_tried": true,
-   "article_url": "https://www.golfchannel.com/dp-world-tour/news/rory-mcilroy-opens-dp-world-tour-championship-with-69-to-boost-bid-for-record-tying-race-to-dubai-title",
-   "image": "https://assets.golfchannel.com/dims4/default/30c2bc3/2147483647/strip/true/crop/5345x3007+0+278/resize/1440x810!/quality/90/?url=https%3A%2F%2Fversant-production-golfchannel.s3.us-east-1.amazonaws.com%2Fbrightspot%2F20%2F19%2Ff36bea2f442f9485d5b3b3775474%2Fhttps-delivery-gettyimages.com%2Fdownloads%2F2304235274"
+   "image": "https://www.newcastleworld.com/jpim-static/image/2026/06/02/13/43/Gregor-Kobel-Switzerland-4-7m.jpeg?width=1200&auto=webp&quality=75&trim=0,0,0,0&crop=",
+   "img_tried": true
   },
   {
    "follow_id": "england-cricket",
@@ -208,21 +268,21 @@
    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNMGtKMTJ2R3ByUGdLNlEyMUY3b3YtOHU4TzVvYklwazJ3QU1aemxDUWFpd3pEVjBvMm5QSUZhSHlER0RXVGlNVlNjOG5kZ0FmNF9hOFVmTlVfYVRmT1E5UEYtNjZmSEltVVlYZm9nRHNZZWwzWXZRanp3Yjc4VEpuZEFrVEdSaXRONFcyTlA3MDV5a2RmcTVQSTdaRTYtc3l2WE0tVXBZNWc4MGJweE9GNFFuVjYwcU0zVU93N0Z6Y3lNU3U5UUE?oc=5",
    "published_at": "2026-11-12T17:00:00+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://www.yorkshirepost.co.uk/sport/cricket/harry-brook-has-grown-into-the-england-captaincy-role-says-gavin-hamilton-9348131",
-   "image": "https://www.yorkshirepost.co.uk/webimg/b25lY21zOmFmNmZhMjg3LTk3ZDctNDVmZC05MzEzLTBlNWM4ZWJmODhjMDo1YzkzMWJlNC04ZmVmLTQ0ZTgtOGY5Yy0wZDJiNTMxYjM3ZTE=.jpg?width=1200&auto=webp&quality=75&crop=3:2,smart&trim="
+   "image": "https://www.yorkshirepost.co.uk/webimg/b25lY21zOmFmNmZhMjg3LTk3ZDctNDVmZC05MzEzLTBlNWM4ZWJmODhjMDo1YzkzMWJlNC04ZmVmLTQ0ZTgtOGY5Yy0wZDJiNTMxYjM3ZTE=.jpg?width=1200&auto=webp&quality=75&crop=3:2,smart&trim=",
+   "img_tried": true
   },
   {
    "follow_id": "newcastle",
-   "title": "Pedro Porro's Bazoumana Toure insult mocked as Newcastle United stay cool on £78m pair",
-   "source": "Chronicle Live",
-   "site": "https://www.chroniclelive.co.uk",
-   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQY3g4YXZjTENhbFFmdkxMRjE3TmFyR1FxZmx1QnVPYlNHOGF5R25CcmJqTFVkMlFxWVJyS3UzckVZU2tlSzg3RUlzOXE4U2xuQm1RZmEzbnZ3S01zeVA4VVJLVFF6WnpYd2hZRVl6UzNYMjFUYlNidTJ1anRTRFVSRkVVbGFMZTFmN2dMYThoeXJMQkQ1OGpJZXZ5R2xXb0FReDA5eHZTc0fSAa4BQVVfeXFMTUpBSzRIYlhma2Y4bWNnZkdHd3Myc3VjcGNDcXZVRFFFUUp2NU5tTm9HWG5fUG1MMkE1SXV6RGJuWWNwWHhoa2xaWGptV1pIM2dBUXU0c3FqX0c2QUFuRTNDbkJYNk0wVTJic1F5SWZQN3Z3R3Q1TGFueDVRbG5kZ2N1Q3I1RHdRWnJ0Y1Y4OHlRTXQ2aUZIRDY5ZHo5dXFvQWlaZTdlU1lueUIyVFN3?oc=5",
+   "title": "‘Under massive pressure’ - Newcastle United favourite speaks out on Matthias Jaissle job",
+   "source": "Shields Gazette",
+   "site": "https://www.shieldsgazette.com",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVDZfMUJsTTFYcmJrVlFtVWxOWmpuZ1VKYXFFRDNVczEzZTg3TkhpRmVWRFItbTM5NHU5dTE0T1hiSDhqTW82eGM5ZVVETll6bWh6Um9qZlJSVWppdzJpTVdsckdHU0ZncmFnQlZXRXRMcFZuSU5ENUVGS3U0WEJuOUhhNFU1Vy1mWnlLOEZYQVNJQTkwVkVxaVdpUTFQVUJCWS1jcnpEbzZ4Nk5Tanc?oc=5",
    "published_at": "2026-11-12T17:00:00+00:00",
    "lang": "en",
    "img_tried": true,
-   "article_url": "https://www.chroniclelive.co.uk/sport/football/football-news/pedro-porros-bazoumana-toure-insult-34901843",
-   "image": "https://i2-prod.chroniclelive.co.uk/article34354332.ece/ALTERNATES/s1200d/0_BazouBamba.jpg"
+   "article_url": "https://www.shieldsgazette.com/sport/football/newcastle-united/newcastle-united-news-matthias-jaissle-9346727",
+   "image": "https://www.shieldsgazette.com/jpim-static/image/2026/11/05/13/41/WhatsApp-Image-2026-11-05-at-13-15-26.jpeg?width=1200&auto=webp&quality=75&trim=0,0,490,0&crop="
   },
   {
    "follow_id": "mcilroy",
@@ -232,9 +292,9 @@
    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOdzRVYUZrRzVoMGJmeFo4SzhGSzdaVHlDS21hdEJ6S1RCNGVzZ1ZBRjJJeFphM1BiUVNKLUlLYWpyWVcxM0RrTG9zMkxxNFRTSFR5R3AwbW5qSWpBYy1pUEFSUzZESklITk52S3lCWDRMdWxVdDlrNFMtLXFBOEFIVmtkLV80UDc4OW9DNl9PeTdYOFA3MjlVZFFvRW15UGxKZVJoa3JVT2tMWTZ1RmZ0WDRuNVlON0ZUVkZGN0Y2RGlDaTJYYTNmUTYxOHdRcEhxMUJHQUVCN0Eta1BM?oc=5",
    "published_at": "2026-11-12T17:00:00+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://www.independent.ie/sport/golf/very-pleased-rory-mcilroy-lays-down-race-to-dubai-marker-with-opening-69-to-be-tied-third/a/164472843.html",
-   "image": null
+   "image": null,
+   "img_tried": true
   },
   {
    "follow_id": "scotland-rugby",
@@ -244,9 +304,9 @@
    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOb1hiUzBvNXIxSzM5R29Ra1dMS1REbzFqMjJPOWtLVEw5NHdSSUlrOTU0Vm5EYko2eFpQaU9uT2FORTNmeGUwbGpRdkU3eTJCdGFONXpfa09RM1c3OVhMNldraUtjYWM3MnJ1SzI1MURVOGVMbWVMTzdGUkNVT2pjVnRSRUNGQ3l1Sktjay1sbw?oc=5",
    "published_at": "2026-11-12T16:31:23+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://www.nrl.com/watch/news/wales-v-scotland--pool-a-placing-play-off-2026-2006293/",
-   "image": "https://www.nrl.com/remote.axd?https://imageproxy-prod.nrl.digital/api/assets/83088473/keyframes/594717/image?center=0.138%2C0.496&preset=share"
+   "image": "https://www.nrl.com/remote.axd?https://imageproxy-prod.nrl.digital/api/assets/83088473/keyframes/594717/image?center=0.138%2C0.496&preset=share",
+   "img_tried": true
   },
   {
    "follow_id": "newcastle",
@@ -256,9 +316,9 @@
    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOUE1SVzgtaHRnOGxsUEtPY2FtVHBSRnhxeEV3Q3pHRVhyeDRTTTcwZnlSVEZULWZoLXJFckJRVG1ON1B6NkJGak95NjFKc3UzQXllcEw1MEd3Q0hyRFRpem9leVIxY0VJSUVnMEV4emdFUnR1Q1ZIVlNwRkxaSV96LTNGVUkxVFBGbURyX215dWxXZy1SbzRSdnlMbHo5UENfaEFpSzlUaWJzOGVpOGxia0U3d2g0bDhJWklfT1VqcVRnUQ?oc=5",
    "published_at": "2026-11-12T16:30:00+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://www.newcastleworld.com/sport/football/newcastle-united/premier-league-news-matthias-jaissle-newcastle-united-9347341",
-   "image": "https://www.newcastleworld.com/jpim-static/image/2026/10/18/11/42/GettyImages-2300685956-(1).jpg?width=1200&auto=webp&quality=75&trim=63,502,577,459&crop="
+   "image": "https://www.newcastleworld.com/jpim-static/image/2026/10/18/11/42/GettyImages-2300685956-(1).jpg?width=1200&auto=webp&quality=75&trim=63,502,577,459&crop=",
+   "img_tried": true
   },
   {
    "follow_id": "mcilroy",
@@ -268,45 +328,21 @@
    "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPTWtmUmNHZlJyQmFDd3ZaMTBuTl85a25UUkVVTE1MRFczemhWVEJGdjViV2UwT3BrRWdZNUUzSC1Qc0RSNGtZRGpjbXBfQnNHTnllNnZWN3ducTJ1UHpoTlRUUVMxc08wMEo2OHlMWFk2WlNfTFJJdXpTZHhPam4tZURKVGlwc2lwUFVrc2ZSYk55MEx6clc1dUFEOTBJcUFtUkhqbDVUUWxVakZQN0hvSnY1c2dFUEJfOWVPbDRQWlJULW5uNDhINU1HNXNDcGpLZ3B0NUhuZFBDaTRFMFNEMGRGRWtZWVFtNnJHNGZGdVhCNXN6cGdQUDJWVE5Mem84eE01TUpudEpOTnVhOWJoUEQwOGxTRmpVZEdJeVZtRXZPcGFIbzF2UtIBrgJBVV95cUxPdTcyRDZMcFBvem50QlNlMnN0T1JUMmZ5dWYxd0VwdENmblRCcHljejNqbzBOMG9CNlVoRzNablJkVmdDbGwtYW9ZVkxvZ1l3SHM2RDJEWFRUeXdFd2REWG84aDhfQjhBME9Bbk1Da1RlZXY3RDUzUHA4NHJrZDk4LW9VazNSWUFwQm1TNWNkUktxX0ZrR2R1TzZvV3F3VGFNOEVjM2U5UTZJQWhQcnV0a1NZOEQ3SFZkcUVhZUxJWDZQUk9SMTdCcDdfSTZLVzEwQ1MwMlJtTVdUdWI0WDVabnotY0Rnb3I3eUpRZHdtaGpzX3A0ZzBwNjc5NEluaFBKYWRnOUo4UURfQ1c2bjRYdWZhRnVoVWNOdndHdDU1MExBZjZ1TkstMmJ4alNpdw?oc=5",
    "published_at": "2026-11-12T16:21:00+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://timesofindia.indiatimes.com/sports/international-sports/rory-mcilroy-opens-up-about-golfs-mental-battle-reveals-the-tennis-legends-who-changed-his-approach-to-pressure/articleshow/135776630.cms",
-   "image": "https://static.toiimg.com/thumb/msid-135776644,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg"
-  },
-  {
-   "follow_id": "mcilroy",
-   "title": "Joost Luiten leads, Rory McIlroy two back in Dubai",
-   "source": "KNBR",
-   "site": "https://www.thesportsleader.com",
-   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOMjJyeXl4MVJnN2lXWWFqWW1lc2ZwbFJ6UzNLTk9ucVRtRzdQTlMtQWNoSGlGckc0SzN4OUxrM3BYajFKOVRZNjRoMVJRX25NVWxMNVFkYlRlZUxRbnBRM2RJY3E5VjE3TjZIUzVhYmZGaExQa2FzSzNDbWstV2YzZXgybUhpX3BrdDdTd1M5TEV2SGxVUVl3Mw?oc=5",
-   "published_at": "2026-11-12T16:12:18+00:00",
-   "lang": "en",
-   "img_tried": true,
-   "article_url": "https://www.thesportsleader.com/2026/11/12/joost-luiten-leads-rory-mcilroy-two-back-in-dubai/",
-   "image": "https://v4.dailysportspage.com/cumulus/image/884374/600/400/"
-  },
-  {
-   "follow_id": "newcastle",
-   "title": "Anis Hadj Moussa and Will Lankshear January hope - Newcastle United transfer state of play",
-   "source": "Chronicle Live",
-   "site": "https://www.chroniclelive.co.uk",
-   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOSEJGZ2pXSlFjbjJ2QS1veDU2djBFLXFhb3RVVWd3eWJzUEV2eFRNbFVGakZneFVldjN6S0JidGZETmdjM0Zudm5oQUttMzdBdENiSmdOSUFHM0RkbFhKZjJkTUZQeTdBUXNJWkJFWUZDUkw3NWF1LVZvTWJpcllQTG94d2VkRk5DeERUcjlQT3M1MUFWVzFIeHBZMVRoTkJiaGl5cFlLQQ?oc=5",
-   "published_at": "2026-11-12T16:02:00+00:00",
-   "lang": "en",
-   "article_url": "https://www.chroniclelive.co.uk/sport/football/transfer-news/anis-hadj-moussa-lankshear-january-34899322",
-   "image": "https://i2-prod.chroniclelive.co.uk/article34900452.ece/ALTERNATES/s1200d/0_imagemaker-75.jpg",
+   "image": "https://static.toiimg.com/thumb/msid-135776644,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
    "img_tried": true
   },
   {
    "follow_id": "newcastle",
    "title": "Newcastle United desperately lack the cut-and-thrust in attack that’ll keep them out of relegation trouble",
-   "source": "Yahoo Sports",
-   "site": "https://sports.yahoo.com",
-   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQR2ptLUJKWHZRbk1hUW9QTlV4SEhCVWM2b3FHQkZPNFZuTk04VlhkeVFfZXkteFBiSU1rSnRnb1h0N01EYTBtSW1aTTRVMGV0NlJHSWtqa1FRTjhtd00zYlFlMEwzcFgxTm14a0lxYnZsd3pEUWpWSXlYMWg4Yi1Na0hhSG5tVHcwZE5mVFFlUQ?oc=5",
+   "source": "FourFourTwo",
+   "site": "https://www.fourfourtwo.com",
+   "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNVExLLUZKbDV2VEdiMlRqUF9IdTl2eHZCcnZSWlZnNDZldVVYZ1pXTGUySmdEdlRIWHgyUDdFcUx0aUZybnU4amRDUDFfODVVNkFIN0JibjdHZXpmU2N6ck1CT3ZJbmVlejdZNlJjT1U1aHlOTUdWTGNSOEc4b0VUSVZkdzFrbi1BbDRabFBnY2lSMUQ1QjVBb1VLaVFpa2ptN3RKY2pmeEp6QWFVa2c2LUtZejJhaTNtN0tLX2U3TUZaMTNWaHRlaGtKcm8yWFpRVExaTGZEZGVidFRrVEU4QQ?oc=5",
    "published_at": "2026-11-12T16:00:00+00:00",
    "lang": "en",
    "img_tried": true,
-   "article_url": "https://sports.yahoo.com/articles/newcastle-united-desperately-lack-cut-160000068.html",
-   "image": "https://s.yimg.com/lo/mysterio/api/36772b2a3a42733251f81554b0f4e27ac232a2045a2a8b131df2140d3cf3978c/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Ffourfourtwo_376%2F78f1e361e5f9c8290447e24a780e92ee.jpg"
+   "article_url": "https://www.fourfourtwo.com/person/player/newcastle-united-desperately-lack-the-cut-and-thrust-in-attack-thatll-keep-them-out-of-relegation-trouble",
+   "image": "https://cdn.mos.cms.futurecdn.net/hEMzZ84HFFdNGP2ew5EuKk-2560-80.jpg"
   },
   {
    "follow_id": "newcastle",
@@ -316,45 +352,9 @@
    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNQlJNdDBVc1hTaWdlZjhqcTdzVVptME94dlhPZHdzYmFZLXRpa3htMWc0MDZTVVlxMDBxeWQzS0xNN2lycUp6dndmV2JIdmU4WDI1U2d5b3hJanBDenJ2NnpibzJjdjhramdUa245NjFNWkU5OTJSZTNDdk1HVTRXcjlILUQ5bkhnVXJ6MTBoZV9uM3RLWXJRSVVQUlBkLU5mSXBfcFhQSDc?oc=5",
    "published_at": "2026-11-12T16:00:00+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://www.shieldsgazette.com/sport/football/newcastle-united/newcastle-united-news-aladji-bamba-9345776",
-   "image": "https://www.shieldsgazette.com/jpim-static/image/2026/08/29/15/14/GettyImages-2291713934.jpeg?width=1200&auto=webp&quality=75&trim=0,0,0,0&crop="
-  },
-  {
-   "follow_id": "newcastle",
-   "title": "Newcastle United's setup is killing two players and transfer window won't fix it",
-   "source": "Chronicle Live",
-   "site": "https://www.chroniclelive.co.uk",
-   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOdng1VDJBRHVrbHdJdzFFNldOYWR3aFZPM1k2bVhHci01aUFNWnhfdXlNSXJLNTZUS3dkSHdBWExxc2otakxwdlBkZ0ZfWmppN0RfSUlPZkhEM3I3eU5qQ2M0Z0lJMlN0QmU0Qzdnc3UzajE4WktsODJpdDM3X2NfVHZhSnRLZmlidzBpWHRjUmlqcGthYXZlR0RwbmMyZXkyTHdJUUhTYXHSAa4BQVVfeXFMTzlVbWtYb3AxY2pzN1dXN0dTR3luVmFiWnBMRUtPdmhwMU11dFFJb0FzQkFQaF9ldVV2RVR1SktrT2xtclNtWi1lTXRsNFhGYWlWU1JtMHNhQlVwYnB2aEhyODREZ2llWXJJeVFuN3VPS0t2T0xxeXJTLVNwbkNSVlJnVl9ycDQ0N0Nxb1Y3UmpHb3ZoZzdtXy1GZThDNnlWbElTOVlSWXAwVDJNaW1n?oc=5",
-   "published_at": "2026-11-12T15:51:00+00:00",
-   "lang": "en",
-   "img_tried": true,
-   "article_url": "https://www.chroniclelive.co.uk/sport/football/football-news/newcastle-uniteds-setup-killing-two-34899696",
-   "image": "https://i2-prod.chroniclelive.co.uk/article34859505.ece/ALTERNATES/s1200d/0_Newcastle-United-v-Everton-Premier-League-202627.jpg"
-  },
-  {
-   "follow_id": "mcilroy",
-   "title": "Race to Dubai permutations: What McIlroy, Chacarra, Rahm, Reed and others need to win",
-   "source": "Golfmagic",
-   "site": "https://www.golfmagic.com",
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOVGhUb2FEdXpiMGM4aHhWTlRIbHNsZWFWb3lfaE8zbXV3Zk5LbEhiZmY1bHpHa1JPOGI2Z3pZaHhsM2JxdzhxS1dySXJtbG00ai1JV1JoUzIzcmJoWEI5TTA5c1E5ZlhncnBXYlhqS0VpMzE0Z1NYSnpzM0IzN1VaQzJzQkZJaWZjVjgwbXdaSlA0QkVRaFFkWk9MZ29RRElCTGVjZnlOYWlTcE5VeW5lVXBIQnVVcF95TkRLRA?oc=5",
-   "published_at": "2026-11-12T15:30:00+00:00",
-   "lang": "en",
-   "img_tried": true,
-   "article_url": "https://www.golfmagic.com/tour/dp-world-tour/race-dubai-permutations-what-mcilroy-chacarra-rahm-reed-and-others-need-win",
-   "image": "https://www.golfmagic.com/sites/default/files/2026-11/rory-mcilroy-augusta.JPG?width=1600&aspect_ratio=16:9"
-  },
-  {
-   "follow_id": "mcilroy",
-   "title": "Rules official explains how Rory McIlroy could have dodged his penalty—and it will probably surprise you",
-   "source": "Australian Golf Digest",
-   "site": "https://www.australiangolfdigest.com.au",
-   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxONFloZEhvRmFRem9yMWRjRV9zcTB6VjNoTjd2Y3RQeTdfNC1lelptTGdXZjJnQXpzMGFUZmFyX19vV2FIeDlQNm40ZTBMYTdBemRidERvcGJLOUNjdWE1YnRvQmFZWXVuSkdPVzJxd1F1d2tfZDB1NU9waXJyYjJKSmZvSDR6SWFpemFKdHdLcUxNdV83MEhObzU3OE9VTFZwakRreUJfaTZUelRpUFFKWU9GUQ?oc=5",
-   "published_at": "2026-11-12T15:13:52+00:00",
-   "lang": "en",
-   "img_tried": true,
-   "article_url": "https://www.australiangolfdigest.com.au/rules-official-explains-how-rory-mcilroy-could-have-dodged-penalty-video/",
-   "image": "https://www.australiangolfdigest.com.au/wp-content/uploads/2026/11/us-golf-digest-import-154325.png"
+   "image": "https://www.shieldsgazette.com/jpim-static/image/2026/08/29/15/14/GettyImages-2291713934.jpeg?width=1200&auto=webp&quality=75&trim=0,0,0,0&crop=",
+   "img_tried": true
   },
   {
    "follow_id": "bath",
@@ -364,9 +364,9 @@
    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQYkNtcGpaSUgzLVVucHFULTh1MWVqS3VNUUdhbWJ6aEtONnZ5YVV4YmQ4UDVOWmxVRDdHeTNlZktiNkZCZmJQaHhyWlBoRDh3alZzQWMxZ1h3UENoXzl6OGJtRm0ybVktS3BMalgya3dEX2dSUURoTDUtbkFzZlZwbGlkVHlPRlRuOTNWVS1mVmVQS0VJVHBR0gGcAUFVX3lxTFBRa19rcTE4cHpBMjRXSTVMQVQxUVFrSXVHX2lMOHIyUHdsaV9EY0xrY01DUG1veXZDYWJjWmVGa0lHVk96QXExMzlvSnRUOWJaTmZ4eXRJa25xeHdHMXhfTUhWeTY4TVlJaXdGR2FYQ3ctWVBlalhPbl9rSUxXQzloMFJmZjRCckJNbVJOMy16NVZqVmh2aW9LenpLUg?oc=5",
    "published_at": "2026-11-12T14:57:00+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://www.somersetlive.co.uk/sport/other-sport/bath-rugby-transfer-rumours-latest-11239109",
-   "image": "https://i2-prod.somersetlive.co.uk/article11204098.ece/ALTERNATES/s1200d/0_Bath-Rugby-v-Montpellier-Herault-Rugby-Investec-Champions-Cup-20262027.jpg"
+   "image": "https://i2-prod.somersetlive.co.uk/article11204098.ece/ALTERNATES/s1200d/0_Bath-Rugby-v-Montpellier-Herault-Rugby-Investec-Champions-Cup-20262027.jpg",
+   "img_tried": true
   },
   {
    "follow_id": "england-cricket",
@@ -376,9 +376,9 @@
    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPbk0xckJ0eDZKY0xzcnJSTllreWpvSHpYcXp1bzBRVlRTOWFKU1FJZzhwb0dBU29CYm9KODl6UGhzRVM0c3VXSXVQX1pjR1ZPbHk2R1JDQlN4Q2hXRjRqQUhaUWVwSUFhYW8tYW9XSkdwZnpLZVE0QXAxbVhIdHF1RWIxV3haZHpaOURraWZGZFdfcEVkMzk0SWxBNU9YTUNaMml1WDJvbUUxSjlsQ2RGR0htSmlMWHlQdFIxbVFqeEozMnViSU1SRGhmN3lfcUVkdmdzNEt4cHpqQQ?oc=5",
    "published_at": "2026-11-12T13:44:00+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://www.thestar.com.my/sport/cricket/2026/11/12/cricket-south-africa-coach-conrad-wants-settled-batting-order-for-bangladesh-england-tests",
-   "image": "https://apicms.thestar.com.my/uploads/images/2026/11/12/4209526.jpg"
+   "image": "https://apicms.thestar.com.my/uploads/images/2026/11/12/4209526.jpg",
+   "img_tried": true
   },
   {
    "follow_id": "scotland-rugby",
@@ -394,6 +394,18 @@
   },
   {
    "follow_id": "england-cricket",
+   "title": "James Anderson Extends Career! England Legend Signs Fresh County Contract After Lancashire Exit",
+   "source": "Outlook India",
+   "site": "https://www.outlookindia.com",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOY1c2M1lGdDJQdVktZHJydDlrRm1YZ01EMmpGUy1iTHdTUHlrVnp5MWUzUmZFU0ZYdGFNclRFRDVySUhlcTh5T3NFeHVhM2ZBdHJvdVlBQldRTVpyUC1INEJsb1M1UEFhUGZ6dE04elZUWWQ2dkZjQU1vaEg3SjJ5RC0wRWJBQlRlMkk5dlE5bTZuSWFvcGVtQUloSVd3Y2lM0gGuAUFVX3lxTE8zaG85b1Q0allKbjY3aVktNEVwdWlUcE11VHY1dURvTFlYeXRUbzhxaEZZLWlZSU1VcThKc1JIbmRjREs0SVV2MTJVQUx1ODNCemYxNlFyREstdGRaaFAxU1JpZnZLbGNjekdiMW5QbkVHd0Y2UzFfYmdtNTg1SlQwcDNyaENxYU85VUFoenZ6d2xFSXBtVGt2Wmlabk9ZRVR2S0lna0FNOUxydzBxZw?oc=5",
+   "published_at": "2026-11-12T11:50:37+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.outlookindia.com/sports/cricket/james-anderson-surrey-contract-county-championship-2027",
+   "image": "https://cf-images.assettype.com/outlookindia/2024-07/786fec3c-9ba4-40ce-be60-2acaf8001418/Fy8-c_OacAAMyXX.jpg?w=1200&amp;ar=40%3A21&amp;auto=format%2Ccompress&amp;ogImage=true&amp;mode=crop&amp;enlarge=true&amp;overlay=false&amp;overlay_position=bottom&amp;overlay_width=100"
+  },
+  {
+   "follow_id": "england-cricket",
    "title": "Croydon teens hit high notes and England cricket call-ups",
    "source": "Inside Croydon",
    "site": "https://insidecroydon.com",
@@ -406,27 +418,15 @@
   },
   {
    "follow_id": "england-cricket",
-   "title": "England cricket great James Anderson signs for Surrey after shock Lancashire exit",
-   "source": "inkl",
-   "site": "https://www.inkl.com",
-   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQaVVBUnM5Z2FxVkJXa0tfa0pITmU4bXloSzFDYXphT3UxRGhpSVRXLWZTYjZpRHh2OVh0RFcyYzZtSU5iOGh4UThUYlZkeG9nX3hJUVR1dnJReDdGbzNjMXlpSlN5MnliQmVnLW5oazJIeUM5bkhaVlRMY3ptQ1doS3VzbEE1MU5FcnNvUXVfTHVybDBUSTVvdDRsNHpmbU5TR0QzbGg1dnVtOVk?oc=5",
-   "published_at": "2026-11-12T10:46:46+00:00",
+   "title": "Cricket-England great Anderson to continue county career at Surrey aged 44",
+   "source": "The Star",
+   "site": "https://www.thestar.com.my",
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOWnE5cFNzV0dreG1Qem8tVmJna3JIY1J5U09WQjEyTVN5YnpDODhOaXFlWU5LaXNLUTZLSjRWbFpJQ3ZFc2JTZTY5WmRZUjRYWEV1LXZjZ2lBSU9BaUdCSTRYLVYzQ01Qb1UweGVlOUpTLXRaUWJwcFh5Y1F2cWNVS2l0UFk3N3NMM044SWtid2VqVVJRVDgzal9FUXRyYWhENklObnBneURlcFJ1cFY0NWx2aWp6ekVRVnphTVZkZFI1cFNr?oc=5",
+   "published_at": "2026-11-12T11:04:00+00:00",
    "lang": "en",
    "img_tried": true,
-   "article_url": "https://www.inkl.com/news/england-cricket-great-james-anderson-signs-for-surrey-after-shock-lancashire-exit",
-   "image": "https://images.inkl.com/s3/article/lead_image/24054860/01M77G9AKKZFQHGTCE4KM7KPJZ.jpg"
-  },
-  {
-   "follow_id": "england-cricket",
-   "title": "England great Anderson to continue county career at Surrey aged 44",
-   "source": "The Straits Times",
-   "site": "https://www.straitstimes.com",
-   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQX1o1R0ZrSFl3ZHRWalQxNnpGbDlZNHRfU2pvNUszMWNPMG1nbEtWajYyQXhleWlDLVNmcDRhY0Z0WFgwZm1lcEhLZGZ2dHd4ck02cUw1U2tZNVV5WU8teVpUWHRCZkMwNmplM3g1VGxReXM3QTRHY09ST1dVaV84ZDhxQWNWRjRVQXhlN3d5Q3N5OXMzRnRRTlhIa2k1SkhKNExR?oc=5",
-   "published_at": "2026-11-12T10:28:00+00:00",
-   "lang": "en",
-   "img_tried": true,
-   "article_url": "https://www.straitstimes.com/sport/england-great-anderson-to-continue-county-career-at-surrey-aged-44",
-   "image": "https://cassette.sphdigital.com.sg/image/straitstimes/3e25a831b01b201ac8b4e73876d1f63c74d1ad851a818555a09ea0e79dff0dfe?t=og"
+   "article_url": "https://www.thestar.com.my/sport/cricket/2026/11/12/cricket-england-great-anderson-to-continue-county-career-at-surrey-aged-44",
+   "image": "https://apicms.thestar.com.my/uploads/images/2026/11/12/4209346.jpg"
   },
   {
    "follow_id": "bath",
@@ -478,26 +478,38 @@
   },
   {
    "follow_id": "england-cricket",
+   "title": "Australia-England face off again but most eyes are elsewhere",
+   "source": "Cricinfo",
+   "site": "https://www.cricinfo.com",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOcGZhM0FlWk5pUS1WbDdnX24xckZ0X09FWjR4aVB0WnhCT1RKLXE3RDdmR2ZBTzRidjVFcFBzdmpHRFZSN1gtRnMyZnBxeXlHekp4cGMxeklTaFl5eUZXWTFyQ3M5RG8zaHY4eWZhc1pxb2g1LXgyMFY4RnlWYzIwXzRzTkVQNkJHMzhESU1oRHg4RUJMU1NaV1N1dGFtMXlHUHc2V19hT1NLTjQ0TEQwUnFDY0FXb25iT0Fn?oc=5",
+   "published_at": "2026-11-12T09:21:12+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.cricinfo.com/series/england-in-australia-2026-27-1528677/australia-vs-england-1st-odi-1528703/match-preview",
+   "image": null
+  },
+  {
+   "follow_id": "england-cricket",
    "title": "Quiet Root keeps England focus ahead of rare milestone",
    "source": "cricket.com.au",
    "site": "https://www.cricket.com.au",
    "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxORUhLT0R1MnJHMFluUGNJazRHTWhxNDBHUkV0R0tVMW43TzBqb3R3SDcxVmp3MEowZmhrNkRRMmxaTi05V2dNTmd5MWwzcGJMRnRLNXpQVGxqM0dyVEp0ODM2cnFVSUNUdDdTNDkxbmZNQkk4U0RFdmVCdTFaNFg1WUJ2OENkMkVVeVRMVm5TZXFBZzROUWZGdjFTZnhSUmlJU3o5UzgzdUlaVWxsd3ZxbTBSaGJYZ05zYlA3czdKQ3BfVXRvRktmb05fVklxNjRLYTI2QlVaLXk3Wl9KTEF2cm9LMVhjUEk?oc=5",
-   "published_at": "2026-11-12T09:15:00+00:00",
+   "published_at": "2026-11-12T09:20:38+00:00",
    "lang": "en",
    "article_url": "https://www.cricket.com.au/news/4608165/england-star-batter-joe-root-reflects-on-career-ahead-of-200th-one-day-international-first-odi-v-australia-perth",
    "image": "https://resources.cricket-australia.pulselive.com/cricket-australia/photo/2026/11/12/1a107d72-d49d-49b1-8203-d29a2fbf107d/root-thumbnail.jpg",
    "img_tried": true
   },
   {
-   "follow_id": "england-cricket",
-   "title": "Australia's Mitchell Marsh sidesteps sandpapergate questions ahead of England series",
-   "source": "SABC Sport",
-   "site": "https://www.sabcsport.com",
-   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOdmJDNmxET0tWdUJ3RHlNRHBvYTI3NVk5eFNUb2FBVmp1X0xZM3g3RWFsRkl0YWtPYVlyMnVvTWNSNkhTZm5WZTl4QWVWZVdYdGprZV9hZS11WVc4bXcxNW8wUWZwb2tRYkdNLUt6T0pnOGppTEo3X2hkUVkzajJQR3BSNHM2eXVEWjVvdjJLbk1EdE5TSkF2cHllaEdMLS1tRTNQeUdrTHF5Z21qTkhncWF2T01haC1HQXVaVmh4U2I?oc=5",
-   "published_at": "2026-11-12T09:05:29+00:00",
+   "follow_id": "scotland-rugby",
+   "title": "All Blacks coach weighs in on maul debate after being 'exposed' by Scotland and World Rugby change: 'It has created anxiety'",
+   "source": "Planet Rugby",
+   "site": "https://www.planetrugby.com",
+   "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNSGxrS2JOSjBmQ2lzM1BTWnRLWnN6MjNORzczaDI1dGZfX1RlYUpZd3hUNXpsV0F5cUM0Zi04OWtGVE0zSmIzTHJjYjNwRzdxM2JBTy04MWgtYjZTLVFKVWRyY3VhdzhKZmRvdDFUYTFDbG9uN19YVmJ5ajRkZUVMVVVrbDZlUWZPaWtnVHpJbEpTMHJVRWt2M1dZamFsMFdIMEd3Rjc1V0p1V0l0SjBlMFdWRmRNemIyMi1JSk1rSlkwMmNFMDJJT3BHRGNxRm9DckhvRXV1cmYxelA2cXRKNDUwa29NUFE?oc=5",
+   "published_at": "2026-11-12T07:07:42+00:00",
    "lang": "en",
-   "article_url": "https://www.sabcsport.com/cricket/news/australia-s-mitchell-marsh-sidesteps-sandpapergate-questions-ahead-of-england-series",
-   "image": "https://cms.sabcsport.com/storage/images/mitchell-marsh-for-australia-aug-202516_1600x900.webp",
+   "article_url": "https://www.planetrugby.com/news/all-blacks-coach-weighs-in-on-maul-debate-after-being-exposed-by-scotland-and-world-rugby-change-it-has-created-anxiety",
+   "image": "https://d3gbf3ykm8gp5c.cloudfront.net/content/uploads/2026/11/11132225/Scotland-maul-against-the-All-Blacks-and-an-inset-of-prop-Zander-Fagerson-celebrating-a-try-1.jpg",
    "img_tried": true
   },
   {
@@ -526,18 +538,6 @@
   },
   {
    "follow_id": "scotland-rugby",
-   "title": "All Blacks coach weighs in on maul debate after being 'exposed' by Scotland and World Rugby change: 'It has created anxiety'",
-   "source": "Planet Rugby",
-   "site": "https://www.planetrugby.com",
-   "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNSGxrS2JOSjBmQ2lzM1BTWnRLWnN6MjNORzczaDI1dGZfX1RlYUpZd3hUNXpsV0F5cUM0Zi04OWtGVE0zSmIzTHJjYjNwRzdxM2JBTy04MWgtYjZTLVFKVWRyY3VhdzhKZmRvdDFUYTFDbG9uN19YVmJ5ajRkZUVMVVVrbDZlUWZPaWtnVHpJbEpTMHJVRWt2M1dZamFsMFdIMEd3Rjc1V0p1V0l0SjBlMFdWRmRNemIyMi1JSk1rSlkwMmNFMDJJT3BHRGNxRm9DckhvRXV1cmYxelA2cXRKNDUwa29NUFE?oc=5",
-   "published_at": "2026-11-12T03:54:58+00:00",
-   "lang": "en",
-   "article_url": "https://www.planetrugby.com/news/all-blacks-coach-weighs-in-on-maul-debate-after-being-exposed-by-scotland-and-world-rugby-change-it-has-created-anxiety",
-   "image": "https://d3gbf3ykm8gp5c.cloudfront.net/content/uploads/2026/11/11132225/Scotland-maul-against-the-All-Blacks-and-an-inset-of-prop-Zander-Fagerson-celebrating-a-try-1.jpg",
-   "img_tried": true
-  },
-  {
-   "follow_id": "scotland-rugby",
    "title": "Wallabies wary of Scotland's Aussie Sione Tuipulotu threat",
    "source": "ESPN",
    "site": "https://www.espn.com.au",
@@ -547,6 +547,18 @@
    "article_url": "https://www.espn.com.au/rugby/story/_/id/50456525/wallabies-wary-scotland-aussie-sione-tuipulotu-threat",
    "image": null,
    "img_tried": true
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "Why other nations like to mock Irish rugby, even Wales and Scotland",
+   "source": "Daily Mail",
+   "site": "https://www.dailymail.com",
+   "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxNMk10VjdWd1R4Umh1MTRxdHpqQjhubVlaZGh2OG4zYnREbXM3NVNnRHZLbTZFNkVBVV9MWkhyRXh3Z2VJeDh1US0zb0V5Z2llY0J0aVREZzJUQ3VKeGQtUThVZmw4NklxcGZMV3FEY2NDZy1LQkkyelVReGJYOFQ0VXpVS3lwcC1lYzBOc09zR0d0MWVFYlR0bUpVVFJJeXAza2ZCVkc3NVZaZ3pYSV9LZ3MxeWszUlZLSWk5S19qOVVfbVNhYXo5VTRYcFlTV0puMUM5Nms0VF9yd1d6TWQyQ1JJLWl3WTZnbm1Rb3FpLU9wM2NJQVBTMUdMdjA3Z3pzUHYwMTVob0ctUQ?oc=5",
+   "published_at": "2026-11-11T22:48:02+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.dailymail.com/sport/rugbyunion/article-16281233/Other-nations-reason-mock-Irish-rugby-Wales-Scotland-signs-Andy-Farrell-gone-40-years-come-plan-silence-cat-calls.html",
+   "image": null
   },
   {
    "follow_id": "scotland-rugby",
@@ -568,9 +580,9 @@
    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE81eFlweVZjZTRyU2lSTXN2R0tkZ1V1UUdSQUtkVWpNeDhMbEl0c1BsS3d0dkV5VE93ZVZYYXpobmIyb214VS1idG1xQUpCcUJ6NlNOZ09VSXV3Qnc2SFhqVnR5bHIyRmloY3FTUGJzTzQ3WEFNRGRv?oc=5",
    "published_at": "2026-11-11T17:18:16+00:00",
    "lang": "fr",
-   "img_tried": true,
    "article_url": "https://pensebet.com/rugby-ubb-adam-coleman-opere-cervicales-absent/",
-   "image": "https://pensebet.com/wp-content/uploads/2026/11/rugby-news-62.jpg"
+   "image": "https://pensebet.com/wp-content/uploads/2026/11/rugby-news-62.jpg",
+   "img_tried": true
   },
   {
    "follow_id": "ubb",
@@ -645,16 +657,16 @@
    "img_tried": true
   },
   {
-   "follow_id": "scotland-rugby",
-   "title": "Wallabies wary of Scotland’s Finn-and-Sione show",
-   "source": "SMH.com.au",
-   "site": "https://www.smh.com.au",
-   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOdVJHcDg5b3hrVThKX245aFhfWnpncnhkR1N6bVhkV2hneDl6WGRoY1hmd2hwdFp5dHdnUlM1WU1jRWREYXQ1LWFxdGZDcy0xclJlZmRBUDF4cXFZTUNHZzZ5RlpVLUxzTDVkd0dOOHdqc1EtWm9VcVRkR25oYnhlbkxWVkx6YTRzQU1vald0U3VNV3hOendibDBZTGg2b2c1bGNkU253WW5XSHlld3Vj?oc=5",
-   "published_at": "2026-11-11T04:30:00+00:00",
+   "follow_id": "bath",
+   "title": "Exeter Chiefs coach warned of ‘tough conversations’ after Bath defeat",
+   "source": "Dave.Sport",
+   "site": "https://dave.sport",
+   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5QbHNSSmtJMTd5SzkyVzlldzBxY1dmaHJiU2p4OWJCb25WOHFES2hObVpXNGFFc1hQanV4dEZRRGdqYjQ0X20xR1hHbHpGWXRuQ1RaNjhKaDNPd204ZDFEaVNGVnpKTHJVSno2dl9wQUppX0tObXI5cmxn?oc=5",
+   "published_at": "2026-11-10T15:24:22+00:00",
    "lang": "en",
-   "article_url": "https://www.smh.com.au/sport/rugby-union/wallabies-wary-of-scotland-s-finn-and-sione-show-20261111-p61d3i.html",
-   "image": "https://static.ffx.io/images/$zoom_0.2919091128305131%2C$multiply_0.7554%2C$ratio_1.777778%2C$width_1059%2C$x_240%2C$y_0/t_crop_custom/q_86%2Cf_auto/e1af818c832a34105f73c9517aa04e5c5b733c58",
-   "img_tried": true
+   "img_tried": true,
+   "article_url": "https://dave.sport/news/exeter-chiefs-tough-conversations-bath-defeat/",
+   "image": "https://dave.sport/wp-content/uploads/2026/11/james-wilson-exeter-chiefs-share.jpg"
   },
   {
    "follow_id": "pepperell",
@@ -805,9 +817,9 @@
    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMFlfSWMyRUpXRVBlbmI2Q1FtbmVxUVZibFRHLXVNSXVVaHFZV3A0UHNYcUtpN182N1JCSnFtNTRMWHQxRjZGT0d6cE9sVE8zSGRNbFNNbUNTbUxsLXZfYUJPOGV0VjFEYmM5S0RaYWYxWkhJQ3FmOTVXMFY1eHUyOElNQjF6aXZtb01ta0hJcjR2RS1RZGdoaXFOWFNqZEpnSFo4QVp6RQ?oc=5",
    "published_at": "2026-11-06T03:06:57+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://www.golfmagic.com/tour/dp-world-tour/sergio-garcia-hits-back-eddie-pepperell-after-dementia-jibe",
-   "image": "https://www.golfmagic.com/sites/default/files/2026-11/sergio-garcia-123.jpg?width=1600&aspect_ratio=16:9"
+   "image": "https://www.golfmagic.com/sites/default/files/2026-11/sergio-garcia-123.jpg?width=1600&aspect_ratio=16:9",
+   "img_tried": true
   },
   {
    "follow_id": "pepperell",
@@ -1492,15 +1504,6 @@
    "linked_match": null
   },
   {
-   "follow_id": "england-cricket",
-   "title": "Absolute Carnage! | England v Sri Lanka ODI & T20 2026 Highlights",
-   "channel": "England & Wales Cricket Board",
-   "video_id": "YbIO8LO_Flk",
-   "short": false,
-   "published_at": "2026-10-29T06:00:28+00:00",
-   "linked_match": null
-  },
-  {
    "follow_id": "forebros",
    "title": "Close call… 😳",
    "channel": "Fore Bros Golf",
@@ -1565,6 +1568,12 @@
   }
  ],
  "errors": [
+  {
+   "follow_id": "newcastle",
+   "source": "thesportsdb",
+   "error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "stale": true
+  },
   {
    "follow_id": "newcastle",
    "source": "match details",
