@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-21T07:01:02.585814+00:00",
+ "generated_at": "2026-11-21T12:49:48.147227+00:00",
  "follows": [
   {
    "id": "england-cricket",
@@ -82,27 +82,339 @@
  "news": [
   {
    "follow_id": "england-cricket",
-   "title": "Australia vs England LIVE updates: Fox Cricket stand down Khawaja, Warner ahead of T20 as Sandpapergate swirls",
-   "source": "WAtoday",
-   "site": "https://www.watoday.com.au",
-   "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPZ2hVM1I0Qmw0ZF9Db1pUeFBaaEgxMllYQ0tiM1BkXzF5VFpIQnVlNGVkVmtvblFmRmpJblJxMFgzRUNoQl9vX2dUWVJHLW1JYThqcFE0cnZaR1RqWlBNYWVWbVVYT01fbTI3U0NKOXNzWXJKdHJvcWVNelhOeHR1QkZZYmM2OHJWbjk5VzhsSUxadGxtNUtadkZKc3RxVjZ4OXFqckQzQ0ZXSkFQZmxnSWxtNnRzZmc5SmFOTkhKZUFRaDlxT0hHenVxNDNGTWpXNDJqdTJOR05pVmNZQnJZV3E4V1R6d1JsQ0JN?oc=5",
-   "published_at": "2026-11-21T06:50:20+00:00",
+   "title": "Australia beats England by 3 wickets in a thrilling T20 chase, sparked by Nikhil Chaudhary",
+   "source": "Medicine Hat News",
+   "site": "https://medicinehatnews.com",
+   "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNdVRaWHBKbkxDV3RMellwVUtLWlRVUTNfWmZxa3Q1RkNIQXVhSDUtbURaR0FpcUYxOE1MTmxyektHRFFnTEVtUW1mbmdZRmsxc2hFd2dkeGRoaEpFOVVWR0U3aEFNdXpha1ZZYmFvaERoMFNRR2dobUNXaDZ6VW5PWHA3OTJ2RWZOcWtnaGswZEZ2Vzg4N1FTTHpiekM1dzZON1ZxbTA3NG1jWDZXZExPN3pyRUIwNHFubnMtOXpoRzVMX2pIeU02TXZyT2JQbFJfaklfdlAtQ0tFMW1NTXVJbV8welJkZVE?oc=5",
+   "published_at": "2026-11-21T12:44:43+00:00",
    "lang": "en",
    "img_tried": true,
-   "article_url": "https://www.watoday.com.au/sport/cricket/australia-vs-england-live-updates-t20-series-hits-the-mcg-as-sandpapergate-continues-to-swirl-20261121-p61g53.html",
-   "image": "https://static.ffx.io/images/$zoom_0.21705267472842793%2C$multiply_0.7554%2C$ratio_1.777778%2C$width_1059%2C$x_0%2C$y_0/t_crop_custom/q_86%2Cf_auto/d24e2f7b7d3dc338ff840dc8a6be3371583ebfa4"
+   "article_url": "https://medicinehatnews.com/sports/national-sports/2026/11/21/australia-beats-england-by-3-wickets-in-a-thrilling-t20-chase-sparked-by-nikhil-chaudhary/",
+   "image": null
+  },
+  {
+   "follow_id": "england-cricket",
+   "title": "Akhtar Admits Bottle-Top Ball Tampering in England",
+   "source": "Wisevoter",
+   "site": "https://wisevoter.com",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNTnZPcjV0eTZRZFNpYjI4emRyVG1DMkIzU1JGNVhmSWhENmthd00zQXFZc3g5eUlkWG9qMm9EYXZKc28tMTcyVzR4ZURpQ3A3S0pPZ3NUdkxOVzNLcXpCSGg1dDJwT2ZsLUFUN1VIcEMzTmpEN3BzdFM0RmtYblFyWDQ3QkpCY2s?oc=5",
+   "published_at": "2026-11-21T12:28:38+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://wisevoter.com/world/2026/11/21/shoaib-akhtar-bottle-tops-ball-alteration",
+   "image": "https://images.highwise.com/media/sports_other-sports.jpg"
+  },
+  {
+   "follow_id": "mcilroy",
+   "title": "Rory McIlroy and renowned sports psychologist hold talks with NHL stars during Toronto visit",
+   "source": "Golfmagic",
+   "site": "https://www.golfmagic.com",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPWlRkcXNzZTktbFd0UzZxbmVWam1sT1p4TGlkYm42c0ludHZSOUxQTGV1MXJic2VUT2J4Zm1yS2l1UEllVGkzeXBxLWZWLWNVQ3RkVU0zaEpBUjUxMEFTLTJyRzFjSDhEcWFlRmpqNV9qS3JpSkZUbjgwUWR0Ylo5ZkVyTU5SeU81aXNKdExHMVZWa3JHN0UwdThnSjRzc0N1Q1FMV2xFem9mWTd0Q25LYTRhLTVuYzdLTEI5X2FB?oc=5",
+   "published_at": "2026-11-21T12:28:11+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.golfmagic.com/tour/pga-tour/rory-mcilroy-and-renowned-sports-psychologist-hold-talks-nhl-stars-during-toronto",
+   "image": "https://www.golfmagic.com/sites/default/files/2026-11/rory-mcilroy-augusta.JPG?width=1600&aspect_ratio=16:9"
+  },
+  {
+   "follow_id": "england-cricket",
+   "title": "Australia vs England, 1st T20I HIGHLIGHTS: Chaudhary powers Australia to three-wicket win",
+   "source": "Sportstar",
+   "site": "https://sportstar.thehindu.com",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOT3dQVXFlZUJrM3pJTmNFb01oV0ZVZEE3bzgzczQ0U0tVeFcwOWVUZFBFdmt3OG0zaW1kbndVdnBLS203SXl0SFFhV2ltTHB3bkZlYm1iRHM1TEktbk84TmlzelFkVnExRmk2WDVPQ2xtQ0xtemNvMGZpbFVwSmJleTFBWWU5NDU5MzVEWGRiNS1Nb0o3cjY2T1pTRDZ4d0w2dVBIdkE4bm1yOVpvcjhFX0ZDeXl6dHNGSUxZaFktVWtUZmPSAcoBQVVfeXFMT3hrYVc3dXoxODM1bExoNjB3VDhNQzVhQTZTdm5VcnJiS0hHTENpSHVBX3lVVEd5Zl9ZNkdJbDZ2U2lramswQl9XbTBJNTNRSHlLXzMxLTd0ckN1NlM2S2FEQlBQN0xrOWpxUEN6ZC1rUnZYdmRxRDRvMTY0YkVqcUlXZ3FxVFMzUXhIVVVwSmhoRWd6dzlFV3hESHJWUmk0M0U2S05GZmxSWlZfcjcwZEc3Tzk2SW5zeXZGSDdCREdaVkRMS1k0QklHUQ?oc=5",
+   "published_at": "2026-11-21T12:26:44+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://sportstar.thehindu.com/cricket/australia-vs-england-1st-t20i-live-score-latest-updates-highlights/article71727635.ece",
+   "image": "https://ss-i.thgim.com/public/incoming/ga3fn8/article71728287.ece/alternates/LANDSCAPE_1200/Australia_England_Cricket__6_44.jpg"
+  },
+  {
+   "follow_id": "england-cricket",
+   "title": "Chaudhary guides Australia to gripping T20 opener win over Brook-inspired England",
+   "source": "The Guardian",
+   "site": "https://www.theguardian.com",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPV3I1cWF5cFZiNUZJS1NFUHgwdE11MVF0bVVjXzh2X25jY28weEV5TnZuZ0o0ME9TQmFWSHZ4cWFSX0hHSEN0NjJJN19BMU01MmR4T0lieTIxNjFoLVBYbU8tSThTeUNtRXFBdjVoQXlhbUFiSTg4TzdXUVdnZFM2OU1QeWg2MGJ6Rmk4TzRkekhkR3dGczIwLUQ1cE8wUm1MT0ZmbQ?oc=5",
+   "published_at": "2026-11-21T12:21:00+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.theguardian.com/sport/2026/nov/21/england-australia-first-t20-international-report-cricket",
+   "image": "https://i.guim.co.uk/img/media/131704720fa1f887b8b2d60f28ab8573de5b79fa/728_0_5002_4001/master/5002.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=7ed7d0098d1457d524e4b77f4298e9dc"
   },
   {
    "follow_id": "newcastle",
-   "title": "Arsenal step up preparations to maintain Premier League lead against Newcastle, Arsenal FC",
-   "source": "Forza Football",
-   "site": "https://forzafootball.com",
-   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOMVNLbXprakFmcDhXRFJrRmJTSjZCUDhPeWtlVDFBT0N6MXMwTjhiWDZoZk9vbUpQbDVsUXoxYkRlNjgzelRBcVI0eUJadHdKcTBQNFIzXzZtV3Y3SlZ0akpoakpDbFJYSkJoa1d4dmRReUxzUGNpOVZkczdvWFRwRURSS01mcTBFcTh6NERTYUQwRUhFT0NqZm5OV29TX0JQZmJKbDdzQ0I1UHdZV2FtOF9DUXo2RDVJRnZv?oc=5",
-   "published_at": "2026-11-21T06:03:55+00:00",
+   "title": "Arsenal Starting XI vs Newcastle United: Confirmed Team News and Predicted Lineup",
+   "source": "Yahoo Sports",
+   "site": "https://sports.yahoo.com",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPU0pBdl9ZQ25vV1BfWFhSQVRxZl9nUm1WWlE2NU9NUldvbnR5amxUb0FtQUh3VDh1enFINzUyN2pFS2NFUi1rY2d4RWJQOFZGMFhKN2lDRWJZX2RCTTdzQkRzV2xvRjNMTHk4TV9FV2ZsUkRSLXMwaG1sWDhsSFlMUGI3V1Z5U0Yx?oc=5",
+   "published_at": "2026-11-21T12:20:00+00:00",
    "lang": "en",
    "img_tried": true,
-   "article_url": "https://forzafootball.com/news/arsenal-step-up-preparations-to-maintain-premier-league-lead-against-newcastle-159487322",
+   "article_url": "https://sports.yahoo.com/articles/arsenal-starting-xi-vs-newcastle-122000793.html",
+   "image": "https://s.yimg.com/lo/mysterio/api/8c1cc22985616d74ff673c74e92a7436e386f0973d43096ab9f29f5ef8ea350e/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fepl_index_articles_253%2Feddd8c136e8fd1d4657e1bf103f36c37.jpg"
+  },
+  {
+   "follow_id": "england-cricket",
+   "title": "Who is Nikhil Chaudhary? Delhi-born all-rounder hits 66, dismisses Harry Brook as Australia beat England in MCG thriller",
+   "source": "Livemint",
+   "site": "https://www.livemint.com",
+   "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNdlR0bmZESlhuTjJaeERIcHYxZy1pZVdvTjdodmdwbm5GYmFoYTR5N25vdWhVdTdIN3FOTS1sSmw2cVd0Nk9sX3dmZ2FzOU1ReE1ZMVRMOEdfaFpOc21lM3R3U185bzM1VHhyRE9QQTNfTjdMcGdQMVg2OVJUY0REek9WSWRJN3BSQTBrSGVJWWFNZERJVmhsbHYyd3F5SXJkVWkySmg5UDVTM2VGTkhwTnpldWdKUTVmWG10V0J0N003d2MwUldXR0hDQl95VG5TVjNMbzNIbXM4VHIzOS1UWTk3RE1ONGs5OXZHMWw4NWM3RDZ0MnN5MG9hbENPLU4wOXAzQldiSdIBjAJBVV95cUxPTGdnaVNzR3VQMEFKcGVPbEhYWlVkRFRFeDFPbFJrNkpTWDJUbUV1aXBhSGw3QXJyd2szV2diVldYa01jVWtrbUFqN09fZktvZkJ6VmhRSjlEdGdLdzYxbVdLa2Q0dnBHdnV1UjJ1WlVGWmttSWd0Qzl2SnBja2M3WUxGa3pVM1lPLXZsT09DRGxHZ3pZNm05SUE3UUFJbDhycDhTU1Z6RFZPcHhCbUFCX0pFVHJjTDFtT2ttRUdyQkh4eXVHQ1dtaVlfV3Utb25XcnpDVFN4WVUxSGFKUVB5emV1VFRXRG5YeXFSTnJ4bWg5VDJRNERLaVByMlhCZHhxWWRpMVlEUjVtNXpy?oc=5",
+   "published_at": "2026-11-21T12:16:58+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.livemint.com/sports/cricket-news/nikhil-chaudhary-delhi-born-all-rounder-hits-66-dismisses-harry-brook-as-australia-beat-england-in-mcg-ausvseng-11795258489237.html",
+   "image": "https://www.livemint.com/lm-img/img/2026/11/21/1600x900/Nikhil_1795262681308_NKle_1795262681426_8jKk_3bc8437b-828f-48d9-b017-0c6ed353e98e_8PWL.jpg"
+  },
+  {
+   "follow_id": "england-cricket",
+   "title": "Jack Edwards Seals Last-Over Thriller As Australia Edge England By Three Wickets In MCG Opener",
+   "source": "Outlook India",
+   "site": "https://www.outlookindia.com",
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOZmxSSUtsazR6NHRYblgxOF94eTVRcGJyQmdRM3ZSZm9iSTl6UlJxdGdMbk1rb2JDQVFfdzNLblVOUWxPR0R6OXladjluMXh5N3ZHTHFaQWxuQU0zbUxxOHJNSThsNHY5Ry1OWHZPNjlZUEVxeXNZVVFockpSM2FvR0pINVU5OWozTkVzSHVLZnd1YzZmQVHSAaMBQVVfeXFMTUQ2eGdjdTBFUTNNa0VBVUU5TnM2Yk01X3FmVHl6ODRTZi1mUzJPT1Z0LVQ3djl1WXFPQkthTTlBdDZyVXg4S0pJRW9UZy1uWnItcE1JNXN1aFU4WTJPRXBoUTVMcldsU2J5U1NOY3pmdXJyZXhoZDhWZ0NQOXVjTUJSQk5UX09Sc1lfcllFZHo2TWxsTWRPYVNXZ3A0SjZNUGFHTQ?oc=5",
+   "published_at": "2026-11-21T11:58:12+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.outlookindia.com/sports/cricket/australia-vs-england-1st-t20i-2026-match-report",
+   "image": "https://cf-images.assettype.com/outlookindia/2026-11-21/jujj6tgr/Jack-Edwards.jpg?w=1200&amp;ar=40%3A21&amp;auto=format%2Ccompress&amp;ogImage=true&amp;mode=crop&amp;enlarge=true&amp;overlay=false&amp;overlay_position=bottom&amp;overlay_width=100"
+  },
+  {
+   "follow_id": "newcastle",
+   "title": "Juventus plotting ambitious Newcastle United swap deal to keep Nick Woltemade as Francisco Conceicao sacrifice looms",
+   "source": "Goal.com",
+   "site": "https://www.goal.com",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQcDVOWXBrcThFZ3N4UDRhUFdjcWV6Z2pRaXZkX0k0dlFCVXpRU2RHZHVhbURHTlN4TWMzN0JLdEd1Nl9vX0VDLWMweFJ1aC1pOGVzZUxvVDhUYTdpdXFnaG92VGF6NGVBZVZZN0tGSGtuaEl3VG93bnBTaVo2VTQ3SVpnanljQmdDX0xhSG5ydERjWk5Rek5OSFJZaHV0YjJOdkt0U0haS2JEa0dzXzc0blBRemFTcFk?oc=5",
+   "published_at": "2026-11-21T11:58:01+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.goal.com/en/news/juventus-newcastle-swap-nick-woltemade-francisco-conceicao-transfer/blt0e24d5a574d0ca1e",
+   "image": "https://assets.goal.com/images/v3/getty-2299832933/crop/MM5DINZZGA5DENRZGQ5G433XMU5DAORSGQ4Q====/GettyImages-2299832933.jpg"
+  },
+  {
+   "follow_id": "newcastle",
+   "title": "A letter to Bruno Guimarães – from all at Newcastle United",
+   "source": "LiveScore",
+   "site": "https://www.livescore.com",
+   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNQlR3ZS1NMm90azlZbjdTS1I4R0ppZS1JeDI4SlgwSEdraFJQekxRRmZGdWFZX0xHQm5NUzg5UklNWW80SDQ2a3o1YV9lTW5XUE1hQXA0QU5CU2h4Qy1tVmlVcWRpUW9uVjFBYmQwZFV1dm5zd2RRb0RRbjlSbzBXSzk3UEdQWVZmM1hwVGFYaWNxNEFQTDd6akEtNnZzRTFoNGw3d2pCajgydGNpTk9XSVBqdTBqblZIVWc1TzhLWDhxeDMyRmFtUnN3?oc=5",
+   "published_at": "2026-11-21T11:56:19+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.livescore.com/en/news/football/premier-league/a-letter-to-bruno-guimares-from-all-at-newcastle-united-newcastle-toons/",
+   "image": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_70,w_4561,h_2565/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/GettyImages/mmsport/354/01m7yxq4h54539hb0few.jpg"
+  },
+  {
+   "follow_id": "england-cricket",
+   "title": "Australia's Chaudhary downs England in tetchy first T20",
+   "source": "Yahoo Sports",
+   "site": "https://ca.sports.yahoo.com",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPcmRva0pGcHBRVEt3R1hPRmNyWFJZWFJDUUI5T0ZwYjhON25SN1Q5YlBCOXExSWF1U2N2bldPLXhjaFJ1X1VKUlg1ejlsUk1KSHliNTFYWmp2UVk2YkRxWkE3cVBicl8tZnFzRDhGYXZoN0h1YnJZcHcxYVQ4QUVjMlViYUlFREdaWTNNTnpHVUI5cEU?oc=5",
+   "published_at": "2026-11-21T11:55:52+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://ca.sports.yahoo.com/news/australias-chaudhary-downs-england-tetchy-115552522.html",
+   "image": "https://s.yimg.com/lo/mysterio/api/97d7adf976394922a111baf720bf3ce073af5590699f8b66f41d7266ae7a8260/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fbbc_us_articles_995%2F396722eb15c87276f95f82de27f556e8.jpg"
+  },
+  {
+   "follow_id": "bath",
+   "title": "Bristol Bears player ratings from Bath Rugby defeat - 'Lacked accuracy'",
+   "source": "Bristol Live",
+   "site": "https://www.bristolpost.co.uk",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOeFU0aWJpcHprU3BsdEtHdjZ6SEExSjFHM2RmQ1VlSGFCZ3RYbjVKX202bzNVV21PeDlocVotOTdHdFFQWHhaME9uMklVbm9GRlhYMHpPdENlX2hTNExxRUxVNF9xR3hlbW01dGRGa0FZNm5WMlZRQjNhMFhvVEtVRzNTeTRIeUZEU0xyQ2V3X2xucnJIMERqQ1BOUGFGUGc?oc=5",
+   "published_at": "2026-11-21T11:46:00+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.bristolpost.co.uk/sport/rugby/match-reports/bristol-bears-player-ratings-bath-11250472",
+   "image": "https://i2-prod.bristolpost.co.uk/article11250453.ece/ALTERNATES/s1200d/1_Bristol-Bears-v-Bath-Rugby-PREM-Rugby-Cup.jpg"
+  },
+  {
+   "follow_id": "newcastle",
+   "title": "Newcastle boss Jaissle targeting key position in January transfer window",
+   "source": "TribalFootball",
+   "site": "https://www.tribalfootball.com",
+   "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNOFJRckZfLWp1Vmdob0xHRURBZzl1aVFZb1dMRy13WmRPWWpuQkh3SkNScVhVcnA0MjZpX185ZjU0ekJOZU43SS1STl9OcnhDbV9UUThXaTFCY0JIYkVGc3o0QXAtUkh0M2ZvTnhKX0FhS2tOV2NaOEJKUk9pbzZSMmEzUGRpRXhJbWtYZ0NMeUJLeHlBdEtkckdhS2FqeXUzX3VRV0FKLU5rd0p4eDhIU1dNcEF2ZXI2RWpOYUo2TWZGZDVmSkN5RExwcWlqWTBZeHU4UTRLV1F4OUlOWTVBOVpfUjljVmxsNkZILWNPekFJa3RkcFNnbjJ4WV9tOG8?oc=5",
+   "published_at": "2026-11-21T11:43:59+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.tribalfootball.com/article/soccer-premier-league-newcastle-boss-jaissle-targeting-key-position-in-january-transfer-window-a3a39d70-6690-467d-988b-4d68b0156a2e",
+   "image": "https://livesport-ott-images.ssl.cdn.cra.cz/r1200xfq60/1626b03f-cac4-4f48-a776-b492da1c8c7d.jpeg"
+  },
+  {
+   "follow_id": "bath",
+   "title": "Bristol vs Bath result: Emens double seals 39-14 derby win",
+   "source": "Dave.Sport",
+   "site": "https://dave.sport",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5hT051RzRhNG14MXdwTHZlaE04eDU2RXY5bEtwSkd3TElXY09Ub0Jyb2N1Zl9tMTZjTjFBSGJPVmlscnk5QkhaWE1aSGhxSV9ac1p2TjhDNWhIMEg1TjQ4dHpsOA?oc=5",
+   "published_at": "2026-11-21T11:42:10+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://dave.sport/news/bristol-bath-result-prem-cup/",
+   "image": "https://dave.sport/wp-content/uploads/2026/11/bristol-bears-vs-bath-result-share.jpg"
+  },
+  {
+   "follow_id": "england-cricket",
+   "title": "Australia's pace woes deepen as Beardman, Bartlett ruled out of England T20Is | Cricket",
+   "source": "Hindustan Times",
+   "site": "https://www.hindustantimes.com",
+   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxONVlJaFdmSFZHU3huX0RmUFNBUEN6Zks3UFIyOFNjQXFLUm5SMHVVejJIQXFyT2FEVEk1WlVnMzRQVkxOUHozX2pqSkNIcThVTExkWDJtVUpoUEh6aXhkdmdHZjBRclV1TEtibjlWbWlGcTIxblBrWU5XOVMxQ3VrZHNlYW1KU2V4V25YYm1oWVNUNGtITU9qOVhtdlBxWExVWVJYUTZ5NkVqSVRkc3BIZXVBbTkzUUZ6c0U1R0sxNkdsWUplaWMyZFpqRlVNSFk20gHWAUFVX3lxTFAwQmRRdDhSN09LNm5QSjVXcnZuTmV1bjR1cTBTNVA2aTEyaFU4REtIZkRNNnRPeDVfWnFKY3BUdGh0VjJBdGJIbmNXbldVVDhHV1JjUVVtbTFOb3dad0MzTjYzT0F1NGVTcC1Jd3V1R1VfTWZsQkxGMkdiNVZ4a2ZPcXM5RVB3TktqeThLT0dtcVBiejJERDhPVFdfdjRGOUtJMUdzWlZTSW9wNXJzeGFuSFZIenlkQXpaY3ZQTDB2UG1pN2R5X28yT1ZPT2RJTUNFNXlyNlE?oc=5",
+   "published_at": "2026-11-21T11:32:24+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.hindustantimes.com/cricket/australias-pace-woes-deepen-as-beardman-bartlett-ruled-out-of-england-t20is-101795260444306.html",
+   "image": "https://www.hindustantimes.com/ht-img/img/2026/11/21/1600x900/logo/CRICKET-AUS-ENG-13_1795260547682_5d9O_1795260561537_KrDm_79b5963a-eb43-4803-acaf-f4ebf42cb7ea_2Wls.jpg"
+  },
+  {
+   "follow_id": "england-cricket",
+   "title": "Australia Host England in 2026 T20I Series Opener at MCG",
+   "source": "Peradaban.id",
+   "site": "https://peradaban.id",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE13c2k5MmN0RW02MUVzMlRUWk1vR3NETTY5d2NkMXdXdlo5S2h0VWJuOXBlSDVNdEl6U0ltUXZMWU51WnRkU2JsNENCcUVaUE9MMzhnbkd4MldaZ3dKVEpZeVlrUjQ4YzNwUHVnUA?oc=5",
+   "published_at": "2026-11-21T11:10:21+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://peradaban.id/en/australia-england-t20i-series-opener",
    "image": null
+  },
+  {
+   "follow_id": "england-cricket",
+   "title": "England's Harry Brook slams his 9th fifty in T20Is: Stats",
+   "source": "NewsBytes",
+   "site": "https://www.newsbytesapp.com",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQdlBlN0hPbUY1aUFTY3lUYlN4VENMZkpQYVZoWnMtbWlSWDZjeVpEMXdJQ0ZURHRMRU12Y0NScmRlV3cyYU9CMEQ4ZUNZeWVrU0JiQVBwaWs0aWp0V0VVR3VqY3luRDZjekpXajZfNkJJaGVMS3dBT3E4eEwxLWV2UkdrYTZ3OVM2VEEzR3lUdWp1VGkzUnJr?oc=5",
+   "published_at": "2026-11-21T11:05:04+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.newsbytesapp.com/news/sports/harry-brook-smashes-65-versus-aus-in-1st-t20i/story",
+   "image": null
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "Can Uruguay's Montevideo Win Threaten Scotland's RWC 2027 Knockout Hopes?| https://www.eticketing.co/",
+   "source": "eTicketing.co",
+   "site": "https://blog.eticketing.co",
+   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPYmN0bjRnU0FrV2hTWWNOMnJ5RUVMdm92Q2hNOW1YUlZfZllMUko3NEdzS0ZseHpQTjRvVl9ycEV3WWVfOVlBSnZodUVtZXo4UlhtR0xfbl9DM2hIano1Ym9uZVgwRmE2bEpXX1c4allibWFrVm1aMUc2Xzdjd1d1LXFZLW9LY3RCU0FKcnV3Z0MzNmVzcWQwUThQNWdpUnVaNmtKQ0JIWHhzYmJtVEJBSUllQ2FSMkdfNV8tMTVvZzg?oc=5",
+   "published_at": "2026-11-21T10:54:31+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://blog.eticketing.co/can-uruguays-12-point-montevideo-breakthrough-endanger-scotlands-path-to-the-rwc-2027-knockouts/",
+   "image": "https://blog.eticketing.co/wp-content/uploads/2026/11/243859556_2679529989009069_8531824868929007173_n.png"
+  },
+  {
+   "follow_id": "newcastle",
+   "title": "Alan Shearer questions Newcastle’s new transfer strategy",
+   "source": "NUFC Blog",
+   "site": "https://nufcblog.co.uk",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNM2lvS29aSHBtVV95Rzl2aWpBTWpsR2FOSHJVSlJpQWxGN1BDeEllTHRjZlRMQUhVblV4VFF0X3R5Ylh0U1ZNcnZpWnhhMU5DWmJlVDBvMjJyZGpTQjF5c0QwMFgxZXNfUXlwMUxma2tRM2g2MGVXQnRGMEZUOVlhOHVZV2ZHb2FPMERzNg?oc=5",
+   "published_at": "2026-11-21T10:40:00+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://nufcblog.co.uk/alan-shearer-questions-newcastles-new-transfer-strategy-44104",
+   "image": "https://nufcblog.co.uk/imager/articles/44110/1795257488_b0464c6958.webp"
+  },
+  {
+   "follow_id": "scotland-rugby",
+   "title": "Highland firefighter says it’s a dream come true to carry out ball ahead of big Scotland rugby clash",
+   "source": "Ross-shire Journal",
+   "site": "https://www.ross-shirejournal.co.uk",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNajJZMzBHS2dINkpMcE53RmpWMHFiYkpUTUNPM3FqeGFFZE5saVF4TFpoUXROVi1RNWlobnNfbnpfVEVJTnhab3cwWVRZVmgtbEVXUEsxaWNlcTZWN0I1b0lnbkJUUExOT2lsRXoyUEtIWU5LLTJwRFQ0SThTUVhzZ2w4NFpFbTdhUDlEUDdrbTVZZlNzS09OTTNqY2VEeWstbFJJRm5JclFWZGRQaGc?oc=5",
+   "published_at": "2026-11-21T10:01:00+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.ross-shirejournal.co.uk/news/highland-firefighter-says-it-s-a-dream-come-true-to-carry-ou-450746/",
+   "image": "https://www.ross-shirejournal.co.uk/_media/img/PJ4P4XEMMV2G8CTN2TN6.jpg"
+  },
+  {
+   "follow_id": "mcilroy",
+   "title": "OMEGA celebrates ambassador Rory McIlroy’s record-equalling eighth Race to Dubai title",
+   "source": "senatus.net",
+   "site": "https://senatus.net",
+   "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE43SG1PTDRFQUE4OUk3TUxKQTJsM1FWMkl0amhVNkJub3JDRlFnUjVKSm9IaU9jZzR3UUUwNXhSbk5YRjBnTGNuc1lCRzBkUQ?oc=5",
+   "published_at": "2026-11-21T09:11:15+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://senatus.net/album/view/17821/",
+   "image": "https://cache2.senatus.net/files/albums/displayfb4/senatus_pppCXv.jpg"
+  },
+  {
+   "follow_id": "newcastle",
+   "title": "Eddie Howe watches Championship club training as Newcastle compensation terms remain clear",
+   "source": "Chronicle Live",
+   "site": "https://www.chroniclelive.co.uk",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNWUtnM2ZzYlducnJNLWUzWU42NVlJeGgtWHIxUUtEWERJcGNPUzU4UGNYVFVhUVMzeVJYSEpWUGIwMmJ5WkFjREd0VGpOaFNISkR2cjBjS1JYRXFkYXkzNWtZQW5FZ3lpamVROXRKVjJVRVdzRXpFdzZPeWlKU2I2NXBqTE9HbXJVWnVFbFpLbHNndU1NUXhuRFdkN2QxX1hPMDAzbFVOZ2xvQdIBrwFBVV95cUxOck1TZ3BsWXVRcUhJdzhfWWI2VFlSOXpTSng0cmk4NzN3S0NiY0NHX2ItaEVXS3Y0SXg3bzlqaUh4T0RDbmVabHZxWFFER3dfQXZtQnQ5cTBRTC1xbmRxTlVOOGVBRFZ3ZjB5Ulk1V0JXaGdkc1N3UEdDMkRmNDUycGJNckk4WE4xMGgwbWZ2OXljakthSzZxYUNIZGIwRkhtcC1DbjNmZktqUWlMN1N3?oc=5",
+   "published_at": "2026-11-21T09:03:00+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.chroniclelive.co.uk/sport/football/football-news/eddie-howe-watches-championship-club-34946708",
+   "image": "https://i2-prod.chroniclelive.co.uk/article34904797.ece/ALTERNATES/s1200d/0_Bristol-City-v-Newcastle-United-Pre-Season-Friendly-Ashton-Gate.jpg"
+  },
+  {
+   "follow_id": "newcastle",
+   "title": "Newcastle v Arsenal: Get money back as free bet if your Bet Builder loses",
+   "source": "The Sun",
+   "site": "https://www.thesun.co.uk",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQR3BtSzZyMF9KVUp1SFVQSndfRVcxajhROXpHZnJMNFhaYVJIY3UxbUZkLWxuN0RJTkpRN0JhYThwWnl2bEl6M25sSm9uZWNOaG91ckxwMXJTdXM3aVpvc0dQYzgxeXl3U2QzdnZFRUhJS25IajlQWEh1dUxaMkh4S1dVMDNUZWxEbjNn?oc=5",
+   "published_at": "2026-11-21T09:00:00+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.thesun.co.uk/sport/41071576/newcastle-arsenal-betfred-free-bet-builder/",
+   "image": "https://www.thesun.co.uk/wp-content/uploads/2026/11/Image_20261120_101117_234.jpeg?quality=90&#038;strip=all&#038;w=1500&#038;h=1000&#038;crop=1"
+  },
+  {
+   "follow_id": "newcastle",
+   "title": "How the Newcastle United recruitment team and Eddie Howe worked is based on myth and rumour",
+   "source": "Yahoo Sports",
+   "site": "https://sports.yahoo.com",
+   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNZDNOVkpPSVJycmQzdXJOMTlNdUQzdTM1cUZycnFTV3RId2NGSWY2ZDNzQmQ2bHp4cGNqankyV2dzUHJUdjNaVnBQUzJxei14QlNTY09feEFlelBYNkEyaEhWUjV0Q0VmX1RkcUFUMXFka3ZhdUotUHpobEVxQnFOZlZybjNIZ2k4dzgxOFhPOWx4Zw?oc=5",
+   "published_at": "2026-11-21T08:58:48+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://sports.yahoo.com/articles/newcastle-united-recruitment-team-eddie-085848178.html",
+   "image": "https://s.yimg.com/lo/mysterio/api/91604de7d08aa9cd01d4907da0281b543269397fae0aa821a293e65e57d28c23/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fthe_mag_612%2F84fe9f83660d96cc64f051381f294ef6.jpg_up.jpg"
+  },
+  {
+   "follow_id": "bath",
+   "title": "'We've got this lad called Messi' - Russell compared to Argentine great after Bath win",
+   "source": "TNT Sports",
+   "site": "https://www.tntsports.co.uk",
+   "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPRFNERXYxWlNjM2RvQl8tbTJUX1hpSUdLY0ZpYVFQcmE0R0F0T3FOTDJtZ1Jrc0QxU1lCOFI2WUt5Rkx5Z0JRZzZpR1U1SG9VdUNkWUcwTW1rWFNfYjRkY0JBYzBnTXgydnBxOU9YRTJfbGpDWUdjbHpHTXBDc3hocnBHN1VIZ3l4Qm9QTFBYQ0czVnVEOXVfTktkWjhrZkR1TU5wS0ItazhOaUNxam1xOVR2am1fOWpuLVhfS3ZCT2lLWWJMbmZDWXc5S3hLU2xVSGNMcTZCai05Q2E3SWp0N3pBTWY1THh3MjQ1dGpfajZFQ21ZMnRsb0hUaVV2bVk?oc=5",
+   "published_at": "2026-11-21T08:53:00+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.tntsports.co.uk/rugby/prem-rugby-cup/2026-2027/ciaran-donoghue-compares-magician-finn-russell-lionel-messi-bath-win-over-bristol-bears_sto23357269/story.shtml",
+   "image": null
+  },
+  {
+   "follow_id": "ubb",
+   "title": "La composition agenaise pour affronter l’UBB",
+   "source": "Rugby Scapulaire",
+   "site": "https://rugby-scapulaire.com",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQYVZLaTFFY04tSFVCTktZZ3VRalVwN0lrYnZqYTlsODllVml2RzVXTjBlelF0WTFFb001Sk1WdUpyZW5GcEowb184aTVXSHlnWFRha2lCZHkyaHNjbUt6MXFTcG5fSWg3a29BSjVnR2ZpT1lTbC1nS3pJOXBtbmN3elYyR25aMDMyNm5PajRuRQ?oc=5",
+   "published_at": "2026-11-21T08:00:10+00:00",
+   "lang": "fr",
+   "img_tried": true,
+   "article_url": "https://rugby-scapulaire.com/breves/195736-la-composition-agenaise-pour-affronter-lubb",
+   "image": "https://rugby-scapulaire.com/wp-content/uploads/rs-social-cards/social-card-195736.png?v=1192147c38"
+  },
+  {
+   "follow_id": "mcilroy",
+   "title": "JJ Redick reveals the Rory McIlroy quote he used to fire up Los Angeles Lakers in the locker room",
+   "source": "HITC",
+   "site": "https://www.hitc.com",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQYjZodnlMMTg3VTFRQ01IOFJqU1M2dXA2UjlMT2g5RUZzX2VqOFhKQjJsd09xLWM2ZjBUOUhtZzlMckdRbjV0cVZfUGc3ZTBxaVhrUVpzU2lpa181ZUN1V1dmTGpzdEpQX21DellqZV8zYjRITFliczdGb2dzLWxsQTM4SEJzTnhUYi01QjBxb2ZlVmJUeC1kcnJjcU1SOEtmYmNhaG1ZZXRlemVKUDNlZURDemVEdXZPcVdB?oc=5",
+   "published_at": "2026-11-21T07:24:00+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.hitc.com/jj-redick-reveals-the-rory-mcilroy-quote-he-used-to-fire-up-los-angeles-lakers-in-the-locker-room/",
+   "image": "https://cdn3.hitc.com/uploads/1/2025/04/GettyImages-2212036155-2048x1365.jpg"
+  },
+  {
+   "follow_id": "newcastle",
+   "title": "Premier League archive: Newcastle's iconic 4-4 comeback against Arsenal at St James' Park on 5th February 2011",
+   "source": "BBC",
+   "site": "https://www.bbc.co.uk",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1icXRCaTdDdDBXelBuMlNmQUktaFZQakNfNnl3WDZKU3NJNldqaUlDSFB0emN5WGJhQ0stcFFiOExTb3ZYdXp2Q1dSdTdwcHVrNFhNVEFOSkZFUGo2aFJoU3N1bm5jMUpi?oc=5",
+   "published_at": "2026-11-21T06:32:37+00:00",
+   "lang": "en",
+   "img_tried": true,
+   "article_url": "https://www.bbc.co.uk/sport/football/videos/ckd715grx9y1o",
+   "image": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/a6e4/live/1a0f0b40-e1c0-11f1-a094-5fdc692f3e33.jpg"
   },
   {
    "follow_id": "newcastle",
@@ -110,83 +422,23 @@
    "source": "Football London",
    "site": "https://www.football.london",
    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPSzE3NkpJckxERGk5STNJeU55bmJpY2lIbWpuLUQySFVQdFdVekZMRXRCbWFfMEczSzdnVy14cGxxc29ZQWlRalpJZlJMR3RsMmVScjI4b1NLai1BbzQ2SWNMMGpLNUdieHYyMGNUWnY3T0x3ME1aYUZLcy0zNVNXcjAtWGwyOHNfSzk4TmF2WkVCZ25Ocjk1N19FQUk0Z250Z3fSAacBQVVfeXFMUEl3cUtoYjhwNFlkbFFDTGk3NGlfb3NZVThZTndwelRCRURwVTlWRDkwWVNiZkIzMzhNLWVZU24zYUZ2SkstNmFQS2ZXTERQcERILWhIdFBRYVdsQzRJUGZscVBzTkdVblI3YWdWd0dpYjdzbmQ4QVNibVAzc3JIc1UybWIwTUhnUlVhdVJEbWVpR1JOQXZxTXo2a2QwdUJvZnpQNDRUZjQ?oc=5",
-   "published_at": "2026-11-21T06:03:44+00:00",
+   "published_at": "2026-11-21T06:04:32+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://www.football.london/arsenal-fc/fixtures-results/arsenal-predicted-team-vs-newcastle-34943448",
-   "image": "https://i2-prod.football.london/article34943463.ece/ALTERNATES/s1200d/1_Ben-White-Jurrien-Timber-and-Arsenal.jpg"
-  },
-  {
-   "follow_id": "newcastle",
-   "title": "L'Arsenal intensifica gli allenamenti per difendere il primato contro il Newcastle",
-   "source": "OneFootball",
-   "site": "https://onefootball.com",
-   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdmlPV2gwb1pMSlFEMGxsRWxIc3VQUi03SUtpbXh3UEQxTENsZ2YwVjAxb0wzUzFJSDNId0pwTS1PN2NhNng1MkNKM2JERkpQTFFXcU9OM3FRdzg2T2xxZ0hGU2lsSFF2ZFd6OEhZdFBUUGU2YWFCQkVnUFJvbVc2T0pmd2J1c2FMUF84QktxTGk5R0xqQnVwMDYycnB4ZF9GU19TVFVlQXRZZFRMbHVrT2w2UFpvZUd6RFhvZzJkWXc?oc=5",
-   "published_at": "2026-11-21T05:51:23+00:00",
-   "lang": "en",
-   "img_tried": true,
-   "article_url": "https://onefootball.com/en/video/larsenal-intensifica-gli-allenamenti-per-difendere-il-primato-contro-il-newcastle-43810726",
-   "image": "https://photobooth-api.onefootball.com/api/screenshot/%2Fv2%2Fphotobooth%2Fcms%2Fen%2F43810726%3Fdate=2026-11-21"
-  },
-  {
-   "follow_id": "newcastle",
-   "title": "Arsenal intensifie sa préparation pour conserver la tête face à Newcastle",
-   "source": "OneFootball",
-   "site": "https://onefootball.com",
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNWVNOVlY4OFhHUXMtU1U4cnludUw0STE2OVAzUkg5bmRNNTUteVlDSmhZYU1zNkhhM2ZDTHZfTWNJcmlkZUxsXzVrVkRzbjdiem5neVlfNlNqaTB2QkViaERmVzRtMUFYOFN1NlVmMUF3MjZUREFydDl1Rk9NejBqaUxzWkE1SEl5cHFmMHh0ajFJR2pRUDBBOWtDYUMtUmVPbTI2UlJoekJWTmpaZTFaNVl4RWlEQQ?oc=5",
-   "published_at": "2026-11-21T05:50:28+00:00",
-   "lang": "en",
-   "img_tried": true,
-   "article_url": "https://onefootball.com/en/video/arsenal-intensifie-sa-preparation-pour-conserver-la-tete-face-a-newcastle-43810704",
-   "image": "https://photobooth-api.onefootball.com/api/screenshot/%2Fv2%2Fphotobooth%2Fcms%2Fen%2F43810704%3Fdate=2026-11-21"
-  },
-  {
-   "follow_id": "newcastle",
-   "title": "Arsenal intensifica os treinos para manter a liderança contra o Newcastle",
-   "source": "OneFootball",
-   "site": "https://onefootball.com",
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOaXNSaWtraVZJWmlnSlIteHNVNFFCempLWTZvaVg4eXpSTGRRMDB6dXM0OWlRM0NaRGFsVUpDLU55bUFTTjVRaHJZTkFwVGRjNGoyTDduNHlLTTJKcHdhNTRxbWluc3dBa2FtRXhlTlZHaWRMT3lZYVk1bFUtQ2JIb3NnOEdabVg4RWtsc25CQWY3RDVXV2UtdDhfa1F2YTI2YVQ4OUtkQzViOGx4ZjRwc2xMNW9zQQ?oc=5",
-   "published_at": "2026-11-21T05:19:21+00:00",
-   "lang": "en",
-   "img_tried": true,
-   "article_url": "https://onefootball.com/en/video/arsenal-intensifica-os-treinos-para-manter-a-lideranca-contra-o-newcastle-43810662",
-   "image": "https://photobooth-api.onefootball.com/api/screenshot/%2Fv2%2Fphotobooth%2Fcms%2Fen%2F43810662%3Fdate=2026-11-21"
+   "image": "https://i2-prod.football.london/article34943463.ece/ALTERNATES/s1200d/1_Ben-White-Jurrien-Timber-and-Arsenal.jpg",
+   "img_tried": true
   },
   {
    "follow_id": "mcilroy",
-   "title": "McIlroy wins 8th Race to Dubai title",
-   "source": "India Golf Weekly",
-   "site": "https://www.indiagolfweekly.com",
-   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQSjVQM0N4dkVTOGNTd3FreUhiT0lWeUhaV2JSLTM1a0kycU1Vd3hSUF94OUVzUEFVak45cEhMTDRqQVNaMnloalVrV2huQ2VPcWFxMmgxOHJFM0EtWWJWbEEyMGhUX2VHZF9ZcnNDX0RkMGJMZkJUbkJiR2JKZmZNRTJucG5ibDNjY1F3S2VLU0xKUEFa?oc=5",
-   "published_at": "2026-11-21T04:34:44+00:00",
+   "title": "Two-time RBC Canadian Open champion Rory McIlroy gets first taste of hockey in Toronto",
+   "source": "PGA Tour",
+   "site": "https://www.pgatour.com",
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNDUxckpEcXQ0OHpnTzRpWEo0b2F2NW5RQ3FQOVlVNnJ0N3h6d1d3UmxjNDNDaDNZT1hMRGxKelIwT1cxZFBhY09ZQ0llUXQ3WW4zN09SaXpvVHZqMzFiRHZMQTF1Zkc2N0o4MTR0N2htQWVHZVdwWXZITl9CYzBITXlNUGpmWFdPX0JGWE40VDluZElrLVh6XzVBZTBWZmF1dVFTTDFQQk5kNWtLM19IOThOZw?oc=5",
+   "published_at": "2026-11-21T02:36:15+00:00",
    "lang": "en",
-   "img_tried": true,
-   "article_url": "https://www.indiagolfweekly.com/features/latest-news/mcilroy-wins-8th-race-to-dubai-title/",
-   "image": null
-  },
-  {
-   "follow_id": "england-cricket",
-   "title": "England Remove Former Australian Coach Over Alleged Role In Ball Tampering Scandal",
-   "source": "Times Now",
-   "site": "https://www.timesnownews.com",
-   "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOV0JMb0MxaUhvenY0Tmo2UHdSeGtpZWZjYnozcm1kNHVxWGJQbDVXLXNDeFJHTlo3NmMyXzZWcHF1SzdsLWpmSm1nNUxjNUV1YXFaX3JxcnJBUUtGMW5SWmtXYWpud2hNWExOcmNRMGdoaWctdmlQNV9aTjJQaDRQRUN3UmtjLTVwVzhiaW5HQXRDN3d6WktsSVN1Y1htOExIdThvLUVuUTJzTGJiSXkzeGNWemRYaG4wVGd0dFMwR0NlUDVKNTdZaVRaS1VmSzdaVEFCbkVocVZmVU1ZSXhGcXZOMXBzYkVzcml6R9IB8gFBVV95cUxPTXFIMmZnSU5DTEl2cjR2c3Z4UDRDbkJUYnJYRE4wLVkwNkk3cTY4Rzg4elY5Z1pkN0pRN2gzZEF3U2xrSzEzamRfbFBNdW5oLUVGOWlSMUl0NEpIU0RrSS1hOG1SdG9zR2ZlenRWWjVMWjVUVTdxX3NacUM4U1lYaDJCQ2dpNVh6akpaQXVYSDRvS1p2RGRmeVFPNTlTdzlxai03MndZUnZIZDBON1lLTWhLUW5GcldXcjFfT0pNckZDRjRFUkJBQTR4eXduZXpIYVd1ajlfYVJwVTY3OTF6Nm83UGRja1JtbkxSWTNuR3BxQQ?oc=5",
-   "published_at": "2026-11-21T04:07:01+00:00",
-   "lang": "en",
-   "img_tried": true,
-   "article_url": "https://www.timesnownews.com/sports/cricket/england-remove-former-australian-coach-david-saker-over-alleged-role-in-ball-tampering-scandal-article-156544795",
-   "image": "https://images.timesnownews.com/thumb/msid-156544799,thumbsize-1663793,width-1280,height-720,resizemode-75/156544799.jpg"
-  },
-  {
-   "follow_id": "mcilroy",
-   "title": "Rory McIlroy asked to deliver speech to Toronto Maple Leafs after watching NHL collapse",
-   "source": "AOL.com",
-   "site": "https://www.aol.com",
-   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPbVlBQkVDX3ZEeUtFVlNCZkJpaHFQc0tOLUJnRTU0WnRTejRhcndTUTM4bklPX1JxbHFRLW5YWThwOTV1Q0djb2Y4b1dRd19vREtZZExXRGNfajhZekxCMEwtTnJRRm5fb3JfczRYQ3hGQVlKZlZTSnU0OHB1UWhjc1N5TQ?oc=5",
-   "published_at": "2026-11-21T03:38:00+00:00",
-   "lang": "en",
-   "img_tried": true,
-   "article_url": "https://www.aol.com/articles/rory-mcilroy-asked-deliver-speech-033808000.html",
-   "image": "https://hermes.media.transform.aol.com/52d3c14464965a7166a06dfd77c913fb5715b310/w_1200,c_scale,f_auto,q_auto/https://hermes.media.static.aol.com/media/2026/11/21/5043eb45-cdc6-3a7b-b777-e540ad1ae025/6cd99d27-d0c2-4874-8919-0aa4f8cd14b0.jpg"
+   "article_url": "https://www.pgatour.com/article/news/latest/2026/11/20/rory-mcilroy-attends-first-hockey-game-toronto-maple-leafs",
+   "image": "https://res.cloudinary.com/pgatour-prod/w_1200,h_628,c_fill,f_auto,q_auto/pgatour/news/editorial/2026/11/20/RoryToronto.jpg",
+   "img_tried": true
   },
   {
    "follow_id": "mcilroy",
@@ -196,9 +448,9 @@
    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1WdFpia2ZwVV9MSjBJczlpQ1o5OHRCV1NJMmpQTWdJT3BycDQyVllNQnFsMHlGTHBPQkRtMndQZklpT2RrS1dPZXhtaGVfSG91bUgycm1tQnFCcWRFTnJ1ajM2WnVsbHIzMzZSRHlB?oc=5",
    "published_at": "2026-11-21T01:49:00+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://golf.com/news/rory-mcilroy-bob-rotellas-nhl-team-joy/",
-   "image": "https://golf.com/wp-content/uploads/2026/11/RoryMcIlroy-1.webp?_t=1795225747"
+   "image": "https://golf.com/wp-content/uploads/2026/11/RoryMcIlroy-1.webp?_t=1795225747",
+   "img_tried": true
   },
   {
    "follow_id": "scotland-rugby",
@@ -213,40 +465,16 @@
    "img_tried": true
   },
   {
-   "follow_id": "newcastle",
-   "title": "Newcastle United predicted lineup vs Arsenal: Magpies welcome league leaders in international break return",
-   "source": "LiveScore",
-   "site": "https://www.livescore.com",
-   "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxOYlZGMHkxamY2RXc5b2FFTVh5SjAzWDBEVjFQbElHM1QybjNXX2E2bzFmeXVzRXZjY0RnUHVfamZtVEVuMUpnZWtxSXVVc2RCNlFNOUJoXy1DTHE5dXVMUGxKZ2RTX3RFbVdqX0s3Vm14N2hCbGlLdGw2WV9kVEludXZLV3NJMWtMa0tGVUpkVE1SbDVwamFmUjVaWVlzaDg3ZE9RakpQeE80UVAxUU9ZQWlqa0wtNG80QUoxc0FpZTl5c2VVbUR0dHo3amYyX0s2VGZidktDTnBHQWh6WWRpSVFGWmVWXzUweC1tVUI3YndOdzY5R1RZS3k3SU44ejdvRlZJWkpsWi1YckdV?oc=5",
-   "published_at": "2026-11-20T23:30:19+00:00",
-   "lang": "en",
-   "img_tried": true,
-   "article_url": "https://www.livescore.com/en/news/football/premier-league/newcastle-united-predicted-lineup-vs-arsenal-magpies-welcome-league-leaders-in-international-break-return-newcastle-toons/",
-   "image": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_11,w_3363,h_1891/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/GettyImages/mmsport/354/01m7x3hrrs0dck2h5pdt.jpg"
-  },
-  {
-   "follow_id": "newcastle",
-   "title": "Newcastle vs Arsenal: Predicted starting 11 as Gunners head to St James' Park",
-   "source": "Yahoo Sports",
-   "site": "https://sports.yahoo.com",
-   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPcW5SWDdpSGdTNmtXV1YzUXNBemdfclNHa0IxZ2k2eXJMck12UXA1NmtPRExBTE1kMFZFcFZyUkNjRDZQalJ1a0NjRk80U2RrYXppZHFGWlFIa055ZzgxdFBTUktFYTVLYjdZbnd2UTJGVFVFbTlkOTM5enVhTldPMU9KblFxcDc2VGY3UUlPZ3pjZw?oc=5",
-   "published_at": "2026-11-20T23:00:02+00:00",
-   "lang": "en",
-   "img_tried": true,
-   "article_url": "https://sports.yahoo.com/articles/newcastle-vs-arsenal-predicted-starting-230002921.html",
-   "image": "https://s.yimg.com/lo/mysterio/api/1c96dd3fa091a48e7b47ead8113d5cc512000053b33ce47eed4a2a1c9f0af609/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fpain_in_the_arsenal_articles_680%2F9031a1f0ad04cdaa705c5bf3fad4a613.jpg_up.jpg"
-  },
-  {
    "follow_id": "bath",
    "title": "Bath Rugby record a rare win at Ashton Gate against derby rivals Bristol Bears",
    "source": "Somerset Live",
    "site": "https://www.somersetlive.co.uk",
    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOQmMxVnFJSmEyWlJSdWZDb1liWUFPcWlRZGJ4enRjOW5PV0pDNFRnTldMQ0Q1VUtzUkx3X3dvUzZOTk9FZUNGZzNqTVRQZ19qUndtMVNzZkxsU1dFMG1nX05iU01NdWd5b0I1U3BIcFFhcmxpQjN4SmZVbkVycElkaFhXVzBJam1vb1NpMNIBkgFBVV95cUxPaFkxbWdXdGowN2wwSzdzUTZjbVJQcDk3cms5LXk0SHpIUXFBNHdzN1MxYTFVc0JTSlZ3NDJ5RGxaR3BmWXNrUkJKeU81OVNzQzc2bm1zS3dTVkxFOGxMM0FOUV9Sc0laZzBZLUlkQTBzTU9VdklLOWp2bWhrSFoydGN0S01QTTNBUWFlcnFQLTN2QQ?oc=5",
-   "published_at": "2026-11-20T22:57:00+00:00",
+   "published_at": "2026-11-20T22:58:09+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://www.somersetlive.co.uk/sport/other-sport/bath-rugby-record-rare-win-11250465",
-   "image": "https://i2-prod.somersetlive.co.uk/article11250470.ece/ALTERNATES/s1200d/0_GettyImages-2305542920.jpg"
+   "image": "https://i2-prod.somersetlive.co.uk/article11250470.ece/ALTERNATES/s1200d/0_GettyImages-2305542920.jpg",
+   "img_tried": true
   },
   {
    "follow_id": "bath",
@@ -256,33 +484,9 @@
    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNT2hDRlFkRXlVLU1tbUpyNkV5T3RpR1ZlVnBINzNnbU92WHFGNEV3UE1nWGs3aklHdTRvclR2WmFuWVNnTWxrZEJrbXVJcnJGSW54V0FJbV9nZjNYcVFJX2MyOEZwa2xPeGJpdWVLYURHOTVDck1XUTJBeHRlMzRnTWhEQl9XMU5yaTV2dQ?oc=5",
    "published_at": "2026-11-20T22:53:00+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://www.somersetlive.co.uk/sport/other-sport/bristol-bears-v-bath-rugby-11249354",
-   "image": "https://i2-prod.somersetlive.co.uk/article11250440.ece/ALTERNATES/s1200d/1_Bristol-Bears-v-Bath-Rugby-PREM-Rugby-Cup.jpg"
-  },
-  {
-   "follow_id": "newcastle",
-   "title": "Mikel Arteta demands more from Bruno Guimaraes as Arsenal star heads for emotional reunion with old club Newcastle",
-   "source": "The Sun",
-   "site": "https://www.thesun.co.uk",
-   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRHFFNmFLdXctUW5pVFY0QkR2YVFyMndzd2xfdUE3aWhoQ2pIcm4yUF9VRzNsd1YtczA2UGttQ1d5eGZEajZWNzFueEJxdVZvdmVFbTZvU3N3MzgyaE1WYm01aDNpaThwamp1Q2RCd210cmZIbEJUY2w3N0cyUG0zbkVFVWxDZVpiWldKQ3UzQ1o?oc=5",
-   "published_at": "2026-11-20T22:36:00+00:00",
-   "lang": "en",
-   "img_tried": true,
-   "article_url": "https://www.thesun.co.uk/sport/41086408/mikel-arteta-arsenal-newcastle-bruno-guimaraes/",
-   "image": "https://www.thesun.co.uk/wp-content/uploads/2026/11/crop-40640609_d61ed6.jpg?quality=90&#038;strip=all&#038;w=1920&#038;h=1080&#038;crop=1"
-  },
-  {
-   "follow_id": "newcastle",
-   "title": "Two key Arsenal players will not play against Newcastle, Arteta confirms",
-   "source": "DAZN",
-   "site": "https://www.dazn.com",
-   "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOWWp3TXQzT1laYVR5M1VMM2dDZnlKU3hoUVdpemJUUXV4YjRQaTl1akxSNUJtT3lfY1BocEs1RGdrajN4a00wNV8xclR3TmZJLTNBamg3MU96amZaRlBLdU16akh6anNNY1RMR0NrRjBzRlk2OWdqSlVpcktBZTB2RUtPaVNQTmlfd0lZcUtYQWlCSGc4dWRnSU9JdEMxSWt0d1NXNy0tZnRKYXVvYUUwWnFkVFlUWVQ0ZDd6cGFLeUh2T3FiWS1LNVk5M3JCWnZvMU11Zmx0d3B4WERYR1htR19wQUREc2Q0ajU0?oc=5",
-   "published_at": "2026-11-20T22:35:48+00:00",
-   "lang": "en",
-   "img_tried": true,
-   "article_url": "https://www.dazn.com/en-GB/news/football/arsenal-injury-update-martin-zubimendi-bukayo-saka-william-saliba-newcastle-mikel-arteta/j56hv0uvw3491oullgzbf8f3m",
-   "image": null
+   "image": "https://i2-prod.somersetlive.co.uk/article11250440.ece/ALTERNATES/s1200d/1_Bristol-Bears-v-Bath-Rugby-PREM-Rugby-Cup.jpg",
+   "img_tried": true
   },
   {
    "follow_id": "mcilroy",
@@ -294,18 +498,6 @@
    "lang": "en",
    "article_url": "https://torontosun.com/sports/hockey/nhl/toronto-maple-leafs/rory-mcilroy-psychologist-meets-team",
    "image": null,
-   "img_tried": true
-  },
-  {
-   "follow_id": "newcastle",
-   "title": "Saints visited by former Newcastle United and AFC Bournemouth manager Howe",
-   "source": "Daily Echo",
-   "site": "https://www.dailyecho.co.uk",
-   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNM19yWUdDX1gtNmhYQ0JrRWhzRUNocVhpbUJSYkgzcGhKb1lXUzc4dG11TGRadTVLZnI3Z2JuOTR2YkM5cWN4TVlEeFF5TTNKN0JuV082WEpvUUROVkZuWlEyU1hFV1ZPdlhEa3JmWXJzT3I2RUFEdDVvbUZGa0h1RTlaeDZnUU0xM3I5RDhEUHBVa3lhTTMzaGhwNmp1ajN1?oc=5",
-   "published_at": "2026-11-20T22:30:00+00:00",
-   "lang": "en",
-   "article_url": "https://www.dailyecho.co.uk/sport/26750140.southampton-visited-former-newcastle-manager-eddie-howe/",
-   "image": "https://www.dailyecho.co.uk/resources/images/21746542.jpg?type=og-image&xType=0&yType=99",
    "img_tried": true
   },
   {
@@ -328,9 +520,9 @@
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5BRDR0VnNFcFI5aFlPWnJHazd4b01WaUNPTE9jUjlNamdEaFJSc1hGb1VoOF9rdFZPaUhEV0FLZnhyenpFUTZIRy1fZDF1NzliS0x0V2d1WGlXTlZseUd3WGN4c3lha1F1OGV0bg?oc=5",
    "published_at": "2026-11-20T22:06:08+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://www.bbc.com/sport/rugby-union/articles/ck1wr018d02xo",
-   "image": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/ab85/live/275e13a0-e52a-11f1-964d-a1d5fe40573e.jpg"
+   "image": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/ab85/live/275e13a0-e52a-11f1-964d-a1d5fe40573e.jpg",
+   "img_tried": true
   },
   {
    "follow_id": "scotland-rugby",
@@ -343,30 +535,6 @@
    "article_url": "https://www.scotsman.com/sport/rugby-union/rassie-erasmus-shines-a-light-on-rugbys-big-problem-says-scotland-great-9365113",
    "image": "https://www.scotsman.com/jpim-static/image/2026/11/20/19/59/GettyImages-2305557766.jpeg?width=1200&auto=webp&quality=75&trim=0,25,0,83&crop=",
    "img_tried": true
-  },
-  {
-   "follow_id": "mcilroy",
-   "title": "Two-time RBC Canadian Open champion Rory McIlroy gets first taste of hockey in Toronto",
-   "source": "PGA Tour",
-   "site": "https://www.pgatour.com",
-   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNDUxckpEcXQ0OHpnTzRpWEo0b2F2NW5RQ3FQOVlVNnJ0N3h6d1d3UmxjNDNDaDNZT1hMRGxKelIwT1cxZFBhY09ZQ0llUXQ3WW4zN09SaXpvVHZqMzFiRHZMQTF1Zkc2N0o4MTR0N2htQWVHZVdwWXZITl9CYzBITXlNUGpmWFdPX0JGWE40VDluZElrLVh6XzVBZTBWZmF1dVFTTDFQQk5kNWtLM19IOThOZw?oc=5",
-   "published_at": "2026-11-20T20:34:04+00:00",
-   "lang": "en",
-   "article_url": "https://www.pgatour.com/article/news/latest/2026/11/20/rory-mcilroy-attends-first-hockey-game-toronto-maple-leafs",
-   "image": "https://res.cloudinary.com/pgatour-prod/w_1200,h_628,c_fill,f_auto,q_auto/pgatour/news/editorial/2026/11/20/RoryToronto.jpg",
-   "img_tried": true
-  },
-  {
-   "follow_id": "england-cricket",
-   "title": "Mohammad Abbas Tops 2026 Test Bowling Charts, Surpasses England’s Josh Tongue",
-   "source": "WE News English",
-   "site": "https://wenewsenglish.com",
-   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOVHVWZmRrbmN4WG9xLVc2czBzV1B2SF9tUXNRRjd6YVduM1FxM3o5QzdESzVVTWVGZGZRRDIyODlZVWhvdnlmVlJCYVZycEgxM05PdVJlX3lYSEZock5HUTlLekRNQUpfQ3Q3ckJJd09uS3NSQ3YyX0NhRFV6OUNQbVBqY1VCdi04bDlTOG9LQlRYemhsWDFCWUJjakxHWHgyeTNzbw?oc=5",
-   "published_at": "2026-11-20T20:26:42+00:00",
-   "lang": "en",
-   "img_tried": true,
-   "article_url": "https://wenewsenglish.com/mohammad-abbas-tops-2026-test-bowling-charts-surpasses-englands-josh-tongue/",
-   "image": "https://wenewsenglish.com/wp-content/uploads/2026/11/abbas-canva.jpg"
   },
   {
    "follow_id": "scotland-rugby",
@@ -429,18 +597,6 @@
    "img_tried": true
   },
   {
-   "follow_id": "england-cricket",
-   "title": "Sandpaper and silence: Marsh hides away as England’s T20 winners roll into MCG",
-   "source": "The Guardian",
-   "site": "https://www.theguardian.com",
-   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxON0VoenVUaTRyMHZmeER3azdsZlZXTVhTMUFveUNHVlREaWNvdm5kUnFONmFyZF9ObHp1bll4UllfVHM4LWxsQmNyd0Z1Rm1YMjBVbzhONWx1bkFFU3ZpcUFTd2ViUjN4V0VlYmZ2Nm5GdVdZalI0ZXdqZzJaNDFSMXZRVjNlTkF1RlpBd2xZa2k3YmxNTnliRlB1RXRlV1hjVUxub0Z2Q0g?oc=5",
-   "published_at": "2026-11-20T18:25:00+00:00",
-   "lang": "en",
-   "article_url": "https://www.theguardian.com/sport/2026/nov/20/mitch-marsh-sandpaper-cricket-scandal-england-australia-t20",
-   "image": "https://i.guim.co.uk/img/media/cb7def0221a6c57f5f6eb73478f7a058491ac2fa/550_136_3899_3119/master/3899.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=1ad73b8bcf2bf2ed8dc1a85ed421bf7e",
-   "img_tried": true
-  },
-  {
    "follow_id": "scotland-rugby",
    "title": "How Stafford McDowall went from herding cows to captaining Scotland",
    "source": "The Scotsman",
@@ -448,20 +604,8 @@
    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQWTREWjBJSmNiX1QtZXRZLU9JS2RyMDFobUF0QldvOF9ZaEc2bjBZZEtXSmY2MUZHOUtTQ09tZWhhbi1EQkxoSkE2di1VUmlpWnhab1EtT1ozZUN0N0doVjNVTWlBbE5vblp3NGh1WnhkUUxNWDdaZFJxS0EtWkt5eFE1dXlJM0FyUVRjLUhLdnVkS2hUWDdTUk1GLTZNSk11TnR5LXcxWGhLcGtEemZsYWZsbjdOb0JpZ1NteXdsUWI?oc=5",
    "published_at": "2026-11-20T18:00:00+00:00",
    "lang": "en",
-   "img_tried": true,
    "article_url": "https://www.scotsman.com/sport/rugby-union/how-stafford-mcdowall-went-from-from-herding-cows-to-captaining-scotland-9365027",
-   "image": "https://www.scotsman.com/jpim-static/image/2026/11/20/17/41/21854998.jpeg?width=1200&auto=webp&quality=75&trim=0,33,0,0&crop="
-  },
-  {
-   "follow_id": "scotland-rugby",
-   "title": "Scotland vs Japan: Date, kick-off time, lineups, team news, TV",
-   "source": "London Evening Standard",
-   "site": "https://www.standard.co.uk",
-   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQLTQ2bVFPZEhSTXpmR1JNVi1PY3ZEM19HUS1kWll3R1VILTMyVlBLZzBYd2M1RG9WMU1YUEt1RnBOZVQ5aVg4cmc5Y0dDTUcxSGY0VXU0S3pBY0FES3ViTmRGQ1RKMFZ5S0l3UzRZTUJjV0hPcTJQMzVUd1JGdUZuLWw5aHhGakxfeUJxTEtwN1R6cFF5OEFaQThxSC1nMU1VODQ0MXFYY0dxZ2d3NFVNNVFDTW90TU9iSlpJMGtTbjBEamd6MWEzaGhPUTAxcExuNGc?oc=5",
-   "published_at": "2026-11-20T17:51:42+00:00",
-   "lang": "en",
-   "article_url": "https://www.standard.co.uk/sport/rugby/scotland-vs-japan-rugby-date-kick-off-time-lineups-team-news-tv-channel-live-stream-b1305544.html",
-   "image": "https://static.standard.co.uk/2026/11/19/13/38/GettyImages-2303481847.jpeg?trim=0,7,171,0&auto=webp&quality=75&width=1200",
+   "image": "https://www.scotsman.com/jpim-static/image/2026/11/20/17/41/21854998.jpeg?width=1200&auto=webp&quality=75&trim=0,33,0,0&crop=",
    "img_tried": true
   },
   {
@@ -489,30 +633,6 @@
    "img_tried": true
   },
   {
-   "follow_id": "england-cricket",
-   "title": "Maro Itoje distances England from win-at-all-costs culture amid Sandpapergate fall out and Rassie Erasmus ban",
-   "source": "Sky Sports",
-   "site": "https://www.skysports.com",
-   "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOOHVwczVUaUE3U0hDYVdzYnZaWUcxMVI4aHdFcFZaS3lyd09fQjdwSzViS3BFdklDTXBOczZOTEFmSnRnY1hiWVFNaHhfVy0taWdtS1k4Y0pjMXhzNjdoMjFKUEhROUQ4Rl8tdUFER05LQUpJNllBOHlXb0NMMjZNblJjbGJpd0thWHJyOC1WdnE5clMwSWtnUnNHbGV4dllQdDNBbWdFa1R0Y3ktRkNYUy1nNm84WDVQRXdkcHlDUTdaZ2hKUXhFQ3ZYTzBXaEs0ZFdCNnQ5ck9GWUw5T2tFUUUtRXhjWXRveFI4QWIwMmtGams?oc=5",
-   "published_at": "2026-11-20T16:48:20+00:00",
-   "lang": "en",
-   "article_url": "https://www.skysports.com/rugby-union/news/13614411/maro-itoje-distances-england-from-win-at-all-costs-culture-amid-sandpapergate-fall-out-and-rassie-erasmus-ban",
-   "image": "https://e0.365dm.com/26/11/1600x900/skysports-maro-itoje_7411592.jpg?20261120161926",
-   "img_tried": true
-  },
-  {
-   "follow_id": "scotland-rugby",
-   "title": "Kingussie firefighter says it’s a dream come true to carry out ball ahead of big Scotland rugby clash",
-   "source": "Strathspey Herald",
-   "site": "https://www.strathspey-herald.co.uk",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQTUpTNHIxbW9ESzJFT3RQWjZsZi11NklESEwzMkU0RVhoY3hXT2xqclFSS05sdkZWdXVNVFNld1hCNFFwdC0wOHZNVzc0ZnJSanZwUjY2N0YyQ0VxRDFPeVhGMzZTWTBVSk0zUGE1ZGI4ZGdwQ1hUalMxc3kycllyY2IwZ2lvYUowU2NWQ2cxVzlOcS1HTS1jTFF3TmFvQ3QxWGpROW1NTE1ZRUViTGc?oc=5",
-   "published_at": "2026-11-20T16:48:00+00:00",
-   "lang": "en",
-   "article_url": "https://www.strathspey-herald.co.uk/news/kingussie-firefighter-says-it-s-a-dream-come-true-to-carry-o-450710/",
-   "image": "https://www.strathspey-herald.co.uk/_media/img/V8K9ZE2W09576R64LZ21.jpg",
-   "img_tried": true
-  },
-  {
    "follow_id": "scotland-rugby",
    "title": "Three captains in a week but Scotland backed to handle the disruption against Japan",
    "source": "The Scotsman",
@@ -535,66 +655,6 @@
    "article_url": "https://golfweek.usatoday.com/story/sports/golf/pga/2026/11/20/rory-mcilroy-first-nhl-game-reads-maple-leafs-starting-lineup/92877003007/",
    "image": null,
    "img_tried": true
-  },
-  {
-   "follow_id": "england-cricket",
-   "title": "Australia's Beardman, Bartlett ruled out of England T20I series, Stanlake called up",
-   "source": "ANI News",
-   "site": "https://www.aninews.in",
-   "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQX2JJZFBORENKbzNQZXRTeFZwRTRWUXBETXRlcVl4V1RCTUR0XzFzY0M1TVVsZHNnQXhaUzdSZjdHeFhWSm1Gdnh1UkdZeFBuak9KSnVkTUc4alBsbEVIYVkyNG9na25LOTFHaVRXVHdta09XTkdOMmRUQ1h4X0xxTUQ2aW9WSUtELXNKYjBiUGd4Z1gzaHVYcEJNSDQydkV2cmFLSjVvS2g2bk9oWDNuOVRQQWhyTE5zOERPYTBxaVJxQWs1bzNtODBiSldSTHFOakFZ?oc=5",
-   "published_at": "2026-11-20T14:48:00+00:00",
-   "lang": "en",
-   "article_url": "https://www.aninews.in/news/sports/cricket/australias-beardman-bartlett-ruled-out-of-england-t20i-series-stanlake-called-up20261120201809",
-   "image": null,
-   "img_tried": true
-  },
-  {
-   "follow_id": "england-cricket",
-   "title": "Australia opt not to name T20I vice-captain for England series",
-   "source": "ESPN",
-   "site": "https://africa.espn.com",
-   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNWXE4UmZSLVBhSmJsX3hvajJiVkMzcXYwMDJZWEdsYTNyU3pNc3VaU2xBQUc5Rnl2M2JnWUpyb1NxUjg4blRPVDhHV2IxdVZtUDF2M0QydjJ2bzFWcm81SjVtaHFIZ3VRTE9fZnYwOWN2bENEdXlmdGk1bm9tdC1TSTJmRjVremRBSEdEQUkxU1N0LWNqTlo4NVRmbW9UakY3Z01WRy1ERVd1YkE?oc=5",
-   "published_at": "2026-11-20T13:40:02+00:00",
-   "lang": "en",
-   "article_url": null,
-   "image": null,
-   "img_tried": true
-  },
-  {
-   "follow_id": "england-cricket",
-   "title": "England parts ways with David Saker in wake of Bancroft's bombshell ball tampering claims: Report",
-   "source": "Firstpost",
-   "site": "https://www.firstpost.com",
-   "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNLTNLQWp6VUZRdzVSUHljZDI4TGNNZVRuRWJnNjlkdS1temY0UEdIdHh0U2NqelQxbWlnWlA3ZG12aFFUVWtHNnNfeHpmMjE4R1pvQ192RjQ1TW8xbDRNTmtyQl85aGtJdkpVZnBXNGpiUWFPdmh4czFxVHZIMXlNZEprYy1fcmUxemY2VjR5cVpZSmJXSE9kTVM5bXA3VFFzekk4dFE0TGJwYXRlVzdtWmQ3SUlsazAxb1laY2hmZHVyaFpCUmNyd3c2OTVBaDBDYXRRenFDSTJMNmRvQkExbjVB0gHnAUFVX3lxTE5nRXJ5ZWh6a3NoVWh4TmlXdFFtekVaeDRKRkM2S21ONGNPVV85QlA1UjNxOEswYmhUZVdDSm9wUV9MMG1MWDV0SE4tVldmTFpEeWt1RDY0S3hHcEVsRHd3NTFLY2M2TzVWWXJSdmcwUHYwSWdxMm14UG5Ia3dqTzU4dmc4MC12R3lQMmFnRTdoVVdqX0JvTzhib1o0LXdfRjFPZFlaZGNTc09QRUhndWxuZFp6Ty1idGl6NnFSQVk3MHZMR2VrcW1RWXg1UEg3MXdWc2g2emNiVWhOZV9RNF9Nb2c1d0c4RQ?oc=5",
-   "published_at": "2026-11-20T11:54:40+00:00",
-   "lang": "en",
-   "img_tried": true,
-   "article_url": "https://www.firstpost.com/firstcricket/england-parts-ways-with-david-saker-in-wake-of-bancrofts-bombshell-ball-tampering-claims-report-14061532.html",
-   "image": null
-  },
-  {
-   "follow_id": "england-cricket",
-   "title": "Australia seek a change of narrative as England return to MCG happy place",
-   "source": "Cricinfo",
-   "site": "https://www.cricinfo.com",
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNeUpvblFVaHROeWk4Wmpsd3RJNjZMZGNUa00wcVJKbW84LVBUVTktX0JfMW40bVhWTVNzR3NCbVhoS0I2S0RBTkU4c0JkZHAwWm0yUkppU1RKdmpfZG54MjUxSi1qWXVCdm9hRDIwUTZGbGxLa0FBWUpyc0VwRDBrUHRVOFZVcGZiNS1aUjJHUWNpNFRqYU1QRjEzeGtOVFI3d0E5U0tFYjNQTi1FVmxCNmVtNEE2aDNhaVV4Yg?oc=5",
-   "published_at": "2026-11-20T09:58:16+00:00",
-   "lang": "en",
-   "article_url": "https://www.cricinfo.com/series/england-in-australia-2026-27-1528677/australia-vs-england-1st-t20i-1528706/match-preview",
-   "image": null,
-   "img_tried": true
-  },
-  {
-   "follow_id": "england-cricket",
-   "title": "England reportedly cut ties with David Saker after Cameron Bancroft’s Sandpapergate revelations",
-   "source": "The Statesman",
-   "site": "https://www.thestatesman.com",
-   "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQQXVqVWEtSlhhTjZobTdhSEtoV212ZmUzN01GOHFVVG0tVDFtYmpNU3RWY2drSkt2U1BWZTRCMFNud2JQMFFhdUhGNUdtQ1FVcW9EUmNhMkR1TGluVUVKM25kUVJPSFVnZHNDRnpQUS1mQTAtSmZDTGZBQ0hOeHJYdGdVQ182VGtoSGZNU05ZeG8tSWtZUGk4Smd0WkRjTnNXY2ZFdS1hcHFZeUtWYnQxZDVQa1UzOGFzTFhjX19uc2VmbWNWaWZ0bEdWRGhNVVRoUGRnY1R0cV9rNVBRRFJZ0gHkAUFVX3lxTE1wak9YQzRXLXFFaHBaRFA5LWNxZ2VWc1FiQnNaREhOd1I2a1JweHhkbDZHZUZDVDMyNDlseXpENExKbS1TVXRHd0p4QW9LVTRYYTE5aktMQ1ZGR1IwWHNQMC1oLXNfbzQ0Y1phV3doVlJXQzVUUWkzenpselVVbU5XTWRhVFE2SUlLMnRKclNQVHlIaE82NUlfU0lMTXZ3Mi1yT0w1SUo5eGtmYWV1cE1oMmw0VVl1RHpidEdYM05XX3RvQ2N3OFFVRU0zX0ZXcDF6Y2VhVm1lNll3YW1ySkQ1WWxhaw?oc=5",
-   "published_at": "2026-11-20T09:22:00+00:00",
-   "lang": "en",
-   "img_tried": true,
-   "article_url": "https://www.thestatesman.com/sports/england-reportedly-cut-ties-with-david-saker-after-cameron-bancrofts-sandpapergate-revelations-1503664773.html",
-   "image": "https://www.thestatesman.com/wp-content/uploads/2026/11/Cameron-Bancroft-and-David-Saker.webp"
   },
   {
    "follow_id": "ubb",
@@ -621,16 +681,16 @@
    "img_tried": true
   },
   {
-   "follow_id": "mcilroy",
-   "title": "Why Rory McIlroy felt obliged to defend Dustin Johnson after Brooks Koepka’s disparaging comments",
-   "source": "Yahoo Sports",
-   "site": "https://sports.yahoo.com",
-   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQNmlWNlBSR21Tb2tWMWpPTFlsNGRpWGJRaXJOUmJfLWdzRkNCS1pHbno4Sm9sZFNtOERSUFY5dlFjTTg5OE5sblFfVnU3WWsyQzY4b1A1MkFUSmZveFY0TnhTQ0hKZ0VxT3hxcDAwWWtwWTd5c2lVMTh1TEpjUVI1OUVLTXE?oc=5",
-   "published_at": "2026-11-19T17:30:00+00:00",
-   "lang": "en",
+   "follow_id": "ubb",
+   "title": "Jean-Georges Cellier : “Lors de sa reprise avec l’UBB après un mois à soigner son souci au quadriceps, Matthieu avait terriblement aggravé sa blessure”",
+   "source": "Rugby Scapulaire",
+   "site": "https://rugby-scapulaire.com",
+   "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxPVzB0SlpFVmM4VkFEMkVMZTdrUHN5U3RUZGhva0trYmFnNlp0YmQ4TnNVQmEwVVg5NTVZRFlnQlVER0l0bFM2WDJsazJSWWlqOWhPTnZLTGtQQnVZRVVsNEpoZWFpajk5Y25vWUdGTmI5eDFWa2hUdG5paFplZ2dzRWJRODM1OXNJeXltOVpKTzNfR1pNTEpaclpLcXFFaGhHRGRzcWxrbDFmOWpCaHdaczg5bXp4OWNBZURxZFo1M2o0N3k4RnlrMFMtTDQyQUhHcTlHcDh6cERObkEzYzZnQl9mMl84WVJYN1dzVjJ0ZjZuNTc0NHhNcXN5NTg0VzE3dnVnNXU3UVozVy1GX0c5b0JkdDgzZU0?oc=5",
+   "published_at": "2026-11-19T07:00:59+00:00",
+   "lang": "fr",
    "img_tried": true,
-   "article_url": "https://sports.yahoo.com/articles/why-rory-mcilroy-felt-obliged-173000215.html",
-   "image": "https://s.yimg.com/lo/mysterio/api/f6b6c7325e25a8e43b2aea81fc320754d41de2d0a15789e3d2ef265f6190802c/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fhitc_articles_832%2F74bc057133f9b3a0c4efd58783629f1f.jpg"
+   "article_url": "https://rugby-scapulaire.com/breves/195645-jean-georges-cellier-lors-de-sa-reprise-avec-lubb-apres-un-mois-a-soigner-son-souci-au-quadriceps-matthieu-avait-terriblement-aggrave-sa-blessure",
+   "image": "https://rugby-scapulaire.com/wp-content/uploads/rs-social-cards/social-card-195645.png?v=37599478a1"
   },
   {
    "follow_id": "pepperell",
@@ -681,16 +741,28 @@
    "img_tried": true
   },
   {
-   "follow_id": "bath",
-   "title": "Getting to the Gate: Bath Rugby (PREM Cup) – November 20th",
-   "source": "Bristol Bears Rugby",
-   "site": "https://www.bristolbearsrugby.com",
-   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQTkc4YnFoaVRrUjJ4ckZYMVpYMmRtZHBOR1pZcnpkVXNpd2Jqck5ZUjVsQUFpUVFiQ1o0ZVlEM1J0OUp0WkRFSHNucnMzcUFlX1NTZjhRYWgwNHNYZHczanUtUE03TzhtZ0Q4dkpkS2U2bmtsXzctZWozRDVjMEZNQ294Rkc5WVdPX05HanZXMEpNMklILW1Ndw?oc=5",
-   "published_at": "2026-11-17T12:41:19+00:00",
-   "lang": "en",
+   "follow_id": "ubb",
+   "title": "Yanis Trebuchaire prolonge avec l’UBB",
+   "source": "Rugby Scapulaire",
+   "site": "https://rugby-scapulaire.com",
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOV0NENWlvdUg0aW1lVzhfVWtwN0JUU3RyZWFFS0VlZ3VkbjBvOWdqbVJuVzlCUnZ4MVloNmpkTHF6R2dVQ3NFNTFuWGFBX0RZZUdBRDhtUlNiZDBMel8tSm91VFNUV1p1a1VpQjQ0WFoxUXJLUWRUZ0Zjb3EzQy1WZGtib2NJdw?oc=5",
+   "published_at": "2026-11-18T09:00:55+00:00",
+   "lang": "fr",
    "img_tried": true,
-   "article_url": "https://www.bristolbearsrugby.com/news/getting-to-the-gate-bath-rugby-prem-cup-november-20th/",
-   "image": "https://www.bristolbearsrugby.com/wp-content/uploads/2026/11/20261104_BristolCityWolves_RT0004-scaled.jpg"
+   "article_url": "https://rugby-scapulaire.com/breves/195570-yanis-trebuchaire-prolonge-avec-lubb",
+   "image": "https://rugby-scapulaire.com/wp-content/uploads/rs-social-cards/social-card-195570.png?v=c6954f3f27"
+  },
+  {
+   "follow_id": "ubb",
+   "title": "Deux joueurs de l’UBB dans le XV type du week-end pour Sud Radio",
+   "source": "Rugby Scapulaire",
+   "site": "https://rugby-scapulaire.com",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQWHY2aDdSNm9GUElNZlViU1p6OVdSWThscjFSa05uXzJzYm9rRnhueWxJN3kxM041NzlRZ1VCbkpCMkwxWF96Z0FsUHRuSkpPVGRDVDF0aGUteUgyRnhlUTE1bzE5S3EtS1QzVy1lclFGeDIwQWE2ZVcxelhYZE1SakN0SXJkNE1sNXE3ZUtyOEl4ZjNwWm5tbTFEcE9FM1BhY0dYdS1PTWxXTnpC?oc=5",
+   "published_at": "2026-11-17T14:00:47+00:00",
+   "lang": "fr",
+   "img_tried": true,
+   "article_url": "https://rugby-scapulaire.com/breves/195537-deux-joueurs-de-lubb-dans-le-xv-type-du-week-end-pour-sud-radio-3",
+   "image": "https://rugby-scapulaire.com/wp-content/uploads/rs-social-cards/social-card-195537.png?v=dd71654573"
   },
   {
    "follow_id": "pepperell",
@@ -700,6 +772,18 @@
    "published_at": "2026-11-17T00:05:00+00:00",
    "lang": "en",
    "kind": "podcast"
+  },
+  {
+   "follow_id": "ubb",
+   "title": "Dix joueurs de l’UBB retenus dans le groupe pour préparer l’Argentine",
+   "source": "Rugby Scapulaire",
+   "site": "https://rugby-scapulaire.com",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPYnI5LU43TU5ZOVd6VHJvOHJMcGZJd2VOZFFWWUZTRWFhcVE3d1Ezc0ZSRVM5UTRld0ktc0IzdGVnU0l2bmQ5R3JQNUt4Zl8wVGpSNGxhTzhiUTF2akdBcEZJRTBvY21xbFRNc0VoeUZWSFRuZDlGNmdqTl8zWnhadDYxRTZnMkVZM0FrYjFnWnE4VWRPaGxNYWsxdmVfbnd2NlZnNDV0S2I0SUJKT3g0?oc=5",
+   "published_at": "2026-11-15T12:00:19+00:00",
+   "lang": "fr",
+   "img_tried": true,
+   "article_url": "https://rugby-scapulaire.com/breves/195491-dix-joueurs-de-lubb-retenus-dans-le-groupe-pour-preparer-largentine",
+   "image": "https://rugby-scapulaire.com/wp-content/uploads/2026/03/Hugo-Avogadro.jpg"
   },
   {
    "follow_id": "pepperell",
@@ -888,7 +972,7 @@
    "follow_id": "england-cricket",
    "kind": "team",
    "source_id": "2627149",
-   "status": "upcoming",
+   "status": "finished",
    "result": null,
    "starts_at": "2026-11-21T08:15:00+00:00",
    "competition": "Twenty20 International Series",
@@ -1016,6 +1100,42 @@
   }
  ],
  "highlights": [
+  {
+   "follow_id": "england-cricket",
+   "title": "Australia v England 2026-27 | First T20I",
+   "channel": "Cricket Australia",
+   "video_id": "-fBcBdRpLXQ",
+   "short": false,
+   "published_at": "2026-11-21T12:23:19+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "forebros",
+   "title": "Have you ever had a clutch putt like this..",
+   "channel": "Fore Bros Golf",
+   "video_id": "2BfN8IORqic",
+   "short": true,
+   "published_at": "2026-11-21T12:09:33+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "bath",
+   "title": "IMPRESSIVE WEST COUNTRY DERBY! Bristol Bears v Bath HIGHLIGHTS | PREM Rugby Cup 26/27 | Round 5",
+   "channel": "PREM Rugby",
+   "video_id": "x33n0sXjjeM",
+   "short": false,
+   "published_at": "2026-11-21T10:00:39+00:00",
+   "linked_match": null
+  },
+  {
+   "follow_id": "mcilroy",
+   "title": "Rory McIlroy v Eugenio Chacarra Final Round | 2026 DP World Tour Championship",
+   "channel": "DP World Tour",
+   "video_id": "SwLXckrtde8",
+   "short": false,
+   "published_at": "2026-11-21T08:00:38+00:00",
+   "linked_match": null
+  },
   {
    "follow_id": "forebros",
    "title": "How close was that!",
@@ -1188,15 +1308,6 @@
    "linked_match": null
   },
   {
-   "follow_id": "mcilroy",
-   "title": "McIlroy 🤝 Chacarra",
-   "channel": "DP World Tour",
-   "video_id": "aavYfPSQlAI",
-   "short": true,
-   "published_at": "2026-11-15T13:36:42+00:00",
-   "linked_match": null
-  },
-  {
    "follow_id": "england-cricket",
    "title": "Australia v England 2026-27 | Second ODI",
    "channel": "Cricket Australia",
@@ -1329,15 +1440,6 @@
    "video_id": "CfhEt3Vx9n0",
    "short": false,
    "published_at": "2026-11-07T16:22:47+00:00",
-   "linked_match": null
-  },
-  {
-   "follow_id": "forebros",
-   "title": "Got to learn the language 🤣",
-   "channel": "Fore Bros Golf",
-   "video_id": "ezC_rSfl_jw",
-   "short": true,
-   "published_at": "2026-11-07T11:52:23+00:00",
    "linked_match": null
   },
   {
